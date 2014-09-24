@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\4.UnicodeCharacter\bin\Debug\4.UnicodeCharacter.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\4.UnicodeCharacter\bin\Debug\4.UnicodeCharacter.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\4.UnicodeCharacter\bin\Debug\4.UnicodeCharacter.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\4.UnicodeCharacter\obj\Debug\4.UnicodeCharacter.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\4.UnicodeCharacter\obj\Debug\4.UnicodeCharacter.pdb

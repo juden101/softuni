@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\bin\Debug\14DecimalToBinary.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\bin\Debug\14DecimalToBinary.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\bin\Debug\14DecimalToBinary.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\obj\Debug\14DecimalToBinary.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\obj\Debug\14DecimalToBinary.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\14DecimalToBinary\obj\Debug\14DecimalToBinary.pdb

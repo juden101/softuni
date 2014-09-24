@@ -1,0 +1,7 @@
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\catchTheBits\bin\Debug\catchTheBits.exe.config
+G:\c#\exams\catchTheBits\bin\Debug\catchTheBits.exe.config
+G:\c#\exams\catchTheBits\bin\Debug\catchTheBits.exe
+G:\c#\exams\catchTheBits\bin\Debug\catchTheBits.pdb
+G:\c#\exams\catchTheBits\obj\Debug\catchTheBits.exe
+G:\c#\exams\catchTheBits\obj\Debug\catchTheBits.pdb
+G:\c#\exams\catchTheBits\obj\Debug\catchTheBits.csprojResolveAssemblyReference.cache

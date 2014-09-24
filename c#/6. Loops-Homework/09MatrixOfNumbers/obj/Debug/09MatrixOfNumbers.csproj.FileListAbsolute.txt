@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\09MatrixOfNumbers\bin\Debug\09MatrixOfNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\09MatrixOfNumbers\bin\Debug\09MatrixOfNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\09MatrixOfNumbers\bin\Debug\09MatrixOfNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\09MatrixOfNumbers\obj\Debug\09MatrixOfNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\09MatrixOfNumbers\obj\Debug\09MatrixOfNumbers.pdb

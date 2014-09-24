@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\15.BitsExchange\bin\Debug\15.BitsExchange.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\15.BitsExchange\bin\Debug\15.BitsExchange.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\15.BitsExchange\bin\Debug\15.BitsExchange.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\15.BitsExchange\obj\Debug\15.BitsExchange.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\15.BitsExchange\obj\Debug\15.BitsExchange.pdb

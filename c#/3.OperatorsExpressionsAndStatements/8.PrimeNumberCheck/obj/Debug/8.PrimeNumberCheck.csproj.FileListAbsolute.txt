@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\8.PrimeNumberCheck\bin\Debug\8.PrimeNumberCheck.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\8.PrimeNumberCheck\bin\Debug\8.PrimeNumberCheck.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\8.PrimeNumberCheck\bin\Debug\8.PrimeNumberCheck.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\8.PrimeNumberCheck\obj\Debug\8.PrimeNumberCheck.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\8.PrimeNumberCheck\obj\Debug\8.PrimeNumberCheck.pdb

@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\04MultiplicationSign\bin\Debug\04MultiplicationSign.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\04MultiplicationSign\bin\Debug\04MultiplicationSign.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\04MultiplicationSign\bin\Debug\04MultiplicationSign.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\04MultiplicationSign\obj\Debug\04MultiplicationSign.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\04MultiplicationSign\obj\Debug\04MultiplicationSign.pdb

@@ -1,0 +1,12 @@
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\bin\Debug\cSharpExam.exe.config
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\bin\Debug\cSharpExam.exe
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\bin\Debug\cSharpExam.pdb
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\obj\Debug\bitSifting.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\obj\Debug\cSharpExam.exe
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\cSharpExam\obj\Debug\cSharpExam.pdb
+G:\c#\exams\cSharpExam\bin\Debug\cSharpExam.exe.config
+G:\c#\exams\cSharpExam\obj\Debug\cSharpExam.exe
+G:\c#\exams\cSharpExam\obj\Debug\cSharpExam.pdb
+G:\c#\exams\cSharpExam\bin\Debug\cSharpExam.exe
+G:\c#\exams\cSharpExam\bin\Debug\cSharpExam.pdb
+G:\c#\exams\cSharpExam\obj\Debug\bitSifting.csprojResolveAssemblyReference.cache

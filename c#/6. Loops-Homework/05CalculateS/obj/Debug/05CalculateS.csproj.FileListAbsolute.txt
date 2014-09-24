@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\05CalculateS\bin\Debug\05CalculateS.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\05CalculateS\bin\Debug\05CalculateS.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\05CalculateS\bin\Debug\05CalculateS.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\05CalculateS\obj\Debug\05CalculateS.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\05CalculateS\obj\Debug\05CalculateS.pdb

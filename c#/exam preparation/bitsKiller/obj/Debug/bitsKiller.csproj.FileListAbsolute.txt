@@ -1,0 +1,5 @@
+G:\c#\exams\bitsKiller\bin\Debug\bitsKiller.exe.config
+G:\c#\exams\bitsKiller\bin\Debug\bitsKiller.exe
+G:\c#\exams\bitsKiller\bin\Debug\bitsKiller.pdb
+G:\c#\exams\bitsKiller\obj\Debug\bitsKiller.exe
+G:\c#\exams\bitsKiller\obj\Debug\bitsKiller.pdb

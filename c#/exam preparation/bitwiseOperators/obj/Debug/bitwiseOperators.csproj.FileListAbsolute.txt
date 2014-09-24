@@ -1,0 +1,5 @@
+G:\c#\exams\bitwiseOperators\bin\Debug\bitwiseOperators.exe.config
+G:\c#\exams\bitwiseOperators\bin\Debug\bitwiseOperators.exe
+G:\c#\exams\bitwiseOperators\bin\Debug\bitwiseOperators.pdb
+G:\c#\exams\bitwiseOperators\obj\Debug\bitwiseOperators.exe
+G:\c#\exams\bitwiseOperators\obj\Debug\bitwiseOperators.pdb

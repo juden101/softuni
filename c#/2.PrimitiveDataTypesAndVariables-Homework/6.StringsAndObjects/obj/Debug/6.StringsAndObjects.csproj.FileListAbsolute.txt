@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\6.StringsAndObjects\bin\Debug\6.StringsAndObjects.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\6.StringsAndObjects\bin\Debug\6.StringsAndObjects.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\6.StringsAndObjects\bin\Debug\6.StringsAndObjects.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\6.StringsAndObjects\obj\Debug\6.StringsAndObjects.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\6.StringsAndObjects\obj\Debug\6.StringsAndObjects.pdb

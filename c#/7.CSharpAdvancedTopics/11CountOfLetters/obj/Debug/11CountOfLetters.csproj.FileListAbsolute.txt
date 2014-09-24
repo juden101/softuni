@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\11CountOfLetters\bin\Debug\11CountOfLetters.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\11CountOfLetters\bin\Debug\11CountOfLetters.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\11CountOfLetters\bin\Debug\11CountOfLetters.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\11CountOfLetters\obj\Debug\11CountOfLetters.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\11CountOfLetters\obj\Debug\11CountOfLetters.pdb

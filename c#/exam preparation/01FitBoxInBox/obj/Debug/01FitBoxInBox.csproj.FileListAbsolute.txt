@@ -1,0 +1,6 @@
+G:\c#\exams\01FitBoxInBox\bin\Debug\01FitBoxInBox.exe.config
+G:\c#\exams\01FitBoxInBox\bin\Debug\01FitBoxInBox.exe
+G:\c#\exams\01FitBoxInBox\bin\Debug\01FitBoxInBox.pdb
+G:\c#\exams\01FitBoxInBox\obj\Debug\01FitBoxInBox.csprojResolveAssemblyReference.cache
+G:\c#\exams\01FitBoxInBox\obj\Debug\01FitBoxInBox.exe
+G:\c#\exams\01FitBoxInBox\obj\Debug\01FitBoxInBox.pdb

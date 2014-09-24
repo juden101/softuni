@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\bin\Debug\18TrailingZeroesInNFactorial.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\bin\Debug\18TrailingZeroesInNFactorial.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\bin\Debug\18TrailingZeroesInNFactorial.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\obj\Debug\18TrailingZeroesInNFactorial.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\obj\Debug\18TrailingZeroesInNFactorial.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\18TrailingZeroesInNFactorial\obj\Debug\18TrailingZeroesInNFactorial.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\10FibonacciNumbers\bin\Debug\10FibonacciNumbers.exe.config
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\10FibonacciNumbers\bin\Debug\10FibonacciNumbers.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\10FibonacciNumbers\bin\Debug\10FibonacciNumbers.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\10FibonacciNumbers\obj\Debug\10FibonacciNumbers.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\10FibonacciNumbers\obj\Debug\10FibonacciNumbers.pdb

@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\bin\Debug\LongestNonDecreasingSubsequence.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\bin\Debug\LongestNonDecreasingSubsequence.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\bin\Debug\LongestNonDecreasingSubsequence.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\obj\Debug\LongestNonDecreasingSubsequence.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\obj\Debug\LongestNonDecreasingSubsequence.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\LongestNonDecreasingSubsequence\obj\Debug\08LongestNonDecreasingSubsequence.csprojResolveAssemblyReference.cache

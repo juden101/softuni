@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\10.EmployeeData\bin\Debug\10.EmployeeData.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\10.EmployeeData\bin\Debug\10.EmployeeData.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\10.EmployeeData\bin\Debug\10.EmployeeData.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\10.EmployeeData\obj\Debug\10.EmployeeData.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\10.EmployeeData\obj\Debug\10.EmployeeData.pdb

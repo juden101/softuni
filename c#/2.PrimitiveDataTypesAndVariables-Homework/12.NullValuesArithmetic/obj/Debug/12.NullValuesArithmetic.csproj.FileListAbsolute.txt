@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\12.NullValuesArithmetic\bin\Debug\12.NullValuesArithmetic.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\12.NullValuesArithmetic\bin\Debug\12.NullValuesArithmetic.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\12.NullValuesArithmetic\bin\Debug\12.NullValuesArithmetic.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\12.NullValuesArithmetic\obj\Debug\12.NullValuesArithmetic.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\12.NullValuesArithmetic\obj\Debug\12.NullValuesArithmetic.pdb

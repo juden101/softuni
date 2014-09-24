@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\15House\bin\Debug\15House.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\15House\bin\Debug\15House.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\15House\bin\Debug\15House.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\15House\obj\Debug\15House.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\15House\obj\Debug\15House.pdb

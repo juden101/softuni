@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\06TheBiggestOfFiveNumbers\bin\Debug\06TheBiggestOfFiveNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\06TheBiggestOfFiveNumbers\bin\Debug\06TheBiggestOfFiveNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\06TheBiggestOfFiveNumbers\bin\Debug\06TheBiggestOfFiveNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\06TheBiggestOfFiveNumbers\obj\Debug\06TheBiggestOfFiveNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\06TheBiggestOfFiveNumbers\obj\Debug\06TheBiggestOfFiveNumbers.pdb

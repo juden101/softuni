@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\ReformatedCSharpProject\bin\Debug\ReformatedCSharpProject.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\ReformatedCSharpProject\bin\Debug\ReformatedCSharpProject.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\ReformatedCSharpProject\bin\Debug\ReformatedCSharpProject.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\ReformatedCSharpProject\obj\Debug\ReformatedCSharpProject.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\ReformatedCSharpProject\obj\Debug\ReformatedCSharpProject.pdb

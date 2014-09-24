@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\11RandomNumbersInGivenRange\bin\Debug\11RandomNumbersInGivenRange.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\11RandomNumbersInGivenRange\bin\Debug\11RandomNumbersInGivenRange.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\11RandomNumbersInGivenRange\bin\Debug\11RandomNumbersInGivenRange.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\11RandomNumbersInGivenRange\obj\Debug\11RandomNumbersInGivenRange.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\11RandomNumbersInGivenRange\obj\Debug\11RandomNumbersInGivenRange.pdb

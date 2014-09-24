@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\bin\Debug\12ZeroSubset.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\bin\Debug\12ZeroSubset.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\bin\Debug\12ZeroSubset.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\obj\Debug\12ZeroSubset.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\obj\Debug\12ZeroSubset.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\12ZeroSubset\obj\Debug\12ZeroSubset.pdb

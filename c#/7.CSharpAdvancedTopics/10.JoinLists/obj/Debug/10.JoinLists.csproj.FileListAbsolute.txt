@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\10.JoinLists\bin\Debug\10.JoinLists.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\10.JoinLists\bin\Debug\10.JoinLists.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\10.JoinLists\bin\Debug\10.JoinLists.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\10.JoinLists\obj\Debug\10.JoinLists.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\10.JoinLists\obj\Debug\10.JoinLists.pdb

@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\bin\Debug\17.Volleyball.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\bin\Debug\17.Volleyball.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\bin\Debug\17.Volleyball.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\obj\Debug\17.Volleyball.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\obj\Debug\17.Volleyball.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\17.Volleyball\obj\Debug\17.Volleyball.pdb

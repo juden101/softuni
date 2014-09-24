@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\bin\Debug\15.JoroTheFootballPlayer.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\bin\Debug\15.JoroTheFootballPlayer.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\bin\Debug\15.JoroTheFootballPlayer.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\obj\Debug\15.JoroTheFootballPlayer.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\obj\Debug\15.JoroTheFootballPlayer.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\15.JoroTheFootballPlayer\obj\Debug\15.JoroTheFootballPlayer.pdb

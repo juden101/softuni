@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TheExplorer\bin\Debug\19.TheExplorer.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TheExplorer\bin\Debug\19.TheExplorer.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TheExplorer\bin\Debug\19.TheExplorer.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TheExplorer\obj\Debug\19.TheExplorer.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TheExplorer\obj\Debug\19.TheExplorer.pdb

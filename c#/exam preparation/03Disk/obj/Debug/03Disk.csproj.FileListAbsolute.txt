@@ -1,0 +1,5 @@
+G:\c#\exams\03Disk\bin\Debug\03Disk.exe.config
+G:\c#\exams\03Disk\bin\Debug\03Disk.exe
+G:\c#\exams\03Disk\bin\Debug\03Disk.pdb
+G:\c#\exams\03Disk\obj\Debug\03Disk.exe
+G:\c#\exams\03Disk\obj\Debug\03Disk.pdb

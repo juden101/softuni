@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\19.BitsInverter\bin\Debug\19.BitsInverter.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\19.BitsInverter\bin\Debug\19.BitsInverter.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\19.BitsInverter\bin\Debug\19.BitsInverter.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\19.BitsInverter\obj\Debug\19.BitsInverter.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\19.BitsInverter\obj\Debug\19.BitsInverter.pdb

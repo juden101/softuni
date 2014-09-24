@@ -1,0 +1,5 @@
+G:\c#\exams\03DrawFigure\bin\Debug\03DrawFigure.exe.config
+G:\c#\exams\03DrawFigure\bin\Debug\03DrawFigure.exe
+G:\c#\exams\03DrawFigure\bin\Debug\03DrawFigure.pdb
+G:\c#\exams\03DrawFigure\obj\Debug\03DrawFigure.exe
+G:\c#\exams\03DrawFigure\obj\Debug\03DrawFigure.pdb

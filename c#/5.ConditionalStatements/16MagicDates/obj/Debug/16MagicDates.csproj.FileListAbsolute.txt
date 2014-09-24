@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\bin\Debug\16MagicDates.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\bin\Debug\16MagicDates.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\bin\Debug\16MagicDates.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\obj\Debug\16MagicDates.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\obj\Debug\16MagicDates.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\16MagicDates\obj\Debug\16MagicDates.pdb

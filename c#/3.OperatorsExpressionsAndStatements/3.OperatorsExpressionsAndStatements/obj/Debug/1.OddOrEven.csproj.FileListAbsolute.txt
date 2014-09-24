@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\obj\Debug\1.OddOrEven.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\bin\Debug\1.OddOrEven.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\bin\Debug\1.OddOrEven.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\bin\Debug\1.OddOrEven.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\obj\Debug\1.OddOrEven.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.OperatorsExpressionsAndStatements\obj\Debug\1.OddOrEven.pdb

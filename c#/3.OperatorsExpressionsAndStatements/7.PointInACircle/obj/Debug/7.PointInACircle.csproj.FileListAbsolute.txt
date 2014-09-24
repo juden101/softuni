@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\7.PointInACircle\bin\Debug\7.PointInACircle.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\7.PointInACircle\bin\Debug\7.PointInACircle.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\7.PointInACircle\bin\Debug\7.PointInACircle.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\7.PointInACircle\obj\Debug\7.PointInACircle.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\7.PointInACircle\obj\Debug\7.PointInACircle.pdb

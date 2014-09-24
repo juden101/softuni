@@ -1,0 +1,6 @@
+G:\c#\exams\03Sunglasses\bin\Debug\03Sunglasses.exe.config
+G:\c#\exams\03Sunglasses\bin\Debug\03Sunglasses.exe
+G:\c#\exams\03Sunglasses\bin\Debug\03Sunglasses.pdb
+G:\c#\exams\03Sunglasses\obj\Debug\03Sunglasses.csprojResolveAssemblyReference.cache
+G:\c#\exams\03Sunglasses\obj\Debug\03Sunglasses.exe
+G:\c#\exams\03Sunglasses\obj\Debug\03Sunglasses.pdb

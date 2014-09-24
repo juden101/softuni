@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\07SortThreeNumbersWithNestedIfs\bin\Debug\07SortThreeNumbersWithNestedIfs.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\07SortThreeNumbersWithNestedIfs\bin\Debug\07SortThreeNumbersWithNestedIfs.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\07SortThreeNumbersWithNestedIfs\bin\Debug\07SortThreeNumbersWithNestedIfs.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\07SortThreeNumbersWithNestedIfs\obj\Debug\07SortThreeNumbersWithNestedIfs.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\07SortThreeNumbersWithNestedIfs\obj\Debug\07SortThreeNumbersWithNestedIfs.pdb

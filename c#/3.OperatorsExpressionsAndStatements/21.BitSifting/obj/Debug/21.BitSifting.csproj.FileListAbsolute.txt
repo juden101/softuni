@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\21.BitSifting\bin\Debug\21.BitSifting.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\21.BitSifting\bin\Debug\21.BitSifting.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\21.BitSifting\bin\Debug\21.BitSifting.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\21.BitSifting\obj\Debug\21.BitSifting.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\21.BitSifting\obj\Debug\21.BitSifting.pdb

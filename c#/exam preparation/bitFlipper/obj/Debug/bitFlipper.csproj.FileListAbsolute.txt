@@ -1,0 +1,5 @@
+G:\c#\exams\bitFlipper\bin\Debug\bitFlipper.exe.config
+G:\c#\exams\bitFlipper\bin\Debug\bitFlipper.exe
+G:\c#\exams\bitFlipper\bin\Debug\bitFlipper.pdb
+G:\c#\exams\bitFlipper\obj\Debug\bitFlipper.exe
+G:\c#\exams\bitFlipper\obj\Debug\bitFlipper.pdb

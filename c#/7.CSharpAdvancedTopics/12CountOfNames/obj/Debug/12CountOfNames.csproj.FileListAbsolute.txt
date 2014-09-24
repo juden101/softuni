@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\bin\Debug\12CountOfNames.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\bin\Debug\12CountOfNames.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\bin\Debug\12CountOfNames.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\obj\Debug\12CountOfNames.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\obj\Debug\12CountOfNames.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\12CountOfNames\obj\Debug\12CountOfNames.pdb

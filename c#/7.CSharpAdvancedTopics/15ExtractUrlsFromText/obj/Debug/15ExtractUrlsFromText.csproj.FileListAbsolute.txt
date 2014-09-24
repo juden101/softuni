@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\15ExtractUrlsFromText\bin\Debug\15ExtractUrlsFromText.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\15ExtractUrlsFromText\bin\Debug\15ExtractUrlsFromText.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\15ExtractUrlsFromText\bin\Debug\15ExtractUrlsFromText.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\15ExtractUrlsFromText\obj\Debug\15ExtractUrlsFromText.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\15ExtractUrlsFromText\obj\Debug\15ExtractUrlsFromText.pdb

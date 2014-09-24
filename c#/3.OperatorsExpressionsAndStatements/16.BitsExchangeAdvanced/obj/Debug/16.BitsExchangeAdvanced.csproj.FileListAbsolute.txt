@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\bin\Debug\16.BitsExchangeAdvanced.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\bin\Debug\16.BitsExchangeAdvanced.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\bin\Debug\16.BitsExchangeAdvanced.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\obj\Debug\16.BitsExchangeAdvanced.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\obj\Debug\16.BitsExchangeAdvanced.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\16.BitsExchangeAdvanced\obj\Debug\16.BitsExchangeAdvanced.pdb

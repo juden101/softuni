@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\bin\Debug\07CalculateNFactorialKFactorial.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\bin\Debug\07CalculateNFactorialKFactorial.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\bin\Debug\07CalculateNFactorialKFactorial.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\obj\Debug\07CalculateNFactorialKFactorial.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\obj\Debug\07CalculateNFactorialKFactorial.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\07CalculateNFactorialKFactorial\obj\Debug\07CalculateNFactorialKFactorial.pdb

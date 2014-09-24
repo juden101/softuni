@@ -1,0 +1,6 @@
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\bin\Debug\02PrintComplanyInformation.exe.config
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\bin\Debug\02PrintComplanyInformation.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\bin\Debug\02PrintComplanyInformation.pdb
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\obj\Debug\02PrintComplanyInformation.csprojResolveAssemblyReference.cache
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\obj\Debug\02PrintComplanyInformation.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\02PrintComplanyInformation\obj\Debug\02PrintComplanyInformation.pdb

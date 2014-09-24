@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.DivideBySevenAndFive\bin\Debug\3.DivideBySevenAndFive.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.DivideBySevenAndFive\bin\Debug\3.DivideBySevenAndFive.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.DivideBySevenAndFive\bin\Debug\3.DivideBySevenAndFive.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.DivideBySevenAndFive\obj\Debug\3.DivideBySevenAndFive.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\3.DivideBySevenAndFive\obj\Debug\3.DivideBySevenAndFive.pdb

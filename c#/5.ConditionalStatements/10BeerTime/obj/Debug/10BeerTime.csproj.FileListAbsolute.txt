@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\10BeerTime\bin\Debug\10BeerTime.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\10BeerTime\bin\Debug\10BeerTime.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\10BeerTime\bin\Debug\10BeerTime.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\10BeerTime\obj\Debug\10BeerTime.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\10BeerTime\obj\Debug\10BeerTime.pdb

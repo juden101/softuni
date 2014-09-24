@@ -1,0 +1,5 @@
+G:\c#\exams\03Eclipse\bin\Debug\03Eclipse.exe.config
+G:\c#\exams\03Eclipse\bin\Debug\03Eclipse.exe
+G:\c#\exams\03Eclipse\bin\Debug\03Eclipse.pdb
+G:\c#\exams\03Eclipse\obj\Debug\03Eclipse.exe
+G:\c#\exams\03Eclipse\obj\Debug\03Eclipse.pdb

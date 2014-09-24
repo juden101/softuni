@@ -1,0 +1,5 @@
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\11NumbersInIntervalDividableByGivenNumber\bin\Debug\11NumbersInIntervalDividableByGivenNumber.exe.config
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\11NumbersInIntervalDividableByGivenNumber\bin\Debug\11NumbersInIntervalDividableByGivenNumber.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\11NumbersInIntervalDividableByGivenNumber\bin\Debug\11NumbersInIntervalDividableByGivenNumber.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\11NumbersInIntervalDividableByGivenNumber\obj\Debug\11NumbersInIntervalDividableByGivenNumber.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\11NumbersInIntervalDividableByGivenNumber\obj\Debug\11NumbersInIntervalDividableByGivenNumber.pdb

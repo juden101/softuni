@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\07MatrixOfPalindromes\bin\Debug\07MatrixOfPalindromes.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\07MatrixOfPalindromes\bin\Debug\07MatrixOfPalindromes.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\07MatrixOfPalindromes\bin\Debug\07MatrixOfPalindromes.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\07MatrixOfPalindromes\obj\Debug\07MatrixOfPalindromes.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\07MatrixOfPalindromes\obj\Debug\07MatrixOfPalindromes.pdb

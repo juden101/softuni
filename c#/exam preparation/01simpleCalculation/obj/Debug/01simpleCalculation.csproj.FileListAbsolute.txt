@@ -1,0 +1,6 @@
+G:\c#\exams\01simpleCalculation\bin\Debug\01simpleCalculation.exe.config
+G:\c#\exams\01simpleCalculation\bin\Debug\01simpleCalculation.exe
+G:\c#\exams\01simpleCalculation\bin\Debug\01simpleCalculation.pdb
+G:\c#\exams\01simpleCalculation\obj\Debug\01simpleCalculation.csprojResolveAssemblyReference.cache
+G:\c#\exams\01simpleCalculation\obj\Debug\01simpleCalculation.exe
+G:\c#\exams\01simpleCalculation\obj\Debug\01simpleCalculation.pdb

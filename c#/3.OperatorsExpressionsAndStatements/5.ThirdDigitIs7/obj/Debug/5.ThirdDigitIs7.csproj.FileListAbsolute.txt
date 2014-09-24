@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\bin\Debug\5.ThirdDigitIs7.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\bin\Debug\5.ThirdDigitIs7.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\bin\Debug\5.ThirdDigitIs7.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\obj\Debug\5.ThirdDigitIs7.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\obj\Debug\5.ThirdDigitIs7.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\5.ThirdDigitIs7\obj\Debug\5.ThirdDigitIs7.pdb

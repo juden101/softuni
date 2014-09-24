@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\12RandomizeTheNumbers1ToN\bin\Debug\12RandomizeTheNumbers1ToN.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\12RandomizeTheNumbers1ToN\bin\Debug\12RandomizeTheNumbers1ToN.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\12RandomizeTheNumbers1ToN\bin\Debug\12RandomizeTheNumbers1ToN.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\12RandomizeTheNumbers1ToN\obj\Debug\12RandomizeTheNumbers1ToN.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\12RandomizeTheNumbers1ToN\obj\Debug\12RandomizeTheNumbers1ToN.pdb

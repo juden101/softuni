@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\14.ModifyABitAtGivenPosition\bin\Debug\14.ModifyABitAtGivenPosition.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\14.ModifyABitAtGivenPosition\bin\Debug\14.ModifyABitAtGivenPosition.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\14.ModifyABitAtGivenPosition\bin\Debug\14.ModifyABitAtGivenPosition.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\14.ModifyABitAtGivenPosition\obj\Debug\14.ModifyABitAtGivenPosition.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\14.ModifyABitAtGivenPosition\obj\Debug\14.ModifyABitAtGivenPosition.pdb

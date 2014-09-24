@@ -1,0 +1,5 @@
+G:\c#\exams\03TheExplorer\bin\Debug\03TheExplorer.exe.config
+G:\c#\exams\03TheExplorer\bin\Debug\03TheExplorer.exe
+G:\c#\exams\03TheExplorer\bin\Debug\03TheExplorer.pdb
+G:\c#\exams\03TheExplorer\obj\Debug\03TheExplorer.exe
+G:\c#\exams\03TheExplorer\obj\Debug\03TheExplorer.pdb

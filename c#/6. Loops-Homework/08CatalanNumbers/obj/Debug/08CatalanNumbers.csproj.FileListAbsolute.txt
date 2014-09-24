@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\08CatalanNumbers\bin\Debug\08CatalanNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\08CatalanNumbers\bin\Debug\08CatalanNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\08CatalanNumbers\bin\Debug\08CatalanNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\08CatalanNumbers\obj\Debug\08CatalanNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\08CatalanNumbers\obj\Debug\08CatalanNumbers.pdb

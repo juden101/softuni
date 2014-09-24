@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\bin\Debug\01NumbersFromOneToN.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\bin\Debug\01NumbersFromOneToN.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\bin\Debug\01NumbersFromOneToN.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\obj\Debug\01NumbersFromOneToN.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\obj\Debug\01NumbersFromOneToN.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\01NumbersFromOneToN\obj\Debug\01NumbersFromOneToN.pdb

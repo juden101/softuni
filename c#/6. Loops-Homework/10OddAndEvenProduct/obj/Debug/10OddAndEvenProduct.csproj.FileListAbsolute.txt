@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\10OddAndEvenProduct\bin\Debug\10OddAndEvenProduct.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\10OddAndEvenProduct\bin\Debug\10OddAndEvenProduct.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\10OddAndEvenProduct\bin\Debug\10OddAndEvenProduct.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\10OddAndEvenProduct\obj\Debug\10OddAndEvenProduct.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\10OddAndEvenProduct\obj\Debug\10OddAndEvenProduct.pdb

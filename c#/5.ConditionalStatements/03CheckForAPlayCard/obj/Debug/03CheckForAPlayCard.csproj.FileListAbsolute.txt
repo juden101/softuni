@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\bin\Debug\03CheckForAPlayCard.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\bin\Debug\03CheckForAPlayCard.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\bin\Debug\03CheckForAPlayCard.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\obj\Debug\03CheckForAPlayCard.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\obj\Debug\03CheckForAPlayCard.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\03CheckForAPlayCard\obj\Debug\03CheckForAPlayCard.pdb

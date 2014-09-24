@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\04PrintADeckOf52Cards\bin\Debug\04PrintADeckOf52Cards.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\04PrintADeckOf52Cards\bin\Debug\04PrintADeckOf52Cards.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\04PrintADeckOf52Cards\bin\Debug\04PrintADeckOf52Cards.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\04PrintADeckOf52Cards\obj\Debug\04PrintADeckOf52Cards.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\04PrintADeckOf52Cards\obj\Debug\04PrintADeckOf52Cards.pdb

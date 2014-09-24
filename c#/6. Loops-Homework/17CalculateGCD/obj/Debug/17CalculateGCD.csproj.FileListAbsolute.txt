@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\17CalculateGCD\bin\Debug\17CalculateGCD.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\17CalculateGCD\bin\Debug\17CalculateGCD.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\17CalculateGCD\bin\Debug\17CalculateGCD.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\17CalculateGCD\obj\Debug\17CalculateGCD.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\17CalculateGCD\obj\Debug\17CalculateGCD.pdb

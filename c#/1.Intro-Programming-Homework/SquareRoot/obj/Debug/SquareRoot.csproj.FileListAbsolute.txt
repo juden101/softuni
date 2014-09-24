@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\SquareRoot\bin\Debug\SquareRoot.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\SquareRoot\bin\Debug\SquareRoot.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\SquareRoot\bin\Debug\SquareRoot.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\SquareRoot\obj\Debug\SquareRoot.pdb

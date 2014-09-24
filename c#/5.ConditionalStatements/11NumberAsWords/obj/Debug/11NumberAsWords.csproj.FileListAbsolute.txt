@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\11NumberAsWords\bin\Debug\11NumberAsWords.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\11NumberAsWords\bin\Debug\11NumberAsWords.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\11NumberAsWords\bin\Debug\11NumberAsWords.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\11NumberAsWords\obj\Debug\11NumberAsWords.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\11NumberAsWords\obj\Debug\11NumberAsWords.pdb

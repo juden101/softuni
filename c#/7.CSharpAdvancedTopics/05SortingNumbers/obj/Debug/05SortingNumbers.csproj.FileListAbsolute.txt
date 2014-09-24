@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\05SortingNumbers\bin\Debug\05SortingNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\05SortingNumbers\bin\Debug\05SortingNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\05SortingNumbers\bin\Debug\05SortingNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\05SortingNumbers\obj\Debug\05SortingNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\05SortingNumbers\obj\Debug\05SortingNumbers.pdb

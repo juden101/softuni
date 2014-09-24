@@ -1,0 +1,5 @@
+G:\c#\exams\bitsUp\bin\Debug\bitsUp.exe.config
+G:\c#\exams\bitsUp\bin\Debug\bitsUp.exe
+G:\c#\exams\bitsUp\bin\Debug\bitsUp.pdb
+G:\c#\exams\bitsUp\obj\Debug\bitsUp.exe
+G:\c#\exams\bitsUp\obj\Debug\bitsUp.pdb

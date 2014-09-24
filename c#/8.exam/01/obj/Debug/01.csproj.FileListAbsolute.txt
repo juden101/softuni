@@ -1,0 +1,6 @@
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\bin\Debug\01.exe.config
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\bin\Debug\01.exe
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\bin\Debug\01.pdb
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\obj\Debug\01.csprojResolveAssemblyReference.cache
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\obj\Debug\01.exe
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\01\obj\Debug\01.pdb

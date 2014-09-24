@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\09RemoveNames\bin\Debug\09RemoveNames.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\09RemoveNames\bin\Debug\09RemoveNames.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\09RemoveNames\bin\Debug\09RemoveNames.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\09RemoveNames\obj\Debug\09RemoveNames.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\09RemoveNames\obj\Debug\09RemoveNames.pdb

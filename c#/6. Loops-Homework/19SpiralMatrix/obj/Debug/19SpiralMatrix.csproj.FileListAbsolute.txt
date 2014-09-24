@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\bin\Debug\19SpiralMatrix.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\bin\Debug\19SpiralMatrix.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\bin\Debug\19SpiralMatrix.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\obj\Debug\19SpiralMatrix.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\obj\Debug\19SpiralMatrix.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\19SpiralMatrix\obj\Debug\19SpiralMatrix.pdb

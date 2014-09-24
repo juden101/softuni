@@ -1,0 +1,6 @@
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\bin\Debug\14SumOfElements.exe.config
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\bin\Debug\14SumOfElements.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\bin\Debug\14SumOfElements.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\obj\Debug\14SumOfElements.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\obj\Debug\14SumOfElements.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\14SumOfElements\obj\Debug\14SumOfElements.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\08DigitAsWord\bin\Debug\08DigitAsWord.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\08DigitAsWord\bin\Debug\08DigitAsWord.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\08DigitAsWord\bin\Debug\08DigitAsWord.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\08DigitAsWord\obj\Debug\08DigitAsWord.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\08DigitAsWord\obj\Debug\08DigitAsWord.pdb

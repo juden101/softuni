@@ -1,0 +1,6 @@
+G:\c#\exams\friendBits\bin\Debug\friendBits.exe.config
+G:\c#\exams\friendBits\bin\Debug\friendBits.exe
+G:\c#\exams\friendBits\bin\Debug\friendBits.pdb
+G:\c#\exams\friendBits\obj\Debug\friendBits.csprojResolveAssemblyReference.cache
+G:\c#\exams\friendBits\obj\Debug\friendBits.exe
+G:\c#\exams\friendBits\obj\Debug\friendBits.pdb

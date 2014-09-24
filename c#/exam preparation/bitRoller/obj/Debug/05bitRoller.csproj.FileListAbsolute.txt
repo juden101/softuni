@@ -1,0 +1,3 @@
+G:\c#\exams\bitRoller\bin\Debug\bitRoller.exe.config
+G:\c#\exams\bitRoller\obj\Debug\bitRoller.exe
+G:\c#\exams\bitRoller\obj\Debug\bitRoller.pdb

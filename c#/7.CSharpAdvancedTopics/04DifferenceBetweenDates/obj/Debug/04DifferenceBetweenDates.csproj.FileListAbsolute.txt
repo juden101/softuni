@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\bin\Debug\04DifferenceBetweenDates.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\bin\Debug\04DifferenceBetweenDates.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\bin\Debug\04DifferenceBetweenDates.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\obj\Debug\04DifferenceBetweenDates.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\obj\Debug\04DifferenceBetweenDates.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\04DifferenceBetweenDates\obj\Debug\04DifferenceBetweenDates.pdb

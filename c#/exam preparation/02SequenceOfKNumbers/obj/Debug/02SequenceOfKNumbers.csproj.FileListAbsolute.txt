@@ -1,0 +1,5 @@
+G:\c#\exams\02SequenceOfKNumbers\bin\Debug\02SequenceOfKNumbers.exe.config
+G:\c#\exams\02SequenceOfKNumbers\bin\Debug\02SequenceOfKNumbers.exe
+G:\c#\exams\02SequenceOfKNumbers\bin\Debug\02SequenceOfKNumbers.pdb
+G:\c#\exams\02SequenceOfKNumbers\obj\Debug\02SequenceOfKNumbers.exe
+G:\c#\exams\02SequenceOfKNumbers\obj\Debug\02SequenceOfKNumbers.pdb

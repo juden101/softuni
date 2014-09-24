@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\18.Nine-DigitMagicNumbers\bin\Debug\18.Nine-DigitMagicNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\18.Nine-DigitMagicNumbers\bin\Debug\18.Nine-DigitMagicNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\18.Nine-DigitMagicNumbers\bin\Debug\18.Nine-DigitMagicNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\18.Nine-DigitMagicNumbers\obj\Debug\18.Nine-DigitMagicNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\18.Nine-DigitMagicNumbers\obj\Debug\18.Nine-DigitMagicNumbers.pdb

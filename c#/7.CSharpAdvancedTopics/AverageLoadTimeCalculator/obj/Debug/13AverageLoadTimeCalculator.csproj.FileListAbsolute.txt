@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\AverageLoadTimeCalculator\bin\Debug\AverageLoadTimeCalculator.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\AverageLoadTimeCalculator\bin\Debug\AverageLoadTimeCalculator.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\AverageLoadTimeCalculator\bin\Debug\AverageLoadTimeCalculator.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\AverageLoadTimeCalculator\obj\Debug\AverageLoadTimeCalculator.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\AverageLoadTimeCalculator\obj\Debug\AverageLoadTimeCalculator.pdb

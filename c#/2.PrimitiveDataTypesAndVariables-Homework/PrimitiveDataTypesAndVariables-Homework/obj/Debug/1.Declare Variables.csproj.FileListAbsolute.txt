@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\bin\Debug\PrimitiveDataTypesAndVariables-Homework.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\bin\Debug\PrimitiveDataTypesAndVariables-Homework.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\bin\Debug\PrimitiveDataTypesAndVariables-Homework.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\obj\Debug\1.Declare Variables.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\obj\Debug\PrimitiveDataTypesAndVariables-Homework.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\PrimitiveDataTypesAndVariables-Homework\obj\Debug\PrimitiveDataTypesAndVariables-Homework.pdb

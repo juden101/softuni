@@ -1,0 +1,1 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\bin\Debug\5.ConditionalStatements.exe.config

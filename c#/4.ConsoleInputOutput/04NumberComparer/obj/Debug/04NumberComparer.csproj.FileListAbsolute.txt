@@ -1,0 +1,5 @@
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\04NumberComparer\bin\Debug\04NumberComparer.exe.config
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\04NumberComparer\bin\Debug\04NumberComparer.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\04NumberComparer\bin\Debug\04NumberComparer.pdb
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\04NumberComparer\obj\Debug\04NumberComparer.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\04NumberComparer\obj\Debug\04NumberComparer.pdb

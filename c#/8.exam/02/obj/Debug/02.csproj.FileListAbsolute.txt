@@ -1,0 +1,5 @@
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\02\bin\Debug\02.exe.config
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\02\bin\Debug\02.exe
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\02\bin\Debug\02.pdb
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\02\obj\Debug\02.exe
+c:\Users\Asus\documents\visual studio 2013\Projects\softuni\02\obj\Debug\02.pdb

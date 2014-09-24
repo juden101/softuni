@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\09.AgeAfterTenYears\bin\Debug\09.AgeAfterTenYears.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\09.AgeAfterTenYears\bin\Debug\09.AgeAfterTenYears.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\09.AgeAfterTenYears\bin\Debug\09.AgeAfterTenYears.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\09.AgeAfterTenYears\obj\Debug\09.AgeAfterTenYears.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\09.AgeAfterTenYears\obj\Debug\09.AgeAfterTenYears.pdb

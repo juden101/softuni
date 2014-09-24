@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintFirstAndLastName\bin\Debug\PrintFirstAndLastName.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintFirstAndLastName\bin\Debug\PrintFirstAndLastName.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintFirstAndLastName\bin\Debug\PrintFirstAndLastName.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintFirstAndLastName\obj\Debug\PrintFirstAndLastName.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintFirstAndLastName\obj\Debug\PrintFirstAndLastName.pdb

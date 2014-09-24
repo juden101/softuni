@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\bin\Debug\01ExchangeIfGreater.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\bin\Debug\01ExchangeIfGreater.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\bin\Debug\01ExchangeIfGreater.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\obj\Debug\01ExchangeIfGreater.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\obj\Debug\01ExchangeIfGreater.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\5.ConditionalStatements\obj\Debug\01ExchangeIfGreater.pdb

@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\02BonusScore\bin\Debug\02BonusScore.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\02BonusScore\bin\Debug\02BonusScore.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\02BonusScore\bin\Debug\02BonusScore.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\02BonusScore\obj\Debug\02BonusScore.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\02BonusScore\obj\Debug\02BonusScore.pdb

@@ -1,0 +1,6 @@
+G:\c#\exams\bitsInverter\bin\Debug\bitsInverter.exe.config
+G:\c#\exams\bitsInverter\obj\Debug\bitsInverter.csprojResolveAssemblyReference.cache
+G:\c#\exams\bitsInverter\bin\Debug\bitsInverter.exe
+G:\c#\exams\bitsInverter\bin\Debug\bitsInverter.pdb
+G:\c#\exams\bitsInverter\obj\Debug\bitsInverter.exe
+G:\c#\exams\bitsInverter\obj\Debug\bitsInverter.pdb

@@ -1,0 +1,9 @@
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\bin\Debug\bitShooter.exe.config
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\bin\Debug\bitShooter.exe
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\bin\Debug\bitShooter.pdb
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\obj\Debug\bitShooter.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\obj\Debug\bitShooter.exe
+C:\Users\ivzb\Desktop\c# projects\cSharpExam\bitShooter\obj\Debug\bitShooter.pdb
+G:\c#\exams\bitShooter\bin\Debug\bitShooter.exe.config
+G:\c#\exams\bitShooter\obj\Debug\bitShooter.exe
+G:\c#\exams\bitShooter\obj\Debug\bitShooter.pdb

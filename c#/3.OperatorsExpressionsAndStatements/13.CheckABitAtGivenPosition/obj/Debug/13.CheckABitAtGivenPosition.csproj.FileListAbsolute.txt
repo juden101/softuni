@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\13.CheckABitAtGivenPosition\bin\Debug\13.CheckABitAtGivenPosition.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\13.CheckABitAtGivenPosition\bin\Debug\13.CheckABitAtGivenPosition.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\13.CheckABitAtGivenPosition\bin\Debug\13.CheckABitAtGivenPosition.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\13.CheckABitAtGivenPosition\obj\Debug\13.CheckABitAtGivenPosition.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\13.CheckABitAtGivenPosition\obj\Debug\13.CheckABitAtGivenPosition.pdb

@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\bin\Debug\PrintSequence.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\bin\Debug\PrintSequence.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\bin\Debug\PrintSequence.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintSequence\obj\Debug\PrintSequence.pdb

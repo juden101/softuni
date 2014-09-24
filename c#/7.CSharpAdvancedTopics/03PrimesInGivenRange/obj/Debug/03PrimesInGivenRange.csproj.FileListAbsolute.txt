@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\03PrimesInGivenRange\bin\Debug\03PrimesInGivenRange.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\03PrimesInGivenRange\bin\Debug\03PrimesInGivenRange.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\03PrimesInGivenRange\bin\Debug\03PrimesInGivenRange.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\03PrimesInGivenRange\obj\Debug\03PrimesInGivenRange.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\03PrimesInGivenRange\obj\Debug\03PrimesInGivenRange.pdb

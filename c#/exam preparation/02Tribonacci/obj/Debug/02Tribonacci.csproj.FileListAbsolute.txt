@@ -1,0 +1,6 @@
+G:\c#\exams\02Tribonacci\bin\Debug\02Tribonacci.exe.config
+G:\c#\exams\02Tribonacci\bin\Debug\02Tribonacci.exe
+G:\c#\exams\02Tribonacci\bin\Debug\02Tribonacci.pdb
+G:\c#\exams\02Tribonacci\obj\Debug\02Tribonacci.exe
+G:\c#\exams\02Tribonacci\obj\Debug\02Tribonacci.pdb
+G:\c#\exams\02Tribonacci\obj\Debug\02Tribonacci.csprojResolveAssemblyReference.cache

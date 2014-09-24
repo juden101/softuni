@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\16.CountAWordInAText\bin\Debug\16.CountAWordInAText.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\16.CountAWordInAText\bin\Debug\16.CountAWordInAText.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\16.CountAWordInAText\bin\Debug\16.CountAWordInAText.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\16.CountAWordInAText\obj\Debug\16.CountAWordInAText.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\16.CountAWordInAText\obj\Debug\16.CountAWordInAText.pdb

@@ -1,0 +1,9 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\bin\Debug\01FibonacciNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\bin\Debug\01FibonacciNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\bin\Debug\01FibonacciNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\obj\Debug\01FibonacciNumbers.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\obj\Debug\01FibonacciNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\01FibonacciNumbers\obj\Debug\01FibonacciNumbers.pdb
+G:\c#\7.CSharpAdvancedTopics\01FibonacciNumbers\bin\Debug\01FibonacciNumbers.exe.config
+G:\c#\7.CSharpAdvancedTopics\01FibonacciNumbers\obj\Debug\01FibonacciNumbers.exe
+G:\c#\7.CSharpAdvancedTopics\01FibonacciNumbers\obj\Debug\01FibonacciNumbers.pdb

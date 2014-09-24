@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\bin\Debug\20.BitsUp.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\bin\Debug\20.BitsUp.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\bin\Debug\20.BitsUp.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\obj\Debug\20.BitsUp.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\obj\Debug\20.BitsUp.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\20.BitsUp\obj\Debug\20.BitsUp.csprojResolveAssemblyReference.cache

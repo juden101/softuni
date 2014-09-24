@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\12.ExtractBitFromInteger\bin\Debug\12.ExtractBitFromInteger.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\12.ExtractBitFromInteger\bin\Debug\12.ExtractBitFromInteger.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\12.ExtractBitFromInteger\bin\Debug\12.ExtractBitFromInteger.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\12.ExtractBitFromInteger\obj\Debug\12.ExtractBitFromInteger.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\12.ExtractBitFromInteger\obj\Debug\12.ExtractBitFromInteger.pdb

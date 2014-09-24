@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\bin\Debug\10.PointInsideACircleAndOutsideOfARectangle.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\bin\Debug\10.PointInsideACircleAndOutsideOfARectangle.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\bin\Debug\10.PointInsideACircleAndOutsideOfARectangle.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\obj\Debug\10.PointInsideACircleAndOutsideOfARectangle.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\obj\Debug\10.PointInsideACircleAndOutsideOfARectangle.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\10.PointInsideACircleAndOutsideOfARectangle\obj\Debug\10.PointInsideACircleAndOutsideOfARectangle.pdb

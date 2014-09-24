@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\2.GravitationOnTheMoon\bin\Debug\2.GravitationOnTheMoon.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\2.GravitationOnTheMoon\bin\Debug\2.GravitationOnTheMoon.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\2.GravitationOnTheMoon\bin\Debug\2.GravitationOnTheMoon.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\2.GravitationOnTheMoon\obj\Debug\2.GravitationOnTheMoon.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\2.GravitationOnTheMoon\obj\Debug\2.GravitationOnTheMoon.pdb

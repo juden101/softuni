@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\bin\Debug\19.TrapezoidArea.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\bin\Debug\19.TrapezoidArea.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\bin\Debug\19.TrapezoidArea.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\obj\Debug\9.TrapezoidArea.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\obj\Debug\19.TrapezoidArea.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\19.TrapezoidArea\obj\Debug\19.TrapezoidArea.pdb

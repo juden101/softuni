@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\06CalculateNKFactoriel\bin\Debug\06CalculateNKFactoriel.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\06CalculateNKFactoriel\bin\Debug\06CalculateNKFactoriel.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\06CalculateNKFactoriel\bin\Debug\06CalculateNKFactoriel.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\06CalculateNKFactoriel\obj\Debug\06CalculateNKFactoriel.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\06CalculateNKFactoriel\obj\Debug\06CalculateNKFactoriel.pdb

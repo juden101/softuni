@@ -1,0 +1,5 @@
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\16MagicStrings\bin\Debug\16MagicStrings.exe.config
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\16MagicStrings\bin\Debug\16MagicStrings.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\16MagicStrings\bin\Debug\16MagicStrings.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\16MagicStrings\obj\Debug\16MagicStrings.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\16MagicStrings\obj\Debug\16MagicStrings.pdb

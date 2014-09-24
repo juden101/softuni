@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\5. Boolean Variable\bin\Debug\_5.Boolean_Variable.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\5. Boolean Variable\bin\Debug\_5.Boolean_Variable.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\5. Boolean Variable\bin\Debug\_5.Boolean_Variable.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\5. Boolean Variable\obj\Debug\_5.Boolean_Variable.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\5. Boolean Variable\obj\Debug\_5.Boolean_Variable.pdb

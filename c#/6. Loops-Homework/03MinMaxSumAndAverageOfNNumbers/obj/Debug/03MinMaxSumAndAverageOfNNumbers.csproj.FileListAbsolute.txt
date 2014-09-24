@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\bin\Debug\03MinMaxSumAndAverageOfNNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\bin\Debug\03MinMaxSumAndAverageOfNNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\bin\Debug\03MinMaxSumAndAverageOfNNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\obj\Debug\03MinMaxSumAndAverageOfNNumbers.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\obj\Debug\03MinMaxSumAndAverageOfNNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\03MinMaxSumAndAverageOfNNumbers\obj\Debug\03MinMaxSumAndAverageOfNNumbers.pdb

@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\2.FloatOrDouble\bin\Debug\2.FloatOrDouble.exe.config
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\2.FloatOrDouble\bin\Debug\2.FloatOrDouble.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\2.FloatOrDouble\bin\Debug\2.FloatOrDouble.pdb
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\2.FloatOrDouble\obj\Debug\2.FloatOrDouble.exe
+C:\Users\ivzb\Desktop\c# projects\PrimitiveDataTypesAndVariables-Homework\2.FloatOrDouble\obj\Debug\2.FloatOrDouble.pdb

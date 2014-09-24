@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\16DecimalToHexadecimalNumber\bin\Debug\16DecimalToHexadecimalNumber.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\16DecimalToHexadecimalNumber\bin\Debug\16DecimalToHexadecimalNumber.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\16DecimalToHexadecimalNumber\bin\Debug\16DecimalToHexadecimalNumber.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\16DecimalToHexadecimalNumber\obj\Debug\16DecimalToHexadecimalNumber.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\16DecimalToHexadecimalNumber\obj\Debug\16DecimalToHexadecimalNumber.pdb

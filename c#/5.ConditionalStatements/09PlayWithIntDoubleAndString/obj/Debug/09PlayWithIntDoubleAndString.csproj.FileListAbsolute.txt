@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\bin\Debug\09PlayWithIntDoubleAndString.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\bin\Debug\09PlayWithIntDoubleAndString.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\bin\Debug\09PlayWithIntDoubleAndString.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\obj\Debug\09PlayWithIntDoubleAndString.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\obj\Debug\09PlayWithIntDoubleAndString.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\09PlayWithIntDoubleAndString\obj\Debug\09PlayWithIntDoubleAndString.pdb

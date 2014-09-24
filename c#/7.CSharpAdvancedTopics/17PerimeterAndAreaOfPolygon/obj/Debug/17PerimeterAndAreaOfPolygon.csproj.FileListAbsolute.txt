@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\17PerimeterAndAreaOfPolygon\bin\Debug\17PerimeterAndAreaOfPolygon.exe.config
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\17PerimeterAndAreaOfPolygon\bin\Debug\17PerimeterAndAreaOfPolygon.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\17PerimeterAndAreaOfPolygon\bin\Debug\17PerimeterAndAreaOfPolygon.pdb
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\17PerimeterAndAreaOfPolygon\obj\Debug\17PerimeterAndAreaOfPolygon.exe
+C:\Users\ivzb\Desktop\c# projects\7.CSharpAdvancedTopics\17PerimeterAndAreaOfPolygon\obj\Debug\17PerimeterAndAreaOfPolygon.pdb

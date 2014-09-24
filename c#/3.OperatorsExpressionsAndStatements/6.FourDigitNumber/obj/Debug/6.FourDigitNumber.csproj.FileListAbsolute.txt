@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\bin\Debug\6.FourDigitNumber.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\bin\Debug\6.FourDigitNumber.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\bin\Debug\6.FourDigitNumber.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\obj\Debug\6.FourDigitNumber.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\obj\Debug\6.FourDigitNumber.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\6.FourDigitNumber\obj\Debug\6.FourDigitNumber.pdb

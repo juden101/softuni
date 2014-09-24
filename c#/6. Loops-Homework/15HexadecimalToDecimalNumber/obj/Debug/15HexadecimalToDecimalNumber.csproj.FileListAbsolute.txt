@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\15HexadecimalToDecimalNumber\bin\Debug\15HexadecimalToDecimalNumber.exe.config
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\15HexadecimalToDecimalNumber\bin\Debug\15HexadecimalToDecimalNumber.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\15HexadecimalToDecimalNumber\bin\Debug\15HexadecimalToDecimalNumber.pdb
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\15HexadecimalToDecimalNumber\obj\Debug\15HexadecimalToDecimalNumber.exe
+C:\Users\ivzb\Desktop\c# projects\6. Loops-Homework\15HexadecimalToDecimalNumber\obj\Debug\15HexadecimalToDecimalNumber.pdb

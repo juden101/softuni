@@ -1,0 +1,6 @@
+G:\c#\exams\04NestedLoops\bin\Debug\04NestedLoops.exe.config
+G:\c#\exams\04NestedLoops\obj\Debug\04NestedLoops.csprojResolveAssemblyReference.cache
+G:\c#\exams\04NestedLoops\bin\Debug\04NestedLoops.exe
+G:\c#\exams\04NestedLoops\bin\Debug\04NestedLoops.pdb
+G:\c#\exams\04NestedLoops\obj\Debug\04NestedLoops.exe
+G:\c#\exams\04NestedLoops\obj\Debug\04NestedLoops.pdb

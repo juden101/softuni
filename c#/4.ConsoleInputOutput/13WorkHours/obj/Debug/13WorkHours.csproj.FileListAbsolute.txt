@@ -1,0 +1,5 @@
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\13WorkHours\bin\Debug\13WorkHours.exe.config
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\13WorkHours\bin\Debug\13WorkHours.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\13WorkHours\bin\Debug\13WorkHours.pdb
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\13WorkHours\obj\Debug\13WorkHours.exe
+C:\Users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\13WorkHours\obj\Debug\13WorkHours.pdb

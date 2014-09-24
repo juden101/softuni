@@ -1,0 +1,5 @@
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\03CirclePerimeterAndArea\bin\Debug\03CirclePerimeterAndArea.exe.config
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\03CirclePerimeterAndArea\bin\Debug\03CirclePerimeterAndArea.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\03CirclePerimeterAndArea\bin\Debug\03CirclePerimeterAndArea.pdb
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\03CirclePerimeterAndArea\obj\Debug\03CirclePerimeterAndArea.exe
+c:\users\ivzb\documents\visual studio 2013\Projects\HomeworkConsoleInputOutput\03CirclePerimeterAndArea\obj\Debug\03CirclePerimeterAndArea.pdb

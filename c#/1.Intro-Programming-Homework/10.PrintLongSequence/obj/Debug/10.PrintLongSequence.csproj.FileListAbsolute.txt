@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\10.PrintLongSequence\bin\Debug\10.PrintLongSequence.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\10.PrintLongSequence\bin\Debug\10.PrintLongSequence.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\10.PrintLongSequence\bin\Debug\10.PrintLongSequence.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\10.PrintLongSequence\obj\Debug\10.PrintLongSequence.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\10.PrintLongSequence\obj\Debug\10.PrintLongSequence.pdb

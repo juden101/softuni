@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintNumbers\bin\Debug\PrintNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\Intro-Programming-Homework\PrintNumbers\obj\Debug\PrintNumbers.pdb

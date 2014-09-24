@@ -1,0 +1,6 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\bin\Debug\14Pairs.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\bin\Debug\14Pairs.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\bin\Debug\14Pairs.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\obj\Debug\14Pairs.csprojResolveAssemblyReference.cache
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\obj\Debug\14Pairs.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\14Pairs\obj\Debug\14Pairs.pdb

@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\05TheBiggestOfThreeNumbers\bin\Debug\05TheBiggestOfThreeNumbers.exe.config
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\05TheBiggestOfThreeNumbers\bin\Debug\05TheBiggestOfThreeNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\05TheBiggestOfThreeNumbers\bin\Debug\05TheBiggestOfThreeNumbers.pdb
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\05TheBiggestOfThreeNumbers\obj\Debug\05TheBiggestOfThreeNumbers.exe
+C:\Users\ivzb\Desktop\c# projects\5.ConditionalStatements\05TheBiggestOfThreeNumbers\obj\Debug\05TheBiggestOfThreeNumbers.pdb

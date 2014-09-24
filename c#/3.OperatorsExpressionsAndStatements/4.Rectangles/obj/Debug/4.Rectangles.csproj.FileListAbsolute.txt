@@ -1,0 +1,5 @@
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\4.Rectangles\bin\Debug\4.Rectangles.exe.config
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\4.Rectangles\bin\Debug\4.Rectangles.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\4.Rectangles\bin\Debug\4.Rectangles.pdb
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\4.Rectangles\obj\Debug\4.Rectangles.exe
+C:\Users\ivzb\Desktop\3.OperatorsExpressionsAndStatements\4.Rectangles\obj\Debug\4.Rectangles.pdb
