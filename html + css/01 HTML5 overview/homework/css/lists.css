@@ -1,0 +1,12 @@
+#circle-list{
+    list-style-type:circle;
+}
+#nested-list{
+    list-style-type:none;
+}
+#square-list{
+    list-style-type:square;
+}
+#disc-list{
+    list-style-type:disc;
+}
