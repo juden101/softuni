@@ -1,0 +1,110 @@
+body {
+    background-color: #009440;
+    font-family: Tahoma;
+    font-size: 16px;
+}
+
+table {
+    border: 1px solid #000;
+    border-spacing: 0;
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+table tr {
+    background-color: #fff;
+}
+
+table tr th, table tr td {
+    border: 1px solid #000;
+    border-left: none;
+    border-bottom: none;
+}
+
+table tr th {
+    border-top: none;
+    background-color: #ffcd0f;
+    padding: 10px;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+table tr th:last-child, table tr td:last-child {
+    border-right: none;
+}
+
+table tr:nth-child(2n+3) {
+    background-color: #cecece;
+}
+
+table tr td:nth-child(odd) {
+    width: 160px;
+}
+
+table tr th:nth-child(4n+1), table tr td:nth-child(4n+1) {
+    text-align: right;
+}
+
+table tr th:nth-child(4n+3), table tr td:nth-child(4n+3) {
+    text-align: left;
+}
+
+table tr th[colspan] {
+    text-align: center;
+}
+
+table tr td img {
+    vertical-align: middle;
+}
+
+/* border radius */
+table tr:first-child th:first-child {
+    border-top-left-radius:10px
+}
+
+table tr:first-child th:last-child {
+    border-top-right-radius:10px
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius:10px
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius:10px
+}
+
+table tr td select {
+    height: 32px;
+    color: #009440;
+}
+
+table tr td select[disabled] {
+    background-color: #e3e3e3;
+    color: #f00;
+}
+
+
+.bet {
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 29px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.red {
+    background-color: #f00;
+}
+
+.green {
+    background-color: #009440;
+}

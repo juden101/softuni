@@ -1,0 +1,51 @@
+#slide {
+    background: url('../images/powerpoint.png') no-repeat;
+    width: 1280px;
+    height: 720px;
+    margin: 0 auto;
+    font-family: Calibri;
+}
+
+#slide #title {
+    color: #ffce67;
+    padding: 20px;
+    padding-bottom: 0;
+    font-size: 40px;
+}
+
+ul {
+    color: #fff;
+    margin-left: 25px;
+}
+
+ul li {
+    color: #fdbb58;
+    list-style-type: square;
+    font-size: 30px;
+}
+
+ul li p {
+    color: #fff;
+    margin: 20px 0;
+}
+
+.tag {
+    color: #ffd863;
+    font-size: 35px;
+}
+
+.code-holder {
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, .2);
+    width: 93%;
+    padding: 5px 10px;
+}
+
+.code-holder .code {
+    margin: 0;
+    color: #fff9d0;
+}
+
+.code-holder .indent {
+    text-indent: 40px;
+}
