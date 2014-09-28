@@ -1,0 +1,84 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+table {
+    background-color: #234465;
+}
+
+tr {
+    margin-bottom: 5px;
+}
+
+.beta {
+    position: absolute;
+    top: 15px;
+    left: 240px;
+}
+
+td#logo {
+    padding: 10px;
+    padding-right: 40px;
+}
+
+a:not(.logo) {
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 8px 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+a:not(.logo):hover {
+    background-color: #4ca0db;
+    transition: all 0.3s ease;
+}
+
+a#user-link:hover{
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+td#notification {
+    text-align: right;
+    padding-right: 40px;
+}
+
+td#notification img {
+    position: absolute;
+    margin-left: 5px;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+    height: 20px;
+    padding: 7px;
+    color: #367cae;
+    position: absolute;
+    top: 8px;
+}
+
+button {
+    border: 1px solid #ccc;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #fff;
+    background: url("../images/glass.png") 5px 8px no-repeat;
+    width: 30px;
+    height: 34px;
+    position: absolute;
+    top: 8px;
+    margin-left: 184px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #367cae;
+}

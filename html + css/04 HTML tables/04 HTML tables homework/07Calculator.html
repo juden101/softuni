@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link href="styles/calculator.css" rel="stylesheet" />
+        <script src="scripts/calculator.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="display"></td>
+            </tr>
+
+            <tr>
+                <td><button onClick="put(1)">1</button></td>
+                <td><button onClick="put(2)">2</button></td>
+                <td><button onClick="put(3)">3</button></td>
+                <td><button onClick="put('+')">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button onClick="put(4)">4</button></td>
+                <td><button onClick="put(5)">5</button></td>
+                <td><button onClick="put(6)">6</button></td>
+                <td><button onClick="put('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button onClick="put(7)">7</button></td>
+                <td><button onClick="put(8)">8</button></td>
+                <td><button onClick="put(9)">9</button></td>
+                <td><button onClick="put('*')">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button onClick="put('C')">C</button></td>
+                <td><button onClick="put(0)">0</button></td>
+                <td><button onClick="put('=')">=</button></td>
+                <td><button onClick="put('/')">/</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
