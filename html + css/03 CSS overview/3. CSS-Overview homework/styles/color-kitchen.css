@@ -1,0 +1,180 @@
+body {
+    background-image: url("../images/color-kitchen.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+body > header {
+    background-color: #008000;
+    width: 33.4%;
+    height: 100px;
+    margin: 0 auto;
+    color: #ff0;
+    font-size: 3.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+    body > header:before {
+        content: " ";
+        background-color: #f00;
+        width: 33.3%;
+        height: 100px;
+        /display: inline-block;
+        position: absolute;
+        left: 0;
+    }
+
+    body > header:after {
+        content: " ";
+        background-color: #00f;
+        width: 33.3%;
+        height: 100px;
+        /display: inline-block;
+        position: absolute;
+        right: 0;
+    }
+
+body > aside {
+    border-radius: 20px;
+    background-color: #fff;
+    opacity: .9;
+    width: 20%;
+    margin: 40px 0 0 20px;
+    float: left;
+}
+
+    body > aside > nav > header {
+        padding: 15px 0 0 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    body > aside > nav > ul {
+        margin: 5px 0;
+        padding: 0 15px 5px 15px;
+        list-style-type: none;
+    }
+
+    body > aside > nav > ul  li {
+        margin: 4px 0;
+    }
+
+    body > aside > nav > ul li a {
+        border-radius: 5px;
+        margin-left: 5px;
+        padding: 5px 3px 0;
+        display: block;
+        text-decoration: none;
+        vertical-align: top;
+        color: #000;
+    }
+
+    body > aside > nav > ul li a:visited {
+        color: #aaa;
+    }
+
+    body > aside > nav > ul li a:before {
+        content: url("../images/success.png");
+    }
+
+    body > aside > nav > ul li a[href*="webColors"]:hover {
+        background-color: #f00;
+    }
+
+    body > aside > nav > ul li a[href*="webSafeColors"]:hover {
+        background-color: #ffa600;
+    }
+
+    body > aside > nav > ul li a[href*="RGB"]:hover {
+        background-color: #ff0;
+    }
+
+    body > aside > nav > ul li a[href*="RGBA"]:hover {
+        background-color: #008400;
+    }
+
+    body > aside > nav > ul li a[href*="HSLHSV"]:hover {
+        background-color: #00f;
+    }
+
+    body > aside > nav > ul li a[href*="lorem"]:hover {
+        background-color: #840084;
+    }
+
+body > section {
+    width: 72%;
+    margin: 40px 0 0 50px;
+    display: inline-block;
+}
+
+    body > section > article {
+        border-radius: 20px;
+        background-color: #fff;
+        opacity: .9;
+        margin-bottom: 10px;
+        padding: 15px;
+        padding-bottom: 10px;
+    }
+
+    body > section > article > header {
+        border-radius: 5px;
+        background-color: #f00;
+        padding: 5px;
+        color: #fff;
+        font-size: 20px;
+    }
+
+        body > section > article > header#webColors {
+            background-color: #f00;
+        }
+
+        body > section > article > header#webSafeColors {
+            background-color: #ffa600;
+            color: #000;
+        }
+
+        body > section > article > header#RGB {
+            background-color: #ff0;
+            color: #000;
+        }
+
+        body > section > article > header#RGBA {
+            background-color: #008400;
+        }
+
+        body > section > article > header#HSLHSV {
+            background-color: #00f;
+        }
+
+        body > section > article > header#lorem {
+            background-color: #840084;
+        }
+
+    body > section > article > div {
+        padding: 5px 0;
+    }
+
+        body > section > article > div:first-letter {
+            font-size: 2em;
+        }
+
+        body > section > article > div:first-line{
+            font-style: italic;
+        }
+
+        body > section > article > span[lang=la] {
+            color: #0000ff;
+            font-style: italic;
+        }
+
+        body > section > article > span[lang=la]:before, body > section > article > span[lang=la]:after {
+            content: "\"";
+        }
+
+    body > section > article > footer a {
+        text-decoration: underline;
+        font-style: italic;
+        color: #aaa;
+    }
