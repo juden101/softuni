@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Form</title>
+        <link href="styles/simple-form.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Enter the system</h1>
+
+        <p>It is necessary to log in your account in order to sign in for a course.</p>
+
+        <section id="register-form">
+            <p>Are you new? <a href="#">Register</a></p>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="password" name="password" />
+            <input type="password" name="repeat-password" />
+            <input type="submit" name="submit" />
+        </section>
+
+        <section id="login-form">
+            <p>Already a student? Login</p>
+            <input type="text" name="name" />
+            <input type="password" name="password" />
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me?</label>
+            <input type="submit" name="submit" />
+            <a href="#">Forgot Password</a>
+        </section>
+    </body>
+</html>
