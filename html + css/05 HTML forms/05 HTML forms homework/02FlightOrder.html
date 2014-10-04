@@ -2,9 +2,144 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Flight Order</title>
+    <style>
+        html, body, section, p, h1 {
+            margin: 0;
+            padding: 0;
+            font-family: Tahoma;
+        }
+
+        section {
+            background-color: #ffc3e1;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        section > h1 {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 32px;
+            font-style: italic;
+            padding: 10px;
+        }
+
+        section .col {
+            width: 210px;
+            padding: 15px;
+            padding-top: 0;
+        }
+
+        section #first-col {
+            float: left;
+        }
+
+        section #second-col {
+            float: right;
+            padding-bottom: 10px;
+        }
+
+        section label {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        section select {
+            width: 210px;
+            height: 25px;
+            margin-top: 5px;
+            /margin-bottom: 20px;
+            font-weight: bold;
+            outline: none;
+        }
+
+        section input[type="date"] {
+            width: 210px;
+        }
+
+        section .counter {
+            width: 62px;
+        }
+
+        section #second-counter-label, section #third-counter-label {
+            margin-left: 40px;
+        }
+
+        section #search {
+            width: 210px;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .fixer {
+            clear: both;
+        }
+    </style>
 </head>
 <body>
+    <section>
+        <h1>Flight order</h1>
 
+        <form method="post">
+            <div id="first-col" class="col">
+                <label for="from-city">From</label>
+                <select name="from-city" id="from-city">
+                    <option value="">enter a city</option>
+                    <option value="Sofia">Sofia</option>
+                    <option value="Plovdiv">Plovdiv</option>
+                    <option value="Varna">Varna</option>
+                    <option value="Burgas">Burgas</option>
+                </select>
+
+                <label> </label><br />
+
+                <label for="departure-date">Departure Date</label>
+                <input type="date" name="departure-date" id="departure-date" value="departure-date" />
+
+                <label for="return-date">Return Date</label>
+                <input type="date" name="return-date" id="return-date" value="return-date" />
+
+                <label for="first-counter" id="first-counter-label">12+</label>
+                <label for="second-counter" id="second-counter-label">2-12</label>
+                <label for="third-counter" id="third-counter-label">0-2</label><br />
+                <input type="number" name="first-counter" id="first-counter" class="counter" value="0" />
+                <input type="number" name="second-counter" id="second-counter" class="counter" value="0" />
+                <input type="number" name="third-counter" id="third-counter" class="counter" value="0" />
+            </div>
+
+            <div id="second-col" class="col">
+                <label for="to-city">To</label>
+                <select name="to-city" id="to-city">
+                    <option value="">enter a city</option>
+                    <option value="Sofia">Sofia</option>
+                    <option value="Plovdiv">Plovdiv</option>
+                    <option value="Varna">Varna</option>
+                    <option value="Burgas">Burgas</option>
+                </select>
+
+                <input type="checkbox" name="prefer-directs" id="prefer-directs" value="1">
+                <label for="prefer-directs">Prefer directs</label><br />
+
+                <label for="time-interval-start">Time Interval</label><br />
+                <input type="time" id="time-interval-start" />
+                <input type="time" />
+
+                <label for="time-interval-end">Time Interval</label><br />
+                <input type="time" id="time-interval-end" />
+                <input type="time" />
+
+                <label for="choose-class">Choose class</label>
+                <select name="choose-class" id="choose-class">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="First">First</option>
+                </select>
+
+                <input type="submit" name="search" id="search" value="Search" />
+            </div>
+        </form>
+
+        <div class="fixer"></div>
+    </section>
 </body>
 </html>
