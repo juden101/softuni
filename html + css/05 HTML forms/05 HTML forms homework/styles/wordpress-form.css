@@ -1,0 +1,36 @@
+html, body, h1, input {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+#form-holder {
+    width: 380px;
+    margin: 0 auto;
+}
+
+#form-holder img#logo {
+    width: 80px;
+}
+
+#form-holder h1#title {
+    display: inline-block;
+    font-size: 38px;
+    vertical-align: 20px;
+    text-transform: uppercase;
+}
+
+    #form-holder h1#title span.blue {
+        color: #20789f;
+    }
+
+    #form-holder h1#title span.big-letter {
+        font-size: 56px;
+    }
+
+#form-holder input[type="image"] {
+    width: 26px;
+    position: relative;
+    top: 8px;
+    left: 8px;
+}
