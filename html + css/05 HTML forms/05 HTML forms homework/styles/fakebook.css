@@ -1,0 +1,21 @@
+html, body, h1, h3 {
+    margin: 0;
+    padding: 0;
+    background-color: #425999;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#form-holder {
+    border: 1px solid #fff;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#form-holder h1, #form-holder h3 {
+    text-align: center;
+}
+
+#form-holder h1 span#title {
+    font-size: 80px;
+}
