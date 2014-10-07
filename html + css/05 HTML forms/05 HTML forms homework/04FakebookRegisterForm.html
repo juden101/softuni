@@ -13,7 +13,7 @@
 
     <form method="post">
         <fieldset id="none-important-info">
-            <legend>None-Important Information</legend>
+            <legend>None-Important Info</legend>
             <input type="text" name="first-name" id="first-name" placeholder="First Name" />
             <input type="text" name="last-name" id="last-name" placeholder="Last Name" />
             <input type="text" name="email" id="email" placeholder="Your Email" />
@@ -35,7 +35,7 @@
         </fieldset>
 
         <fieldset id="important-info">
-            <legend>Important Information *required</legend>
+            <legend>Important Info *required</legend>
             <select name="country">
                 <option>Country</option>
                 <option value="at">Austria</option>
@@ -47,9 +47,9 @@
             <input type="text" name="village" placeholder="Village" />
             <input type="text" name="district" placeholder="District" />
             <input type="text" name="street" placeholder="Street" />
-            <input type="number" name="nr" placeholder="Nr" />
-            <input type="number" name="floor" placeholder="Floor" />
-            <input type="number" name="ap-nr" placeholder="Ap Nr" />
+            <input type="number" class="small" name="nr" placeholder="Nr" />
+            <input type="number" class="small" name="floor" placeholder="Floor" />
+            <input type="number" class="small" name="ap-nr" placeholder="Ap Nr" />
 
             <label for="door-color">Door Color</label>
             <input type="color" name="door-color" id="door-color" value="#EE82EE" />
@@ -65,8 +65,10 @@
             </select>
 
             <label for="personal-info">More Personal Information</label>
-            <textarea id="personal-info"></textarea>
+            <textarea id="personal-info" placeholder="Give Us More Info!!!"></textarea>
         </fieldset>
+
+        <div class="fixer"></div>
 
         <input type="reset" value="Clear form" />
         <input type="submit" value="Register" />

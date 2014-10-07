@@ -1,4 +1,4 @@
-html, body, h1, h3 {
+html, body, h1, h3, fieldset {
     margin: 0;
     padding: 0;
     background-color: #425999;
@@ -7,8 +7,7 @@ html, body, h1, h3 {
 }
 
 #form-holder {
-    border: 1px solid #fff;
-    width: 500px;
+    width: 670px;
     margin: 0 auto;
 }
 
@@ -16,6 +15,116 @@ html, body, h1, h3 {
     text-align: center;
 }
 
+#form-holder h1 {
+    margin-top: 15px;
+}
+
+#form-holder h3 {
+    margin-bottom: 15px;
+}
+
 #form-holder h1 span#title {
     font-size: 80px;
+}
+
+#form-holder fieldset {
+    border-color: #fff;
+    border-radius: 10px;
+    padding-left: 7px;
+}
+
+#form-holder fieldset legend {
+    margin: 0 auto;
+}
+
+#form-holder fieldset#none-important-info {
+    width: 210px;
+    height: 232px;
+    float: left;
+    margin-left: 10px;
+}
+
+#form-holder fieldset#important-info {
+    width: 400px;
+    float: right;
+    margin-right: 10px;
+}
+
+#form-holder fieldset#none-important-info input {
+    border: none;
+    border-radius: 5px;
+    width: 90px;
+    padding: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#form-holder fieldset#none-important-info input[type="radio"] {
+    width: 16px;
+    margin: 0;
+}
+
+#form-holder fieldset#none-important-info input#birthday {
+    width: 140px;
+    display: block;
+}
+
+#form-holder fieldset#important-info input[type="text"],
+#form-holder fieldset#important-info input[type="color"],
+#form-holder fieldset#important-info input[type="number"],
+#form-holder fieldset#important-info select {
+    border: none;
+    border-radius: 5px;
+    width: 120px;
+    padding: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#form-holder fieldset#important-info input[type="number"].small {
+    border: none;
+    border-radius: 5px;
+    width: 50px;
+    padding: 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#form-holder fieldset#important-info input[type="color"] {
+    width: 130px;
+    padding: 0;
+}
+
+#form-holder fieldset#important-info label {
+    display: block;
+}
+
+#form-holder fieldset#important-info textarea {
+    width: 385px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+#form-holder input[type="reset"] {
+    border: none;
+    border-radius: 10px;
+    width: 220px;
+    height: 40px;
+    margin: 10px 0 10px 10px;
+    font-size: 20px;
+    color: #425999;
+}
+
+#form-holder input[type="submit"] {
+    border: none;
+    border-radius: 10px;
+    width: 410px;
+    height: 40px;
+    margin: 10px 0 10px 15px;
+    font-size: 20px;
+    color: #425999;
+}
+
+.fixer {
+    clear: both;
 }
