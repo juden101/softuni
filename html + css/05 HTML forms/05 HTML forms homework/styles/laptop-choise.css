@@ -1,0 +1,108 @@
+html, body, p, h1, h2, input {
+    margin: 0;
+    padding: 0;
+    color: #2c425a;
+}
+
+#form-holder {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#form-holder h1#title {
+    margin: 5px;
+}
+
+#form-holder #laptops {
+    width: 580px;
+    display: inline-block;
+}
+
+    #form-holder #laptops .product {
+        border: 1px solid #d9eefa;
+        border-radius: 10px;
+        width: 160px;
+        height: 200px;
+        margin: 5px;
+        padding: 10px;
+        display: inline-block;
+        float: left;
+        position: relative;
+        text-decoration: none;
+    }
+
+    #form-holder #laptops .product h2.title {
+        font-size: 18px;
+    }
+
+    #form-holder #laptops .product p.description {
+        font-size: 16px;
+    }
+
+    #form-holder #laptops .product img {
+
+    }
+
+    #form-holder #laptops .product .new {
+        background-image: url("../images/new.png");
+        width: 50px;
+        height: 51px;
+        display: inline-block;
+        position: absolute;
+        top: 90px;
+        left: 25px;
+    }
+
+    #form-holder #laptops .product p.price {
+        background-color: #2c425a;
+        border-top-left-radius: 10px;
+        color: #fff;
+        padding: 10px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+#form-holder #sliders {
+    border: 1px solid #d9eefa;
+    border-radius: 10px;
+    width: 200px;
+    padding: 10px 0;
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+    #form-holder #sliders .slide {
+        position: relative;
+    }
+
+    #form-holder #sliders .slide h2.title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: normal;
+        padding: 5px 0 10px 0;
+    }
+
+    #form-holder #sliders .slide .min-range {
+        position: absolute;
+        top: 26px;
+        left: 2px;
+    }
+
+    #form-holder #sliders .slide .max-range {
+        position: absolute;
+        top: 26px;
+        right: 2px;
+    }
+
+    #form-holder #sliders .slide input {
+        width: 200px;
+        margin-top: 15px;
+    }
+
+.fixer {
+    display: clear;
+}
