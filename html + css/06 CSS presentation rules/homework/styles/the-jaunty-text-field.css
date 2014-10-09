@@ -1,0 +1,142 @@
+html, body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+
+    border-top: 5px dotted #ff0;
+    border-right: 10px solid #008400;
+    border-bottom: 7px double #00f;
+    border-left: 5px dashed #f00;
+
+    font-family: Arial, sans-serif;
+}
+
+section h1 {
+    padding-bottom: 20px;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 10px #aaa;
+    font-size: 26pt;
+}
+
+section div {
+    margin: 0 auto;
+
+    border-radius: 60px;
+    text-align: center;
+}
+
+    section div.blue {
+        border: 3px solid #0000ff;
+    }
+
+    section div.green {
+        border: 3px solid #008400;
+    }
+
+    section div.yellow {
+        border: 4px solid #ffff00;
+    }
+
+    section div.red {
+        border: 3px solid #ff0000;
+
+        padding: 20px;
+    }
+
+section div p {
+    padding-bottom: 10px;
+
+    font-size: 14pt;
+    text-shadow: 10px 7px 10px #aaa;
+}
+
+section div input {
+    background-color: #de9518;
+    border: 2px outset #ffa300;
+    outline: none;
+    text-align: center;
+}
+
+section span.bubble-small {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 125px;
+    right: 100px;
+    border-radius: 50%;
+
+    background-color: #aaa;
+    opacity: 0.8;
+}
+
+section span.bubble-small:before {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+
+    border: 2px dashed #fff;
+}
+
+section span.bubble-middle {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 80px;
+    right: 48px;
+    border-radius: 50%;
+
+    background-color: #aaa;
+    opacity: 0.8;
+}
+
+section span.bubble-middle:before {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+
+    border: 2px dashed #fff;
+}
+
+section span.bubble-big {
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: -65px;
+    border-radius: 40px;
+    text-align: center;
+
+    background-color: #aaa;
+    opacity: 0.8;
+    font-weight: bold;
+    color: #fff;
+}
+
+section span.bubble-big:before {
+    width: 86px;
+    height: 50px;
+    border-radius: 40px;
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 3px;
+
+    border: 2px dashed #fff;
+}
