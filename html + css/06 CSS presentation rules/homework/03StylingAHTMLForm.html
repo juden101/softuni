@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>⦁	Styling a HTML Form</title>
+    <link href="styles/styling-a-html-form.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post">
+        <ul>
+            <h3>Step 1: Your details</h3>
+
+            <li>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="First and last name" />
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@domain.com" />
+            </li>
+            <li>
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="eg. +447500000000" />
+            </li>
+
+            <h3>Step 2: Delivery address</h3>
+
+            <li>
+                <label for="address">Address</label>
+                <textarea name="address" id="address"></textarea>
+            </li>
+            <li>
+                <label for="post-code">Post code</label>
+                <input type="text" name="post-code" id="post-code" />
+            </li>
+            <li>
+                <label for="country">Country</label>
+                <input type="text" name="country" id="country" />
+            </li>
+
+            <h3>Step 3: Card details</h3>
+            <li>
+                <label>Card type</label>
+
+                <div id="card-types">
+                    <input type="radio" name="credit-card" id="visa" value="visa" />
+                    <label class="credit-card" for="visa">Visa</label>
+
+                    <input type="radio" name="credit-card" id="amex" value="amex" />
+                    <label class="credit-card" for="amex">AmEx</label>
+
+                    <input type="radio" name="credit-card" id="mastercard" value="mastercard" />
+                    <label class="credit-card" for="mastercard">Mastercard</label>
+                </div>
+            </li>
+            <li>
+                <label for="card-number">Card number</label>
+                <input type="text" name="card-number" id="card-number" />
+            </li>
+            <li>
+                <label for="security-code">Security code</label>
+                <input type="text" name="security-code" id="security-code" />
+            </li>
+            <li>
+                <label for="name-on-card">Name on card</label>
+                <input type="text" name="name-on-card" id="name-on-card" placeholder="exact name as on the card" />
+            </li>
+
+            <input type="submit" name="submit" value="BUT IT!" />
+        </ul>
+    </form>
+</body>
+</html>

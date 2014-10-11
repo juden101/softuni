@@ -1,0 +1,115 @@
+html, body, ul, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 400px;
+    height: 685px;
+    margin: 20px auto;
+    padding: 15px;
+
+    background-image: url("../images/formBackground.jpg");
+    border-radius: 5px;
+}
+
+form h3 {
+    margin: 5px;
+
+    color: #fff;
+}
+
+form ul {
+
+}
+
+form ul li {
+    margin: 2px 0;
+    padding: 10px;
+    position: relative;
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    list-style: none;
+}
+
+form ul li label {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+}
+
+form ul li input {
+    width: 175px;
+    padding: 4px;
+    margin-left: 150px;
+
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+form ul li input:focus {
+    background-color: #E8E8E8;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+form ul li textarea {
+    width: 175px;
+    height: 60px;
+    margin-left: 150px;
+    padding: 4px;
+
+    border: none;
+    border-radius: 3px;
+    outline: none;
+}
+
+form ul li #card-types {
+    margin: 30px auto 0 auto;
+    width: 330px;
+}
+
+form ul li #card-types label {
+    position: relative;
+    top: 0;
+    padding: 1px 0 1px 34px;
+}
+
+form ul li #card-types label[for="visa"] {
+    background: url("../images/visa.png") 0 -5px no-repeat;
+}
+
+form ul li #card-types label[for="amex"] {
+    background: url("../images/amex.png") 0 -5px no-repeat;
+}
+
+form ul li #card-types label[for="mastercard"] {
+    background: url("../images/mastercard.png") 0 -5px no-repeat;
+}
+
+form ul li #card-types input[type="radio"] {
+    width: 20px;
+    margin: 0;
+    display: inline-block;
+}
+
+form input[type="submit"] {
+    margin: 18px 0 0 165px;
+    padding: 5px 20px;
+
+    background-color: #02122a;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+}
+
+form input[type="submit"]:hover {
+    background-color: #fff;
+    color: #02122a;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
