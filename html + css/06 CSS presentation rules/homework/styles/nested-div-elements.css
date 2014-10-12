@@ -1,0 +1,17 @@
+body {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+div {
+    height: 100%;
+    width: 95%;
+    padding-right: 0px;
+
+    background: #ff9c00;
+    border: 1px solid #234465;
+    border-radius: 90px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
