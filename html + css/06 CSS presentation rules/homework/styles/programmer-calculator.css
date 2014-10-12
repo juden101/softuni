@@ -1,0 +1,84 @@
+html, body, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+#calculator {
+    width: 420px;
+    height: 400px;
+    margin: 20px auto;
+    padding: 0 10px;
+
+    background-color: #69c1f0;
+}
+
+#calculator #title {
+    height: 32px;
+
+    background: url("../images/calc-icon.png") 0 10px no-repeat;
+}
+
+#calculator #program-name {
+    margin: 8px 0 0 180px;
+    display: inline-block;
+
+    text-align: center;
+}
+
+#calculator #buttons {
+    height: 20px;
+    right: 0;
+    top: 1px;
+    display: inline-block;
+    float: right;
+
+    text-align: center;
+}
+
+#calculator #buttons .button {
+    width: 22px;
+    height: 20px;
+    display: inline-block;
+
+    cursor: default;
+}
+
+#calculator #buttons #minimize {
+    vertical-align: bottom;
+    line-height: 13px;
+}
+
+
+#calculator #buttons #minimize:hover {
+    background: #3665b3;
+
+    color: #fff;
+}
+
+#calculator #buttons #maximize {
+    color: #ccc;
+}
+
+#calculator #buttons #close {
+    width: 40px;
+    height: 20px;
+
+
+    background: #c75050;
+    color: #fff;
+    vertical-align: bottom;
+    line-height: 22px;
+}
+
+#calculator #buttons #close:hover {
+    background: #e04343;
+}
+
+#calculator #main {
+    width: 100%;
+    height: 358px;
+
+    background: linear-gradient(to bottom, #edf4fc 0%,#d9e4f1 100%);
+    background: -webkit-linear-gradient(top, #edf4fc 0%,#d9e4f1 100%);
+}
