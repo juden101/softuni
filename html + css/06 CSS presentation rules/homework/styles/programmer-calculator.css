@@ -1,22 +1,23 @@
-html, body, p {
+html, body, p, ul, li, input[type="button"] {
     margin: 0;
     padding: 0;
-    font-family: Arial;
+    font-family: Consolas;
 }
 
 #calculator {
     width: 420px;
-    height: 400px;
+    height: 408px;
     margin: 20px auto;
-    padding: 0 10px;
+    padding: 0 10px 0 8px;
 
     background-color: #69c1f0;
+    cursor: default;
 }
 
 #calculator #title {
     height: 32px;
 
-    background: url("../images/calc-icon.png") 0 10px no-repeat;
+    background: url("../images/calc-icon.png") 2px 9px no-repeat;
 }
 
 #calculator #program-name {
@@ -24,6 +25,7 @@ html, body, p {
     display: inline-block;
 
     text-align: center;
+    font-family: Arial;
 }
 
 #calculator #buttons {
@@ -36,49 +38,209 @@ html, body, p {
     text-align: center;
 }
 
-#calculator #buttons .button {
-    width: 22px;
-    height: 20px;
-    display: inline-block;
+    #calculator #buttons .button {
+        width: 22px;
+        height: 20px;
+        display: inline-block;
+    }
 
-    cursor: default;
-}
+    #calculator #buttons #minimize {
+        vertical-align: bottom;
+        line-height: 13px;
+    }
 
-#calculator #buttons #minimize {
-    vertical-align: bottom;
-    line-height: 13px;
-}
+    #calculator #buttons #minimize:hover {
+        background: #3665b3;
 
+        color: #fff;
+    }
 
-#calculator #buttons #minimize:hover {
-    background: #3665b3;
+    #calculator #buttons #maximize {
+        color: #ccc;
+    }
 
-    color: #fff;
-}
+    #calculator #buttons #close {
+        width: 40px;
+        height: 20px;
 
-#calculator #buttons #maximize {
-    color: #ccc;
-}
+        background: #c75050;
+        color: #fff;
+        vertical-align: bottom;
+        line-height: 22px;
+    }
 
-#calculator #buttons #close {
-    width: 40px;
-    height: 20px;
-
-
-    background: #c75050;
-    color: #fff;
-    vertical-align: bottom;
-    line-height: 22px;
-}
-
-#calculator #buttons #close:hover {
-    background: #e04343;
-}
+    #calculator #buttons #close:hover {
+        background: #e04343;
+    }
 
 #calculator #main {
     width: 100%;
-    height: 358px;
+    height: 365px;
+    position: relative;
 
     background: linear-gradient(to bottom, #edf4fc 0%,#d9e4f1 100%);
     background: -webkit-linear-gradient(top, #edf4fc 0%,#d9e4f1 100%);
+    border: 1px solid #59a4cc;
+}
+
+#calculator #main #menu {
+    height: 20px;
+
+    background-color: #f5f6f7;
+}
+
+    #calculator #main #menu ul {
+        list-style-type: none;
+    }
+
+    #calculator #main #menu ul li {
+        padding: 2px 5px;
+        display: inline-block;
+
+        border: 1px solid #f5f6f7;
+        font-size: 10pt;
+        font-family: Arial;
+    }
+
+    #calculator #main #menu ul li:hover {
+        background-color: #d5e7f8;
+        border: 1px solid #7ab1e8;
+    }
+
+#calculator #main #display {
+    width: 398px;
+    height: 50px;
+    margin: 10px;
+
+    background: linear-gradient(to bottom, #e9f1fb 0%,#fff 100%);
+    background: -webkit-linear-gradient(top, #e9f1fb 0%,#fff 100%);
+    border: 1px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px #8e9cad;
+}
+
+    #calculator #main #display p {
+        padding-right: 5px;
+
+        text-align: right;
+        font-size: 26px;
+        line-height: 60px;
+    }
+
+#calculator #main #binary-display {
+    height: 58px;
+    margin: 10px;
+    padding: 2px 5px 5px 5px;
+
+    border: 1px solid #fff;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px 1px #8e9cad;
+}
+
+    #calculator #main #binary-display .col {
+        display: inline-block;
+        padding-right: 13.5px;
+
+        font-size: 13px;
+    }
+
+    #calculator #main #binary-display .col:last-child {
+        padding-right: 0;
+    }
+
+    #calculator #main #binary-display .col p {
+        color: #666;
+    }
+
+    #calculator #main #binary-display .col p.binary {
+        color: #1e395b;
+    }
+
+#calculator #main .systems {
+    width: 70px;
+    height: 85px;
+    margin: 10px;
+    padding-top: 3px;
+
+    box-shadow: 0px 0px 0px 1px #8e9cad;
+    border-radius: 2px;
+}
+
+    #calculator #main .systems ul li {
+        list-style: none;
+    }
+
+    #calculator #main .systems ul li input[type="radio"] {
+        position: relative;
+        top: 2px;
+    }
+
+    #calculator #main .systems ul li label {
+        color: #1e395b;
+        font-size: 10pt;
+    }
+
+#calculator #main #control {
+    width: 322px;
+    height: 190px;
+    position: absolute;
+    top: 168px;
+    left: 92px;
+}
+
+    #calculator #main #control input[type="button"] {
+        width: 32px;
+        height: 27px;
+        margin-bottom: 5px;
+
+        background: none;
+        border: 1px solid #8e9cad;
+        border-radius: 2px;
+        text-align: center;
+        outline: none;
+        color: #1e395b;
+    }
+
+    #calculator #main #control input[type="button"].disabled {
+        background: none;
+        border: 1px solid #b4c2d1;
+    }
+
+    #calculator #main #control input[type="button"].functional {
+        background: -webkit-linear-gradient(top,  #f0f6fb 0%,#e2eaf3 50%,#d5e0ed 51%,#d7e2ef 100%);
+        background: linear-gradient(to bottom,  #f0f6fb 0%,#e2eaf3 50%,#d5e0ed 51%,#d7e2ef 100%);
+    }
+
+    #calculator #main #control input[type="button"].m-functional {
+        background: linear-gradient(to bottom, #d4e0ed 0%,#d7e2ef 100%);
+        background: -webkit-linear-gradient(top, #d4e0ed 0%,#d7e2ef 100%);
+    }
+
+    #calculator #main #control input[type="button"].number {
+        background: -webkit-linear-gradient(top, #f7fbff 0%,#edf3f8 50%,#e7edf5 51%,#f0f8fd 100%);
+        background: linear-gradient(to bottom, #f7fbff 0%,#edf3f8 50%,#e7edf5 51%,#f0f8fd 100%);
+
+        font-size: 12pt;
+        font-family: Arial, sans-serif;
+    }
+
+    #calculator #main #control input[type="button"].equals {
+        height: 60px;
+        position: absolute;
+        right: 5px;
+
+        font-size: 22pt;
+    }
+
+    #calculator #main #control input[type="button"].zero {
+        width: 72px;
+    }
+
+#calculator #main #control input[type="button"]:not(.disabled):hover {
+    border: 1px solid #ffdb00;
+    background: -webkit-linear-gradient(top, #fff4e9 0%,#fee2c2 50%,#ffcf69 51%,#fffac6 100%);
+    background: linear-gradient(to bottom, #fff4e9 0%,#fee2c2 50%,#ffcf69 51%,#fffac6 100%);
+
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
 }
