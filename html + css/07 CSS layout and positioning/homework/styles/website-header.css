@@ -2,6 +2,8 @@ html, body, ul, li {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    font-size: 13pt;
+    color: #fff;
 }
 
 #header {
@@ -12,9 +14,7 @@ html, body, ul, li {
 }
 
     #header #logo {
-        /*width: 255px;
-        height: 90px;
-        padding: 10px 0 0 25px;*/
+        margin: 10px 0 0 20px;
         display: inline-block;
     }
 
@@ -22,38 +22,126 @@ html, body, ul, li {
 
         }
 
-        /*#header #logo a .beta {
-            margin-top: 5px;
+        #header #logo a .beta {
+            margin-top: -60px;
             margin-left: 230px;
 
             text-decoration: none;
             color: #fff;
             font-size: 9pt;
-        }*/
+        }
 
     #header #navigation {
-        width: 700px;
-        position: relative;
-        top: -20px;
         display: inline-block;
+        float: right;
+        margin: 20px 10px 0 0;
 
-        border: 1px solid #fff;
+        text-align: right;
     }
 
         #header #navigation #profile {
-
+            margin-top: -5px;
         }
 
             #header #navigation #profile li {
                 display: inline-block;
+                margin-right: 10px;
+            }
+
+            #header #navigation #profile li #notifications {
+                padding-right: 20px;
+
+                background: url("../images/notification-icon.png") 14px 0 no-repeat;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            #header #navigation #profile li #notifications:hover {
+                text-decoration: underline;
+            }
+
+            #header #navigation #profile .dropdown {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            #header #navigation #profile .dropdown::after {
+                padding-left: 4px;
+                content: '\25BE';
+
+                color: #fff;
+            }
+
+            #header #navigation #profile .search {
+
+            }
+
+            #header #navigation #profile .search input[type="search"] {
+                width: 220px;
+                height: 30px;
+                padding: 5px;
+
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                color: #367cae;
+            }
+
+            #header #navigation #profile .search input[type="submit"] {
+                width: 30px;
+                height: 30px;
+                margin-left: -35px;
+                padding: 5px;
+
+                background: url("../images/search-icon.png") 6px no-repeat #fff;
+                border: none;
+                border-left: 1px solid #d5d5d5;
+                border-radius: 5px;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                outline: none;
+                color: #367cae;
+            }
+
+            #header #navigation #profile .search input[type="submit"]:hover {
+                background-color: #367cae;
+                border-color: #d5d5d5;
+                cursor: pointer;
             }
 
         #header #navigation #menu {
-
+            margin-top: 10px;
         }
 
             #header #navigation #menu li {
+                padding: 7px 5px;
                 display: inline-block;
+            }
+
+            #header #navigation #menu li a {
+                padding: 7px 5px;
+
+                border-radius: 5px;
+                color: #fff;
+                font-size: 13pt;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            #header #navigation #menu li a:hover {
+                background: #4ca0db;
+            }
+
+            #header #navigation #menu li .dropdown {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            #header #navigation #menu li .dropdown::after {
+                padding-left: 4px;
+                content: '\25BE';
+
+                color: #fff;
             }
 
 .fixer {
