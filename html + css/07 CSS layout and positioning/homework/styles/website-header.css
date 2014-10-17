@@ -6,6 +6,10 @@ html, body, ul, li {
     color: #fff;
 }
 
+body {
+    background-color: #ccc;
+}
+
 #header {
     width: 100%;
     height: 100px;
@@ -116,6 +120,7 @@ html, body, ul, li {
             #header #navigation #menu li {
                 padding: 7px 5px;
                 display: inline-block;
+                position:relative;
             }
 
             #header #navigation #menu li a {
@@ -128,22 +133,72 @@ html, body, ul, li {
                 text-transform: uppercase;
             }
 
-            #header #navigation #menu li a:hover {
+            #header #navigation #menu > li > a:hover {
                 background: #4ca0db;
             }
 
-            #header #navigation #menu li .dropdown {
+            #header #navigation #menu > li > .dropdown {
                 color: #fff;
                 text-decoration: none;
             }
 
-            #header #navigation #menu li .dropdown::after {
+            #header #navigation #menu > li > .dropdown::after {
                 padding-left: 4px;
                 content: '\25BE';
 
                 color: #fff;
             }
 
-.fixer {
-    clear: both;
-}
+            /* DROP DOWN */
+            #header #navigation #menu li ul {
+                display: none;
+                position:absolute;
+                top:100%;
+                left:0;
+                background: #234465;
+                border: 1px solid #1d3955;
+                padding:0
+            }
+
+            #header #navigation #menu li ul li
+             {
+                width: 250px;
+                margin: 0;
+                padding: 0;
+             }
+
+            #header #navigation #menu li ul a
+            {
+                font-size: 11pt;
+                text-align: left;
+                border-bottom: 1px solid #435f7b;
+                text-transform: none;
+                padding:5px;
+                padding-left: 15px;
+                margin: 0;
+                display: block;
+                border-radius: 0;
+                height: 30px;
+                line-height: 30px;
+            }
+
+            #header #navigation #menu li ul li:last-child a
+            {
+                border-bottom: none;
+            }
+
+            #header #navigation #menu li ul a:hover
+            {
+                background-color: #ff9c00;
+            }
+
+            #header #navigation #menu li ul ul
+            {
+                top:0;
+                left:100%
+            }
+
+            #header #navigation #menu li:hover > ul
+            {
+                display:block
+            }
