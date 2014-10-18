@@ -10,23 +10,23 @@ body {
     background-color: #ccc;
 }
 
-#header {
+header {
     width: 100%;
     height: 100px;
 
     background: #234465;
 }
 
-    #header #logo {
+    header #logo {
         margin: 10px 0 0 20px;
         display: inline-block;
     }
 
-        #header #logo a {
+        header #logo a {
 
         }
 
-        #header #logo a .beta {
+        header #logo a .beta {
             margin-top: -60px;
             margin-left: 230px;
 
@@ -35,7 +35,7 @@ body {
             font-size: 9pt;
         }
 
-    #header #navigation {
+    header #navigation {
         display: inline-block;
         float: right;
         margin: 20px 10px 0 0;
@@ -43,16 +43,16 @@ body {
         text-align: right;
     }
 
-        #header #navigation #profile {
+        header #navigation #profile {
             margin-top: -5px;
         }
 
-            #header #navigation #profile li {
+            header #navigation #profile li {
                 display: inline-block;
                 margin-right: 10px;
             }
 
-            #header #navigation #profile li #notifications {
+            header #navigation #profile li #notifications {
                 padding-right: 20px;
 
                 background: url("../images/notification-icon.png") 14px 0 no-repeat;
@@ -60,27 +60,27 @@ body {
                 text-decoration: none;
             }
 
-            #header #navigation #profile li #notifications:hover {
+            header #navigation #profile li #notifications:hover {
                 text-decoration: underline;
             }
 
-            #header #navigation #profile .dropdown {
+            header #navigation #profile .dropdown {
                 color: #fff;
                 text-decoration: none;
             }
 
-            #header #navigation #profile .dropdown::after {
+            header #navigation #profile .dropdown::after {
                 padding-left: 4px;
                 content: '\25BE';
 
                 color: #fff;
             }
 
-            #header #navigation #profile .search {
+            header #navigation #profile .search {
 
             }
 
-            #header #navigation #profile .search input[type="search"] {
+            header #navigation #profile .search input[type="search"] {
                 width: 220px;
                 height: 30px;
                 padding: 5px;
@@ -91,7 +91,7 @@ body {
                 color: #367cae;
             }
 
-            #header #navigation #profile .search input[type="submit"] {
+            header #navigation #profile .search input[type="submit"] {
                 width: 30px;
                 height: 30px;
                 margin-left: -35px;
@@ -107,23 +107,23 @@ body {
                 color: #367cae;
             }
 
-            #header #navigation #profile .search input[type="submit"]:hover {
+            header #navigation #profile .search input[type="submit"]:hover {
                 background-color: #367cae;
                 border-color: #d5d5d5;
                 cursor: pointer;
             }
 
-        #header #navigation #menu {
+        header #navigation #menu {
             margin-top: 10px;
         }
 
-            #header #navigation #menu li {
+            header #navigation #menu li {
                 padding: 7px 5px;
                 display: inline-block;
                 position:relative;
             }
 
-            #header #navigation #menu li a {
+            header #navigation #menu li a {
                 padding: 7px 5px;
 
                 border-radius: 5px;
@@ -133,16 +133,16 @@ body {
                 text-transform: uppercase;
             }
 
-            #header #navigation #menu > li > a:hover {
+            header #navigation #menu > li > a:hover {
                 background: #4ca0db;
             }
 
-            #header #navigation #menu > li > .dropdown {
+            header #navigation #menu > li > .dropdown {
                 color: #fff;
                 text-decoration: none;
             }
 
-            #header #navigation #menu > li > .dropdown::after {
+            header #navigation #menu > li > .dropdown::after {
                 padding-left: 4px;
                 content: '\25BE';
 
@@ -150,7 +150,7 @@ body {
             }
 
             /* DROP DOWN */
-            #header #navigation #menu li ul {
+            header #navigation #menu li ul {
                 display: none;
                 position:absolute;
                 top:100%;
@@ -160,14 +160,14 @@ body {
                 padding:0
             }
 
-            #header #navigation #menu li ul li
+            header #navigation #menu li ul li
              {
                 width: 250px;
                 margin: 0;
                 padding: 0;
              }
 
-            #header #navigation #menu li ul a
+            header #navigation #menu li ul a
             {
                 font-size: 11pt;
                 text-align: left;
@@ -182,23 +182,23 @@ body {
                 line-height: 30px;
             }
 
-            #header #navigation #menu li ul li:last-child a
+            header #navigation #menu li ul li:last-child a
             {
                 border-bottom: none;
             }
 
-            #header #navigation #menu li ul a:hover
+            header #navigation #menu li ul a:hover
             {
                 background-color: #ff9c00;
             }
 
-            #header #navigation #menu li ul ul
+            header #navigation #menu li ul ul
             {
                 top:0;
                 left:100%
             }
 
-            #header #navigation #menu li:hover > ul
+            header #navigation #menu li:hover > ul
             {
                 display:block
             }
