@@ -1,0 +1,128 @@
+html, body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Tahoma, sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+section {
+    width: 960px;
+    margin: 0 auto;
+}
+
+    section h1 {
+        margin: 15px;
+
+        color: #234465;
+    }
+
+    section article {
+        width: 250px;
+        height: 365px;
+        margin: 0 15px;
+        padding: 20px;
+        display: inline-block;
+        float: left;
+
+        background-color: #fff;
+        box-shadow: 0 2px 3px #bfbfbf;
+    }
+
+        section article h2 {
+            font-size: 16px;
+            color: #234465;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        section article h2 a {
+            text-decoration: none;
+            color: #2a6496;
+        }
+
+        section article p.date {
+            margin-top: 5px;
+
+            text-align: right;
+            font-size: 14px;
+        }
+
+        section article p.author {
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+
+        section article p.description {
+            min-height: 34px;
+            margin-bottom: 10px;
+
+            font-size: 14px;
+            color: #5a5a5a;
+        }
+
+        section article p.tags {
+
+        }
+
+        section article p.tags span.bold {
+            font-weight: bold;
+            color: rgb(90, 90, 90);
+        }
+
+        section article p.tags span {
+            font-size: 13px;
+            color: rgb(153, 153, 153);
+        }
+
+        section article img {
+            margin-bottom: 20px;
+        }
+
+        section article hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 1px solid #eee;
+        }
+
+    section #pagination {
+        display: block;
+        margin-top: 40px;
+    }
+
+        section #pagination li {
+            display: inline-block;
+            margin-right: -6px;
+
+            list-style: none;
+        }
+
+        section #pagination li a {
+            padding: 6px 12px;
+
+            background-color: #4ca0db;
+            border: 1px solid #285e8e;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section #pagination li a:hover {
+            background-color: #ff9c00;
+        }
+
+        section #pagination li a.active {
+            background-color: #ff9c00;
+            border: 1px solid #ff9c00;
+        }
+
+        section #pagination li a.active:hover {
+            background-color: #3071a9;
+            border: 1px solid #285e8e;
+        }
+
+.fixer {
+    clear: both;
+}
