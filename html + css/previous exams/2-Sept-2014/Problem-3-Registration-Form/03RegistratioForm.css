@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Montserrat Regular;
+    src: url("Montserrat-Regular.ttf");
+}
+
+html, body, ul, li, p, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("body-background.jpg");
+
+    font-family: Montserrat Regular;
+}
+
+#wrapper {
+
+}
+
+    #wrapper h1 {
+        margin: 20px 0;
+
+        text-align: center;
+        color: #f18f32;
+        font-weight: normal;
+    }
+
+    #wrapper form {
+        width: 400px;
+        margin: 0 auto;
+
+        background: linear-gradient(to right, #dccbb5 0%,#ece2cd 5%,#ece2ce 95%,#dccbb5 100%);
+        border: 1px solid #a4875d;
+        border-radius: 5px;
+
+        box-shadow: inset 0px 7px 35px -15px rgba(0,0,0,0.64);
+    }
+
+        #wrapper form ul {
+            padding: 10px;
+        }
+
+        #wrapper form ul li {
+            list-style: none;
+        }
+
+        #wrapper form ul li input[type=email],
+        #wrapper form ul li input[type=password],
+        #wrapper form ul li input[type=text] {
+            width: 96%;
+            margin: 5px 0;
+            padding: 7px 5px;
+
+            border: 1px solid #a4875d;
+            border-radius: 5px;
+            outline: none;
+            color: #a4875d;
+        }

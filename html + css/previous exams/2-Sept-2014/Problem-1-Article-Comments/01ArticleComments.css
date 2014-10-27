@@ -1,0 +1,74 @@
+html, body, hr, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+#comments {
+    width: 648px;
+    margin: 0 auto;
+
+    font: 11pt Arial, sans-serif;
+}
+
+#comments h3 {
+    padding-bottom: 10px;
+}
+
+#comments hr {
+    margin-bottom: 15px;
+
+    border: none;
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#comments .comment {
+
+}
+
+#comments .comment .header img {
+    float: left;
+    padding-right: 10px;
+}
+
+#comments .comment .header .user {
+    font-weight: bold;
+}
+
+#comments .comment .header .date {
+    color: rgb(153, 153, 153);
+    font-weight: bold;
+}
+
+#comments .comment .header .buttons {
+    float: right;
+    margin-top: -30px;
+}
+
+#comments .comment .header .votes {
+    float: right;
+    padding-right: 10px;
+    margin-top: -5px;
+
+    font-weight: bold;
+    color: rgb(102, 102, 102);
+}
+
+#comments .comment .header .down {
+    color: rgb(237, 28, 36);
+}
+
+#comments .comment .body p {
+    padding: 25px 0;
+}
+
+#comments .comment .body p a {
+    color: #000;
+}
+
+
+#comments .comment .body p a:hover,
+#comments .comment .body p a:active {
+    color: rgb(170, 170, 170);
+}
+
+

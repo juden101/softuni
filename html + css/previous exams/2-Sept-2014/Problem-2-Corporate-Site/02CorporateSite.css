@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+html, body, ul, li, p, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+#wrapper {
+
+}
+
+#wrapper header {
+    width: 980px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+    #wrapper header #logo {
+        margin: 30px 0 0 10px;
+        display: inline-block;
+    }
+
+    #wrapper header #logo:hover {
+        transform: rotate(-10deg);
+        transition: all 0.5s ease;
+    }
+
+    #wrapper header #menu {
+        float: right;
+        margin-top: 30px;
+    }
+
+        #wrapper header #menu li {
+            margin: 35px 10px 0 0;
+            display: inline-block;
+        }
+
+        #wrapper header #menu li a {
+            padding: 5px;
+
+            color: rgb(89, 89, 89);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #wrapper header #menu li a:hover {
+            background-color: #eee;
+            color: #565656;
+            text-decoration: underline;
+        }
+
+        #wrapper header #menu li a.active {
+            background-color: #53bad0;
+            color: #fff;
+            text-decoration: none;
+        }
+
+#wrapper main {
+
+}
+
+    #wrapper main #slider {
+        height: 400px;
+
+        background: url(background-large.jpg) no-repeat 0 40%;
+        background-size: 100%;
+    }
+
+        #wrapper main #slider #slider-data {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        #wrapper main #slider #slider-data h3 {
+            display: block;
+            width: 600px;
+            margin: 0 auto;
+            padding-top: 50px;
+
+            color: #fff;
+            font-size: 30pt;
+        }
+
+        #wrapper main #slider #slider-data p {
+            padding: 20px 50px;
+
+            color: #fff;
+            text-indent: 5px;
+            font-size: 14pt;
+            text-align: justify;
+        }
+
+        #wrapper main #slider #slider-data a {
+            width: 250px;
+            margin: 20px auto;
+            padding: 10px;
+            display: block;
+
+            background: rgba(0, 0, 0, .1);
+            border: 1px solid #fff;
+            border-radius: 5px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #wrapper main #slider #slider-data a:hover {
+            background: rgba(0, 0, 0, .4);
+            transition: all 0.5s ease;
+        }
+
+    #wrapper main #navigation {
+        width: 980px;
+        margin: 0 auto;
+    }
+
+        #wrapper main #navigation h4 {
+            width: 370px;
+            margin: 50px auto;
+            display: block;
+
+            font-size: 18pt;
+            font-weight: normal;
+            color: rgb(89, 89, 89);
+        }
+
+        #wrapper main #navigation article {
+            width: 300px;
+            margin: 10px;
+            display: inline-block;
+            float: left;
+        }
+
+            #wrapper main #navigation article h5 {
+                margin-bottom: 10px;
+                padding: 8px;
+                padding-left: 45px;
+
+                background-repeat: no-repeat;
+                background-size: 40px 40px;
+                font-size: 15pt;
+                font-weight: normal;
+                color: rgb(89, 89, 89);
+            }
+
+            #wrapper main #navigation article h5.search {
+                background-image: url("search-icon.png");
+            }
+
+            #wrapper main #navigation article h5.navigation {
+                background-image: url("navigation-icon.png");
+            }
+
+            #wrapper main #navigation article h5.shopping {
+                background-image: url("shopping-icon.png");
+            }
+
+            #wrapper main #navigation article p {
+                margin-bottom: 15px;
+
+                font-size: 13pt;
+                color: rgb(120, 120, 120);
+            }
+
+            #wrapper main #navigation article a {
+                color: #67b8d3;
+                text-decoration: none;
+            }
+
+    #wrapper footer {
+        width: 100%;
+        bottom: 0;
+        position: absolute;
+        display: block;
+
+        background-color: #111;
+        border-top: 3px solid #009aca;
+    }
+
+        #wrapper footer p {
+            padding: 20px 0;
+
+            color: #646464;
+            text-align: center;
+        }
+
+.fixer {
+    clear: both;
+}
