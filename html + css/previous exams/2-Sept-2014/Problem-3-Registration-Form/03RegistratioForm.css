@@ -38,22 +38,87 @@ body {
     }
 
         #wrapper form ul {
-            padding: 10px;
+            padding: 15px;
         }
 
         #wrapper form ul li {
             list-style: none;
         }
 
+        #wrapper form ul li.footer {
+            margin-top: 10px;
+        }
+
         #wrapper form ul li input[type=email],
         #wrapper form ul li input[type=password],
         #wrapper form ul li input[type=text] {
-            width: 96%;
+            width: 88%;
             margin: 5px 0;
-            padding: 7px 5px;
+            padding: 10px 5px 10px 37px;
 
+            background: #fffbf4 5px -5px no-repeat;
             border: 1px solid #a4875d;
             border-radius: 5px;
             outline: none;
             color: #a4875d;
+        }
+
+        /** CHECKBOX */
+        #wrapper form ul li input[type=checkbox] {
+            top: 8px;
+            margin-left: 10px;
+            padding: 12px;
+
+            -webkit-appearance: none;
+            background-color: #fafafa;
+            border: 1px solid #a18151;
+            outline: none;
+            border-radius: 3px;
+            display: inline-block;
+            position: relative;
+        }
+
+        #wrapper form ul li input[type=checkbox]:checked:after {
+            content: '\2714';
+            font-size: 18px;
+            position: absolute;
+            top: 3px;
+            left: 4px;
+            color: #a18151;
+        }
+        /** END OF CHECBOX */
+
+        #wrapper form ul li input[type=submit] {
+            padding: 10px 40px;
+
+            background: linear-gradient(to bottom, #06c5e4 0%, #04abda 100%);
+            border: 1px solid #105262;
+            border-radius: 5px;
+            color: #105262;
+            font-size: 14pt;
+        }
+
+        #wrapper form ul li input[type=submit]:hover {
+            box-shadow: inset 0px 7px 35px -15px rgba(0,0,0,0.64);
+        }
+
+            .email-icon {
+                background-image: url("icon-email.png")!important;
+            }
+
+            .password-icon {
+                background-image: url("icon-password.png")!important;
+            }
+
+            .user-icon {
+                background-image: url("icon-name.png")!important;
+            }
+
+        #wrapper form ul li p {
+            margin: 10px 0 3px 0;
+        }
+
+        #wrapper form ul li label {
+            font-size: 10pt;
+            vertical-align: 4px;
         }
