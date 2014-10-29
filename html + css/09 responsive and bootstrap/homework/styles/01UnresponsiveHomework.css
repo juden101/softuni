@@ -1,0 +1,230 @@
+html, body, h1, h2, nav, ul, li, p {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #6698ff;
+}
+
+#wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+
+    #wrapper > header {
+        padding-bottom: 10px;
+
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+    }
+
+        #wrapper > header h1 {
+
+        }
+
+            #wrapper > header h1 a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+                #wrapper > header h1 a img {
+                    margin-top: 10px;
+                }
+
+                #wrapper > header h1 a span {
+                    font-size: 30pt;
+                }
+
+
+        #wrapper > header nav {
+            padding-top: 10px;
+            position: relative;
+        }
+
+            #wrapper > header nav ul {
+                position: absolute;
+                right: 15px;
+            }
+
+                #wrapper > header nav ul li {
+                    display: inline-block;
+                    list-style: none;
+                }
+
+                #wrapper > header nav ul li a {
+                    margin-right: 5px;
+                    padding: 5px 20px;
+
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    text-decoration: none;
+                    color: #000;
+                }
+
+        #wrapper > section {
+            width: 73%;
+            margin-top: 25px;
+            float: left;
+        }
+
+            #wrapper > section article {
+                margin-bottom: 10px;
+                padding: 15px;
+
+                background-color: #e0eafe;
+                border: 1px solid #000;
+                box-sizing: border-box;
+            }
+
+                #wrapper > section article h1 {
+                    font-size: 18pt;
+                }
+
+                #wrapper > section article p {
+                    padding: 15px 0 5px 0;
+                    
+                    text-indent: 30px;
+                    font-size: 10pt;
+                    text-align: justify;
+                }
+
+        #wrapper > aside {
+            background-color: #e0eafe;
+            width: 22%;
+            margin-top: 25px;
+            float: right;
+            padding: 15px;
+
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+            #wrapper > aside ul {
+
+            }
+
+                #wrapper > aside ul li {
+                    padding-bottom: 10px;
+
+                    list-style: none;
+                }
+
+                    #wrapper > aside ul li a {
+                        color: #000;
+                        text-decoration: none;
+                        font-size: 10pt;
+                    }
+
+        #wrapper > footer {
+            background-color: #e0eafe;
+            width: 100%;
+            padding: 15px 0 5px 0;
+            float: left;
+
+            border: 1px solid #000;
+            box-sizing: border-box;
+        }
+
+            #wrapper > footer h2 {
+                text-align: center;
+            }
+
+                #wrapper > footer h2 a {
+
+                }
+
+@media only screen and (max-width: 960px) {
+
+    #wrapper {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-width: 780px) {
+
+    #wrapper > header h1 a span {
+        font-size: 24pt;
+    }
+
+    #wrapper > section {
+        width: 100%;
+    }
+
+    #wrapper > aside {
+        float: left;
+        width: 100%;
+        padding: 0;
+        padding-left: 10px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    #wrapper > aside ul li {
+        width: 22%;
+        padding: 1.5%;
+        display: inline-block;
+        float: left;
+
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+
+    #wrapper > header h1 a {
+        width: 100%;
+        display: block;
+    }
+
+    #wrapper > header h1 a img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    #wrapper > header h1 a span {
+        display: block;
+
+        text-align: center;
+    }
+
+    #wrapper > header {
+        margin-bottom: 100px;
+    }
+
+    #wrapper > header nav ul {
+        width: 100%;
+        position: absolute;
+        top: 5px;
+        right: 0;
+    }
+
+    #wrapper > header nav ul li {
+        display: block;
+    }
+
+    #wrapper > header nav ul li a {
+        width: 75%;
+        display: block;
+        margin: 0 auto;
+
+        border-bottom: none;
+    }
+
+    #wrapper > header nav ul li:last-child a {
+        border-bottom: 1px solid #000;
+    }
+
+    #wrapper article h1 {
+        text-align: center;
+    }
+
+    #wrapper footer h2 {
+        font-size: 14pt;
+    }
+
+}
