@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Yanone Kaffeesatz Regular";
+    src: url(yanonekaffeesatz-regular-webfont.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(form-background.png);
+}
+
+#wrapper {
+    position: relative;
+    width: 530px;
+    margin: 0 auto;
+
+    font-family: "Yanone Kaffeesatz Regular";
+}
+
+    #wrapper h1 {
+        font-size: 36pt;
+        font-weight: normal;
+        color: #7c7873;
+        text-align: center;
+
+        padding: 5px 0;
+    }
+
+    #wrapper .letter-content {
+        z-index: 4;
+        position: absolute;
+        width: 420px;
+        height: 400px;
+        top: 70px;
+        left: 35px;
+        padding: 20px;
+    }
+
+        #wrapper .letter-content ul {
+
+        }
+
+            #wrapper .letter-content ul li {
+                list-style: none;
+            }
+
+                #wrapper .letter-content ul li h5 {
+                    padding-top: 10px;
+                    font-size: 22pt;
+                    font-weight: normal;
+                    color: #7c7873;
+                }
+
+                #wrapper .letter-content ul li p {
+                    color: #b3abb4;
+                    text-transform: uppercase;
+                }
+
+                #wrapper .letter-content ul li textarea {
+                    width: 95%;
+                    height: 80px;
+                    padding: 10px;
+
+                    background: transparent;
+                    border: 1px solid #e4ddd3;
+                    font-family: Helvetica, Arial, serif;
+                    color: #514d4a;
+                }
+
+                #wrapper .letter-content ul li textarea:focus {
+                    background: rgba(255, 255, 255, 0.3);
+                    outline: none;
+                }
+
+                #wrapper .letter-content ul li input[type="text"],
+                #wrapper .letter-content ul li input[type="email"] {
+                    width: 95%;
+                    height: 30px;
+                    padding: 0 10px;
+
+                    background: transparent;
+                    border: 1px solid #e4ddd3;
+                    font-family: Helvetica, Arial, serif;
+                    color: #514d4a;
+                }
+
+                #wrapper .letter-content ul li input[type="text"],
+                #wrapper .letter-content ul li input[type="email"] {
+                    background: rgba(255, 255, 255, 0.3);
+                    outline: none;
+                }
+
+                #wrapper .letter-content ul li input[type="submit"] {
+                    width: 30%;
+                    height: 35px;
+                    margin: 20px 0 0 150px;
+
+                    background: none;
+                    border: none;
+                    border-radius: 5px;
+                    font-family: "Yanone Kaffeesatz Regular";
+                    font-size: 16pt;
+                    font-weight: bold;
+                    color: #7c7873;
+                }
+
+                #wrapper .letter-content ul li input[type="submit"]:hover {
+                    background: #bbc9cf;
+                    color: #435c70;
+                    text-shadow: 1px 1px 1px rgba(255, 255, 255, 1);
+                }
+
+    #wrapper .letter {
+        z-index: 2;
+        position: absolute;
+        width: 420px;
+        height: 400px;
+        top: 70px;
+        left: 35px;
+        padding: 20px;
+
+        background: url(letter-background.png);
+        border: 1px solid #b9b6ad;
+        border-radius: 5px;
+    }
+
+    #wrapper .letter-head {
+        z-index: 1;
+        position: absolute;
+        top: 197px;
+
+        width: 530px;
+        height: 316px;
+        background: url(envelope-top.png);
+    }
+
+    #wrapper .letter-body {
+        z-index: 3;
+        position: absolute;
+        top: 380px;
+
+        width: 530px;
+        height: 260px;
+        background: url(envelope-bottom.png);
+    }
