@@ -1,0 +1,180 @@
+@font-face {
+    font-family: Glyphicons Halflings;
+    src: url(glyphicons-halflings-regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: url(blurred-green-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+form#login {
+    width: 350px;
+    height: 265px;
+    margin: 80px auto 0 auto;
+
+    background: rgba(255, 255, 255, 0.8);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: -1px -1px 10px 0px rgba(50, 50, 50, 0.5);
+}
+
+    form#login h1 {
+        padding: 10px 0;
+
+        background: #93d55c;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+        color: #fff;
+        font-size: 15pt;
+        line-height: 20px;
+    }
+
+    form#login ul {
+        margin-top: 35px;
+    }
+
+        form#login ul li {
+            margin-bottom: 20px;
+
+            list-style: none;
+        }
+
+            form#login ul li input {
+                width: 270px;
+                height: 30px;
+                margin-right: 15px;
+                padding: 0 10px;
+                float: right;
+
+                border: 1px solid #ccc;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                outline: none;
+            }
+
+            form#login ul li input:focus {
+                border: 1px solid #66afe9;
+                box-shadow: 0 0 2px 0px rgba(50, 50, 50, 0.75);
+            }
+
+            form#login ul li .icon {
+                width: 30px;
+                height: 30px;
+                margin-left: 12px;
+                display: inline-block;
+
+                background: #eee;
+                border: 1px solid #ccc;
+                border-right: none;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            form#login ul li .icon:before {
+                margin-left: 8px;
+                line-height: 31px;
+                font-family: "Glyphicons Halflings";
+            }
+
+            form#login ul li .email {
+
+            }
+
+            form#login ul li .email:before {
+                content: '\e008';
+            }
+
+            form#login ul li .password {
+
+            }
+
+            form#login ul li .password:before {
+                content: '\e033';
+            }
+
+            form#login ul li input[type="submit"] {
+                width: 323px;
+                height: 40px;
+                margin-top: 10px;
+
+                background: #5cb85c;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 12pt;
+                box-shadow: 0px 4px 0px #229e22;
+            }
+
+            form#login ul li input[type="submit"]:hover {
+                background: #449d44;
+                cursor: pointer;
+            }
+
+form#search {
+    width: 350px;
+    height: 34px;
+    margin: 30px auto;
+}
+
+    form#search ul {
+
+    }
+
+        form#search ul li {
+            list-style: none;
+        }
+
+            form#search ul li input[type=text] {
+                width: 251px;
+                height: 30px;
+                padding: 0 10px;
+
+                border: 1px solid #ccc;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                outline: none;
+            }
+
+            form#search ul li input[type=text]:focus {
+                border: 1px solid #66afe9;
+                box-shadow: 0 0 2px 0px rgba(50, 50, 50, 0.75);
+            }
+
+            form#search ul li button {
+                width: 77px;
+                height: 32px;
+                margin-left: -5px;
+                padding-right: 10px;
+
+                background: #5cb85c;
+                border: 1px solid #4cae4c;
+                border-left: none;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                color: #fff;
+                outline: none;
+                text-align: right;
+            }
+
+            form#search ul li button:hover {
+                background: #449d44;
+                cursor: pointer;
+            }
+
+            form#search ul li button .search::before {
+                display: inline-block;
+                margin-top: -2px;
+
+                font-family: 'Glyphicons Halflings';
+                content: '\e003';
+            }

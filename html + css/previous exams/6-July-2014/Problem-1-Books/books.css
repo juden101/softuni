@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 485px;
+    margin: 20px auto;
+
+    font-family: Tahoma, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+    #wrapper section {
+
+    }
+
+        #wrapper section article {
+            width: 137px;
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+            #wrapper section article img {
+                margin: 0 auto;
+                margin-bottom: 10px;
+
+                border: 1px solid #dadee4;
+            }
+
+            #wrapper section article a {
+                color: #000;
+                text-decoration: none;
+            }
+
+            #wrapper section article a:hover {
+                color: #7d7d7d;
+            }
+
+            #wrapper section article p {
+                margin-bottom: 10px;
+            }
+
+                #wrapper section article p.desc {
+                    text-transform: uppercase;
+                }
+
+                #wrapper section article p.author {
+                    color: #777;
+                }
+
+                #wrapper section article p.price {
+                    margin-bottom: 15px;
+
+                    color: #8f0509;
+                    font-weight: bold;
+                }
+
+        #wrapper section article > a.button {
+            padding: 5px 10px 5px 25px;
+
+            background: url(shopping-cart-inactive.png) -1px 2px no-repeat #e6e7e9;
+            border-radius: 3px;
+            font-size: 10px;
+            color: #323232;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        #wrapper section article > a.button:hover {
+            background: url(shopping-cart-active.png) -1px 2px no-repeat #e6e7e9;
+            color: #000;
+        }
