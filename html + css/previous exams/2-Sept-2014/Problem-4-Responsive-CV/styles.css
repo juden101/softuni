@@ -1,49 +1,206 @@
-* { margin: 0; padding: 0; }
-html { height: 101%; }
-body { background: #f2f2f2 url('bg-tile.png'); font-size: 62.5%; padding-bottom: 65px; }
-
-h1 { font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; color: #454545; font-size: 3.6em; margin-bottom: 6px; }
-h2 { font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; color: #484848; font-size: 2.5em; margin-bottom: 10px; text-decoration: underline; }
-h3 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #777; font-weight: normal; font-size: 1.8em; margin-bottom: 10px; }
-h4 { font-family: "Trebuchet MS", Verdana, Arial, sans-serif; color: #656565; font-weight: bold; font-size: 1.75em; margin-bottom: 4px; }
-
-p { font-family: "Balthazar", "Droid Serif", serif; color: #565656; font-size: 1.8em; line-height: 1.4em; margin-bottom: 15px; padding-left: 35px; }
-small { font-family: "Balthazar", "Droid Serif", serif; color: #656565; font-size: 1.6em; display: block; margin-bottom: 6px; }
-ul { display: block; list-style: none; }
-ul li { padding-left: 45px; list-style-type: none; vertical-align: top; background: url('bullet.png') 25px 5px no-repeat; margin-bottom: 5px; font-family: "Balthazar", "Droid Serif", serif; color: #666; font-size: 1.6em; line-height: 2.3em; }
-
-img { border: 0; max-width: 100%; }
-
-a { color: #5582d6; text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/** @group core layout **/
-#w { margin: 0px 50px; padding: 20px 40px; padding-top: 35px; background: #fff; min-width: 260px; max-width: 900px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; -webkit-border-bottom-left-radius: 8px; -webkit-border-bottom-right-radius: 8px; -moz-border-radius-bottomleft: 8px; -moz-border-radius-bottomright: 8px; }
-
-header { width: 100%; }
-
-/** @group personal settings **/
-#info { float: left; margin-bottom: 12px; }
-#photo { float: right; }
-#photo img { 
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
--webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
--moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-background-color: #fff;
-border: 1px solid #ccc;
-padding: 5px; 
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    height: 101%;
+}
+body {
+    background: #f2f2f2 url('bg-tile.png');
+    font-size: 62.5%;
+    padding-bottom: 65px;
+}
+h1 {
+    color: #454545;
+    font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif;
+    font-size: 3.6em;
+    margin-bottom: 6px;
+}
+h2 {
+    color: #484848;
+    font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+h3 {
+    color: #777;
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 1.8em;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+h4 {
+    color: #656565;
+    font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+p {
+    color: #565656;
+    font-family: "Balthazar", "Droid Serif", serif;
+    font-size: 1.8em;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+    padding-left: 35px;
+}
+small {
+    color: #656565;
+    display: block;
+    font-family: "Balthazar", "Droid Serif", serif;
+    font-size: 1.6em;
+    margin-bottom: 6px;
+}
+ul {
+    display: block;
+    list-style: none;
+}
+ul li {
+    background: url('bullet.png') 25px 5px no-repeat;
+    color: #666;
+    font-family: "Balthazar", "Droid Serif", serif;
+    font-size: 1.6em;
+    line-height: 2.3em;
+    list-style-type: none;
+    margin-bottom: 5px;
+    padding-left: 45px;
+    vertical-align: top;
+}
+img {
+    border: 0;
+    max-width: 100%;
+}
+a {
+    color: #5582d6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#w {
+    background: #fff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin: 0px 50px;
+    max-width: 900px;
+    min-width: 260px;
+    moz-border-radius-bottomleft: 8px;
+    moz-border-radius-bottomright: 8px;
+    padding: 20px 40px;
+    padding-top: 35px;
+    webkit-border-bottom-left-radius: 8px;
+    webkit-border-bottom-right-radius: 8px;
+}
+header {
+    width: 100%;
+}
+#info {
+    float: left;
+    margin-bottom: 12px;
+}
+#photo {
+    float: right;
+}
+#photo img {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    moz-border-radius: 3px;
+    moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    webkit-border-radius: 3px;
+    webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#skills-left {
+    display: block;
+    float: left;
+    margin-right: 30px;
+}
+#skills-right {
+    display: block;
+    float: left;
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
 }
 
-/** @group skills **/
-#skills-left { display: block; float: left; margin-right: 30px; }
-#skills-right { display: block; float: left;}
+@media all and (max-width: 740px) {
 
-/** @group clearfix **/
-.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
-.clearfix { display: inline-block; }
- 
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
+    #w {
+        padding: 35px 0 20px 0;
+    }
+
+        header.clearfix #info {
+            float: none;
+
+            text-align: center;
+        }
+
+        header.clearfix #photo {
+            width: 262px;
+            float: none;
+            margin: 0 auto;
+        }
+
+    #w > h2 {
+        text-align: center;
+    }
+
+    section#skills {
+        padding-left: 20px;
+    }
+
+        section h2 {
+            text-align: center;
+        }
+
+        section p {
+            padding: 0 20px;
+            text-align: justify;
+        }
+
+}
+
+@media all and (max-width: 570px) {
+
+    #skills li {
+         display: inline-block;
+         width: 115px;
+         padding-left: 20px;
+
+         background-position: 0px 5px;
+     }
+
+    #skills #skills-left {
+        display: block;
+        float: none;
+    }
+
+    #skills #skills-right {
+        display: block;
+        float: none;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #w {
+        margin: 0 20px;
+    }
+}
