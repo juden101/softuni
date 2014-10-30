@@ -1,2 +1,45 @@
 /* Add here your responsive CSS */
 
+@media all and (max-width: 780px) {
+
+    .body {
+        width: 95%;
+    }
+
+    .mainHeader nav {
+        height: auto;
+    }
+
+    .mainHeader img {
+        width: 100%;
+        height: auto;
+        margin: 3% 0;
+    }
+
+    .mainHeader nav ul {
+        padding: 0;
+    }
+
+    .mainHeader nav ul li {
+        display: block;
+        float: none;
+    }
+
+    .mainHeader nav ul li a {
+        width: 100%;
+        padding: 5px 0!important;
+    }
+
+    .content {
+        width: 100%;
+        float: none!important;
+        margin-bottom: 10px;
+    }
+
+    aside {
+        width: 100%!important;
+        margin-left: 0!important;
+        float: none!important;
+    }
+
+}
