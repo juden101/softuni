@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Patua One';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Patua One'), local('PatuaOne-Regular'), url(http://fonts.gstatic.com/s/patuaone/v6/yAXhog6uK3bd3OwBILv_SBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    font-family: Georgia;
+}
+
+    #wrapper header {
+        width: 564px;
+        margin: 0 auto;
+    }
+
+        #wrapper header h1 {
+            background: url(site-logo.png) no-repeat 108px 8px;
+            background-size: 40px;
+            text-align: center;
+            font-family: 'Patua One';
+            font-size: 45px;
+            font-weight: normal;
+            color: #444;
+        }
+        #wrapper header h1:hover {
+            color: #777;
+            cursor: pointer;
+        }
+
+        #wrapper header p {
+            text-align: center;
+            font-family: Georgia, italic;
+            font-size: 12px;
+            font-style: italic;
+            color: #666;
+        }
+
+        #wrapper header nav {
+            margin: 10px auto;
+
+            border-top: 1px dashed #aaa;
+            border-bottom: 1px dashed #aaa;
+        }
+
+            #wrapper header nav ul {
+                width: 380px;
+                margin: 0 auto;
+            }
+
+                #wrapper header nav ul li {
+                    display: inline-block;
+                    margin: 5px 0;
+                }
+
+                    #wrapper header nav ul li a {
+                        display: inline-block;
+                        padding: 3px 5px;
+
+                        border-radius: 4px;
+                        color: #999;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+
+                    #wrapper header nav ul li a:hover {
+                        background: #eee;
+                        color: #666;
+                    }
+
+    #wrapper main {
+        width: 940px;
+        margin: 0 auto;
+    }
+
+        #wrapper main img {
+            margin: 10px 0;
+        }
+
+        #wrapper main .left {
+            width: 69%;
+            float: left;
+        }
+
+            #wrapper main .left section#message {
+                width: 85%;
+                margin: 20px auto;
+                padding: 20px 0;
+
+                border-top: 1px dashed #aaa;
+                border-bottom: 1px dashed #aaa;
+            }
+
+                #wrapper main .left section#message h3 {
+                    padding-bottom: 10px;
+
+                    text-align: center;
+                    color: #666;
+                    font-size: 24px;
+                    font-weight: normal;
+                }
+
+                #wrapper main .left section#message p {
+                    text-align: center;
+                    color: #666;
+                    font-size: 13px;
+                }
+
+            #wrapper main .left section#content {
+
+            }
+
+                #wrapper main .left section#content h2 {
+                    padding-bottom: 15px;
+
+                    font-size: 30px;
+                    font-weight: normal;
+                }
+
+                #wrapper main .left section#content p {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+
+        #wrapper main .right {
+            width: 30%;
+            float: right;
+        }
+
+            #wrapper main .right aside {
+                margin-bottom: 15px;
+                padding: 15px;
+
+                border: 1px dashed #aaa;
+            }
+
+                #wrapper main .right aside .header {
+                    margin-bottom: 10px;
+                }
+
+                    #wrapper main .right aside .header input[type=text] {
+                        padding: 3px;
+
+                        border: 1px solid #ccc;
+                    }
+
+                    #wrapper main .right aside .header input[type=submit] {
+                        padding: 2px 5px;
+
+                        font-family: Arial;
+                    }
+
+                #wrapper main .right aside .content {
+
+                }
+
+                    #wrapper main .right aside .content h4 {
+                        margin-bottom: 10px;
+
+                        color: #666;
+                    }
+
+                    #wrapper main .right aside .content ul {
+
+                    }
+
+                        #wrapper main .right aside .content ul li {
+                            list-style: none;
+                        }
+
+                            #wrapper main .right aside .content ul li a {
+                                color: #06c;
+                                text-decoration: none;
+                                font-size: 14px;
+                            }
+
+                            #wrapper main .right aside .content ul li a:hover {
+                                color: #ff4b33;
+                                text-decoration: underline;
+                            }
+
+    footer {
+        width: 98%;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+
+        background: #eee;
+        border-top: 1px solid #ccc;
+    }
+
+        footer p {
+            text-align: center;
+        }
+
+.fixer {
+    clear: both;
+}
