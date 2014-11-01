@@ -26,7 +26,6 @@ body {
   font: 1.1em 'Nunito', Arial, sans-serif;
   text-align: center;
   text-rendering: optimizeLegibility;
-  min-width: 600px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -315,4 +314,69 @@ a:hover {
 
 .post pre.terminal code {
   background-color: #333;
+}
+
+@media all and (max-width: 568px) {
+    .site .container {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .banner a.title {
+        font-size: 450%;
+    }
+
+    .header .navigation li {
+        display: inline-block;
+        margin-bottom: 5%;
+    }
+
+    table {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody {
+        display: block;
+    }
+
+    table tbody tr {
+        margin: 0 10px 10px 0;
+        padding: 10px;
+        display: block;
+    }
+
+    table tbody tr:nth-child(odd) {
+        background: #eeeeef;
+    }
+
+    table tbody tr td {
+        display: block;
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    table tbody tr td:before {
+        padding-left: 67px;
+        content: '';
+    }
+
+    table tbody tr td:first-child:before {
+        margin-left: -70px;
+        padding-right: 17px;
+
+        content: 'When:';
+        font-weight: bold;
+    }
+
+    table tbody tr td:last-child:before {
+        margin-left: -70px;
+        padding-right: 19px;
+
+        content: 'What:';
+        font-weight: bold;
+    }
 }
