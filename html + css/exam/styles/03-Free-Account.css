@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+#wrapper {
+    width: 800px;
+    margin: 15px auto;
+    padding: 15px 25px;
+
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px 1px rgba(0,0,0,0.5);
+}
+
+    #wrapper h1 {
+        padding: 15px 0;
+
+        text-align: center;
+        font-size: 24px;
+        font-weight: normal;
+        color: #462C0B;
+    }
+
+    #wrapper p {
+        text-align: center;
+        font-size: 14px;
+        color: #3B3247;
+    }
+
+    #wrapper .forms-holder {
+        width: 85%;
+        margin: 15px auto 0 auto;
+        padding-top: 15px;
+        border-top: 1px solid #cecece;
+    }
+
+        #wrapper .forms-holder form {
+            width: 45%;
+        }
+
+        #wrapper .forms-holder form.register {
+            float: left;
+        }
+
+        #wrapper .forms-holder form.login {
+            float: right;
+        }
+
+            #wrapper .forms-holder form h3 {
+                margin-bottom: 5px;
+
+                color: #462C0B;
+                font-weight: normal;
+                font-size: 17px;
+            }
+
+            #wrapper .forms-holder form ul {
+
+            }
+
+                #wrapper .forms-holder form ul li {
+                    margin-bottom: 10px;
+
+                    list-style: none;
+                }
+
+                    #wrapper .forms-holder form ul li input[type="text"],
+                    #wrapper .forms-holder form ul li input[type="email"],
+                    #wrapper .forms-holder form ul li input[type="password"] {
+                        width: 100%;
+                        padding: 8px;
+
+                        border: 1px solid #CFCFCF;
+                        border-radius: 5px;
+                        outline: none;
+                    }
+
+                    #wrapper .forms-holder form ul li .ok,
+                    #wrapper .forms-holder form ul li .not-ok {
+                        background: 98.5% 4px no-repeat;
+                    }
+
+                    #wrapper .forms-holder form ul li .ok {
+                        background-image: url("../images/ok.png");
+                    }
+
+                    #wrapper .forms-holder form ul li .not-ok {
+                        background-image: url("../images/no.png");
+                    }
+
+                    #wrapper .forms-holder form ul li input[type="checkbox"] {
+                        position: relative;
+                        top: 3px;
+                        left: 2px;
+                    }
+
+                    #wrapper .forms-holder form ul li label {
+                        font-size: 13px;
+                        color: #7C7E7B;
+                    }
+
+                    #wrapper .forms-holder form ul li a.forgotten-password {
+                        font-size: 14px;
+                        color: #E96283;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+
+                    #wrapper .forms-holder form ul li a.forgotten-password:hover {
+                        text-decoration: underline;
+                    }
+
+                    #wrapper .forms-holder form ul li input[type="submit"] {
+                        margin-top: 5px;
+                        padding: 10px 30px;
+
+                        background: #f0f0f0;
+                        border: none;
+                        border-radius: 5px;
+                        box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.75);
+                        font-weight: bold;
+                    }
+
+                    #wrapper .forms-holder form ul li input[type="submit"]:hover {
+                        background: #AFDF67;
+                        cursor: pointer;
+                    }
+
+.float-fixer {
+    clear: both;
+}

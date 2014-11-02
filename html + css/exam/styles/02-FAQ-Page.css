@@ -1,0 +1,162 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Open-sans", sans-serif;
+}
+
+#wrapper {
+    background: #F3F3F5;
+}
+
+    #wrapper header {
+        margin-bottom: 15px;
+
+        background: url("../images/bgr.jpg");
+    }
+
+        #wrapper header div {
+            width: 920px;
+            height: 350px;
+            margin: 0 auto;
+
+            background: url("../images/got-dolls.jpg");
+        }
+
+            #wrapper header h1 {
+                margin: 240px 0 0 488px;
+                padding: 12px 15px;
+                display: inline-block;
+
+                background: #5d5c5d;
+                opacity: 0.9;
+                font-family: "Lobster";
+                font-size: 60px;
+                font-weight: normal;
+                color: #fff;
+            }
+
+    #wrapper main {
+        width: 920px;
+        margin: 0 auto;
+    }
+
+        #wrapper main aside {
+            width: 20%;
+            float: left;
+        }
+
+            #wrapper main aside ul {
+                margin-bottom: 15px;
+            }
+
+            #wrapper main aside ul li {
+                padding: 5px;
+
+                background: #4E5359;
+                box-sizing: border-box;
+                list-style: none;
+            }
+
+            #wrapper main aside ul li.active {
+                background: #42464B;
+            }
+
+            #wrapper main aside ul li:hover:not(.active) {
+                background: #5D6167;
+            }
+
+            #wrapper main aside ul li:before {
+                content: ' ';
+                margin: 0 10px 0 -5px;
+                padding: 5px 2px;
+            }
+
+            #wrapper main aside ul li.active:before {
+                background: #22DBA5;
+            }
+
+            #wrapper main aside ul li:hover:not(.active):before {
+                background: #2F6D6C;
+            }
+
+                #wrapper main aside ul li:last-child {
+                    border-bottom: none;
+                }
+
+                    #wrapper main aside ul li a {
+                        text-decoration: none;
+                        font-size: 13px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+
+            #wrapper main aside img {
+                width: 100%;
+
+                opacity: 0.8;
+            }
+
+        #wrapper main div {
+            width: 78%;
+            float: right;
+        }
+
+            #wrapper main div section {
+                margin-top: 15px;
+                padding: 10px;
+
+                background: #fff;
+                border-top: 1.5px solid #BBBABF;
+            }
+
+            #wrapper main div section:first-of-type {
+                margin-top: 0;
+            }
+
+                #wrapper main div section h3 {
+                    margin-bottom: 10px;
+
+                    text-transform: uppercase;
+                    color: #BBBAC2;
+                    font-size: 14px;
+                }
+
+                #wrapper main div section article {
+
+                }
+
+                    #wrapper main div section article h4 {
+                        margin: 5px 0;
+                    }
+
+                        #wrapper main div section article h4 a {
+                            text-decoration: none;
+                            color: #00e;
+                        }
+
+                    #wrapper main div section article p {
+                        color: #A19899;
+                    }
+
+    #wrapper footer {
+        background: #C9C7CC;
+
+        margin-top: 10px;
+    }
+
+        #wrapper footer div {
+            width: 920px;
+            margin: 0 auto;
+            padding: 10px 0 50px 0;
+        }
+
+            #wrapper footer div p {
+                color: #4E5364;
+            }
+
+.float-fixer {
+    clear: both;
+}
