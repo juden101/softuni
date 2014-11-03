@@ -1,0 +1,43 @@
+title:            JekyllWebsite
+description:      A website make with Jekyll for the SoftUni homework
+disqus_shortname:
+reading_time:     true
+words_per_minute: 200
+url: http://homeworks.littleninja.softuni-friends.org/10.%20PreprocessorsTransitionsJekyll/3.%20JekyllWebsite
+owner:
+  name:           Peshko Goshkov
+  avatar:         avatar.jpg
+  bio:            "I am Peshko. I'm gonna be a great software engineer"
+  email:          peshko@goshkov.codes
+  twitter:
+  facebook: ?ref=logo
+  github:
+links:
+  - title: Theme Setup
+    url: /theme-setup
+
+timezone:    Europe/Sofia
+future:      true
+highlighter: pygments
+markdown:    kramdown
+
+permalink:   /:categories/:title/
+
+paginate: 5
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: true
+
+  coderay:
+    coderay_line_numbers: nil
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
