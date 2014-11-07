@@ -1,0 +1,41 @@
+#game-grid {
+    width: 458px;
+    height: 460px;
+    margin: 0 auto;
+
+    background: #3cf;
+}
+
+#game-grid div {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    margin-bottom: 5px;
+
+    background: #fff;
+    text-align: center;
+}
+
+#game-grid div::before {
+    content: 'x';
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    visibility: hidden;
+
+    font-size: 110px;
+}
+
+#game-grid div.o::before {
+    visibility: visible;
+
+    content: 'o';
+    color: #51c40c;
+}
+
+#game-grid div.x::before {
+    visibility: visible;
+
+    content: 'x';
+    color: #cf0000;
+}
