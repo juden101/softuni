@@ -48,13 +48,41 @@
 
     background: url("images/ninja.png") no-repeat;
     background-size: 100%;
-
-    /transition: transform .5s;
-
-
 }
 
-.spin {
+#game .rock {
+    width: 108px;
+    height: 100px;
+    position: absolute;
+    /top: 0px;
+    /left: 380px;
+    /visibility: hidden;
+
+    background: url("images/rock.png") no-repeat;
+    background-size: 100%;
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 8000ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 8000ms;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+
+    -ms-animation-name: spin;
+    -ms-animation-duration: 8000ms;
+    -ms-animation-iteration-count: 1;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.spin-player {
     -webkit-animation-name: spin;
     -webkit-animation-duration: 500ms;
     -webkit-animation-iteration-count: infinite;
@@ -77,22 +105,40 @@
 }
 
 @-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
+    from { -ms-transform: rotate(0deg); visibility: visible; }
     to { -ms-transform: rotate(360deg); }
 }
 @-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
+    from { -moz-transform: rotate(0deg); visibility: visible; }
     to { -moz-transform: rotate(360deg); }
 }
 @-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
+    from { -webkit-transform: rotate(0deg); visibility: visible; }
     to { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin {
     from {
         transform:rotate(0deg);
+        visibility: visible;
     }
     to {
         transform:rotate(360deg);
     }
+}
+
+@-ms-keyframes fall {
+    from { top: 0; }
+    to { top: 75%; }
+}
+@-moz-keyframes fall {
+    from { top: 0; }
+    to { top: 75%; }
+}
+@-webkit-keyframes fall {
+    from { top: 0; }
+    to { top: 75%; }
+}
+@keyframes fall {
+    from { top: 0; }
+    to { top: 75%; }
 }
