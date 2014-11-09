@@ -1,6 +1,7 @@
 var game = document.getElementById('game');
 var player = document.getElementById('player');
 var lastPosition = 'left';
+var isGameOver = false;
 
 player.style.top = "380px";
 player.style.left = "380px";
@@ -8,40 +9,50 @@ player.style.left = "380px";
 setInterval(function() {
     moveRocks();
 }, 25);
+
 setInterval(function() {
     increaseTime();
 }, 1000);
+
 setInterval(function() {
     //TODO ROCK POSITION
-    var rockPosition = random(0, 730);
-    var rock = document.createElement('div');
-    rock.className = 'rock';
-    rock.style.top = 0 + 'px';
-    rock.style.left = random(0, 730) + 'px';
+    if(!isGameOver) {
+        var rockPosition = random(0, 730);
+        var rock = document.createElement('div');
+        rock.className = 'rock';
+        rock.style.top = 0 + 'px';
+        rock.style.left = random(0, 730) + 'px';
 
-    game.appendChild(rock);
+        game.appendChild(rock);
+    }
 }, 1500);
 
+document.getElementById('retry').addEventListener("click", function() {
+    location.reload();
+});
+
 document.onkeydown = function(e) {
-    e = e || window.event;
+    if(!isGameOver) {
+        e = e || window.event;
 
-    switch(e.which || e.keyCode) {
-        case 32:
-            movePlayer('flip');
+        switch(e.which || e.keyCode) {
+            case 32:
+                movePlayer('flip');
 
-            break;
-        case 37:
-            movePlayer('left');
+                break;
+            case 37:
+                movePlayer('left');
 
-            break;
-        case 39:
-            movePlayer('right');
+                break;
+            case 39:
+                movePlayer('right');
 
-            break;
-        default: return;
+                break;
+            default: return;
+        }
+
+        e.preventDefault();
     }
-
-    e.preventDefault();
 }
 
 function moveRocks() {
@@ -55,17 +66,11 @@ function moveRocks() {
         var currentRockLeft = rocks[i].style.left.replace('px', '');
 
         //CHECKS COLLISION
-        console.log("rock => " + currentRockTop + ", " + currentRockLeft);
-        console.log("player => " + playerTop + ", " + playerLeft);
-
-        console.log(Math.abs(currentRockTop - playerTop) + ", " + Math.abs(currentRockLeft - playerLeft));
-
         if(Math.abs(currentRockTop - playerTop) < 100 && Math.abs(currentRockLeft - playerLeft) < 100) {
             var points = document.getElementById('points').innerText;
             var time = document.getElementById('time').innerText;
 
-            alert("You gained " + points + " points in " + time + " seconds!");
-            location.reload();
+            gameOver(points, time);
         }
 
         //REMOVES ROCK WHEN HIT THE GROUND
@@ -79,6 +84,21 @@ function moveRocks() {
         rocks[i].style.top = (parseInt(currentRockTop) + 3) + 'px';
     }
 }
+
+function gameOver(points, time) {
+    isGameOver = true;
+
+    document.getElementById('player').style.visibility = 'hidden';
+    document.getElementById('game-over').style.visibility = 'visible';
+
+    var rocks = game.getElementsByClassName('rock');
+    for (var i = 0; i < rocks.length; i++) {
+        game.getElementsByClassName('rock')[i].remove();
+    }
+
+    document.getElementById('info').innerHTML = "You gained " + points + " points in " + time + " seconds!"
+}
+
 function movePlayer(position) {
     var player = document.getElementById('player');
     var playerPosition = parseInt(getComputedStyle(player).getPropertyValue('left').replace('px',''));
@@ -115,14 +135,17 @@ function movePlayer(position) {
         }, 500);
     }
 }
+
 function increasePoints() {
     var currentPoints = parseInt(document.getElementById('points').innerText);
     document.getElementById('points').innerHTML = currentPoints + 1;
 }
+
 function increaseTime() {
     var currentTime = parseInt(document.getElementById('time').innerText);
     document.getElementById('time').innerHTML = currentTime + 1;
 }
+
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
