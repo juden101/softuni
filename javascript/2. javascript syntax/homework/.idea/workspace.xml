@@ -36,14 +36,20 @@
         <option value="$PROJECT_DIR$/02.SimpleCalculations/02.SimpleCalculations.js" />
         <option value="$PROJECT_DIR$/03.CheckIfNumberIsEven/checkIfNumberIsEven.js" />
         <option value="$PROJECT_DIR$/04.CheckIfNumberIsPrime/checkIfNumberIsPrime.js" />
+        <option value="$PROJECT_DIR$/05.DivisionBy3/dividsionBy3.js.html" />
+        <option value="$PROJECT_DIR$/05.DivisionBy3/divisionBy3.js" />
+        <option value="$PROJECT_DIR$/06.BitChecker/bitChecker.js" />
+        <option value="$PROJECT_DIR$/07.TheLifetimeSupplyCalculator/theLifetimeSupplyCalculator.js" />
+        <option value="$PROJECT_DIR$/08.CylinderVolume/cylinderVolume.js" />
+        <option value="$PROJECT_DIR$/09.TreeOrHouse/TreeOrHouse.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1026" />
+    <option name="x" value="732" />
+    <option name="y" value="3" />
+    <option name="width" value="949" />
+    <option name="height" value="1008" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -98,34 +104,33 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.checkIfNumberIsPrime.js">
-    <configuration default="false" name="powerfulCars.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="powerfulCars.js" working-dir="$PROJECT_DIR$/01.PowerfulCars">
+  <component name="RunManager" selected="Node.js.TreeOrHouse.js">
+    <configuration default="false" name="divisionBy3.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="divisionBy3.js" working-dir="$PROJECT_DIR$/05.DivisionBy3">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="false" name="02.SimpleCalculations.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="simpleCalculations.js" working-dir="$PROJECT_DIR$/02.SimpleCalculations">
+    <configuration default="false" name="bitChecker.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="bitChecker.js" working-dir="$PROJECT_DIR$/06.BitChecker">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="false" name="checkIfNumberIsEven.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="checkIfNumberIsEven.js" working-dir="$PROJECT_DIR$/03.CheckIfNumberIsEven">
+    <configuration default="false" name="theLifetimeSupplyCalculator.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="theLifetimeSupplyCalculator.js" working-dir="$PROJECT_DIR$/07.TheLifetimeSupplyCalculator">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="false" name="checkIfNumberIsPrime.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="checkIfNumberIsPrime.js" working-dir="$PROJECT_DIR$/04.CheckIfNumberIsPrime">
+    <configuration default="false" name="cylinderVolume.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="cylinderVolume.js" working-dir="$PROJECT_DIR$/08.CylinderVolume">
       <RunnerSettings RunnerId="NodeJS.run" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+    <configuration default="false" name="TreeOrHouse.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodeJS/node" path-to-js-file="TreeOrHouse.js" working-dir="$PROJECT_DIR$/09.TreeOrHouse">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -138,14 +143,12 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
       <option name="filePath" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -155,24 +158,36 @@
       <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.powerfulCars.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.02.SimpleCalculations.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.checkIfNumberIsEven.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.checkIfNumberIsPrime.js" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.divisionBy3.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.bitChecker.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.theLifetimeSupplyCalculator.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.cylinderVolume.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.TreeOrHouse.js" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.checkIfNumberIsPrime.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.checkIfNumberIsEven.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.02.SimpleCalculations.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.powerfulCars.js" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.TreeOrHouse.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.cylinderVolume.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.theLifetimeSupplyCalculator.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.bitChecker.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.divisionBy3.js" />
       </list>
     </recent_temporary>
   </component>
@@ -189,19 +204,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="732" y="3" width="949" height="1008" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.45394737" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -235,7 +250,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15260324" vertical-offset="0" max-vertical-offset="557">
           <caret line="5" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -257,8 +271,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/04.CheckIfNumberIsPrime/checkIfNumberIsPrime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5798923" vertical-offset="0" max-vertical-offset="557">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.082125604" vertical-offset="0" max-vertical-offset="828">
+          <caret line="4" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/05.DivisionBy3/divisionBy3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12781955" vertical-offset="0" max-vertical-offset="612">
+          <caret line="4" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/06.BitChecker/bitChecker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07.TheLifetimeSupplyCalculator/theLifetimeSupplyCalculator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.287594" vertical-offset="0" max-vertical-offset="532">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/09.TreeOrHouse/TreeOrHouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.287594" vertical-offset="0" max-vertical-offset="532">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08.CylinderVolume/cylinderVolume.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19172932" vertical-offset="0" max-vertical-offset="532">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding />
         </state>
       </provider>
