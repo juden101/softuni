@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <div>first div</div>
+        <div>second div</div>
+        <div class="empty"></div>
+        <div>third div<div>inner div</div></div>
+
+        <ul id="result"></ul>
+
+        <script>
+            var divsContent = [];
+            var divs = document.getElementsByTagName('div');
+
+            for(div in divs) {
+                var currentDiv = divs[div].innerHTML;
+                var currentLi = document.createElement("li");
+                currentLi.innerHTML = currentDiv;
+
+                if(currentDiv) {
+                    document.getElementById('result').appendChild(currentLi);
+                }
+            }
+        </script>
+    </body>
+</html>
