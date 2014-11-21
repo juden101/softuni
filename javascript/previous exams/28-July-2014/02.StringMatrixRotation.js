@@ -58,12 +58,3 @@ function solve(input){
 
     printMatrix(matrix);
 }
-
-solve(
-    [
-        'Rotate(90)',
-        'hello',
-        'softuni',
-        'exam'
-    ]
-)
