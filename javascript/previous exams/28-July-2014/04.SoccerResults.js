@@ -25,7 +25,7 @@ function solve(input) {
         var awayGoals = Number(match[4]);
 
         if(!teams[homeTeam]) {
-            teams[homeTeam] =  JSON.parse(JSON.stringify(team));
+            teams[homeTeam] = JSON.parse(JSON.stringify(team));
         }
 
         addResult(teams[homeTeam], awayTeam, homeGoals, awayGoals);
