@@ -1,0 +1,15 @@
+section {
+    width: 40%;
+    margin-top: 10px;
+}
+
+section span.number {
+    padding: 5px 7px;
+    margin: 1px -3px 0 0;
+    display: inline-block;
+    background-color: #98bf21;
+}
+
+section span.prime {
+    background-color: #e9990d;
+}

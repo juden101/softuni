@@ -7,7 +7,7 @@
 </head>
 <body>
     <table>
-        <tr>
+        <tr class="title">
             <td class="title">Number</td>
             <td class="title">Square</td>
         </tr>
@@ -33,8 +33,8 @@
 
             $sumOfAllRoots = (float)round($sumOfAllRoots, 2);
         ?>
-        <tr>
-            <td class="title">Total:</td>
+        <tr class="title">
+            <td>Total:</td>
             <td><?= $sumOfAllRoots;?></td>
         </tr>
     </table>

@@ -23,6 +23,7 @@ if(isset($_POST['years']) && $_POST['years'] != '') {
             $yearsAnnualExpenses[$i][$month] = mt_rand(1, 999);
             $totalSum += $yearsAnnualExpenses[$i][$month];
         }
+
         $yearsAnnualExpenses[$i]['total'] = $totalSum;
     }
 }
@@ -37,7 +38,7 @@ if(isset($_POST['years']) && $_POST['years'] != '') {
 if(isset($yearsAnnualExpenses) && count($yearsAnnualExpenses) > 0) {
 ?>
     <table>
-        <tr>
+        <tr class="title">
             <td class="title">Year</td>
 
             <?php

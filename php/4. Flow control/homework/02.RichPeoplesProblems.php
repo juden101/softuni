@@ -34,7 +34,7 @@
     if(isset($cars) && count($cars) > 0) {
     ?>
         <table>
-            <tr>
+            <tr class="title">
                 <td class="title">Car</td>
                 <td class="title">Color</td>
                 <td class="title">Count</td>
