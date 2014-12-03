@@ -1,0 +1,21 @@
+table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table tr:nth-child(odd) {
+    background-color: #eaf2d3;
+}
+
+table tr.title {
+    background-color: #a7c942;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+table td {
+    padding: 5px;
+    border: 1px solid #98bf21;
+}
