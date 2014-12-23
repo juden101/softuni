@@ -25,9 +25,6 @@ if(count($datesMatches[0]) > 0) {
     for($i = 0; $i < count($datesMatches[0]); $i++) {
         $date = $datesMatches[0][$i];
         $splitDate = explode('-', $date);
-        $year = $splitDate[0];
-        $month = $splitDate[1];
-        $day = $splitDate[2];
 
         $dateFormat = 'Y-m-d';
 
