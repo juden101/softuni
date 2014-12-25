@@ -25,7 +25,6 @@ public class _01_Timespan {
         long diffSeconds = diff / 1000 % 60;
         long diffMinutes = diff / (60 * 1000) % 60;
         long diffHours = diff / (60 * 60 * 1000);
-
 		
 	    System.out.printf("%d:%02d:%02d", diffHours, diffMinutes, diffSeconds);
 	}
