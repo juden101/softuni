@@ -4,33 +4,50 @@ class Program
 {
     static void Main()
     {
-        Person me = new Person();
-        me.Name = "Ivan";
-        me.Age = 18;
-        me.Email = "asd@";
-        Console.WriteLine(me.Name);
-        Console.WriteLine(me.Age);
+        try
+        {
+            Person ivan = new Person("Ivan", 18, "ivan@gmail.com");
+            Person pesho = new Person("Pesho", 43, "");
+            Person gosho = new Person("Gosho", 27);
+
+            Console.WriteLine(ivan.ToString());
+            Console.WriteLine(pesho.ToString());
+            Console.WriteLine(gosho.ToString());
+        }
+        catch (ArgumentNullException ex)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(ex.ParamName);
+            Console.ResetColor();
+        }
     }
 }
 
 class Person
 {
 
-    private String name;
+    private string name;
     private int age;
-    private String email;
+    private string email;
 
-    public Person(String name, int age, String email)
+    public Person(string name, int age, String email)
+    {
+        this.Name = name;
+        this.Age = age;
+        this.Email = email;
+    }
+
+    public Person(string name, int age) : this(name, age, "")
     {
 
     }
 
-    public String Name
+    public string Name
     {
         get { return this.name; }
         set
         {
-            if (String.IsNullOrEmpty(value))
+            if (string.IsNullOrEmpty(value))
             {
                 throw new ArgumentNullException("Name cannot be empty.");
             }
@@ -53,18 +70,30 @@ class Person
         }
     }
 
-    public String Email
+    public string Email
     {
         get { return this.email; }
         set
         {
-            if (!String.IsNullOrEmpty(value) && !value.Contains("@"))
+            if (!string.IsNullOrEmpty(value) && !value.Contains("@"))
             {
                 throw new ArgumentNullException("Email should be either empty or valid.");
             }
 
             this.email = value;
         }
+    }
+
+    public override string ToString()
+    {
+        string output = "Person: " + this.Name + ", " + this.Age;
+
+        if (!string.IsNullOrEmpty(this.Email))
+        {
+            output += ", " + this.Email;
+        }
+
+        return output;
     }
 
 }
