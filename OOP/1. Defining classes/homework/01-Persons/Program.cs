@@ -11,7 +11,9 @@ class Program
             Person gosho = new Person("Gosho", 27);
 
             Console.WriteLine(ivan.ToString());
+            Console.WriteLine("########################");
             Console.WriteLine(pesho.ToString());
+            Console.WriteLine("########################");
             Console.WriteLine(gosho.ToString());
         }
         catch (ArgumentNullException ex)
@@ -37,7 +39,8 @@ class Person
         this.Email = email;
     }
 
-    public Person(string name, int age) : this(name, age, "")
+    public Person(string name, int age)
+        : this(name, age, "")
     {
 
     }
