@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-Paths", "Paths\03-Paths.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-Points3D", "01-Points3D\01-Points3D.csproj", "{AD881E04-3E7F-4884-B33F-3AEE595A02A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-HTMLDispatcher", "04-HTMLDispatcher\04-HTMLDispatcher.csproj", "{665F52AF-701B-4F0B-8CF5-8D357B6E6C8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{AD881E04-3E7F-4884-B33F-3AEE595A02A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD881E04-3E7F-4884-B33F-3AEE595A02A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD881E04-3E7F-4884-B33F-3AEE595A02A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665F52AF-701B-4F0B-8CF5-8D357B6E6C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665F52AF-701B-4F0B-8CF5-8D357B6E6C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665F52AF-701B-4F0B-8CF5-8D357B6E6C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665F52AF-701B-4F0B-8CF5-8D357B6E6C8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
