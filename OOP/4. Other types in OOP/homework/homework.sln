@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-GalacticGPS", "01-GalacticGPS\01-GalacticGPS.csproj", "{F8E510B3-B66F-495F-B08C-FD7C9F72098E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-FractionCalculator", "02-FractionCalculator\02-FractionCalculator.csproj", "{582CE70B-AB19-4852-9498-77AFBA24C935}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F8E510B3-B66F-495F-B08C-FD7C9F72098E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8E510B3-B66F-495F-B08C-FD7C9F72098E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8E510B3-B66F-495F-B08C-FD7C9F72098E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582CE70B-AB19-4852-9498-77AFBA24C935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582CE70B-AB19-4852-9498-77AFBA24C935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582CE70B-AB19-4852-9498-77AFBA24C935}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582CE70B-AB19-4852-9498-77AFBA24C935}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
