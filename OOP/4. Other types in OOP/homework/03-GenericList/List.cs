@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Text;
 
-public class GenericList<T>
+[Version(1.234)]
+public class GenericList<T> where T : IComparable<T>
 {
     const int DefaultCapacity = 16;
 
@@ -97,21 +99,104 @@ public class GenericList<T>
         elements = new T[DefaultCapacity];
         this.Count = 0;
     }
-    /*
-    public T Find(T value)
+    
+    public int Find(T value)
     {
-        bool found = false;
-
         for (int i = 0; i < this.Count; i++)
         {
-            if(value == this.elements[i]) {
-                
+            if (Equals(value, this.elements[i]))
+            {
+                return i;
             }
         }
 
-        T result = elements[index];
-        return result;
-    }*/
+        return -1;
+    }
+
+    public bool Contains(T value)
+    {
+        for (int i = 0; i < this.Count; i++)
+        {
+            if (Equals(value, this.elements[i]))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static bool Equal<T>(T first, T second) where T : IComparable<T>
+    {
+        if (first.CompareTo(second) == 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public T Max()
+    {
+        if (this.count == 0)
+        {
+            throw new InvalidOperationException("The list is empty");
+        }
+
+        T maxValue = this.elements[0];
+        for (int i = 0; i < this.Count; i++)
+        {
+            if (this.elements[i].CompareTo(maxValue) > 0)
+            {
+                maxValue = this.elements[i];
+            }
+        }
+
+        return maxValue;
+    }
+    
+    public T Min()
+    {
+        if (this.count < 1)
+        {
+            throw new InvalidOperationException("The list is empty");
+        }
+
+        T min = this.elements[0];
+        for (int i = 1; i < this.Count; i++)
+        {
+            if (this.elements[i].CompareTo(min) < 0)
+            {
+                min = elements[i];
+            }
+        }
+
+        return min;
+    }
+
+    public static T[] CreateArray<T>(T value, int count)
+    {
+        T[] arr = new T[count];
+        for (int i = 0; i < count; i++)
+        {
+            arr[i] = value;
+        }
+        return arr;
+    }
+
+    public static T Max<T>(T first, T second) where T : IComparable<T>
+    {
+        if (first.CompareTo(second) >= 0)
+        {
+            return first;
+        }
+        else
+        {
+            return second;
+        }
+    }
 
     public T this[int index]
     {
@@ -133,5 +218,22 @@ public class GenericList<T>
         {
             throw new IndexOutOfRangeException(String.Format("Invalid index: {0}.", index));
         }
+    }
+
+    public override string ToString()
+    {
+        string output = "";
+
+        for (int i = 0; i < this.Count; i++)
+        {
+            output += this.elements[i];
+
+            if (i < this.Count - 1)
+            {
+                output += ", ";
+            }
+        }
+
+        return String.Format("[{0}]", output);
     }
 }
