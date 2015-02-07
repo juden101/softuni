@@ -1,0 +1,10 @@
+// Export to method!!!
+
+Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+string[] pairs = paramsString.Split('&');
+
+foreach (var pair in pairs)
+{
+	string[] keyValuePair = pair.Split('=');
+	keyValuePairs[keyValuePair[0]] = keyValuePair[1];
+}
