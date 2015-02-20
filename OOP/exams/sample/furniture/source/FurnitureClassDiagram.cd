@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="FurnitureManufacturer.Interfaces.IAdjustableChair" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IAdjustableChair.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FurnitureManufacturer.Interfaces.IChair" Collapsed="true">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IChair.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FurnitureManufacturer.Interfaces.ICompany" Collapsed="true">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAQBAAAIAEBAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ICompany.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FurnitureManufacturer.Interfaces.IConvertibleChair" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IConvertibleChair.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FurnitureManufacturer.Interfaces.IFurniture" Collapsed="true">
+    <Position X="3.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IFurniture.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FurnitureManufacturer.Interfaces.ITable" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Interfaces\ITable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
