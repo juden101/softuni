@@ -81,5 +81,10 @@
                 this.isFurnished = value;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}: Name = {1}, Area = {2}, Location = {3}, Furnitured = {4}", this.Type, this.Name, this.Area, this.Location, this.IsFurnished ? "Yes" : "No");
+        }
     }
 }

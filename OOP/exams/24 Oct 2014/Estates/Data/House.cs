@@ -29,5 +29,10 @@
                 this.floors = value;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, Floors: {1}", base.ToString(), this.Floors);
+        }
     }
 }

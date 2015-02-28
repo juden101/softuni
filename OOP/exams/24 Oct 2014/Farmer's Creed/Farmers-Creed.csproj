@@ -4,10 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{81D5B6F0-CCFE-429F-B4E2-966F8927C2FD}</ProjectGuid>
+    <ProjectGuid>{29F6263B-C463-48CF-9327-973932A635A0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Estates</RootNamespace>
-    <AssemblyName>Estates</AssemblyName>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FarmersCreed</RootNamespace>
+    <AssemblyName>Farm</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,32 +33,41 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Apartment.cs" />
-    <Compile Include="Data\BuildingEstate.cs" />
-    <Compile Include="Data\Estate.cs" />
-    <Compile Include="Data\EstateFactory.cs" />
-    <Compile Include="Data\House.cs" />
-    <Compile Include="Data\Offer.cs" />
-    <Compile Include="Data\Office.cs" />
-    <Compile Include="Engine\EstatesAgency.cs" />
-    <Compile Include="Interfaces\IEstateEngine.cs" />
-    <Compile Include="Interfaces\EstateType.cs" />
-    <Compile Include="Interfaces\IBuildingEstate.cs" />
-    <Compile Include="Interfaces\IGarage.cs" />
-    <Compile Include="Interfaces\IApartment.cs" />
-    <Compile Include="Interfaces\IEstate.cs" />
-    <Compile Include="Interfaces\IHouse.cs" />
-    <Compile Include="Interfaces\IOffice.cs" />
-    <Compile Include="Interfaces\IRentOffer.cs" />
-    <Compile Include="Interfaces\IOffer.cs" />
-    <Compile Include="Interfaces\ISaleOffer.cs" />
-    <Compile Include="Engine\EstateEngine.cs" />
-    <Compile Include="Interfaces\OfferType.cs" />
+    <Compile Include="Simulator\EnhancedFarmSimulator.cs" />
+    <Compile Include="Units\Animal.cs" />
+    <Compile Include="Simulator\FarmSimulator.cs" />
+    <Compile Include="Units\CherryTree.cs" />
+    <Compile Include="Units\Cow.cs" />
+    <Compile Include="Units\Farm.cs" />
+    <Compile Include="Units\FarmUnit.cs" />
+    <Compile Include="Units\Food.cs" />
+    <Compile Include="Units\FoodPlant.cs" />
+    <Compile Include="Units\FoodType.cs" />
+    <Compile Include="Units\GameObject.cs" />
+    <Compile Include="Interfaces\IEdible.cs" />
+    <Compile Include="Interfaces\IFarm.cs" />
+    <Compile Include="Interfaces\IProduct.cs" />
+    <Compile Include="Interfaces\IProductProducable.cs" />
+    <Compile Include="Units\Plant.cs" />
+    <Compile Include="Units\ProductType.cs" />
+    <Compile Include="Units\Product.cs" />
+    <Compile Include="FarmersCreedMain.cs" />
+    <Compile Include="Units\Swine.cs" />
+    <Compile Include="Units\TobaccoPlant.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Interfaces\InterfacesClassDiagram.cd" />
+    <None Include="FarmDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
