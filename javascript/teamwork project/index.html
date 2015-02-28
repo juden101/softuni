@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cognitio</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script data-main="js/app" src="js/bower_components/requirejs/require.js"></script>
+	<script type="text/javascript" src="js/utilities/music.js" defer></script>
+</head>
+<body>
+	<div id="game">
+		<div id="svg-container"></div>
+		<div id="game-container"></div>
+	</div>
+	
+	<audio id="background-music" autoplay loop>
+		<source src="music/background.mp3" type="audio/mpeg" />
+	</audio>
+		
+	<div class="audio-controls">
+		<div id="music" class="on"></div>
+		<div id="sounds" class="on"></div>
+	</div>
+</body>
+</html>

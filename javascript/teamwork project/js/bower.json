@@ -1,0 +1,26 @@
+{
+  "name": "Cognitio",
+  "version": "0.0.0",
+  "homepage": "https://github.com/TeamPhlox/Cognitio",
+  "authors": [
+    "IvailoPapazov <ihellfiend@gmail.com>",
+    "00dri <alexandrova.adriana@gmail.com>",
+    "ivzb <izahariev96@gmail.com>",
+    "ves_velichkov <kolior4eto97@gmail.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.15",
+    "kineticjs": "~5.1.0",
+    "raphael": "~2.1.2"
+  }
+}
