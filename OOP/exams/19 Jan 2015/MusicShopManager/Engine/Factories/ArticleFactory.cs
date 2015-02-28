@@ -9,34 +9,29 @@
     {
         public IMicrophone CreateMirophone(string make, string model, decimal price, bool hasCable)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new Microphone(make, model, price, hasCable);
         }
 
         public IDrums CreateDrums(string make, string model, decimal price, string color, int width, int height)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new Drums(make, model, price, color, width, height);
         }
 
         public IElectricGuitar CreateElectricGuitar(string make, string model, decimal price, string color,
             string bodyWood, string fingerboardWood, int numberOfAdapters, int numberOfFrets)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new ElectricGuitar(make, model, price, color, bodyWood, fingerboardWood, numberOfAdapters, numberOfFrets);
         }
 
         public IAcousticGuitar CreateAcousticGuitar(string make, string model, decimal price, string color,
             string bodyWood, string fingerboardWood, bool caseIncluded, StringMaterial stringMaterial)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new AcousticGuitar(make, model, price, color, bodyWood, fingerboardWood, caseIncluded, stringMaterial);
         }
 
         public IBassGuitar CreateBassGuitar(string make, string model, decimal price, string color, string bodyWood, string fingerboardWood)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new BassGuitar(make, model, price, color, bodyWood, fingerboardWood);
         }
     }
 }

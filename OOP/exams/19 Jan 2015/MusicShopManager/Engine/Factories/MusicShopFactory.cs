@@ -9,8 +9,7 @@
     {
         public IMusicShop CreateMusicShop(string name)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return new MusicShop(name);
         }
     }
 }
