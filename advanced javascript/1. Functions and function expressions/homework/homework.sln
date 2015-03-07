@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "03. Test the Value of this", "03. Test the Value of this\03. Test the Value of this.njsproj", "{06A2179F-70CA-44FB-BDBF-E3019A97D4F4}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "05. Function Composition", "05. Function Composition\05. Function Composition.njsproj", "{5456CF7E-D5AA-4EA3-9FC2-CF11FB702E47}"
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "06. DOM Traversal", "06. DOM Traversal\06. DOM Traversal.njsproj", "{673A516D-3F1A-4B15-822E-79BF78B12D62}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "07. DOM Manipulation", "07. DOM Manipulation\07. DOM Manipulation.njsproj", "{CA2731DA-7F74-4147-A8B2-5A12D10734A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{673A516D-3F1A-4B15-822E-79BF78B12D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673A516D-3F1A-4B15-822E-79BF78B12D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673A516D-3F1A-4B15-822E-79BF78B12D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2731DA-7F74-4147-A8B2-5A12D10734A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2731DA-7F74-4147-A8B2-5A12D10734A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2731DA-7F74-4147-A8B2-5A12D10734A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2731DA-7F74-4147-A8B2-5A12D10734A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
