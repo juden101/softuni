@@ -1,20 +1,20 @@
 ﻿var domModule = (function domModule() {
     function appendChild(domElement, selector) {
         var target = document.querySelector(selector);
-
+        
         target.appendChild(domElement);
     }
     
     function removeChild(parentSelector, childSelector) {
         var target = document.querySelector(parentSelector);
         var child = target.querySelector(childSelector);
-
+        
         target.removeChild(child);
     }
     
     function addHandler(selector, eventHandler, event) {
         var target = document.querySelectorAll(selector);
-
+        
         for (var i = 0; i < target.length; i++) {
             target[i].addEventListener(eventHandler, event);
         }
@@ -22,7 +22,7 @@
     
     function retrieveElements(selector) {
         var elements = document.querySelectorAll(selector);
-
+        
         return elements;
     }
     
@@ -44,7 +44,7 @@ domModule.appendChild(liElement, ".birds-list");
 domModule.removeChild("ul.birds-list", "li:first-child");
 
 // Adds a click event to all bird list items
-domModule.addHandler("li.bird", "click", function() {
+domModule.addHandler("li.bird", "click", function () {
     alert("Hello there!");
 });
 
