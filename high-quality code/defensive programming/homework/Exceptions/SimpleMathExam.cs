@@ -2,22 +2,27 @@
 
 public class SimpleMathExam : Exam
 {
+    private int problemsSolved;
 
     public SimpleMathExam(int problemsSolved)
     {
-        if (problemsSolved < 0)
-        {
-            problemsSolved = 0;
-        }
-        if (problemsSolved > 10)
-        {
-            problemsSolved = 10;
-        }
-
         this.ProblemsSolved = problemsSolved;
     }
 
-    public int ProblemsSolved { get; private set; }
+    public int ProblemsSolved
+    {
+        get { return this.problemsSolved; }
+
+        private set
+        {
+            if (this.problemsSolved < 0 || this.problemsSolved > 10)
+            {
+                throw new ArgumentOutOfRangeException("The problems solved must be in range [0 ... 10].");
+            }
+
+            this.problemsSolved = value;
+        }
+    }
 
     public override ExamResult Check()
     {
