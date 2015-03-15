@@ -9,6 +9,8 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "02. 2D Geometry Structure",
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "03. 2D Geometry Canvas", "03. 2D Geometry Canvas\03. 2D Geometry Canvas.njsproj", "{1D7CA922-A154-48E7-8F89-AC40F49FEB5A}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "04. 2D Geometry API", "04. 2D Geometry API\04. 2D Geometry API.njsproj", "{E13A9E27-CDD5-47F9-BB00-BFC988236BFB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1D7CA922-A154-48E7-8F89-AC40F49FEB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D7CA922-A154-48E7-8F89-AC40F49FEB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D7CA922-A154-48E7-8F89-AC40F49FEB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13A9E27-CDD5-47F9-BB00-BFC988236BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13A9E27-CDD5-47F9-BB00-BFC988236BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13A9E27-CDD5-47F9-BB00-BFC988236BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13A9E27-CDD5-47F9-BB00-BFC988236BFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

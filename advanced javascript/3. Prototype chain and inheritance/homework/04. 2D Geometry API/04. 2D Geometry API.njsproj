@@ -3,14 +3,14 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>03. 2D Geometry Canvas</Name>
-    <RootNamespace>03. 2D Geometry Canvas</RootNamespace>
+    <Name>04. 2D Geometry API</Name>
+    <RootNamespace>04. 2D Geometry API</RootNamespace>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>1d7ca922-a154-48e7-8f89-ac40f49feb5a</ProjectGuid>
+    <ProjectGuid>e13a9e27-cdd5-47f9-bb00-bfc988236bfb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>app.js</StartupFile>
     <StartWebBrowser>False</StartWebBrowser>
@@ -31,8 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.js" />
-    <Compile Include="geometry-api.js" />
-    <Content Include="geometry.html" />
+    <Content Include="geometry API.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
