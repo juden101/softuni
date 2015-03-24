@@ -15,7 +15,13 @@ var todo = (function () {
 			checkBox.name = 'name';
 			checkBox.value = 'value';
 			checkBox.className = 'checkBox';
-			checkBox.setAttribute('onclick','swap(this);');
+			checkBox.addEventListener('click', function() {
+				if (this.nextSibling.style.backgroundColor == 'lightgreen') {
+					this.nextSibling.style.backgroundColor = 'white';
+				} else {
+					this.nextSibling.style.backgroundColor = 'lightgreen';
+				}
+			}, false);
 			itemDiv.appendChild(checkBox);
 
 			var text = document.createElement('p');
@@ -53,7 +59,9 @@ var todo = (function () {
 			button.id = 'itemSubmitButton_' + sectionsCount;
 			button.className = 'itemSubmitButton';
 			button.textContent = '+';
-			button.setAttribute('onclick','addItem(this.id);');
+			button.addEventListener('click', function() {
+				todoList.addItem(button.id);
+			}, false);
 			section.appendChild(button);
 			
 			document.getElementById('sections').appendChild(section);
@@ -88,7 +96,7 @@ var todo = (function () {
 			var button = document.createElement('button');
 			button.id = 'sectionSubmitButton';
 			button.textContent = 'New section';
-			button.addEventListener('click', createSection, false);
+			button.addEventListener('click', todoList.addSection, false);
 			div.appendChild(button);
 
 			document.body.appendChild(div);
@@ -102,25 +110,5 @@ var todo = (function () {
 	};
 }());
 
-var todoList;
-
-(function createContainer() {
-	todoList = new todo.Container('Tuesday TODO list');
-	todoList.addToDom();
-})();
-
-function createSection() {
-	todoList.addSection();
-}
-
-function addItem(buttonId) {
-	todoList.addItem(buttonId);
-}
-
-function swap(checkBoxParent) {
-	if (checkBoxParent.nextSibling.style.backgroundColor == 'lightgreen') {
-		checkBoxParent.nextSibling.style.backgroundColor = 'white';
-	} else {
-		checkBoxParent.nextSibling.style.backgroundColor = 'lightgreen';
-	}
-}
+var todoList = new todo.Container('Tuesday TODO list');
+todoList.addToDom();
