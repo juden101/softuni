@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-3">
+        <section id="categories-tab">
+            <h2>Categories</h2>
+            <ul>
+                {{#categories}}
+                    <li><a href="#/category/{{objectId}}">{{categoryName}}</a></li>
+                {{/categories}}
+            </ul>
+        </section>
+        <section id="tags-tab">
+            <h2>Tags</h2>
+            {{#tags}}
+                <span style="font-size: 1.{{percent}}em">{{name}}</span>
+            {{/tags}}
+        </section>
+        <form method="post" id="search-form" style="margin-top: 15px;">
+            <input type="text" name="search" id="search-value" placeholder="Question, answer or tag..." />
+            <input type="submit" id="search" value="Seach" />
+        </form>
+    </div>
+
+    <div class="col-md-9">
+        {{#questions}}
+        <article class="post">
+            <h2><a href="#/view-post/{{objectId}}" class="post-link">{{title}}</a></h2>
+            <p>
+                <span>Author: <a href="#/user/{{authorId}}">{{authorName}}</a>,</span>
+                <span>Date: {{createdAt}},</span>
+                <span>Views: {{views}}</span>
+            </p>
+            <p>
+                <span>Category: <a href="#/category/{{category}}">{{categoryName}}</a>,</span>
+                <span>Tags: <b>{{tags}}</b></span>
+            </p>
+        </article>
+        {{/questions}}
+        {{^questions}}
+            <h2>No questions found!</h2>
+        {{/questions}}
+    </div>
+</div>

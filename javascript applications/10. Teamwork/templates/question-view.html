@@ -1,0 +1,36 @@
+<h2><a href="#/view-post/{{objectId}}" class="post-link">{{title}}</a></h2>
+<p>
+    <span>Author: <a href="#/user/{{authorId}}">{{authorName}}</a>,</span>
+    <span>Date: {{createdAt}},</span>
+    <span>Views: {{views}}</span>
+</p>
+<p>
+    <span>Category: <a href="#/category/{{categoryId}}">{{categoryName}}</a>,</span>
+    <span>Tags: <b>{{tags}}</b></span>
+</p>
+
+<hr />
+
+<p>
+    {{text}}
+</p>
+
+<hr />
+
+<div id="answer-holder">
+    <div id="error-holder"></div>
+    <label>Your answer:</label><br />
+    <textarea rows="3" cols="60" id="answer-body"></textarea><br />
+    <button id="add-answer">Answer</button>
+</div>
+
+<h3>Answers:</h3>
+
+<div id="answers-holder">
+    {{#answers}}
+        <p>{{answerBody}}</p>
+        <p></p>
+        <p>Author: <a href="#/user/{{authorUserId}}">{{authorUsername}}</a>, Date: {{createdAt}}</p>
+        <hr />
+    {{/answers}}
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Forum</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css">
+	<link rel="stylesheet" href="css/index.css">
+
+	<!-- libs -->
+	<script type="text/javascript" src="js/libs/jquery-2.1.3.min.js" defer></script>
+	<script type="text/javascript" src="js/libs/bootstrap.min.js" defer></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/sammy.js/0.7.6/sammy.min.js" defer></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/q.js/0.9.2/q.js" defer></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js" defer></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" defer></script>
+	<script type="text/javascript" src="http://notifyjs.com/dist/notify-combined.min.js" defer></script>
+
+	<!-- models -->
+	<script type="text/javascript" src="js/models/requester.js" defer></script>
+	<script type="text/javascript" src="js/models/validator.js" defer></script>
+	<script type="text/javascript" src="js/models/headers.js" defer></script>
+	<script type="text/javascript" src="js/models/forumDataModel.js" defer></script>
+	<script type="text/javascript" src="js/models/forumAuthModel.js" defer></script>
+	<script type="text/javascript" src="js/models/cookies.js" defer></script>
+
+	<!-- views -->
+	<script type="text/javascript" src="js/views/homeView.js" defer></script>
+	<script type="text/javascript" src="js/views/askQuestionView.js" defer></script>
+	<script type="text/javascript" src="js/views/askedQuestionView.js" defer></script>
+	<script type="text/javascript" src="js/views/loginView.js" defer></script>
+	<script type="text/javascript" src="js/views/registerView.js" defer></script>
+	<script type="text/javascript" src="js/views/questionView.js" defer></script>
+	<script type="text/javascript" src="js/views/newAnswerView.js" defer></script>
+	<script type="text/javascript" src="js/views/rankingView.js" defer></script>
+	<script type="text/javascript" src="js/views/menuView.js" defer></script>
+	<script type="text/javascript" src="js/views/errorView.js" defer></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="js/controllers/questionController.js" defer></script>
+	<script type="text/javascript" src="js/controllers/authController.js" defer></script>
+	<script type="text/javascript" src="js/controllers/navigationController.js" defer></script>
+	<script type="text/javascript" src="js/controllers/rankingController.js" defer></script>
+
+	<!-- app main -->
+	<script type="text/javascript" src="js/app.js" defer></script>
+</head>
+<body>
+	<div class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#/">Forum</a>
+			</div>
+			<div class="collapse navbar-collapse" id="forum-menu" data-type=""></div>
+		</div>
+	</div>
+	
+	<div id="wrapper" class="container"></div>
+
+	<hr />
+
+	<footer>
+		<p style="text-align: center;">Team EggPlant JS apps teamwork project</p>
+	</footer>
+</body>
+</html>
