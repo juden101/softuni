@@ -3,36 +3,57 @@
 <html>
 
 <head>
-	<title>Phonebook</title>
-	<link rel="stylesheet" href="styles.css">
+    <title>Phonebook</title>
+    <link rel="stylesheet" href="styles.css">
 
-	<script src="node_modules/jquery/dist/jquery.js" defer></script>
-	<script src="node_modules/shimney-sammy/main.js" defer></script>
-	<script src="node_modules/q/q.js" defer></script>
-	<script src="node_modules/mustache/mustache.js" defer></script>
+    <!-- Libs -->
+    <script src="node_modules/jquery/dist/jquery.js" defer></script>
+    <script src="node_modules/shimney-sammy/main.js" defer></script>
+    <script src="node_modules/q/q.js" defer></script>
+    <script src="node_modules/mustache/mustache.js" defer></script>
+    <script src="node_modules/noty/js/noty/packaged/jquery.noty.packaged.js" defer></script>
+    <script src="node_modules/noty/js/noty/layouts/top.js" defer></script>
+    <script src="node_modules/noty/js/noty/themes/default.js" defer></script>
 
-	<script src="js/models/headers.js" defer></script>
-	<script src="js/models/ajaxRequester.js" defer></script>
+    <!-- Views -->
+    <script src="js/views/homeViews.js" defer></script>
+    <script src="js/views/userViews.js" defer></script>
+    <script src="js/views/phoneViews.js" defer></script>
 
-	<script src="js/app.js" defer></script>
+    <!-- Models -->
+    <script src="js/models/headers.js" defer></script>
+    <script src="js/models/ajaxRequester.js" defer></script>
+    <script src="js/models/noty.js" defer></script>
+    <script src="js/models/userModel.js" defer></script>
+    <script src="js/models/phoneModel.js" defer></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/homeController.js" defer></script>
+    <script src="js/controllers/userController.js" defer></script>
+    <script src="js/controllers/phoneController.js" defer></script>
+
+    <!-- Main -->
+    <script src="js/app.js" defer></script>
 </head>
 
 <body>
-	<header id="header">Phonebook <span id="page-title"></span></header>
+<header id="header">Phonebook - <span id="page-title"></span></header>
 
-	<!-- Left sidebar menu -->
-	<ul id="menu">
-		<li><a href="#" class="link">Home</a></li>
-		<li><a href="#" class="link">Phonebook</a></li>
-		<li><a href="#" class="link">Add Phone</a></li>
-		<li><a href="#" class="link">Edit Profile</a></li>
-		<li><a href="#" class="link">Logout</a></li>
-	</ul>
-	
-	<!-- Main screen placeholder -->
-	<main id="wrapper"></main>
-	
-	<footer id="footer">&copy; 2014 by Software University Foundation, No Rights Reserved</footer>
+<!-- Left sidebar menu -->
+<ul id="menu">
+    <li><a href="#/home/" class="link">Home</a></li>
+    <li><a href="#/phones/" class="link">Phonebook</a></li>
+    <li><a href="#/phones/add/" class="link">Add Phone</a></li>
+    <li><a href="#/editProfile/" class="link">Edit Profile</a></li>
+    <li><a href="#/logout/" class="link">Logout</a></li>
+</ul>
+
+<!-- Main screen placeholder -->
+<div id="success-message"></div>
+<div id="error-message"></div>
+<main id="wrapper"></main>
+
+<footer id="footer">&copy; 2014 by Software University Foundation, No Rights Reserved</footer>
 </body>
 
 </html>

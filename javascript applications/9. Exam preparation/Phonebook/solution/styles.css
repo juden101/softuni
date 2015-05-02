@@ -124,3 +124,8 @@ table th, table td {
     clear: both;
 }
 
+#success-message,
+#error-message {
+    width: 60%;
+    margin: 15px auto;
+}
