@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/bootstrap.css" />
+    <title>Social Network</title>
+
+    <!-- Libs -->
+    <script src="node_modules/jquery/dist/jquery.js" defer></script>
+    <script src="node_modules/shimney-sammy/main.js" defer></script>
+    <script src="node_modules/q/q.js" defer></script>
+    <script src="node_modules/mustache/mustache.js" defer></script>
+    <script src="node_modules/noty/js/noty/packaged/jquery.noty.packaged.js" defer></script>
+    <script src="node_modules/noty/js/noty/layouts/top.js" defer></script>
+    <script src="node_modules/noty/js/noty/themes/default.js" defer></script>
+    <script src="node_modules/tooltipsy/tooltipsy.min.js" defer></script>
+
+    <!-- Views -->
+    <script src="scripts/views/homeViews.js" defer></script>
+    <script src="scripts/views/userViews.js" defer></script>
+    <script src="scripts/views/postViews.js" defer></script>
+
+    <!-- Models -->
+    <script src="scripts/models/headers.js" defer></script>
+    <script src="scripts/models/ajaxRequester.js" defer></script>
+    <script src="scripts/models/noty.js" defer></script>
+    <script src="scripts/models/userModel.js" defer></script>
+    <script src="scripts/models/postModel.js" defer></script>
+
+    <!-- Controllers -->
+    <script src="scripts/controllers/homeController.js" defer></script>
+    <script src="scripts/controllers/userController.js" defer></script>
+    <script src="scripts/controllers/postController.js" defer></script>
+
+    <!-- Main -->
+    <script src="scripts/app.js" defer></script>
+</head>
+<body>
+
+<div id="wrapper">
+
+    <!-- logo -->
+    <div class="logo">
+        <a href="#"><img src="imgs/beer.png"/></a>
+        <span>Cool Story Bro</span>
+    </div>
+    <!-- end of logo -->
+
+    <!-- header -->
+    <header class="header" id="header"></header>
+    <!-- end of header -->
+
+    <!-- main -->
+    <div id="success-message"></div>
+    <div id="error-message"></div>
+    <section class="main" id="main"></section>
+    <!-- end of main -->
+</div>
+
+</body>
+</html>
