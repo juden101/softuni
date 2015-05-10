@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<title>Students Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/controllers/StudentsPageController.js" defer></script>
+</head>
+<body ng-app="StudentsPageApp">
+	<main ng-controller="StudentsController">
+		<h1>{{name}}</h1>
+		<img ng-src="{{photo}}" />
+		<p>Grade: {{grade}}</p>
+		<p>School: {{school}}</p>
+		<p>Teacher: {{teacher}}</p>
+		<label for="photo-input">Change student photo</label>
+		<textarea ng-model="photo" type="text" name="photo" id="photo-input" cols="40" rows="5"><textarea>
+	</main>
+</body>
+</html>
