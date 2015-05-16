@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency", "TravelAgency\TravelAgency.csproj", "{40CF5178-FADE-4F64-B80C-C2B498474756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgency.Tests", "TravelAgency.Tests\TravelAgency.Tests.csproj", "{CDD570EB-FBEB-44F2-BFFC-E059D899ED73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40CF5178-FADE-4F64-B80C-C2B498474756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CF5178-FADE-4F64-B80C-C2B498474756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CF5178-FADE-4F64-B80C-C2B498474756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CF5178-FADE-4F64-B80C-C2B498474756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD570EB-FBEB-44F2-BFFC-E059D899ED73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD570EB-FBEB-44F2-BFFC-E059D899ED73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD570EB-FBEB-44F2-BFFC-E059D899ED73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD570EB-FBEB-44F2-BFFC-E059D899ED73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
