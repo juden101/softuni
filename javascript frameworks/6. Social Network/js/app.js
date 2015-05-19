@@ -7,13 +7,15 @@ var socialNetworkApp = angular
         $routeProvider
             .when('/', {
                 templateUrl: 'templates/home-guest.html',
-                controller: 'mainController'
+                controller: 'MainController'
             })
             .when('/login', {
-                templateUrl: 'templates/login.html'
+                templateUrl: 'templates/login.html',
+                controller: 'AuthenticationController'
             })
             .when('/register', {
-                templateUrl: 'templates/register.html'
+                templateUrl: 'templates/register.html',
+                controller: 'AuthenticationController'
             })
             .otherwise({
                 redirectTo: '/'

@@ -1,5 +1,5 @@
 'use strict';
 
-socialNetworkApp.controller('mainController', function ($scope) {
+socialNetworkApp.controller('MainController', function ($scope) {
 
 });
