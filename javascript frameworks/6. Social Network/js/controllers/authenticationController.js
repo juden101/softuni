@@ -28,5 +28,12 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
                 noty.showError('Unsuccessful register!', serverError);
             });
     };
+
+    $scope.logout = function () {
+        authentication.clearCredentials();
+        $location.path('/user/home');
+
+        noty.showInfo('Successful logout!');
+    };
 });
 

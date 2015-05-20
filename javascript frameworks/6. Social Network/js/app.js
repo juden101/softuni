@@ -20,9 +20,9 @@ var SocialNetworkApp = angular
                 templateUrl: 'templates/home.html',
                 controller: 'MainController',
                 resolve: {
-                    isLogged: function($location) {
-                        if(localStorage.getItem('accessToken')){
-                            $location.path('/home');
+                    isNotLogged: function($location) {
+                        if(!localStorage.getItem('accessToken')){
+                            $location.path('/');
                         }
                     }
                 }
@@ -33,7 +33,7 @@ var SocialNetworkApp = angular
                 resolve: {
                     isLogged: function($location) {
                         if(localStorage.getItem('accessToken')){
-                            $location.path('/');
+                            $location.path('/home');
                         }
                     }
                 }
@@ -44,6 +44,17 @@ var SocialNetworkApp = angular
                 resolve: {
                     isLogged: function($location) {
                         if(localStorage.getItem('accessToken')){
+                            $location.path('/home');
+                        }
+                    }
+                }
+            })
+            .when('/logout', {
+                templateUrl: 'templates/logout.html',
+                controller: 'AuthenticationController',
+                resolve: {
+                    isLogged: function($location) {
+                        if(!localStorage.getItem('accessToken')){
                             $location.path('/');
                         }
                     }
