@@ -14,6 +14,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js" defer></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/packaged/jquery.noty.packaged.min.js" defer></script>
+    <script type="text/javascript" src="js/libs/ngStorage.js" defer></script>
 
     <!-- Main app -->
     <script type="text/javascript" src="js/app.js" defer></script>
@@ -21,8 +23,13 @@
     <!-- Controllers -->
     <script type="text/javascript" src="js/controllers/mainController.js" defer></script>
     <script type="text/javascript" src="js/controllers/authenticationController.js" defer></script>
+
+    <!-- Services -->
+    <script type="text/javascript" src="js/services/authenticationService.js" defer></script>
+    <script type="text/javascript" src="js/services/userService.js" defer></script>
+    <script type="text/javascript" src="js/services/notyService.js" defer></script>
 </head>
-<body ng-app="socialNetworkApp">
+<body ng-app="SocialNetworkApp">
     <ng-view>
 
     </ng-view>

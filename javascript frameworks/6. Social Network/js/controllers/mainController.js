@@ -1,5 +1,9 @@
 'use strict';
 
-socialNetworkApp.controller('MainController', function ($scope) {
+SocialNetworkApp.controller('MainController', function ($scope) {
+    $scope.isLogged = function(){
+        return authentication.isLogged();
+    };
+
 
 });
