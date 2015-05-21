@@ -30,6 +30,12 @@ SocialNetworkApp.factory('user', function ($http, $resource, baseServiceUrl) {
             return resource.save({option1: 'logout'});
         };
 
+        user.searchUser = function(searchTerm){
+            var option1 = 'search?searchTerm=' + searchTerm;
+
+            return resource.query({ option1: option1 });
+        };
+
         return user;
     }
 });

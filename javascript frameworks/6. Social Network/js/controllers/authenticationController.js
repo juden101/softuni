@@ -7,11 +7,11 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
                 var accessToken = data['access_token'];
 
                 profile(accessToken).userProfile().$promise.then(
-                    function (profileData) {
-                        profileData['access_token'] = data['access_token'];
-                        authentication.setCredentials(profileData);
-                        $location.path('/user/home');
+                    function (userData) {
+                        authentication.setAccessToken(accessToken);
+                        authentication.setUserData(userData);
 
+                        $location.path('/user/home');
                         noty.showInfo('Successful login!');
                     },
                     function (error) {
@@ -31,11 +31,11 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
                 var accessToken = data['access_token'];
 
                 profile(accessToken).userProfile().$promise.then(
-                    function (profileData) {
-                        profileData['access_token'] = data['access_token'];
-                        authentication.setCredentials(profileData);
-                        $location.path('/user/home');
+                    function (userData) {
+                        authentication.setAccessToken(accessToken);
+                        authentication.setUserData(userData);
 
+                        $location.path('/user/home');
                         noty.showInfo('Successful register!');
                     },
                     function (error) {

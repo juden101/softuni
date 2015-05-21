@@ -1,6 +1,8 @@
 'use strict';
 
 SocialNetworkApp.controller('ProfileController', function ($scope, $location, authentication, profile, noty) {
+    $scope.userData = authentication.getUserData();
+
     $scope.getUserProfile = function() {
         if(authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();

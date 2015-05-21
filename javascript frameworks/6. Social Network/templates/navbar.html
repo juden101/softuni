@@ -1,1 +1,24 @@
-<a href="#/home">Home</a> | <a href="#/profile">Edit profile</a> | <a href="#/profile/password">Edit password</a> | <a href="#/logout">Logout</a>
+<img class="" name="image" src="{{userData.profileImageData}}" style="width: 50px; height: 50px">
+
+<a href="#/{{userData.username}}/wall/">{{userData.name}}</a> |
+<a href="#/home">News feed</a> |
+<a href="#/requests">Friend requests</a> |
+<a href="#/profile">Edit profile</a> |
+<a href="#/profile/password">Edit password</a> |
+<a href="#/logout">Logout</a>
+
+<form id="search-form" role="search">
+    <div class="input-group">
+        <input type="text" id="search-input" ng-model="searchTerm" ng-change="searchUser()" ng-blur="clearSearchResults()" class="form-control" placeholder="Search by name...">
+    </div>
+
+    <div id="search-results" ng-if="searchResults" class="list-group">
+        <div ng-repeat="user in searchResults" class="list-group-item">
+            <a href="#/users/{{user.username}}/wall/">
+                <img ng-src="{{defaultImage}}" ng-if="!user.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
+                <img ng-src="{{user.profileImageData}}" ng-if="user.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
+                <span class="name">{{user.name}}</span>
+            </a>
+        </div>
+    </div>
+</form>

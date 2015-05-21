@@ -9,8 +9,28 @@ SocialNetworkApp.factory('authentication', function ($http, baseServiceUrl) {
         return isLogged;
     };
 
-    authentication.setCredentials = function (data) {
-        authentication.clearCredentials();
+    authentication.setAccessToken = function(accessToken) {
+        localStorage.setItem('accessToken', accessToken);
+    };
+
+    authentication.setUserData = function(userData) {
+        localStorage.setItem('userData', JSON.stringify(userData));
+    };
+
+    authentication.getAccessToken = function () {
+        return localStorage.getItem('accessToken');
+    };
+
+    authentication.getUserData = function () {
+        return JSON.parse(localStorage.getItem('userData') || '{}');
+    };
+
+    authentication.clearCredentials = function () {
+        localStorage.clear();
+    };
+
+    /*authentication.setCredentials = function (userData) {
+        localStorage.setItem('accessToken', data['access_token']);
 
         if (data['access_token']) {
             localStorage.setItem('accessToken', data['access_token']);
@@ -39,16 +59,9 @@ SocialNetworkApp.factory('authentication', function ($http, baseServiceUrl) {
         if (data['gender']) {
             localStorage.setItem('gender', data['gender']);
         }
-    };
+    };*/
 
-    authentication.clearCredentials = function () {
-        localStorage.clear();
-    };
-
-    authentication.getAccessToken = function () {
-        return localStorage.getItem('accessToken');
-    };
-
+    /*
     authentication.getUsername = function () {
         return localStorage.getItem('username');
     };
@@ -56,6 +69,22 @@ SocialNetworkApp.factory('authentication', function ($http, baseServiceUrl) {
     authentication.getName = function () {
         return localStorage.getItem('name');
     };
+
+    authentication.getEmail = function () {
+        return localStorage.getItem('email');
+    };
+
+    authentication.getGender = function () {
+        return localStorage.getItem('gender');
+    };
+
+    authentication.getProfileImage = function () {
+        return localStorage.getItem('profileImageData');
+    };
+
+    authentication.getCoverImage = function () {
+        return localStorage.getItem('coverImageData');
+    };*/
 
     return authentication;
 });
