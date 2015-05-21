@@ -1,0 +1,60 @@
+<header header-directive></header>
+
+<div class="mainbox">
+    <form class="form-horizontal white col-xs-12" name="editProfileForm" ng-submit="editProfile()" ng-init="getUserProfile()">
+        <legend>
+            <h2>Edit Profile</h2>
+        </legend>
+
+        <div class="col-lg-12 form-info">
+            <div class="col-lg-2 col-lg-offset-2 picture-upload">
+                <div class="form-group">
+                    <img class="thumbnail" name="image" src="{{userProfile.profileImageData}}" id="profile-image" style="width: 200px; height: 200px" required>
+                </div>
+                <div class="form-group">
+                    <p class="file-limit">Size limit: 128KB</p>
+                    <input type="file" class="form-control" ng-model="userProfile.profileImageData" onchange="angular.element(this).scope().uploadProfileImage(this.files)" id="inputProfileImageData">
+                </div>
+            </div>
+
+            <div class="form-group col-xs-7">
+                <label for="reg-name" class="col-lg-3 control-label">Name</label>
+                <div class="col-lg-7">
+                    <input type="text" ng-model="userProfile.name" class="form-control" id="reg-name" placeholder="Name" required>
+                </div>
+            </div>
+            <div class="form-group col-xs-7">
+                <label for="reg-email" class="col-lg-3 control-label">Email</label>
+                <div class="col-lg-7">
+                    <input type="email" ng-model="userProfile.email" class="form-control" id="reg-email" placeholder="example@yahoo.com" required>
+                </div>
+            </div>
+            <div class="form-group col-xs-7">
+                <label class="col-lg-3 control-label">Gender</label>
+                <div class="col-lg-7">
+                    <label class="radio-inline"><input ng-model="userProfile.gender"  type="radio" name="gender" ng-value="1"  required>Male</label>
+                    <label class="radio-inline"><input ng-model="userProfile.gender" type="radio" name="gender" ng-value="2">Female</label>
+                    <label class="radio-inline"><input ng-model="userProfile.gender" type="radio" name="gender" ng-value="0">Other</label>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-7">
+                <label class="col-lg-3 control-label">Cover image</label>
+
+                <div class="form-group col-xs-7">
+                    <div class="form-group">
+                        <img class="thumbnail pull-right" name="image" src="{{userProfile.coverImageData}}" id="cover-image" style="width: 400px; height: 100px" required>
+                    </div>
+                    <div class="form-group">
+                        <p class="file-limit text-center" >Size limit: 128KB</p>
+                        <input type="file" class="form-control pull-right" ng-model="userProfile.coverImageData" onchange="angular.element(this).scope().uploadCoverImage(this.files)" id="inputCoverImageData" style="width: 400px;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-xs-12">
+                <button type="submit" class="btn btn-md btn-primary center-block">Edit profile</button>
+            </div>
+        </div>
+    </form>
+</div>

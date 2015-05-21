@@ -1,22 +1,35 @@
 'use strict';
 
-SocialNetworkApp.factory('user', function ($http, baseServiceUrl) {
-    var user = {};
-    var serviceUrl = baseServiceUrl + '/users';
+SocialNetworkApp.factory('user', function ($http, $resource, baseServiceUrl) {
+    return function(token) {
+        $http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 
-    user.login = function (loginData, success, error) {
-        $http.post(serviceUrl + '/Login', loginData)
-            .success(function (data, status, headers, config) {
-                success(data);
-            }).error(error);
-    };
+        var user = {};
+        var serviceUrl = baseServiceUrl + '/users/:option1';
+        var resource = $resource(
+            serviceUrl,
+            {
+                option1: '@option1'
+            },
+            {
+                edit: {
+                    method: 'PUT'
+                }
+            }
+        );
 
-    user.register = function (registerData, success, error) {
-        $http.post(serviceUrl + '/Register', registerData)
-            .success(function (data, status, headers, config) {
-                success(data);
-            }).error(error);
-    };
+        user.login = function (loginData) {
+            return resource.save({option1: 'login'}, loginData);
+        };
 
-    return user;
+        user.register = function(registerData) {
+            return resource.save({option1: 'register'}, registerData);
+        };
+
+        user.logout = function() {
+            return resource.save({option1: 'logout'});
+        };
+
+        return user;
+    }
 });

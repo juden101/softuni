@@ -10,7 +10,7 @@ var SocialNetworkApp = angular
                 controller: 'MainController',
                 resolve: {
                     isLogged: function($location) {
-                        if(localStorage.getItem('accessToken')){
+                        if(localStorage.getItem('accessToken')) {
                             $location.path('/home');
                         }
                     }
@@ -21,7 +21,29 @@ var SocialNetworkApp = angular
                 controller: 'MainController',
                 resolve: {
                     isNotLogged: function($location) {
-                        if(!localStorage.getItem('accessToken')){
+                        if(!localStorage.getItem('accessToken')) {
+                            $location.path('/');
+                        }
+                    }
+                }
+            })
+            .when('/profile', {
+                templateUrl: 'templates/editProfile.html',
+                controller: 'ProfileController',
+                resolve: {
+                    isLogged: function($location) {
+                        if(!localStorage.getItem('accessToken')) {
+                            $location.path('/');
+                        }
+                    }
+                }
+            })
+            .when('/profile/password', {
+                templateUrl: 'templates/editPassword.html',
+                controller: 'ProfileController',
+                resolve: {
+                    isLogged: function($location) {
+                        if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
                     }
@@ -32,7 +54,7 @@ var SocialNetworkApp = angular
                 controller: 'AuthenticationController',
                 resolve: {
                     isLogged: function($location) {
-                        if(localStorage.getItem('accessToken')){
+                        if(localStorage.getItem('accessToken')) {
                             $location.path('/home');
                         }
                     }
@@ -43,7 +65,7 @@ var SocialNetworkApp = angular
                 controller: 'AuthenticationController',
                 resolve: {
                     isLogged: function($location) {
-                        if(localStorage.getItem('accessToken')){
+                        if(localStorage.getItem('accessToken')) {
                             $location.path('/home');
                         }
                     }
@@ -54,7 +76,7 @@ var SocialNetworkApp = angular
                 controller: 'AuthenticationController',
                 resolve: {
                     isLogged: function($location) {
-                        if(!localStorage.getItem('accessToken')){
+                        if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
                     }
