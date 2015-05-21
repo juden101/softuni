@@ -1,14 +1,23 @@
 'use strict';
 
-SocialNetworkApp.controller('AuthenticationController', function ($scope, $location, $route, user, authentication, noty) {
+SocialNetworkApp.controller('AuthenticationController', function ($scope, $location, $route, user, authentication, profile, noty) {
     $scope.login = function () {
         user().login($scope.loginData).$promise.then(
             function(data) {
-                console.log(data)
-                authentication.setCredentials(data);
-                $location.path('/user/home');
+                var accessToken = data['access_token'];
 
-                noty.showInfo('Successful login!');
+                profile(accessToken).userProfile().$promise.then(
+                    function (profileData) {
+                        profileData['access_token'] = data['access_token'];
+                        authentication.setCredentials(profileData);
+                        $location.path('/user/home');
+
+                        noty.showInfo('Successful login!');
+                    },
+                    function (error) {
+                        noty.showError('Unable to get user profile data, plese try again!', error);
+                    }
+                );
             },
             function(error) {
                 noty.showError('Unsuccessful login!', error);
@@ -19,10 +28,20 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
     $scope.register = function () {
         user().register($scope.registerData).$promise.then(
             function(data) {
-                authentication.setCredentials(data);
-                $location.path('/user/home');
+                var accessToken = data['access_token'];
 
-                noty.showInfo('Successful register!');
+                profile(accessToken).userProfile().$promise.then(
+                    function (profileData) {
+                        profileData['access_token'] = data['access_token'];
+                        authentication.setCredentials(profileData);
+                        $location.path('/user/home');
+
+                        noty.showInfo('Successful register!');
+                    },
+                    function (error) {
+                        noty.showError('Unable to get user profile data, plese try again!', error);
+                    }
+                );
             },
             function(error) {
                 noty.showError('Unsuccessful register!', error);

@@ -3,31 +3,57 @@
 SocialNetworkApp.factory('authentication', function ($http, baseServiceUrl) {
     var authentication = {};
 
-    authentication.isLogged = function(){
-        return localStorage['accessToken'] !== undefined;
+    authentication.isLogged = function () {
+        var isLogged = localStorage['accessToken'] !== undefined;
+
+        return isLogged;
     };
 
     authentication.setCredentials = function (data) {
-        localStorage.setItem('accessToken', data['access_token']);
-        localStorage.setItem('username', data['userName']);
-        localStorage.setItem('name', data['name']);
+        authentication.clearCredentials();
+
+        if (data['access_token']) {
+            localStorage.setItem('accessToken', data['access_token']);
+        }
+
+        if (data['username']) {
+            localStorage.setItem('username', data['username']);
+        }
+
+        if (data['name']) {
+            localStorage.setItem('name', data['name']);
+        }
+
+        if (data['email']) {
+            localStorage.setItem('email', data['email']);
+        }
+
+        if (data['profileImageData']) {
+            localStorage.setItem('profileImageData', data['profileImageData']);
+        }
+
+        if (data['coverImageData']) {
+            localStorage.setItem('coverImageData', data['coverImageData']);
+        }
+
+        if (data['gender']) {
+            localStorage.setItem('gender', data['gender']);
+        }
     };
 
     authentication.clearCredentials = function () {
-        localStorage.removeItem('accessToken');
-        localStorage.removeItem('username');
-        localStorage.removeItem('name');
+        localStorage.clear();
     };
 
-    authentication.getAccessToken = function(){
+    authentication.getAccessToken = function () {
         return localStorage.getItem('accessToken');
     };
 
-    authentication.getUsername = function(){
+    authentication.getUsername = function () {
         return localStorage.getItem('username');
     };
 
-    authentication.getName = function(){
+    authentication.getName = function () {
         return localStorage.getItem('name');
     };
 

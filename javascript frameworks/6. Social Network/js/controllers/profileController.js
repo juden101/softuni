@@ -22,6 +22,8 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
 
         profile(accessToken).update(userProfileData).$promise.then(
             function () {
+                userProfileData['access_token'] = authentication.getAccessToken();
+                authentication.setCredentials(userProfileData);
                 noty.showInfo('Profile successfully edited.');
             },
             function (error) {
