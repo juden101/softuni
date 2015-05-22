@@ -42,12 +42,13 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             return resource.edit({ option1: 'requests', option2: option2});
         };
 
-        /*
         profile.getNewsFeed = function(pageSize, startPostId){
             var option1 = 'feed?StartPostId' + (startPostId ? "=" + startPostId : "") + "&PageSize=" + pageSize;
 
             return resource.query({ option1: option1});
         };
+
+        /*
 
         profile.getFriendsList = function(){
             return resource.query({ option1: 'friends'});

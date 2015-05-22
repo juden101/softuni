@@ -1,7 +1,10 @@
 'use strict';
 
-SocialNetworkApp.controller('ProfileController', function ($scope, $location, authentication, profile, noty) {
+SocialNetworkApp.controller('ProfileController', function ($scope, $location, authentication, profile, noty, PAGE_SIZE) {
     $scope.userData = authentication.getUserData();
+    $scope.posts = [];
+    $scope.busy = false;
+    var feedStartPostId;
 
     $scope.getUserProfile = function() {
         if(authentication.isLogged()) {
@@ -70,6 +73,33 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
                 $scope.userProfile.profileImageData = reader.result;
             };
             reader.readAsDataURL(file);
+        }
+    };
+
+    $scope.loadNewsFeed = function(){
+        if (authentication.isLogged()) {
+            if ($scope.busy){
+                return;
+            }
+            $scope.busy = true;
+
+            var accessToken = authentication.getAccessToken();
+
+            profile(accessToken).getNewsFeed(PAGE_SIZE, feedStartPostId).$promise.then(
+                function (data) {
+                    $scope.posts = $scope.posts.concat(data);
+
+                    if($scope.posts.length > 0) {
+                        feedStartPostId = $scope.posts[$scope.posts.length - 1].id;
+                    }
+
+                    $scope.busy = false;
+                    $scope.isNewsFeed = true;
+                },
+                function (error) {
+                    noty.showError('Error while fetching feed data.', error);
+                }
+            );
         }
     };
 

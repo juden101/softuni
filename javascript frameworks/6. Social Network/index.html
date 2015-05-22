@@ -9,13 +9,14 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Libs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-resource.js" defer></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js" defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.3.5/packaged/jquery.noty.packaged.min.js" defer></script>
     <script type="text/javascript" src="js/libs/ngStorage.js" defer></script>
+    <script type="text/javascript" src="js/libs/ng-infinite-scroll.js" defer></script>
 
     <!-- Main app -->
     <script type="text/javascript" src="js/app.js" defer></script>
@@ -25,15 +26,23 @@
     <script type="text/javascript" src="js/controllers/authenticationController.js" defer></script>
     <script type="text/javascript" src="js/controllers/userController.js" defer></script>
     <script type="text/javascript" src="js/controllers/profileController.js" defer></script>
+    <script type="text/javascript" src="js/controllers/postController.js" defer></script>
+    <script type="text/javascript" src="js/controllers/commentController.js" defer></script>
 
     <!-- Services -->
     <script type="text/javascript" src="js/services/authenticationService.js" defer></script>
     <script type="text/javascript" src="js/services/userService.js" defer></script>
     <script type="text/javascript" src="js/services/profileService.js" defer></script>
+    <script type="text/javascript" src="js/services/postService.js" defer></script>
+    <script type="text/javascript" src="js/services/commentService.js" defer></script>
     <script type="text/javascript" src="js/services/notyService.js" defer></script>
 
     <!-- Directives -->
     <script type="text/javascript" src="js/directives/headerDirective.js" defer></script>
+    <script type="text/javascript" src="js/directives/feedDirective.js" defer></script>
+    <script type="text/javascript" src="js/directives/profileControllerDirective.js" defer></script>
+    <script type="text/javascript" src="js/directives/postControllerDirective.js" defer></script>
+    <script type="text/javascript" src="js/directives/commentControllerDirective.js" defer></script>
 </head>
 <body ng-app="SocialNetworkApp">
     <ng-view>

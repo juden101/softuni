@@ -29,6 +29,12 @@ SocialNetworkApp.factory('authentication', function ($http, baseServiceUrl) {
         localStorage.clear();
     };
 
+    authentication.getUsername = function () {
+        var username = authentication.getUserData()['username'];
+
+        return username;
+    };
+
     /*authentication.setCredentials = function (userData) {
         localStorage.setItem('accessToken', data['access_token']);
 

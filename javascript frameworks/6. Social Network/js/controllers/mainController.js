@@ -1,6 +1,6 @@
 'use strict';
 
-SocialNetworkApp.controller('MainController', function ($scope, authentication, $interval, user, profile, noty, DEFAULT_PROFILE_IMAGE) {
+SocialNetworkApp.controller('MainController', function ($scope, $location, $interval, $routeParams, authentication, user, profile, noty, DEFAULT_PROFILE_IMAGE) {
     $scope.isLogged = function() {
         return authentication.isLogged();
     };
@@ -8,6 +8,8 @@ SocialNetworkApp.controller('MainController', function ($scope, authentication, 
     $scope.userData = authentication.getUserData();
     $scope.defaultImage = DEFAULT_PROFILE_IMAGE;
     $scope.showPendingRequests = false;
+    $scope.isOwnWall = authentication.getUsername() === $routeParams['username'];
+    $scope.isOwnFeed = $location.path() === '/home';
 
     $scope.getFriendRequests = function () {
         if (authentication.isLogged()) {
