@@ -44,6 +44,7 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
                 );
             },
             function(error) {
+                console.log(error);
                 noty.showError('Unsuccessful register!', error);
             }
         );

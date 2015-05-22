@@ -18,13 +18,30 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             }
         );
 
-        profile.userProfile = function(){
+        profile.userProfile = function (){
             return resource.get();
         };
 
-        profile.update = function(data, option1){
+        profile.update = function (data, option1){
             return resource.edit({option1: option1}, data);
         };
+
+        profile.getPendingRequests = function () {
+            return resource.query({ option1: 'requests' });
+        };
+
+        profile.acceptRequest = function(requestId){
+            var option2 = requestId + '?status=approved';
+
+            return resource.edit({ option1: 'requests', option2: option2});
+        };
+
+        profile.rejectRequest = function(requestId){
+            var option2 = requestId + '?status=rejected';
+
+            return resource.edit({ option1: 'requests', option2: option2});
+        };
+
         /*
         profile.getNewsFeed = function(pageSize, startPostId){
             var option1 = 'feed?StartPostId' + (startPostId ? "=" + startPostId : "") + "&PageSize=" + pageSize;
@@ -40,25 +57,13 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             return resource.get({ option1: 'friends', option2: 'preview'});
         };
 
-        profile.sendFriendRequest = function(username){
-            return resource.save({ option1: 'requests', option2: username});
-        };
+         profile.sendFriendRequest = function(username){
+         return resource.save({ option1: 'requests', option2: username});
+         };
 
-        profile.getPendingRequests = function(){
-            return resource.query({ option1: 'requests' });
-        };
 
-        profile.acceptRequest = function(requestId){
-            var option2 = '' + requestId + '?status=approved';
 
-            return resource.edit({ option1: 'requests', option2: option2});
-        };
-
-        profile.rejectRequest = function(requestId){
-            var option2 = '' + requestId + '?status=rejected';
-
-            return resource.edit({ option1: 'requests', option2: option2});
-        };*/
+        */
 
         return profile;
     }
