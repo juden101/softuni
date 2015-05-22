@@ -103,6 +103,37 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
         }
     };
 
+    $scope.getOwnFiendsList = function() {
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            profile(accessToken).getFriendsList().$promise.then(
+                function (data) {
+                    $scope.friendsList = data;
+                },
+                function (error) {
+                    noty.error('Error with friend list data!', error);
+                }
+            );
+        }
+    };
+
+    $scope.getOwnFriendsListPreview = function(){
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            profile(accessToken).getFriendsListPreview().$promise.then(
+                function (data) {
+                    data.userFriendsUrl = '#/friends/';
+                    $scope.friendsListPreview = data;
+                },
+                function (error) {
+                    noty.error('Error with friend list preview!', error);
+                }
+            );
+        }
+    };
+
     $scope.uploadCoverImage = function (files) {
         var file = files[0];
         var reader;
@@ -124,6 +155,23 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
                 $scope.userProfile.coverImageData = reader.result;
             };
             reader.readAsDataURL(file);
+        }
+    };
+
+    $scope.sendFriendRequest = function(previewData){
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            profile(accessToken).sendFriendRequest(previewData.username).$promise.then(
+                function () {
+                    previewData.status = 'pending';
+
+                    noty.showInfo('Friend request successfully sent to ' + previewData.username + '.');
+                },
+                function (error) {
+                    noty.showError('Unsuccessful invitation sent!', error);
+                }
+            );
         }
     };
 });

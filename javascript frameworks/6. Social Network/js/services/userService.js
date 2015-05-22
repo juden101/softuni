@@ -36,6 +36,10 @@ SocialNetworkApp.factory('user', function ($http, $resource, baseServiceUrl) {
             return resource.query({ option1: option1 });
         };
 
+        user.getUserPreviewData = function(username){
+            return resource.get({ option1: username, option2: 'preview' });
+        };
+
         return user;
     }
 });

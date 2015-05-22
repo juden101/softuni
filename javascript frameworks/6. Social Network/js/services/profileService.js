@@ -48,8 +48,6 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             return resource.query({ option1: option1});
         };
 
-        /*
-
         profile.getFriendsList = function(){
             return resource.query({ option1: 'friends'});
         };
@@ -58,13 +56,9 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             return resource.get({ option1: 'friends', option2: 'preview'});
         };
 
-         profile.sendFriendRequest = function(username){
-         return resource.save({ option1: 'requests', option2: username});
-         };
-
-
-
-        */
+        profile.sendFriendRequest = function(username){
+            return resource.save({ option1: 'requests', option2: username});
+        };
 
         return profile;
     }

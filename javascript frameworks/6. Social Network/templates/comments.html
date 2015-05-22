@@ -1,6 +1,7 @@
 <li class="media" ng-repeat="comment in post.comments">
     <div class="media-left">
-        <img class="media-object" ng-src="{{comment.author.profileImageData}}"  err-src="{{defaultImage}}" alt="..." style="width: 50px; height: 50px">
+        <img class="media-object" ng-src="{{defaultImage}}" ng-if="!comment.author.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
+        <img class="media-object"  ng-src="{{comment.author.profileImageData}}" ng-if="comment.author.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
     </div>
     <div class="media-body">
         <span class="glyphicon glyphicon-user"></span><span class="author" popup-show="templates/user-preview-box.html" ng-click="showUserPreview(comment.author.username, $event, 'comment')"> {{comment.author.name}}</span>

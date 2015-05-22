@@ -1,7 +1,7 @@
 'use strict';
 
 var SocialNetworkApp = angular
-    .module('SocialNetworkApp', ['ngRoute', 'ngResource', 'infinite-scroll'])
+    .module('SocialNetworkApp', ['ngRoute', 'ngResource', 'infinite-scroll', 'rt.popup'])
     .constant({
         'baseServiceUrl': 'http://softuni-social-network.azurewebsites.net/api',
         'PAGE_SIZE': 5,
