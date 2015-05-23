@@ -37,7 +37,18 @@ var SocialNetworkApp = angular
                 controller: 'MainController',
                 resolve:{
                     isNotLogged: function($location){
-                        if(!localStorage.getItem('accessToken')){
+                        if(!localStorage.getItem('accessToken')) {
+                            $location.path('/');
+                        }
+                    }
+                }
+            })
+            .when('/user/:username/friends/', {
+                templateUrl: 'templates/friends.html',
+                controller: 'MainController',
+                resolve: {
+                    isNotLogged: function($location){
+                        if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
                     }
