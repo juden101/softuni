@@ -123,7 +123,8 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
 
             profile(accessToken).getFriendsListPreview().$promise.then(
                 function (data) {
-                    data.userFriendsUrl = '#/friends/';
+                    var username = authentication.getUsername();
+                    data.userFriendsUrl = '#/user/' + username + '/friends/';
                     $scope.friendsListPreview = data;
                 },
                 function (error) {
