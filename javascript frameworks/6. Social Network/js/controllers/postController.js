@@ -67,4 +67,39 @@ SocialNetworkApp.controller('PostController', function ($scope, $routeParams, us
             }
         }
     };
+
+    $scope.deletePost = function(postData){
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            post(accessToken).removePost(postData.id).$promise.then(
+                function(){
+                    var index =  $scope.posts.indexOf(postData);
+                    $scope.posts.splice(index, 1);
+
+                    noty.showInfo('Post successfuly removed.');
+                },
+                function(error) {
+                    noty.showError('Unsuccessful post remove!', error);
+                }
+            );
+        }
+    };
+
+    $scope.editPost = function(postData) {
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            post(accessToken).editPost(postData.id, postData.newPostContent).$promise.then(
+                function(){
+                    postData.postContent = postData.newPostContent;
+
+                    noty.showInfo('Post successfully edited.');
+                },
+                function(error){
+                    noty.showError('Unsuccessful post edit!', error);
+                }
+            );
+        }
+    };
 });
