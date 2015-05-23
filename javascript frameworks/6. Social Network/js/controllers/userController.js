@@ -7,7 +7,7 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
     $scope.busy = false;
     var feedStartPostId;
 
-    $scope.showUserPreview = function(username){
+    $scope.showUserPreview = function(username) {
         $scope.previewData = {};
 
         if (authentication.isLogged()) {
@@ -101,7 +101,7 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
         }
     };
 
-    $scope.getUserFriends = function(){
+    $scope.getUserFriends = function() {
         if(authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();
             var wallUsername = $routeParams['username'];
