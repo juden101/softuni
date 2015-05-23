@@ -22,7 +22,7 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
                         status: false
                     };
 
-                    if(authentication.getUsername() !== $scope.wallOwner.username) {
+                    if(authentication.getUsername() !== data.username) {
                         if(data.isFriend) {
                             $scope.previewData.status = 'friend';
                         } else if(data.hasPendingRequest){
