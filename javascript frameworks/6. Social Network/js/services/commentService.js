@@ -11,6 +11,11 @@ SocialNetworkApp.factory('comment', function($http, $resource, baseServiceUrl){
                     option1: '@option1',
                     option2: '@option2',
                     option3: '@option3'
+                },
+                {
+                    edit: {
+                        method: 'PUT'
+                    }
                 }
             );
 
@@ -28,6 +33,15 @@ SocialNetworkApp.factory('comment', function($http, $resource, baseServiceUrl){
 
         comment.unlike = function(postId, commentId){
             return resource.remove({option1: postId, option2: commentId, option3: "likes"})
+        };
+
+        comment.removeComment = function(postId, commentId){
+            return resource.remove({option1: postId, option2: commentId});
+        };
+
+        comment.editComment = function(postId, commentId, commentContent){
+            var commentData = { 'commentContent': commentContent};
+            return resource.edit({option1: postId, option2: commentId}, commentData);
         };
 
         return comment;

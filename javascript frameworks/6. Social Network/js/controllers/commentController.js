@@ -77,4 +77,39 @@ SocialNetworkApp.controller('CommentController', function ($scope, authenticatio
             );
         }
     };
+
+    $scope.editComment = function(postData, commentData) {
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            comment(accessToken).editComment(postData.id, commentData.id, commentData.newCommentContent).$promise.then(
+                function(){
+                    noty.showInfo('Comment successfully edited.');
+                    commentData.commentContent = commentData.newCommentContent;
+                },
+                function(error) {
+                    noty.showError('Unsuccessful comment edit!', error);
+                }
+            );
+        }
+    };
+
+    $scope.deleteComment = function(postData, commentData){
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            comment(accessToken).removeComment(postData.id, commentData.id).$promise.then(
+                function(){
+                    var index =  postData.comments.indexOf(commentData);
+                    postData.comments.splice(index, 1);
+                    postData.totalCommentsCount--;
+
+                    noty.showInfo('Comment successfully removed.');
+                },
+                function(error) {
+                    noty.showError('Unsuccessful comment edit!', error);
+                }
+            );
+        }
+    };
 });

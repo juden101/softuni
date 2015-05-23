@@ -6,14 +6,25 @@
     <div class="media-body">
         <span class="glyphicon glyphicon-user"></span><span class="author" popup-show="templates/user-preview-box.html" ng-click="showUserPreview(comment.author.username, $event, 'comment')"> {{comment.author.name}}</span>
         <span>{{comment.date | date: "dd MMM yyyy hh:mm:ss"}}</span>
-        <p>{{comment.commentContent}}</p>
     </div>
+
+    <div class="comment-content col-xs-12 col-md-12">
+        <span ng-if="!comment.editing">{{comment.commentContent}}</span>
+        <form ng-show="comment.editing" name="editCommentForm" ng-submit="editComment(post, comment); comment.editing = false">
+            <input type="text" ng-model="comment.newCommentContent" ng-minlength="1" required class="form-group col-xs-12"/>
+            <button class="btn btn-success" type="submit" ng-disabled="editCommentForm.$invalid">Save</button>
+            <a class="btn btn-default" ng-click="comment.editing = false">Cancel</a>
+        </form>
+    </div>
+
     <div class="col-xs-12 col-md-12">
         <span ng-if="isOwnWall || isOwnFeed || post.author.isFriend || post.wallOwner.isFriend">
             <span ng-if="!comment.liked" ng-click="likeComment(post, comment);" class="like-button">Like</span>
-            <span ng-if="comment.liked" ng-click="unlikeComment(post, comment);" class="unlike-button">Unlike</span>
+            <span ng-if="comment.liked" ng-click="unlikeComment(post, comment);" class="unlike-button">Dislike</span>
         </span>
         <span class="glyphicon glyphicon-thumbs-up" title="likes"></span> <span class="views post-details" title="likes">{{comment.likesCount}}</span>
     </div>
+        <span ng-if="comment.author.username === username" ng-click="comment.editing = true; comment.newCommentContent = comment.commentContent">edit</span>
+        <span ng-if="post.author.username === username || comment.author.username === username" ng-click="deleteComment(post, comment)">delete</span>
 </li>
 <li class="pointer" ng-if="post.comments.length < post.totalCommentsCount" ng-click="getPostComments(post)">view all</li>

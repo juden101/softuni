@@ -32,10 +32,6 @@
             </form>
         </div>
 
-        <div class="form-group col-xs-12 col-md-12">
-            <span>{{post.postContent}}</span>
-        </div>
-
         <div class="form-group col-xs-12 col-md-12" >
             <span ng-if="isOwnWall || isOwnFeed || post.author.isFriend || post.wallOwner.isFriend">
                 <span ng-if="!post.liked" ng-click="likePost(post);" class="like-button">Like</span>
