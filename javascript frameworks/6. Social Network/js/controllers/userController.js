@@ -22,7 +22,7 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
                         status: false
                     };
 
-                    if(authentication.getUsername() !== data.username) {
+                    if(authentication.getUsername() !== $scope.wallOwner.username) {
                         if(data.isFriend) {
                             $scope.previewData.status = 'friend';
                         } else if(data.hasPendingRequest){
@@ -122,15 +122,17 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
             var accessToken = authentication.getAccessToken();
             var wallUsername = $routeParams['username'];
 
-            user(accessToken).getUserFriendsPreview(wallUsername).$promise.then(
-                function (data) {
-                    data.userFriendsUrl = '#/user/' + $routeParams['username'] + '/friends/';
-                    $scope.friendsListPreview = data;
-                },
-                function (error) {
-                    noty.showError('Unsuccessful user friends preview load!', error);
-                }
-            );
+            if (wallUsername != authentication.getUsername()) {
+                user(accessToken).getUserFriendsPreview(wallUsername).$promise.then(
+                    function (data) {
+                        data.userFriendsUrl = '#/user/' + $routeParams['username'] + '/friends/';
+                        $scope.friendsListPreview = data;
+                    },
+                    function (error) {
+                        noty.showError('Unsuccessful user friends preview load!', error);
+                    }
+                );
+            }
         }
     };
 });
