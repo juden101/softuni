@@ -5,8 +5,9 @@ SocialNetworkApp.controller('CommentController', function ($scope, authenticatio
         if(authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();
             var isWallOwnerFriend = postData.wallOwner.isFriend;
+            var isWallOwnerMe = postData.wallOwner.username == authentication.getUsername();
 
-            if (isWallOwnerFriend) {
+            if (isWallOwnerFriend || isWallOwnerMe) {
                 comment(accessToken).addComment(postData.id, $scope.commentData).$promise.then(
                     function(data){
                         $scope.commentData.commentContent = '';

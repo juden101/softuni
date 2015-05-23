@@ -68,16 +68,16 @@ SocialNetworkApp.controller('PostController', function ($scope, $routeParams, us
         }
     };
 
-    $scope.deletePost = function(postData){
+    $scope.deletePost = function(postData) {
         if(authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();
 
             post(accessToken).removePost(postData.id).$promise.then(
-                function(){
-                    var index =  $scope.posts.indexOf(postData);
+                function() {
+                    var index = $scope.posts.indexOf(postData);
                     $scope.posts.splice(index, 1);
 
-                    noty.showInfo('Post successfuly removed.');
+                    noty.showInfo('Post successfully removed.');
                 },
                 function(error) {
                     noty.showError('Unsuccessful post remove!', error);

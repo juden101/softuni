@@ -1,5 +1,4 @@
-<div ng-repeat="post in posts" post-controller-directive user-controller-directive class="feed">
-    {{postTest}}
+<div ng-repeat="post in posts" post-controller-directive class="feed">
     <div class="well .alert-success col-xs-12 col-md-12" comment-controller-directive>
         <div class="form-group col-xs-12 col-md-12">
             <div class="media-left">
@@ -17,7 +16,20 @@
                     </span>
                 </span>
                 <div>{{post.date | date : "dd MMM yyyy hh:mm:ss"}}</div>
+                <div ng-if="post.author.username === username || isOwnWall" class="btn-group drop-down post-caret" role="group">
+                    <span ng-if="post.author.username === username" ng-click="post.editing = true; post.newPostContent = post.postContent">edit</span>
+                    <span ng-if="post.author.username === username || isOwnWall" ng-click="deletePost(post)">delete</span>
+                </div>
             </div>
+        </div>
+
+        <div class="form-group col-xs-12 col-md-12">
+            <span ng-if="!post.editing">{{post.postContent}}</span>
+            <form ng-show="post.editing" name="editPostForm" ng-submit="editPost(post); post.editing = false">
+                <input type="text" ng-model="post.newPostContent" ng-minlength="1" required class="form-group col-xs-12"/>
+                <button class="btn btn-success" type="submit" ng-disabled="editPostForm.$invalid">Save</button>
+                <a class="btn btn-default" ng-click="post.editing = false">Cancel</a>
+            </form>
         </div>
 
         <div class="form-group col-xs-12 col-md-12">
