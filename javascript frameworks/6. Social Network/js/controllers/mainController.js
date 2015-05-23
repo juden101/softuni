@@ -5,6 +5,7 @@ SocialNetworkApp.controller('MainController', function ($scope, $location, $inte
         return authentication.isLogged();
     };
 
+    $scope.username = authentication.getUsername();
     $scope.userData = authentication.getUserData();
     $scope.defaultImage = DEFAULT_PROFILE_IMAGE;
     $scope.showPendingRequests = false;
@@ -48,18 +49,17 @@ SocialNetworkApp.controller('MainController', function ($scope, $location, $inte
     };
 
     $scope.rejectFriendRequest = function(request){
-        if (authentication.isLogged()){
-            usSpinnerService.spin('spinner-1');
-            profileService(authentication.getAccessToken()).rejectRequest(request.id).$promise.then(
+        if (authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+
+            profile(accessToken).rejectRequest(request.id).$promise.then(
                 function(){
                     var index =  $scope.pendingRequests.indexOf(request);
                     $scope.pendingRequests.splice(index,1);
-                    usSpinnerService.stop('spinner-1');
-                    notifyService.showInfo("Friend request successfully rejected.");
+
+                    noty.showInfo('Friend request successfully rejected.');
                 }, function(error){
-                    $log.warn(error);
-                    usSpinnerService.stop('spinner-1');
-                    notifyService.showError("Unsuccessful request reject!", error);
+                    noty.showError('Unsuccessful request reject!', error);
                 }
             );
         }
