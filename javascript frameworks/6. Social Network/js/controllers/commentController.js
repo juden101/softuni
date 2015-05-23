@@ -4,19 +4,25 @@ SocialNetworkApp.controller('CommentController', function ($scope, authenticatio
     $scope.addComment = function(postData){
         if(authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();
+            var isWallOwnerFriend = postData.wallOwner.isFriend;
 
-            comment(accessToken).addComment(postData.id, $scope.commentData).$promise.then(
-                function(data){
-                    $scope.commentData.commentContent = '';
-                    postData.comments.unshift(data);
-                    postData.totalCommentsCount++;
+            if (isWallOwnerFriend) {
+                comment(accessToken).addComment(postData.id, $scope.commentData).$promise.then(
+                    function(data){
+                        $scope.commentData.commentContent = '';
+                        postData.comments.unshift(data);
+                        postData.totalCommentsCount++;
 
-                    noty.showInfo('Comment successfuly added.');
-                },
-                function(error){
-                    noty.showError('Unsuccessful comment add!', error);
-                }
-            );
+                        noty.showInfo('Comment successfuly added.');
+                    },
+                    function(error){
+                        noty.showError('Unsuccessful comment add!', error);
+                    }
+                );
+            }
+            else {
+                noty.showError('You are not allowed to comment non-friend posts.');
+            }
         }
     };
 
