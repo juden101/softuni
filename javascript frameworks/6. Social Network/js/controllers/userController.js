@@ -42,13 +42,14 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
     $scope.getWallOwner = function() {
         if (authentication.isLogged()) {
             var accessToken = authentication.getAccessToken();
+            var loggedUsername = authentication.getUsername();
             var wallUsername = $routeParams['username'];
 
             user(accessToken).getUserFullData(wallUsername).$promise.then(
                 function(data) {
                     $scope.wallOwner = data;
 
-                    if(authentication.getUsername() !== $scope.wallOwner.username) {
+                    if(loggedUsername !== $scope.wallOwner.username) {
                         if(data.isFriend) {
                             $scope.wallOwner.status = 'friend';
                         } else if(data.hasPendingRequest) {
@@ -58,7 +59,7 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
                         }
                     }
 
-                    if($scope.wallOwner.isFriend && $location.path() === '/user/' + wallUsername + '/wall/') {
+                    if((loggedUsername === $scope.wallOwner.username || $scope.wallOwner.isFriend) && $location.path() === '/user/' + wallUsername + '/wall/') {
                         $scope.getUserFriendsListPreview();
                     }
 
@@ -95,6 +96,22 @@ SocialNetworkApp.controller('UserController', function ($scope, $location, $rout
                 },
                 function (error) {
                     noty.showError('Error loading user wall!', error);
+                }
+            );
+        }
+    };
+
+    $scope.getUserFriends = function(){
+        if(authentication.isLogged()) {
+            var accessToken = authentication.getAccessToken();
+            var wallUsername = $routeParams['username'];
+
+            user(accessToken).getUserFriends(wallUsername).$promise.then(
+                function (data) {
+                    $scope.friendsList = data;
+                },
+                function (error) {
+                    noty.showError('Error while getting user friends data.', error)
                 }
             );
         }
