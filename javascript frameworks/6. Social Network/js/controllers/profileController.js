@@ -27,12 +27,11 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
 
         profile(accessToken).update(userProfileData).$promise.then(
             function () {
-                userProfileData['access_token'] = authentication.getAccessToken();
-                authentication.setCredentials(userProfileData);
+                authentication.setUserData(userProfileData);
                 noty.showInfo('Profile successfully edited.');
             },
             function (error) {
-                notifyService.showError('Error with profile editing!', error);
+                noty.showError('Error with profile editing!', error);
             }
         );
     };
@@ -143,7 +142,7 @@ SocialNetworkApp.controller('ProfileController', function ($scope, $location, au
 
             $scope.userProfile.coverImageData = undefined;
             noty.showError("Invalid file format.");
-        } else if(file.size > 131072) {
+        } else if(file.size > 1048576) {
             $('#cover-image').attr('src', '');
 
             $scope.userProfile.coverImageData = undefined;

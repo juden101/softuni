@@ -6,7 +6,7 @@
     </legend>
 
     <div class="form-group col-md-9">
-        <div ng-include="'templates/feed.html'" infinite-scroll='loadNewsFeed()' infinite-scroll-distance="0"></div>
+        <div ng-include="'templates/posts.html'" infinite-scroll='loadNewsFeed()' infinite-scroll-distance="0"></div>
     </div>
 
     <div class="media col-md-3" ng-init="getOwnFriendsListPreview()" ng-include="'templates/friends-preview.html'"></div>

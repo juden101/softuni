@@ -5,11 +5,13 @@ SocialNetworkApp.factory('user', function ($http, $resource, baseServiceUrl) {
         $http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 
         var user = {};
-        var serviceUrl = baseServiceUrl + '/users/:option1';
+        var serviceUrl = baseServiceUrl + '/users/:option1/:option2/:option3';
         var resource = $resource(
             serviceUrl,
             {
-                option1: '@option1'
+                option1: '@option1',
+                option2: '@option2',
+                option3: '@option3'
             },
             {
                 edit: {
@@ -30,14 +32,32 @@ SocialNetworkApp.factory('user', function ($http, $resource, baseServiceUrl) {
             return resource.save({option1: 'logout'});
         };
 
-        user.searchUser = function(searchTerm){
-            var option1 = 'search?searchTerm=' + searchTerm;
+        user.getUserWall = function(username, pageSize, startPostId) {
+            var option2 = '/wall?StartPostId' + (startPostId ? "=" + startPostId : "") + "&PageSize=" + pageSize;
+
+            return resource.query({ option1: username, option2: option2});
+        };
+
+        user.searchUser = function(searchTerm) {
+            var option1 = '/search?searchTerm=' + searchTerm;
 
             return resource.query({ option1: option1 });
         };
 
-        user.getUserPreviewData = function(username){
+        user.getUserPreviewData = function(username) {
             return resource.get({ option1: username, option2: 'preview' });
+        };
+
+        user.getUserFullData = function(username) {
+            return resource.get({ option1: username });
+        };
+
+        user.getUserFriendsPreview = function(username){
+            return resource.get({ option1: username, option2: 'friends', option3: 'preview' });
+        };
+
+        user.getUserFriends = function(username){
+            return resource.query({ option1: username, option2: 'friends' });
         };
 
         return user;

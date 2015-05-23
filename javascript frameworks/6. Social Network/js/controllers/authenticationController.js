@@ -56,11 +56,14 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
         user(accessToken).logout().$promise.then(
             function() {
                 authentication.clearCredentials();
-                $location.path('/');
+                $location.path('/home');
 
                 noty.showInfo('Successful logout!');
             },
-            function(error){
+            function(error) {
+                authentication.clearCredentials();
+                $location.path('/home');
+
                 noty.showError('Unsuccessful logout!', error);
             }
         );

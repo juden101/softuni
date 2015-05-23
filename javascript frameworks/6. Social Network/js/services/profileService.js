@@ -30,19 +30,19 @@ SocialNetworkApp.factory('profile', function($http, $q, $resource, baseServiceUr
             return resource.query({ option1: 'requests' });
         };
 
-        profile.acceptRequest = function(requestId){
+        profile.acceptRequest = function(requestId) {
             var option2 = requestId + '?status=approved';
 
             return resource.edit({ option1: 'requests', option2: option2});
         };
 
-        profile.rejectRequest = function(requestId){
+        profile.rejectRequest = function(requestId) {
             var option2 = requestId + '?status=rejected';
 
             return resource.edit({ option1: 'requests', option2: option2});
         };
 
-        profile.getNewsFeed = function(pageSize, startPostId){
+        profile.getNewsFeed = function(pageSize, startPostId) {
             var option1 = 'feed?StartPostId' + (startPostId ? "=" + startPostId : "") + "&PageSize=" + pageSize;
 
             return resource.query({ option1: option1});

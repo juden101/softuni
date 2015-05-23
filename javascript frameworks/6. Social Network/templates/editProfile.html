@@ -46,7 +46,7 @@
                         <img class="thumbnail pull-right" name="image" src="{{userProfile.coverImageData}}" id="cover-image" style="width: 400px; height: 100px" required>
                     </div>
                     <div class="form-group">
-                        <p class="file-limit text-center" >Size limit: 128KB</p>
+                        <p class="file-limit text-center" >Size limit: 1MB</p>
                         <input type="file" class="form-control pull-right" ng-model="userProfile.coverImageData" onchange="angular.element(this).scope().uploadCoverImage(this.files)" id="inputCoverImageData" style="width: 400px;">
                     </div>
                 </div>

@@ -2,7 +2,7 @@
 
 SocialNetworkApp.directive('feedDirective', function () {
     return {
-        templateUrl: 'templates/feed.html',
+        templateUrl: 'templates/posts.html',
         controller: 'ProfileController'
     }
 });
