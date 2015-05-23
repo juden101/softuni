@@ -1,11 +1,11 @@
-<li class="media" ng-repeat="comment in post.comments">
+<li class="comment" class="media" ng-repeat="comment in post.comments">
     <div class="media-left">
         <img class="media-object" ng-src="{{defaultImage}}" ng-if="!comment.author.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
         <img class="media-object"  ng-src="{{comment.author.profileImageData}}" ng-if="comment.author.profileImageData" alt="profile picture" style="width: 50px; height: 50px"/>
     </div>
     <div class="media-body">
-        <span class="glyphicon glyphicon-user"></span><span class="author" popup-show="templates/user-preview-box.html" ng-click="showUserPreview(comment.author.username, $event, 'comment')"> {{comment.author.name}}</span>
-        <span>{{comment.date | date: "dd MMM yyyy hh:mm:ss"}}</span>
+        <span class="glyphicon glyphicon-user"></span><span class="author link" popup-show="templates/user-preview-box.html" ng-click="showUserPreview(comment.author.username, $event, 'comment')"> {{comment.author.name}}</span>
+        at <span>{{comment.date | date: "dd MMM yyyy hh:mm:ss"}}</span>
     </div>
 
     <div class="comment-content col-xs-12 col-md-12">
@@ -17,14 +17,14 @@
         </form>
     </div>
 
-    <div class="col-xs-12 col-md-12">
+    <div class="comment-actions col-xs-12 col-md-12">
         <span ng-if="isOwnWall || isOwnFeed || post.author.isFriend || post.wallOwner.isFriend">
-            <span ng-if="!comment.liked" ng-click="likeComment(post, comment);" class="like-button">Like</span>
-            <span ng-if="comment.liked" ng-click="unlikeComment(post, comment);" class="unlike-button">Dislike</span>
+            <span ng-if="!comment.liked" ng-click="likeComment(post, comment);" class="like-button link">Like</span>
+            <span ng-if="comment.liked" ng-click="unlikeComment(post, comment);" class="unlike-button link">Dislike</span>
         </span>
         <span class="glyphicon glyphicon-thumbs-up" title="likes"></span> <span class="views post-details" title="likes">{{comment.likesCount}}</span>
+        <span class="glyphicon glyphicon-asterisk link" ng-if="comment.author.username === username" ng-click="comment.editing = true; comment.newCommentContent = comment.commentContent">edit</span>
+        <span class="glyphicon glyphicon-remove link" ng-if="post.author.username === username || comment.author.username === username" ng-click="deleteComment(post, comment)">delete</span>
     </div>
-        <span ng-if="comment.author.username === username" ng-click="comment.editing = true; comment.newCommentContent = comment.commentContent">edit</span>
-        <span ng-if="post.author.username === username || comment.author.username === username" ng-click="deleteComment(post, comment)">delete</span>
 </li>
-<li class="pointer" ng-if="post.comments.length < post.totalCommentsCount" ng-click="getPostComments(post)">view all</li>
+<span class="link" ng-if="post.comments.length < post.totalCommentsCount" ng-click="getPostComments(post)">View all comments</span>
