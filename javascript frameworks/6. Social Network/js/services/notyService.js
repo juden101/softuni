@@ -17,6 +17,10 @@ SocialNetworkApp.factory('noty', function () {
                     errors.push(serverError.error_description);
                 }
 
+                if (serverError && serverError.data.message) {
+                    errors.push(serverError.data.message);
+                }
+
                 if (serverError && serverError.message) {
                     errors.push(serverError.message);
                 }

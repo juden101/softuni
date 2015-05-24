@@ -8,46 +8,38 @@
         </div>
         <div class="panel-body">
             <form id="register-form" class="form-horizontal" role="form" ng-submit="register()">
-                <!--{{#errorMessages.length}}
-                <div id="signupalert" class="alert alert-danger">
-                    {{#errorMessages}}
-                    <p class="form-error-message">{{message}}</p>
-                    {{/errorMessages}}
-                </div>
-                {{/errorMessages.length}}-->
-
                 <div class="form-group">
                     <label for="register-username" class="col-md-3 control-label">Username</label>
                     <div class="col-md-9">
-                        <input type="text" id="register-username" class="form-control" ng-model="registerData.username" placeholder="Username..." />
+                        <input type="text" id="register-username" class="form-control" ng-model="registerData.username" placeholder="Username..." min="4" required />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="register-password" class="col-md-3 control-label">Password</label>
                     <div class="col-md-9">
-                        <input type="password" id="register-password" class="form-control" ng-model="registerData.password" placeholder="Password..." />
+                        <input type="password" id="register-password" class="form-control" ng-model="registerData.password" placeholder="Password..." min="6" required />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="register-repeat-password" class="col-md-3 control-label">Password confirm</label>
                     <div class="col-md-9">
-                        <input type="password" id="register-repeat-password" class="form-control" ng-model="registerData.confirmPassword" placeholder="Password confrim..." />
+                        <input type="password" id="register-repeat-password" class="form-control" ng-model="registerData.confirmPassword" placeholder="Password confrim..."  min="6" required />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="register-name" class="col-md-3 control-label">Name</label>
                     <div class="col-md-9">
-                        <input type="text" id="register-name" class="form-control" ng-model="registerData.name" placeholder="Name..." />
+                        <input type="text" id="register-name" class="form-control" ng-model="registerData.name" placeholder="Name..." min="4" required />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="register-email" class="col-md-3 control-label">Email</label>
                     <div class="col-md-9">
-                        <input type="text" id="register-email" class="form-control" ng-model="registerData.email" placeholder="Email Address" />
+                        <input type="email" id="register-email" class="form-control" ng-model="registerData.email" title="Please enter valid email!" placeholder="Email Address" required />
                     </div>
                 </div>
 

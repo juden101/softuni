@@ -39,12 +39,11 @@ SocialNetworkApp.controller('AuthenticationController', function ($scope, $locat
                         noty.showInfo('Successful register!');
                     },
                     function (error) {
-                        noty.showError('Unable to get user profile data, plese try again!', error);
+                        noty.showError('Unable to get user profile data, please try again!', error);
                     }
                 );
             },
             function(error) {
-                console.log(error);
                 noty.showError('Unsuccessful register!', error);
             }
         );

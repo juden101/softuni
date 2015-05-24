@@ -58,7 +58,7 @@ var SocialNetworkApp = angular
                 templateUrl: 'templates/editProfile.html',
                 controller: 'ProfileController',
                 resolve: {
-                    isLogged: function($location) {
+                    isNotLogged: function($location) {
                         if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
@@ -69,7 +69,7 @@ var SocialNetworkApp = angular
                 templateUrl: 'templates/editPassword.html',
                 controller: 'ProfileController',
                 resolve: {
-                    isLogged: function($location) {
+                    isNotLogged: function($location) {
                         if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
@@ -102,7 +102,7 @@ var SocialNetworkApp = angular
                 templateUrl: 'templates/logout.html',
                 controller: 'AuthenticationController',
                 resolve: {
-                    isLogged: function($location) {
+                    isNotLogged: function($location) {
                         if(!localStorage.getItem('accessToken')) {
                             $location.path('/');
                         }
