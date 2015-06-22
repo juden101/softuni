@@ -1,0 +1,13 @@
+The task of a database designer is to structure the data in a way that eliminates unnecessary duplication and provides a rapid search path to all necessary information. The process of refining tables, keys, columns, and relationships to create an efficient database is called normalization. Normalizing is not just for relational files: it is also a common design activity for indexed files.
+
+Normalization is a complex process with many specific rules and different levels of intensity. In its full definition, normalization is the process of discarding repeating groups, minimizing redundancy, eliminating composite keys for partial dependency, and separating non-key attributes. In simple terms, the rules for normalization can be summed up in a single phrase: "Each attribute (column) must be a fact about the key, the whole key, and nothing but the key." Each table should describe only one type of entity (such as a person, place, customer order, or product item).
+Some of the benefits of normalization are:
+
+Data integrity (because there is no redundant, neglected data).
+Optimized queries (because normalized tables produce rapid, efficient joins).
+Faster index creation and sorting (because the tables have fewer columns).
+Faster UPDATE performance (because there are fewer indexes per table).
+Improved concurrency resolution (because table locks will affect less data).
+
+
+You can normalize most simple databases by following a simple rule of thumb: tables that contain repeated information should be divided into separate tables to eliminate the duplication.
