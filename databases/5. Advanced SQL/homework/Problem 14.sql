@@ -1,0 +1,1 @@
+SELECT FORMAT(GETDATE(), 'dd.MM.yyyy hh:mm:ss:fff', 'en-US') AS [DateTime]

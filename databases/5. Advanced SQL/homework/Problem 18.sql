@@ -1,0 +1,3 @@
+ALTER TABLE Users
+ADD GroupId INTEGER,
+FOREIGN KEY(FK_Groups) REFERENCES Groups(GroupId);
