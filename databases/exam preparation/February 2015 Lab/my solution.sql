@@ -1,3 +1,4 @@
+/*
 -- Task 1
 SELECT Title
 FROM Questions
@@ -95,6 +96,85 @@ GROUP BY c.Name, u.Username, u.PhoneNumber
 HAVING u.PhoneNumber IS NOT NULL
 ORDER BY [Answers Count] DESC
 
+--TASK 13
+1.
+CREATE TABLE Towns (
+  Id int PRIMARY KEY IDENTITY,
+  Name nvarchar(100)
+)
+
+ALTER TABLE Users
+ADD TownId int NULL
+
+ALTER TABLE Users WITH CHECK ADD CONSTRAINT FK_Users_Towns
+FOREIGN KEY (TownId) REFERENCES Towns(Id)
+GO
+
+2.
+INSERT INTO Towns(Name) VALUES ('Sofia'), ('Berlin'), ('Lyon')
+UPDATE Users SET TownId = (SELECT Id FROM Towns WHERE Name='Sofia')
+INSERT INTO Towns VALUES
+('Munich'), ('Frankfurt'), ('Varna'), ('Hamburg'), ('Paris'), ('Lom'), ('Nantes')
+
+3.
+UPDATE Users
+SET TownId = (SELECT Id FROM Towns WHERE Name = 'Paris')
+WHERE DATENAME(dw, RegistrationDate) = 'Friday'
+
+4.
+UPDATE Answers
+SET QuestionId = (SELECT Id FROM Questions WHERE Title = 'Java += operator')
+WHERE DATENAME(dw, CreatedOn) IN ('Monday', 'Sunday') AND MONTH(CreatedOn) = 2
+
+5.
+BEGIN TRAN
+
+CREATE Table [#AnswerIds] (
+	AnswerId int not null
+)
+
+INSERT INTO [#AnswerIds]
+SELECT a.Id FROM Answers a
+WHERE (SELECT SUM(Value) FROM Answers aa JOIN Votes v ON v.AnswerId = a.Id) < 0
+
+DELETE FROM Votes
+FROM Votes v
+WHERE v.AnswerId in 
+	(
+		SELECT a.Id FROM Answers a
+		WHERE (SELECT SUM(Value)
+		FROM Answers aa
+		JOIN Votes v ON v.AnswerId = a.Id) < 0)
+
+DELETE FROM Answers
+FROM Answers a
+WHERE a.Id in (SELECT * FROM [#AnswerIds])
+
+DROP TABLE [#AnswerIds]
+
+ROLLBACK TRAN
+
+6.
+INSERT INTO Questions(Title, Content, CategoryId, UserId, CreatedOn)
+VALUES (
+	'Fetch NULL values in PDO query', 
+	'When I run the snippet, NULL values are converted to empty strings. How can fetch NULL values?', 
+	(SELECT Id FROM Categories WHERE Name='Databases'),
+	(SELECT Id FROM Users WHERE UserName='darkcat'), 
+	GETDATE())
+
+7.
+
+SELECT t.Name as [Town], u.Username as [Username], COUNT(*) as [AnswersCount]
+FROM Towns t
+JOIN Users u
+	ON t.Id = u.TownId
+JOIN Answers a
+	ON a.UserId = u.Id
+GROUP BY t.Name, u.Username
+ORDER BY [AnswersCount] DESC, [Username]
+*/
+/*
 --TASK 14
 CREATE VIEW AllQuestions
 AS
@@ -159,3 +239,4 @@ END
 GO
 
 SELECT * FROM fn_ListUsersQuestions()
+*/
