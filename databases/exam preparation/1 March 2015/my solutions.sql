@@ -109,6 +109,26 @@ WHERE RIGHT(p.PeakName, 1) = LEFT(r.RiverName, 1)
 ORDER BY [Mix]
 
 -- TASK 14
+-- first way
+SELECT 
+	c.CountryName AS Country,
+	ISNULL((SELECT p2.PeakName FROM Peaks p2 WHERE p2.Elevation = MAX(p.Elevation)), '(no highest peak)') AS [Highest Peak Name],
+	ISNULL(MAX(p.Elevation), 0) AS [Highest Peak Elevation],
+	ISNULL((SELECT m2.MountainRange from Mountains m2 
+		JOIN Peaks p3
+			ON m2.Id = p3.MountainId
+		WHERE p3.Elevation = max(p.Elevation)), '(no mountain)') AS Mountain
+FROM Countries c
+LEFT JOIN MountainsCountries mc
+	ON c.CountryCode = mc.CountryCode
+LEFT JOIN Mountains m
+	ON m.Id = mc.MountainId
+LEFT JOIN Peaks p
+	ON m.Id = p.MountainId
+GROUP BY c.CountryName
+ORDER BY Country, [Highest Peak Elevation]
+
+-- second way
 SELECT
 	c.CountryName as [Country],
 	p.PeakName as [Highest Peak Name],
