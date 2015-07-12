@@ -260,44 +260,42 @@ FROM
 RIGHT OUTER JOIN Users u
 	ON q.UserId = u.Id
 
-SELECT * FROM AllQuestions
-
-IF (object_id(N'fn_ListUsersQuestions') IS NOT NULL)
-DROP FUNCTION fn_ListUsersQuestions
-GO
-
-CREATE FUNCTION fn_ListUsersQuestions()
+ALTER FUNCTION fn_ListUsersQuestions()
 	RETURNS @tbl_UsersQuestions TABLE(
 		UserName NVARCHAR(MAX),
 		Questions NVARCHAR(MAX)
 	)
 AS
 BEGIN
-	DECLARE UsersCursor CURSOR FOR
-		SELECT Username FROM Users
-		ORDER BY Username;
-	OPEN UsersCursor;
-	DECLARE @username NVARCHAR(MAX);
-	FETCH NEXT FROM UsersCursor INTO @username;
-	WHILE @@FETCH_STATUS = 0
-	BEGIN
-		DECLARE @questions NVARCHAR(MAX) = NULL;
-		SELECT
-			@questions = CASE
-				WHEN @questions IS NULL THEN CONVERT(NVARCHAR(MAX), Title, 112)
-				ELSE @questions + ', ' + CONVERT(NVARCHAR(MAX), Title, 112)
-			END
-		FROM AllQuestions
-		WHERE Username = @username
-		ORDER BY Title DESC;
+	DECLARE usersCursor CURSOR FOR
+		SELECT u.Username
+		FROM Users u
+		ORDER BY u.Username
 
-		INSERT INTO @tbl_UsersQuestions
-		VALUES(@username, @questions)
+	OPEN usersCursor
+	DECLARE @username NVARCHAR(MAX)
+	FETCH NEXT FROM usersCursor INTO @username
+
+	WHILE @@FETCH_STATUS = 0
+		BEGIN
+			DECLARE @questions NVARCHAR(MAX) = NULL;
+			SELECT
+				@questions = CASE
+					WHEN @questions IS NULL THEN CONVERT(NVARCHAR(MAX), Title, 112)
+					ELSE @questions + ', ' + CONVERT(NVARCHAR(MAX), Title, 112)
+				END
+			FROM AllQuestions
+			WHERE Username = @username
+			ORDER BY Title DESC;
+
+			INSERT INTO @tbl_UsersQuestions
+			VALUES(@username, @questions)
 		
-		FETCH NEXT FROM UsersCursor INTO @username;
-	END;
-	CLOSE UsersCursor;
-	DEALLOCATE UsersCursor;
+			FETCH NEXT FROM UsersCursor INTO @username;
+		END
+	CLOSE usersCursor
+	DEALLOCATE usersCursor
+
 	RETURN;
 END
 GO
