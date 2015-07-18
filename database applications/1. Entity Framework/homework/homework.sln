@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Employee DAO Class", "02. Employee DAO Class\02. Employee DAO Class.csproj", "{CDEBFD13-E7FE-47C6-8304-384A69128195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DbContext for the SoftUni Database", "01. DbContext for the SoftUni Database\01. DbContext for the SoftUni Database.csproj", "{EBED5FAC-D113-423B-80A1-87032A2AAC1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Database Search Queries", "03. Database Search Queries\03. Database Search Queries.csproj", "{701B5C1E-4423-47C9-96B8-BEACFF53DFEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Native SQL Query", "04. Native SQL Query\04. Native SQL Query.csproj", "{FDDD2719-CFC1-4950-B4B4-2FA2FAF7DF57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Concurrent Database Changes", "05. Concurrent Database Changes\05. Concurrent Database Changes.csproj", "{B2CC2DD5-09C3-4123-B45A-1756A73C9A1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Call a Stored Procedure", "06. Call a Stored Procedure\06. Call a Stored Procedure.csproj", "{98259447-88A4-4FF8-98EB-2D8E1ECD75E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Play with the SQL Server Profiler", "07. Play with the SQL Server Profiler\07. Play with the SQL Server Profiler.csproj", "{5AE061EF-EABB-48AE-95C2-B79806F47338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDEBFD13-E7FE-47C6-8304-384A69128195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEBFD13-E7FE-47C6-8304-384A69128195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEBFD13-E7FE-47C6-8304-384A69128195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEBFD13-E7FE-47C6-8304-384A69128195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBED5FAC-D113-423B-80A1-87032A2AAC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBED5FAC-D113-423B-80A1-87032A2AAC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBED5FAC-D113-423B-80A1-87032A2AAC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBED5FAC-D113-423B-80A1-87032A2AAC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701B5C1E-4423-47C9-96B8-BEACFF53DFEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701B5C1E-4423-47C9-96B8-BEACFF53DFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701B5C1E-4423-47C9-96B8-BEACFF53DFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701B5C1E-4423-47C9-96B8-BEACFF53DFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDDD2719-CFC1-4950-B4B4-2FA2FAF7DF57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDDD2719-CFC1-4950-B4B4-2FA2FAF7DF57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDDD2719-CFC1-4950-B4B4-2FA2FAF7DF57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDDD2719-CFC1-4950-B4B4-2FA2FAF7DF57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CC2DD5-09C3-4123-B45A-1756A73C9A1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CC2DD5-09C3-4123-B45A-1756A73C9A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CC2DD5-09C3-4123-B45A-1756A73C9A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CC2DD5-09C3-4123-B45A-1756A73C9A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98259447-88A4-4FF8-98EB-2D8E1ECD75E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98259447-88A4-4FF8-98EB-2D8E1ECD75E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98259447-88A4-4FF8-98EB-2D8E1ECD75E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98259447-88A4-4FF8-98EB-2D8E1ECD75E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AE061EF-EABB-48AE-95C2-B79806F47338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AE061EF-EABB-48AE-95C2-B79806F47338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AE061EF-EABB-48AE-95C2-B79806F47338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AE061EF-EABB-48AE-95C2-B79806F47338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
