@@ -1,0 +1,6 @@
+
+C# basics 3/07/2014 9/09/2015 0
+PHP introduction 10/08/2014 13/12/2015 100
+Java hardcore 15/12/2014 18/06/2015 300
+JS frameworks 6/02/2014 6/09/2015 225
+HTML fundamentals 15/07/2014 9/08/2015 75
