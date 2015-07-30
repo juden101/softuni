@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<students xmlns="urn:students">
+	<student>
+		<name>Pesho</name>
+		<gender>Male</gender>
+		<birth-date>1994-11-05T13:15:30Z</birth-date>
+		<phone-number>+359 879 957 347</phone-number>
+		<email>pesho@gmail.com</email>
+		<university>Software University</university>
+		<speciality>Software Development</speciality>
+		<faculty-number>8465357897</faculty-number>
+		<exams>
+			<exam>
+				<name>C# fundamentals</name>
+				<date-taken>2015-03-05T18:00:00Z</date-taken>
+				<grade>6.00</grade>
+			</exam>
+		</exams>
+	</student>
+	<student>
+		<name>Gosho</name>
+		<gender>Male</gender>
+		<birth-date>1991-03-25T06:45:36Z</birth-date>
+		<email>pesho@gmail.com</email>
+		<university>Software University</university>
+		<speciality>Software Development</speciality>
+		<faculty-number>98798789423</faculty-number>
+		<exams>
+			<exam>
+				<name>C# fundamentals</name>
+				<date-taken>2015-03-05T18:00:00Z</date-taken>
+				<grade>4.67</grade>
+			</exam>
+		</exams>
+	</student>
+	<student>
+		<name>Minka</name>
+		<gender>Female</gender>
+		<birth-date>1995-12-13T16:28:36Z</birth-date>
+		<phone-number>+359 879 468 487</phone-number>
+		<email>minka@gmail.com</email>
+		<university>Software University</university>
+		<speciality>Software Development</speciality>
+		<exams>
+			<exam>
+				<name>C# fundamentals</name>
+				<date-taken>2015-03-05T18:00:00Z</date-taken>
+				<grade>5.79</grade>
+			</exam>
+		</exams>
+	</student>
+	<endorsements>
+		<endorsement>
+			<author>Some</author>
+			<author-email>Some@mail.mail</author-email>
+			<endorsement-date>2012-05-11</endorsement-date>
+			<endorsement-text>whte4hg</endorsement-text>
+		</endorsement>
+    </endorsements>
+</students>
