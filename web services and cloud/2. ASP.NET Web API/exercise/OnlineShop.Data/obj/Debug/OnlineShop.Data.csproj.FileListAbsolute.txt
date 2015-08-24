@@ -1,0 +1,32 @@
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\OnlineShop.Data.dll.config
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\OnlineShop.Data.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\OnlineShop.Data.pdb
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\EntityFramework.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\OnlineShop.Models.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\OnlineShop.Models.pdb
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\EntityFramework.xml
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\obj\Debug\OnlineShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\obj\Debug\OnlineShop.Data.dll
+C:\Users\izaha\Desktop\2. ASP.NET-Web-API-Online-Shop-Skeleton\OnlineShop.Data\obj\Debug\OnlineShop.Data.pdb
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\OnlineShop.Data.dll.config
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\OnlineShop.Data.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\OnlineShop.Data.pdb
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\EntityFramework.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\OnlineShop.Models.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\OnlineShop.Models.pdb
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\EntityFramework.xml
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\obj\Debug\OnlineShop.Data.csprojResolveAssemblyReference.cache
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\obj\Debug\OnlineShop.Data.dll
+C:\Users\izaha\Desktop\softuni\web services and cloud\2. ASP.NET Web API\exercise\OnlineShop.Data\obj\Debug\OnlineShop.Data.pdb

@@ -1,0 +1,14 @@
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\obj\Debug\BookShop.Models.csprojResolveAssemblyReference.cache
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\BookShop.Models.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\BookShop.Models.pdb
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\obj\Debug\BookShop.Models.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\obj\Debug\BookShop.Models.pdb
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\BookShop.Models.dll.config
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\EntityFramework.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\EntityFramework.xml
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\izaha\Desktop\BookShop\BookShop.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
