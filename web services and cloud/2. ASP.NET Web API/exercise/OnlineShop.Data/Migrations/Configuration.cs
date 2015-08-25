@@ -18,6 +18,7 @@ namespace OnlineShop.Data.Migrations
 
         protected override void Seed(OnlineShopEntities context)
         {
+            return;
             var adTypes = SeedAdTypes(context);
 
             var user = SeedUser(context);

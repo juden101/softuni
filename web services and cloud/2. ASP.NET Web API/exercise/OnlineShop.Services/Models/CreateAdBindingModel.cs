@@ -15,10 +15,13 @@ namespace OnlineShop.Services.Models
 
         public string Description { get; set; }
 
+        [Required]
         public int TypeId { get; set; }
 
+        [Required]
         public decimal Price { get; set; }
 
+        [Required]
         public IEnumerable<int> Categories { get; set; }
     }
 }
