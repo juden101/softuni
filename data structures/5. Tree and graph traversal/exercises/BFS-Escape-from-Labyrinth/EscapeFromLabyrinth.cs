@@ -72,12 +72,12 @@ public class EscapeFromLabyrinth
     static bool IsExit(Point currentCell)
     {
         bool isOnBoardX = currentCell.X == 0 || currentCell.X == width - 1;
-        bool isOnBoardY = currentCell.Y == 0 || currentCell.X == height - 1;
+        bool isOnBoardY = currentCell.Y == 0 || currentCell.Y == height - 1;
 
         return isOnBoardX || isOnBoardY;
     }
 
-    static void TryDirection(Queue<Point> queue, Point currentCell, string direction, int deltaX, int deltaY)
+    private static void TryDirection(Queue<Point> queue, Point currentCell, string direction, int deltaX, int deltaY)
     {
         int newX = currentCell.X + deltaX;
         int newY = currentCell.Y + deltaY;
@@ -100,7 +100,7 @@ public class EscapeFromLabyrinth
         }
     }
 
-    static string TracePathBack(Point currentCell)
+    private static string TracePathBack(Point currentCell)
     {
         var path = new StringBuilder();
 
@@ -128,12 +128,19 @@ public class EscapeFromLabyrinth
 
         for (int row = 0; row < height; row++)
         {
-            
+            string line = Console.ReadLine();
+
+            for (int col = 0; col < width; col++)
+            {
+                labyrinth[row, col] = line[col];
+            }
         }
     }
 
     public static void Main()
     {
+        ReadLabyrinth();
+
         string shortestPathToExit = FindShortestPathToExit();
 
         if (shortestPathToExit == null)
