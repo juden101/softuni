@@ -1,5 +1,6 @@
 ﻿using BookShop.Services.Models;
 using Microsoft.AspNet.Identity;
+using OnlineShop.Data.UnitOfWork;
 using OnlineShop.Models;
 using OnlineShop.Services.Models;
 using System;
@@ -8,12 +9,24 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.OData;
+using System.Web.Http.Description;
+using OnlineShop.Services.Infrastructure;
 
 namespace OnlineShop.Services.Controllers
 {
     [Authorize]
     public class AdsController : BaseApiController
     {
+        public AdsController()
+            : base()
+        {
+        }
+
+        public AdsController(IOnlineShopData onlineShopData, IUserIdProvider userIdProvider)
+             : base(onlineShopData, userIdProvider)
+        {
+        }
+
         // GET api/ads
         [HttpGet]
         [Route("api/ads")]
@@ -21,7 +34,7 @@ namespace OnlineShop.Services.Controllers
         [EnableQuery]
         public IHttpActionResult GetAds()
         {
-            var ads = this.Data.Ads
+            var ads = this.Data.Ads.All()
                 .Where(a => a.Status == AdStatus.Open)
                 .OrderByDescending(a => a.Type.Index)
                 .ThenByDescending(a => a.PostedOn)
@@ -35,56 +48,45 @@ namespace OnlineShop.Services.Controllers
         [Route("api/ads")]
         public IHttpActionResult CreateAd(CreateAdBindingModel model)
         {
+            string userId = this.UserIdProvider.GetUserId();
+            if (userId == null)
+            {
+                return this.Unauthorized();
+            }
+
             if (model == null)
             {
-                return this.BadRequest("Model is empty");
+                return this.BadRequest("Ad model cannot be null.");
             }
 
             if (!this.ModelState.IsValid)
             {
                 return this.BadRequest(this.ModelState);
             }
-            
-            if (model.Categories.Count() > 3)
-            {
-                return this.BadRequest("Categories have to be between 1 and 3");
-            }
 
-            var allCategories = this.Data.Categories;
-            var currentAdCategories = new HashSet<Category>();
-            foreach (var categoryId in model.Categories)
-            {
-                var currentCategory = allCategories.Where(c => c.Id == categoryId).FirstOrDefault();
-                if (currentCategory == null)
-                {
-                    return this.BadRequest("Invalid category");
-                }
-
-                currentAdCategories.Add(currentCategory);
-            }
-            
-            if (!this.Data.AdTypes.Where(at => at.Id == model.TypeId).Any())
-            {
-                return this.BadRequest("Invalid ad type");
-            }
-
-            var ad = new Ad()
+            var newAd = new Ad
             {
                 Name = model.Name,
                 Description = model.Description,
+                TypeId = model.TypeId,
                 Price = model.Price,
                 PostedOn = DateTime.Now,
-                OwnerId = User.Identity.GetUserId(),
-                TypeId = model.TypeId,
-                Categories = currentAdCategories
+                OwnerId = userId
             };
 
-            this.Data.Ads.Add(ad);
+            foreach (var categoryId in model.Categories)
+            {
+                var category = this.Data.Categories.Find(categoryId);
+                newAd.Categories.Add(category);
+            }
+
+            this.Data.Ads.Add(newAd);
             this.Data.SaveChanges();
 
-            var result = this.Data.Ads
-                .Where(a => a.Id == ad.Id)
-                .Select(AdViewModel.Create);
+            var result = this.Data.Ads.All()
+                .Where(a => a.Id == newAd.Id)
+                .Select(AdViewModel.Create)
+                .FirstOrDefault();
 
             return this.Ok(result);
         }
@@ -94,16 +96,16 @@ namespace OnlineShop.Services.Controllers
         [Route("api/ads/{id}/close")]
         public IHttpActionResult CloseAd(int id)
         {
-            Ad ad = this.Data.Ads.Where(a => a.Id == id).FirstOrDefault();
+            Ad ad = this.Data.Ads.All().Where(a => a.Id == id).FirstOrDefault();
             if (ad == null)
             {
                 this.NotFound();
             }
 
-            string userId = User.Identity.GetUserId();
+            string userId = UserIdProvider.GetUserId();
             if (ad.Owner.Id != userId)
             {
-                this.Unauthorized();
+                this.BadRequest();
             }
 
             ad.Status = AdStatus.Closed;
@@ -111,7 +113,7 @@ namespace OnlineShop.Services.Controllers
 
             this.Data.SaveChanges();
 
-            var result = this.Data.Ads
+            var result = this.Data.Ads.All()
                 .Where(a => a.Id == ad.Id)
                 .Select(AdViewModel.Create);
 

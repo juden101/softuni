@@ -2,19 +2,24 @@
 {
     using System.Web.Http;
     using Data;
+    using Data.UnitOfWork;
+    using Infrastructure;
 
     public class BaseApiController : ApiController
     {
         public BaseApiController()
-            : this(new OnlineShopEntities())
+            : this(new OnlineShopData(new OnlineShopEntities()), new AspNetUserIdProvider())
         {
         }
 
-        public BaseApiController(OnlineShopEntities data)
+        public BaseApiController(IOnlineShopData data, IUserIdProvider userIdProvider)
         {
             this.Data = data;
+            this.UserIdProvider = userIdProvider;
         }
 
-        protected OnlineShopEntities Data { get; set; }
+        protected IOnlineShopData Data { get; set; }
+
+        protected IUserIdProvider UserIdProvider { get; set; }
     }
 }

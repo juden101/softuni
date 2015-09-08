@@ -225,9 +225,13 @@
     <Compile Include="Controllers\AdsController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CustomValidation\AdCategoriesAttribute.cs" />
+    <Compile Include="CustomValidation\AdTypeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\AspNetUserIdProvider.cs" />
+    <Compile Include="Infrastructure\IUserIdProvider.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdOwnerViewModel.cs" />
