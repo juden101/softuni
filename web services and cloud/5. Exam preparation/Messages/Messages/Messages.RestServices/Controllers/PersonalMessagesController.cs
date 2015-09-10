@@ -26,7 +26,7 @@ namespace Messages.RestServices.Controllers
                 return this.BadRequest("Invalid session token.");
             }
 
-            var user = this.Data.Users.FirstOrDefault(u => u.Id == userId);
+            var user = this.Data.Users.All().FirstOrDefault(u => u.Id == userId);
 
             if (user == null)
             {
@@ -34,6 +34,7 @@ namespace Messages.RestServices.Controllers
             }
 
             var personalMessages = this.Data.UserMessages
+                .All()
                 .Where(um => um.Receiver.Id == user.Id)
                 .OrderByDescending(um => um.DateSent)
                 .Select(PersonalMessageViewModel.Create);
@@ -58,7 +59,7 @@ namespace Messages.RestServices.Controllers
             }
 
 
-            var recipient = this.Data.Users.FirstOrDefault(u => u.UserName == model.Recipient);
+            var recipient = this.Data.Users.All().FirstOrDefault(u => u.UserName == model.Recipient);
 
             if (recipient == null)
             {
@@ -70,7 +71,7 @@ namespace Messages.RestServices.Controllers
 
             if (userId != null)
             {
-                user = this.Data.Users.FirstOrDefault(u => u.Id == userId);
+                user = this.Data.Users.All().FirstOrDefault(u => u.Id == userId);
             }
 
             if (user == null && userId != null)

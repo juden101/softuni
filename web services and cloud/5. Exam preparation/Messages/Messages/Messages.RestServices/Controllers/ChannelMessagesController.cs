@@ -20,6 +20,7 @@ namespace Messages.RestServices.Controllers
         public IHttpActionResult GetChannelMessages(string channelName)
         {
             var channel = this.Data.Channels
+                .All()
                 .FirstOrDefault(c => c.Name == channelName);
 
             if (channel == null)
@@ -41,6 +42,7 @@ namespace Messages.RestServices.Controllers
         public IHttpActionResult GetChannelMessages(string channelName, int limit)
         {
             var channel = this.Data.Channels
+                .All()
                 .FirstOrDefault(c => c.Name == channelName);
 
             if (channel == null)
@@ -67,6 +69,7 @@ namespace Messages.RestServices.Controllers
         public IHttpActionResult AddChannelMessage(string channelName, AddChannelMessageBindingModel model)
         {
             var channel = this.Data.Channels
+                .All()
                 .FirstOrDefault(c => c.Name == channelName);
 
             if (channel == null)
@@ -89,7 +92,7 @@ namespace Messages.RestServices.Controllers
 
             if (userId != null)
             {
-                user = this.Data.Users.FirstOrDefault(u => u.Id == userId);
+                user = this.Data.Users.All().FirstOrDefault(u => u.Id == userId);
             }
 
             if (user == null && userId != null)

@@ -106,8 +106,13 @@
   </Choose>
   <ItemGroup>
     <Compile Include="AccountsTests.cs" />
+    <Compile Include="IntegrationTest.cs" />
+    <Compile Include="Mocks\GenericRepositoryMock.cs" />
+    <Compile Include="Mocks\GenericUserStoreMock.cs" />
+    <Compile Include="Mocks\MessagesDataMock.cs" />
     <Compile Include="Models\MessageModel.cs" />
     <Compile Include="Models\UserSessionModel.cs" />
+    <Compile Include="UnitTestsWithMocking.cs" />
     <Compile Include="UserMessagesTests.cs" />
     <Compile Include="ChannelMessagesTests.cs" />
     <Compile Include="ChannelTests.cs" />

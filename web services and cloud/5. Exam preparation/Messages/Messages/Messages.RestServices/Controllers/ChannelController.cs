@@ -1,4 +1,5 @@
-﻿using Messages.Models;
+﻿using Messages.Data.UnitOfWork;
+using Messages.Models;
 using Messages.RestServices.Models.BindingModels;
 using Messages.RestServices.Models.ViewModels;
 using System;
@@ -12,6 +13,11 @@ namespace Messages.RestServices.Controllers
 {
     public class ChannelController : BaseApiController
     {
+        public ChannelController(IMessagesData data)
+            : base(data)
+        {
+        }
+
         // GET api/channels
         [HttpGet]
         [Route("api/channels")]
@@ -19,6 +25,7 @@ namespace Messages.RestServices.Controllers
         public IHttpActionResult GetAllChannels()
         {
             var data = this.Data.Channels
+                .All()
                 .OrderBy(c => c.Name)
                 .Select(ChannelViewModel.Create);
 
@@ -31,7 +38,7 @@ namespace Messages.RestServices.Controllers
         [ResponseType(typeof(IQueryable<IHttpActionResult>))]
         public IHttpActionResult GetChannel(int id)
         {
-            var channel = this.Data.Channels.Where(c => c.Id == id);
+            var channel = this.Data.Channels.All().Where(c => c.Id == id);
 
             if (!channel.Any())
             {
@@ -59,7 +66,7 @@ namespace Messages.RestServices.Controllers
                 return this.BadRequest(this.ModelState);
             }
 
-            if (this.Data.Channels.Any(c => c.Name == model.Name))
+            if (this.Data.Channels.All().Any(c => c.Name == model.Name))
             {
                 return this.Conflict();
             }
@@ -73,6 +80,7 @@ namespace Messages.RestServices.Controllers
             this.Data.SaveChanges();
 
             var result = this.Data.Channels
+                .All()
                 .Where(c => c.Id == channel.Id)
                 .Select(ChannelViewModel.Create);
 
@@ -94,14 +102,14 @@ namespace Messages.RestServices.Controllers
                 return this.BadRequest(this.ModelState);
             }
 
-            var channel = this.Data.Channels.FirstOrDefault(c => c.Id == id);
+            var channel = this.Data.Channels.All().FirstOrDefault(c => c.Id == id);
 
             if (channel == null)
             {
                 return this.NotFound();
             }
 
-            if (this.Data.Channels.Any(c => c.Name == model.Name))
+            if (this.Data.Channels.All().Any(c => c.Name == model.Name))
             {
                 return this.Conflict();
             }
@@ -110,6 +118,7 @@ namespace Messages.RestServices.Controllers
             this.Data.SaveChanges();
 
             var result = this.Data.Channels
+                .All()
                 .Where(c => c.Id == channel.Id)
                 .Select(ChannelViewModel.Create);
 
@@ -121,7 +130,7 @@ namespace Messages.RestServices.Controllers
         [HttpDelete]
         public IHttpActionResult DeleteChannel(int id)
         {
-            var channel = this.Data.Channels.FirstOrDefault(c => c.Id == id);
+            var channel = this.Data.Channels.All().FirstOrDefault(c => c.Id == id);
 
             if (channel == null)
             {
@@ -133,7 +142,7 @@ namespace Messages.RestServices.Controllers
                 return this.Conflict();
             }
 
-            this.Data.Channels.Remove(channel);
+            this.Data.Channels.Delete(channel);
             this.Data.SaveChanges();
 
             return this.Ok(new

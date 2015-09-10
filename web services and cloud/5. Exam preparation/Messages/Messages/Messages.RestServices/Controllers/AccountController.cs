@@ -12,10 +12,11 @@
     using System.Web.Http;
 
     using Microsoft.Owin.Testing;
+    using Data.UnitOfWork;
 
     [Authorize]
     [RoutePrefix("api/user")]
-    public class AccountController : ApiController
+    public class AccountController : BaseApiController
     {
         public ApplicationUserManager UserManager
         {
@@ -23,6 +24,11 @@
             {
                 return Request.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
+        }
+
+        public AccountController(IMessagesData data)
+            : base(data)
+        {
         }
 
         // POST api/user/register

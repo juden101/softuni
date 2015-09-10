@@ -53,6 +53,10 @@
   <ItemGroup>
     <Compile Include="MessagesDbContext.cs" />
     <Compile Include="Migrations\MessagesDbMigrationConfiguration.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="UnitOfWork\IMessagesData.cs" />
+    <Compile Include="UnitOfWork\MessagesData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

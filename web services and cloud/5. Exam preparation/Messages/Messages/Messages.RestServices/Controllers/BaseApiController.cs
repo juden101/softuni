@@ -1,20 +1,21 @@
 ﻿namespace Messages.RestServices.Controllers
 {
     using Messages.Data;
+    using Data.UnitOfWork;
     using System.Web.Http;
 
     public class BaseApiController : ApiController
     {
         public BaseApiController()
-            : this(new MessagesDbContext())
+            : this(new MessagesData(new MessagesDbContext()))
         {
         }
 
-        public BaseApiController(MessagesDbContext data)
+        public BaseApiController(IMessagesData data)
         {
             this.Data = data;
         }
 
-        protected MessagesDbContext Data { get; set; }
+        protected IMessagesData Data { get; set; }
     }
 }
