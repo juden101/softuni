@@ -108,13 +108,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AccountsTests.cs" />
-    <Compile Include="BugsTests.cs" />
-    <Compile Include="CommentsTests.cs" />
+    <Compile Include="BugControllerTests.cs" />
+    <Compile Include="CommentsIntegrationTests.cs" />
+    <Compile Include="FakeBugsRepository.cs" />
+    <Compile Include="FakeUnitOfWork.cs" />
     <Compile Include="Models\BugModel.cs" />
     <Compile Include="Models\CommentModel.cs" />
     <Compile Include="Models\UserSessionModel.cs" />
-    <Compile Include="TestingEngine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

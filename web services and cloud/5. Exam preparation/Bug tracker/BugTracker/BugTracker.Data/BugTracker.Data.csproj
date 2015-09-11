@@ -57,6 +57,10 @@
     <Compile Include="BugTrackerDbContext.cs" />
     <Compile Include="Migrations\BugTrackerDbMigrationConfiguration.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Repositories\GenericRepository.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="UnitOfWork\BugTrackerData.cs" />
+    <Compile Include="UnitOfWork\IBugTrackerData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />

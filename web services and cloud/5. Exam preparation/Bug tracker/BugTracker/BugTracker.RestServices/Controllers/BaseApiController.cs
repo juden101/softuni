@@ -1,4 +1,5 @@
 ﻿using BugTracker.Data;
+using BugTracker.Data.UnitOfWork;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,15 +11,15 @@ namespace BugTracker.RestServices.Controllers
     public class BaseApiController : ApiController
     {
         public BaseApiController()
-            : this(new BugTrackerDbContext())
+            : this(new BugTrackerData(new BugTrackerDbContext()))
         {
         }
 
-        public BaseApiController(BugTrackerDbContext data)
+        public BaseApiController(IBugTrackerData data)
         {
             this.Data = data;
         }
 
-        protected BugTrackerDbContext Data { get; set; }
+        protected IBugTrackerData Data { get; set; }
     }
 }

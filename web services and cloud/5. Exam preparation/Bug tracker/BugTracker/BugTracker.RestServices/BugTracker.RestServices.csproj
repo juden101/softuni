@@ -201,6 +201,7 @@
     <Compile Include="Models\BindingModels\EditBugBindingModel.cs" />
     <Compile Include="Models\BindingModels\AddBugBindingModel.cs" />
     <Compile Include="Models\UserAccountInputModel.cs" />
+    <Compile Include="Models\ViewModels\CommentViewModel.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

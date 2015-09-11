@@ -1,5 +1,6 @@
 ﻿using BugTracker.Data.Models;
 using BugTracker.RestServices.Models.BindingModels;
+using BugTracker.RestServices.Models.ViewModels;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace BugTracker.RestServices.Controllers
         [Route("api/comments")]
         public IHttpActionResult GetComments()
         {
-            var comments = this.Data.Comments.OrderByDescending(c => c.DateCreated)
+            var comments = this.Data.Comments.All().OrderByDescending(c => c.DateCreated)
                 .Select(c => new
                 {
                     Id = c.Id,
@@ -45,7 +46,7 @@ namespace BugTracker.RestServices.Controllers
                 return this.NotFound();
             }
 
-            var bugComments = bug.Comments.OrderByDescending(bc => bc.DateCreated).Select(bc => new
+            var bugComments = bug.Comments.OrderByDescending(bc => bc.DateCreated).Select(bc => new CommentViewModel()
             {
                 Id = bc.Id,
                 Text = bc.Text,

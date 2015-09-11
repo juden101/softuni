@@ -1,4 +1,5 @@
 ﻿using BugTracker.Data.Models;
+using BugTracker.Data.UnitOfWork;
 using BugTracker.RestServices.Models.BindingModels;
 using Microsoft.AspNet.Identity;
 using System;
@@ -12,12 +13,17 @@ namespace BugTracker.RestServices.Controllers
     [RoutePrefix("api/bugs")]
     public class BugsController : BaseApiController
     {
+        public BugsController(IBugTrackerData data)
+            : base(data)
+        {
+        }
+
         // GET api/bugs
         [HttpGet]
         [Route]
         public IHttpActionResult GetBugs()
         {
-            var bugs = this.Data.Bugs.OrderBy(b => b.DateCreated)
+            var bugs = this.Data.Bugs.All().OrderBy(b => b.DateCreated)
                 .Select(b => new
                 {
                     Id = b.Id,
@@ -185,10 +191,14 @@ namespace BugTracker.RestServices.Controllers
                 return this.NotFound();
             }
 
-            var commentsToDelete = this.Data.Comments.Where(c => c.Bug.Id == bug.Id);
-            this.Data.Comments.RemoveRange(commentsToDelete);
+            var commentsToDelete = this.Data.Comments.All().Where(c => c.Bug.Id == bug.Id);
+            foreach (var comment in commentsToDelete)
+            {
+                this.Data.Comments.Delete(comment);
+            }
+            //this.Data.Comments.Delete().RemoveRange(commentsToDelete);
 
-            this.Data.Bugs.Remove(bug);
+            this.Data.Bugs.Delete(bug);
             this.Data.SaveChanges();
 
             return Ok(new
@@ -202,7 +212,7 @@ namespace BugTracker.RestServices.Controllers
         [Route("filter")]
         public IHttpActionResult GetBugsByFilter([FromUri]FilterBugsBindingModel filterData)
         {
-            var bugs = this.Data.Bugs.AsQueryable();
+            var bugs = this.Data.Bugs.All();
 
             if (filterData != null)
             {
