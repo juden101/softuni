@@ -1,4 +1,7 @@
-﻿using BidSystem.Data.Models;
+﻿using BidSystem.Data;
+using BidSystem.Data.Models;
+using BidSystem.Data.UnitOfWork;
+using BidSystem.RestServices.Infrastructure;
 using BidSystem.RestServices.Models.BindingModels;
 using BidSystem.RestServices.Models.ViewModels;
 using Microsoft.AspNet.Identity;
@@ -12,6 +15,16 @@ namespace BidSystem.RestServices.Controllers
 {
     public class BidsController : BaseApiController
     {
+        public BidsController()
+            : base(new BidSystemData(new BidSystemDbContext()))
+        {
+        }
+
+        public BidsController(IBidSystemData data)
+            : base(data)
+        {
+        }
+
         // GET api/bids/my
         [HttpGet]
         [Route("api/bids/my")]
@@ -21,6 +34,7 @@ namespace BidSystem.RestServices.Controllers
             var userId = this.User.Identity.GetUserId();
 
             var bids = this.Data.Bids
+                .All()
                 .OrderBy(b => b.Date)
                 .Where(b => b.Bidder.Id == userId)
                 .Select(BidsViewModel.Create);
@@ -37,6 +51,7 @@ namespace BidSystem.RestServices.Controllers
             var userId = this.User.Identity.GetUserId();
 
             var bids = this.Data.Bids
+                .All()
                 .OrderBy(b => b.Date)
                 .Where(b =>
                     b.Bidder.Id == userId &&

@@ -1,5 +1,6 @@
 ﻿using BidSystem.Data;
 using BidSystem.Data.UnitOfWork;
+using BidSystem.RestServices.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;

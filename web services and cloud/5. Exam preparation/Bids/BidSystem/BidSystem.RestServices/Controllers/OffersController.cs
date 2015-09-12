@@ -19,6 +19,7 @@ namespace BidSystem.RestServices.Controllers
         public IHttpActionResult GetAllOffers()
         {
             var offers = this.Data.Offers
+                .All()
                 .OrderBy(o => o.PublishDate)
                 .Select(OffersViewModel.Create);
 
@@ -31,6 +32,7 @@ namespace BidSystem.RestServices.Controllers
         public IHttpActionResult GetActiveOffers()
         {
             var offers = this.Data.Offers
+                .All()
                 .Where(o => o.ExpirationDate > DateTime.Now)
                 .OrderBy(o => o.PublishDate)
                 .Select(OffersViewModel.Create);
@@ -44,6 +46,7 @@ namespace BidSystem.RestServices.Controllers
         public IHttpActionResult GetExpiredOffers()
         {
             var offers = this.Data.Offers
+                .All()
                 .Where(o => o.ExpirationDate < DateTime.Now)
                 .OrderBy(o => o.PublishDate)
                 .Select(OffersViewModel.Create);
@@ -57,6 +60,7 @@ namespace BidSystem.RestServices.Controllers
         public IHttpActionResult GetDetailedOffer(int id)
         {
             var offer = this.Data.Offers
+                .All()
                 .Where(o => o.Id == id)
                 .Select(DetailedOfferViewModel.Create)
                 .FirstOrDefault();
@@ -78,6 +82,7 @@ namespace BidSystem.RestServices.Controllers
             var userId = this.User.Identity.GetUserId();
 
             var offers = this.Data.Offers
+                .All()
                 .OrderBy(o => o.PublishDate)
                 .Where(o => o.Seller.Id == userId)
                 .Select(OffersViewModel.Create);

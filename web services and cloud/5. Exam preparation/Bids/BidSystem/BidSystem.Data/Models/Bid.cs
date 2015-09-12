@@ -10,7 +10,11 @@ namespace BidSystem.Data.Models
 
         public decimal Price { get; set; }
 
+        public string BidderId { get; set; }
+
         public virtual User Bidder { get; set; }
+
+        public int OfferId { get; set; }
 
         public virtual Offer Offer { get; set; }
 

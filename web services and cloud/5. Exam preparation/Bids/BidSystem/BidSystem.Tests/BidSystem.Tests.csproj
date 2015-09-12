@@ -66,6 +66,10 @@
     <Reference Include="Microsoft.Owin.Testing">
       <HintPath>..\packages\Microsoft.Owin.Testing.3.0.1\lib\net45\Microsoft.Owin.Testing.dll</HintPath>
     </Reference>
+    <Reference Include="Moq, Version=4.2.1507.118, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -110,6 +114,10 @@
   <ItemGroup>
     <Compile Include="AccountsTests.cs" />
     <Compile Include="BidsTests.cs" />
+    <Compile Include="MockContainer.cs" />
+    <Compile Include="Mocks\BidSystemDataMock.cs" />
+    <Compile Include="Mocks\GenericRepositoryMock.cs" />
+    <Compile Include="Mocks\GenericUserStoreMock.cs" />
     <Compile Include="Models\OfferModel.cs" />
     <Compile Include="Models\BidModel.cs" />
     <Compile Include="Models\UserSessionModel.cs" />
