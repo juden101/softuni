@@ -1,0 +1,10 @@
+telnet
+
+open 128.30.52.37 80
+
+GET /standards/ HTTP/1.1
+Host: www.w3.org
+
+GET /2008/site/css/minimum HTTP/1.1
+Host: www.w3.org
+

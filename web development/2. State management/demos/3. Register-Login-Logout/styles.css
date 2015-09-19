@@ -1,0 +1,23 @@
+header.login {
+    background: #eeeeff;
+    padding: 10px;
+}
+
+header.login:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header.login div.user {
+    float: left;
+}
+
+header.login div.logout {
+    float: right;
+}
+
+header div.user-menu {
+    margin-left: 20px;
+    display: inline-block;
+}

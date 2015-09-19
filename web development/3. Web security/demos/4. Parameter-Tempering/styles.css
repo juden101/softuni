@@ -1,0 +1,24 @@
+header.login {
+    background: #eeeeff;
+    padding: 10px;
+}
+
+header.login:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header.login div.user {
+    float: left;
+}
+
+header.login div.edit-profile {
+    float: right;
+    margin-right: 10px;
+}
+
+header.login div.logout {
+    float: right;
+}
+
