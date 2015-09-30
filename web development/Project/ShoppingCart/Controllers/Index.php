@@ -1,10 +1,10 @@
 <?php
 
-namespace ShoppingCart\Controllers;
+namespace Controllers;
 
-class HomeController {
+class Index {
     public function index() {
-        echo "Home page";
+        echo "Index page";
     }
 
     public function test() {

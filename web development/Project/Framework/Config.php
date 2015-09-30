@@ -2,16 +2,20 @@
 
 namespace Framework;
 
-class Config {
+class Config
+{
     private static $_instance = null;
     private $_configFolder = null;
     private $_configArray = array();
 
-    private function __construct() { }
+    private function __construct()
+    {
+    }
 
-    public function setConfigFolder($configFolder) {
+    public function setConfigFolder($configFolder)
+    {
         if (!$configFolder) {
-            throw new \Exception('Empty config folder path.');
+            throw new \Exception('Empty Config folder path.');
         }
 
         $realPath = realpath($configFolder);
@@ -19,7 +23,8 @@ class Config {
         if ($realPath != false && is_dir($realPath) && is_readable($realPath)) {
             $this->_configArray = array();
             $this->_configFolder = $realPath . DIRECTORY_SEPARATOR;
-            $namespaces = isset($this->app['namespaces']) ? $this->app['namespaces'] : null;
+
+            $namespaces = $this->app['namespaces'];
 
             if (is_array($namespaces)) {
                 Autoloader::registerNamespaces($namespaces);
@@ -29,7 +34,8 @@ class Config {
         }
     }
 
-    public static function getInstance() {
+    public static function getInstance()
+    {
         if (self::$_instance == null) {
             self::$_instance = new Config();
         }
@@ -37,27 +43,30 @@ class Config {
         return self::$_instance;
     }
 
-    public function getConfigFolder() {
+    public function getConfigFolder()
+    {
         return $this->_configFolder;
     }
 
-    public function includeConfigFile($path) {
+    public function includeConfigFile($path)
+    {
         if (!$path) {
-            throw new \Exception('Empty config path');
+            throw new \Exception('Empty Config path');
         }
 
         $file = realpath($path);
 
         if ($file != false && is_file($file) && is_readable($file)) {
             $baseName = explode('.php', basename($file))[0];
-            $this->_configArray[$baseName] = require_once $file;
+            $this->_configArray[$baseName] = include $file;
         } else {
             throw new \Exception('Config file read error: ' . $path);
         }
     }
 
-    public function __get($name) {
-        if (!isset($this->_configArray[$name]) || !$this->_configArray[$name]) {
+    public function __get($name)
+    {
+        if (!isset($this->_configArray[$name]) || $this->_configArray[$name] == null) {
             $this->includeConfigFile($this->_configFolder . $name . '.php');
         }
 
