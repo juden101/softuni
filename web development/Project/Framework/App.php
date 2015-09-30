@@ -4,6 +4,8 @@ namespace Framework;
 
 use Framework\Routers\DefaultRouter;
 use Framework\Routers\IRouter;
+use Framework\Sessions\ISession;
+use Framework\Sessions\NativeSession;
 
 require_once 'Autoloader.php';
 
@@ -13,6 +15,8 @@ class App
     private $_config = null;
     private $_frontController = null;
     private $_router = null;
+    private $_dbConnections = [];
+    private $_session = null;
 
     private function __construct()
     {
@@ -61,6 +65,45 @@ class App
         return $this->_config;
     }
 
+    public function getDbConnection($connection = 'default')
+    {
+        if (!$connection) {
+            throw new \Exception('No connection string provided', 500);
+        }
+
+        if ($this->_dbConnections[$connection]) {
+            return $this->_dbConnections[$connection];
+        }
+
+        $dbConfig = $this->getConfig()->database;
+
+        if (!$dbConfig[$connection]) {
+            throw new \Exception('No valid connection string found in config file', 500);
+        }
+
+        $database = new \PDO(
+            $dbConfig[$connection]['connection_url'],
+            $dbConfig[$connection]['username'],
+            $dbConfig[$connection]['password'],
+            $dbConfig[$connection]['pdo_options']
+        );
+
+        $this->_dbConnections[$connection] = $database;
+
+        return $database;
+    }
+
+    /**
+     * @return ISession
+     */
+    public function getSession(){
+        return $this->_session;
+    }
+
+    public function setSession(ISession $session){
+        $this->_session = $session;
+    }
+
     public function run()
     {
         if ($this->_config->getConfigFolder() == null) {
@@ -82,6 +125,20 @@ class App
                 default:
                     $this->_frontController->setRouter(new DefaultRouter());
                     break;
+            }
+        }
+
+        $sessionInfo = $this->_config->app['session'];
+
+        if ($sessionInfo['auto_start']) {
+            if ($sessionInfo['type'] == 'native') {
+                $this->_session = new NativeSession(
+                    $sessionInfo['name'],
+                    $sessionInfo['lifetime'],
+                    $sessionInfo['path'],
+                    $sessionInfo['domain'],
+                    $sessionInfo['secure']
+                );
             }
         }
 
