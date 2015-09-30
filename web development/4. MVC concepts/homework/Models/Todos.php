@@ -17,7 +17,7 @@ class Todos
 
         $result->execute([ $user_id ]);
 
-        return $result->fetch();
+        return $result->fetchAll();
     }
 
     public function addTodoItem($user_id, $todo_text) {
