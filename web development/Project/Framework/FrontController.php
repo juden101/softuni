@@ -2,7 +2,7 @@
 
 namespace Framework;
 
-use Framework\Routers\DefaultRouter;
+use Framework\Routers\IRouter;
 
 class FrontController
 {
@@ -14,6 +14,7 @@ class FrontController
     private $_controller = null;
     private $_method = null;
     private $_params = array();
+    private $_router = null;
 
     private function __construct()
     {
@@ -28,10 +29,43 @@ class FrontController
         return self::$_instance;
     }
 
+    public function getRouter()
+    {
+        return $this->_router;
+    }
+
+    public function setRouter(IRouter $router)
+    {
+        $this->_router = $router;
+    }
+
+    private function getDefaultController()
+    {
+        $controller = App::getInstance()->getConfig()->app['default_controller'];
+
+        if ($controller) {
+            return strtolower($controller);
+        }
+
+        return self::DEFAULT_CONTROLLER;
+    }
+
+    private function getDefaultMethod()
+    {
+        $method = App::getInstance()->getConfig()->app['default_method'];
+        if ($method) {
+            return strtolower($method);
+        }
+        return self::DEFAULT_METHOD;
+    }
+
     public function dispatch()
     {
-        $router = new DefaultRouter();
-        $uri = $router->getURI();
+        if ($this->_router == null) {
+            throw new \Exception('Invalid router!', 500);
+        }
+
+        $uri = $this->_router->getURI();
         $routes = App::getInstance()->getConfig()->routes;
         $routeData = null;
 
@@ -43,7 +77,6 @@ class FrontController
                 ) {
                     $this->_namespace = $data['namespace'];
                     $routeData = $data;
-
                     // package found, remove it from uri - example Admin/index/edit/3
                     $uri = substr($uri, strlen($route) + 1);
                     break;
@@ -61,7 +94,6 @@ class FrontController
         }
 
         $params = explode('/', strtolower($uri));
-
         // No params means no controller and method as well.
         if ($params[0]) {
             $this->_controller = trim($params[0]);
@@ -95,27 +127,5 @@ class FrontController
         $file = ucfirst($this->_namespace) . '\\' . ucfirst($this->_controller);
         $calledController = new $file();
         $calledController->{strtolower($this->_method)}();
-    }
-
-    private function getDefaultController()
-    {
-        $controller = App::getInstance()->getConfig()->app['default_controller'];
-
-        if ($controller) {
-            return strtolower($controller);
-        }
-
-        return self::DEFAULT_CONTROLLER;
-    }
-
-    private function getDefaultMethod()
-    {
-        $method = App::getInstance()->getConfig()->app['default_method'];
-
-        if ($method) {
-            return strtolower($method);
-        }
-
-        return self::DEFAULT_METHOD;
     }
 }
