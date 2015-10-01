@@ -1,5 +1,4 @@
 <?php
-
 namespace Controllers\Admin;
 
 use Framework\BaseController;
@@ -10,21 +9,25 @@ class IndexController extends BaseController
 {
     /**
      * @Admin
-     * @Get
-     * @Route("custom/{id:int}/index")
      * @throws \Exception
      */
     public function index()
     {
-        $model = 'test';
-        $validModel = $this->validator->setRule('minlength', $model, 10, 'invalid lenght')->validate();
+        $this->db->prepare("
+            SELECT username
+            FROM users
+            WHERE isAdmin = 1");
 
-        if (!$validModel) {
-            $model = $this->validator->getErrors()[0];
+        $response = $this->db->execute()->fetchAllAssoc();
+        $admins = [];
+
+        foreach ($response as $admin) {
+            $admins[] = $admin['username'];
         }
 
-        $this->view->appendToLayout('body', new IndexViewModel('TestAdmin', $model, 'no'));
+        $this->view->appendToLayout('body', new IndexViewModel($admins));
         $this->view->appendToLayout('header', 'header');
+        $this->view->appendToLayout('meta', 'meta');
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.Admin.home');
     }

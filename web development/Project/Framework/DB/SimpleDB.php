@@ -8,8 +8,13 @@ use Framework\Normalizer;
 class SimpleDB
 {
     protected $_connection = 'default';
+
+    /**
+     * @var \PDO
+     */
     private $_db = null;
     private static $database = null;
+
     /**
      * @var \PDOStatement
      */
@@ -56,14 +61,44 @@ class SimpleDB
     {
         $data = $this->_statement->fetchAll(\PDO::FETCH_ASSOC);
 
-        return $this->processData($data, $escape);
+        if ($data === false) {
+            return false;
+        }
+
+        if ($escape) {
+            $escaped = [];
+
+            foreach ($data as $elementKey => $elementData) {
+                foreach ($elementData as $key => $value) {
+                    $escaped[$elementKey][$key] = htmlentities($value);
+                }
+            }
+
+            return $escaped;
+        }
+
+        return $data;
     }
 
     public function fetchRowAssoc($escape = true)
     {
         $data = $this->_statement->fetch(\PDO::FETCH_ASSOC);
 
-        return $this->processData($data, $escape);
+        if ($data === false) {
+            return false;
+        }
+
+        if ($escape) {
+            $escaped = [];
+
+            foreach ($data as $key => $value) {
+                $escaped[$key] = htmlentities($value);
+            }
+
+            return $escaped;
+        }
+
+        return $data;
     }
 
     public function getLastInsertedId()
@@ -86,8 +121,11 @@ class SimpleDB
             FROM users
             WHERE username = ? AND id = ?");
 
-        $statement->bindParam(1, App::getInstance()->getSession()->_username);
-        $statement->bindParam(2, App::getInstance()->getSession()->_login);
+        $username = App::getInstance()->getSession()->_username;
+        $id = App::getInstance()->getSession()->_login;
+
+        $statement->bindParam(1, $username);
+        $statement->bindParam(2, $id);
         $statement->execute();
         $response = $statement->fetch(\PDO::FETCH_ASSOC);
 
@@ -107,9 +145,13 @@ class SimpleDB
                 SELECT {$col}
                 FROM users
                 WHERE username = ? AND id = ?");
+
+            $username = App::getInstance()->getSession()->_username;
+            $id = App::getInstance()->getSession()->_login;
+
             $statement->bindColumn(1, $col);
-            $statement->bindParam(1, App::getInstance()->getSession()->_username);
-            $statement->bindParam(2, App::getInstance()->getSession()->_login);
+            $statement->bindParam(1, $username);
+            $statement->bindParam(2, $id);
             $statement->execute();
 
             $response = $statement->fetch(\PDO::FETCH_ASSOC);

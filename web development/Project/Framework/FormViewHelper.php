@@ -32,12 +32,13 @@ class FormViewHelper
         return $this;
     }
 
-    public function initForm($action, $method = 'post')
+    public function initForm($action, $attributes = [], $method = 'post')
     {
         if ($this->_currentElementId != 0) {
             throw new \Exception('Cannot start form as not first element!', 500);
         }
 
+        $this->_elements['formAttributes'] = $attributes;
         $this->_elements['form']['action'] = $action;
         $this->_elements['form']['method'] = $method;
         $this->_isInForm = true;
@@ -201,7 +202,15 @@ class FormViewHelper
         if ($this->_isInForm) {
             $action = $this->_elements['form']['action'];
             $method = $this->_elements['form']['method'];
-            echo '<form action="' . $action . '" method="' . $method . '">';
+
+            echo '<form action="' . $action . '" method="' . $method . '"';
+            $attributes = $this->_elements['formAttributes'];
+
+            foreach ($attributes as $attribute => $value) {
+                echo " " . $attribute . '="' . $value . '"';
+            }
+
+            echo '>';
         }
 
         foreach ($this->_assembledElements as $element) {

@@ -10,12 +10,14 @@ class View
     private $_viewBag = [];
     private $_layoutParts = [];
     private $_layoutData = [];
+    private $_path = null;
     private $_extension = '.php';
 
     private function __construct()
     {
         $appConfig = App::getInstance()->getConfig();
         $this->_viewPath = isset($appConfig->app['views']) ? $appConfig->app['views'] : null;
+        $this->_path = isset($appConfig->app['default_path']) ? $appConfig->app['default_path'] : null;
 
         if ($this->_viewPath == null) {
             $this->_viewPath = realpath('ShoppingCart/Views/');
@@ -126,6 +128,11 @@ class View
     public function getLayoutData($name)
     {
         return isset($this->_layoutData[$name]) ? $this->_layoutData[$name] : null;
+    }
+
+    public function getPath()
+    {
+        return isset($this->_path) ? $this->_path : null;
     }
 
     private function includeFile($file)

@@ -29,6 +29,7 @@ class BaseController
 
     /**
      * @var Validator
+     * @Inject Validator
      */
     protected $validator;
 
@@ -43,15 +44,20 @@ class BaseController
      */
     protected $session;
 
+    /**
+     * @var Path
+     */
+    protected $path;
+
     public function __construct()
     {
         $this->app = App::getInstance();
         $this->view = View::getInstance();
         $this->config = $this->app->getConfig();
         $this->input = InputData::getInstance();
-        $this->validator = new Validator();
         $this->db = new SimpleDB();
         $this->session = $this->app->getSession();
+        $this->path = isset($this->config->app['default_path']) ? $this->config->app['default_path'] : null;
     }
 
     protected function redirect($uri)

@@ -139,6 +139,7 @@ class FrontController
         if (array_key_exists($uri, $this->_customRoutes)) {
             $this->_controller = $this->_customRoutes[$uri]['Controller'];
             $this->_method = strtolower($this->_customRoutes[$uri]['Method']);
+            $uri = explode('/', $uri);
             $this->_params = $uri;
             $this->processController();
         }
@@ -156,6 +157,7 @@ class FrontController
                 if (preg_match($pattern, $uri)) {
                     $this->_controller = $this->_customRoutes[$route]['Controller'];
                     $this->_method = strtolower($this->_customRoutes[$route]['Method']);
+                    $uri = explode('/', $uri);
                     $this->_params = $uri;
                     $this->processController();
                 }
@@ -240,6 +242,7 @@ class FrontController
 
         $this->processController();
     }
+
     private function processController()
     {
         $input = InputData::getInstance();
@@ -258,10 +261,10 @@ class FrontController
                     // Create binding model
                     $refMethod = new \ReflectionMethod($calledController, $this->_method);
                     $doc = $refMethod->getDocComment();
-
+                    // Validate accessibility
                     $this->ValidateAuthorization($doc);
 
-                    if (preg_match('/@param\s+\\\?([\s\S]+BindingModel)\s+\$/' , $doc, $match)) {
+                    if (preg_match('/@param\s+\\\?([\s\S]+BindingModel)\s+\$/', $doc, $match)) {
                         $bindingModelName = $match[1];
                         $bindingModelsNamespace = App::getInstance()->getConfig()->app['namespaces']['Models'] . 'BindingModels/';
                         $bindingModelsNamespace = str_replace('../', '', $bindingModelsNamespace);
@@ -270,9 +273,11 @@ class FrontController
                         $bindingReflection = new \ReflectionClass($bindingModelPath);
                         $properties = $bindingReflection->getProperties();
                         $params = [];
+
                         foreach ($properties as $property) {
                             $name = $property->getName();
                             $value = $input->postForDb($name);
+
                             if ($value === null) {
                                 throw new \Exception("Invalid binding model! Property '$name' not found", 400);
                             } else {
@@ -281,9 +286,10 @@ class FrontController
                         }
 
                         $bindingModel = new $bindingModelPath($params);
+                        Injector::getInstance()->loadDependencies($calledController);
                         $calledController->{strtolower($this->_method)}($bindingModel);
-
                     } else {
+                        Injector::getInstance()->loadDependencies($calledController);
                         $calledController->{strtolower($this->_method)}();
                     }
 
@@ -302,7 +308,7 @@ class FrontController
     private function isValidRequestMethod($controller, $method)
     {
         $reflectionMethod = new \ReflectionMethod($controller, $method);
-        $foundRequestAnnotations = [];
+        $foundRequestAnnotations = array();
         $comment = strtolower($reflectionMethod->getDocComment());
 
         if (preg_match('/@get/', $comment)) {
@@ -341,15 +347,13 @@ class FrontController
 
         return true;
     }
-
     private function ValidateAuthorization($doc)
     {
         $doc = strtolower($doc);
-
-        $notLoggedRegex = '/@NotLogged/';
+        $notLoggedRegex = '/@notlogged/';
         preg_match($notLoggedRegex, $doc, $matches);
 
-        if (isset($matches)) {
+        if ($matches) {
             if (App::getInstance()->getSession()->_login) {
                 throw new \Exception("Already logged in!", 400);
             }
@@ -358,10 +362,10 @@ class FrontController
         $authorizeRegex = '/@authorize(?:\s+error:\("(.+)"\))?/';
         preg_match($authorizeRegex, $doc, $matches);
 
-        if ($matches) {
+        if (isset($matches) && $matches != null) {
             $error = 'Unauthorized!';
 
-            if ($matches[1]) {
+            if (isset($matches[1]) && $matches[1] != null) {
                 $error = ucfirst($matches[1]);
             }
 
@@ -384,7 +388,7 @@ class FrontController
 
         if (isset($matches[1]) && $matches[1] != null) {
             $role = $matches[1];
-
+            
             if (!SimpleDB::hasRole($role)) {
                 $role = ucfirst($role);
                 throw new \Exception("$role access only!", 401);

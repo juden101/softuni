@@ -3,38 +3,15 @@
 namespace Models\ViewModels\Admin\IndexController;
 
 class IndexViewModel {
-    private $name;
-    private $password;
-    private $admin;
+    private $admins;
 
-    public function __construct($name, $password, $admin)
+    public function __construct($admins)
     {
-        $this->name = $name;
-        $this->password = $password;
-        $this->admin = $admin;
+        $this->admins = $admins;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getAdmins()
     {
-        return $this->name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAdmin()
-    {
-        return $this->admin;
+        return $this->admins;
     }
 }

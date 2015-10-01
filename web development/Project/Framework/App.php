@@ -2,6 +2,7 @@
 
 namespace Framework;
 
+use Framework\DB\SimpleDB;
 use Framework\Routers\DefaultRouter;
 use Framework\Routers\IRouter;
 use Framework\Sessions\ISession;
@@ -171,5 +172,25 @@ class App
         if ($this->_session != null) {
             $this->_session->saveSession();
         }
+    }
+
+    public function getUsername()
+    {
+        return $this->_session->escapedUsername;
+    }
+
+    public function isLogged()
+    {
+        return $this->_session->escapedUsername !== null;
+    }
+
+    public function isAdmin()
+    {
+        return SimpleDB::isAdmin();
+    }
+
+    public function isEditor()
+    {
+        return SimpleDB::hasRole('editor');
     }
 }
