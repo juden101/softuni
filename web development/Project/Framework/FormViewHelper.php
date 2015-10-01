@@ -9,6 +9,7 @@ class FormViewHelper
     private $_assembledElements = [];
     private $_currentElementId = 0;
     private $_isInForm = false;
+    protected $_additionalTokens = array();
 
     private function  __construct()
     {
@@ -40,6 +41,11 @@ class FormViewHelper
         $this->_elements['form']['action'] = $action;
         $this->_elements['form']['method'] = $method;
         $this->_isInForm = true;
+
+        if (strtolower($method) != 'post' && strtolower($method) != 'get') {
+            $this->_additionalTokens[$method] = '<input type="hidden" name="_method" value="' . $method . '">';
+            $this->_elements['form']['method'] = "post";
+        }
 
         return $this;
     }
@@ -100,12 +106,27 @@ class FormViewHelper
         return $this;
     }
 
+    public function initDiv()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<div';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '</div>';
+
+        return $this;
+    }
+
     public function initBoostrapDropDown($value)
     {
         $this->_elements[$this->_currentElementId]['opening tag'] = '<div class="dropdown">
 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">' . $value .
             '<span class="caret"></span></button><ul class="dropdown-menu">';
         $this->_elements[$this->_currentElementId]['closing tag'] = ' </ul></div>';
+
+        return $this;
+    }
+
+    public function initLink(){
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<a';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '</a>';
 
         return $this;
     }
@@ -175,7 +196,7 @@ class FormViewHelper
         return $this;
     }
 
-    public function render()
+    public function render($samePageToken = false)
     {
         if ($this->_isInForm) {
             $action = $this->_elements['form']['action'];
@@ -188,7 +209,14 @@ class FormViewHelper
         }
 
         if ($this->_isInForm) {
-            Token::init()->render();
+            Token::init()->render($samePageToken);
+
+            if (count($this->_additionalTokens) != 0) {
+                foreach ($this->_additionalTokens as $token) {
+                    echo $token;
+                }
+            }
+
             echo '</form>';
         }
 

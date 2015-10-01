@@ -32,7 +32,7 @@ class NativeSession implements ISession
 
     public function __get($name)
     {
-        return $_SESSION[$name];
+        return isset($_SESSION[$name]) ? $_SESSION[$name] : null;
     }
 
     public function __set($name, $value)

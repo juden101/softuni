@@ -5,9 +5,9 @@ namespace Framework;
 class InputData
 {
     private static $_instance = null;
-    private $_get = array();
-    private $_post = array();
-    private $_cookies = array();
+    private $_get = [];
+    private $_post = [];
+    private $_cookies = [];
 
     private function __construct()
     {
@@ -66,6 +66,13 @@ class InputData
         return $default;
     }
 
+    public function getForDb($name, $normalize = null, $default = null)
+    {
+        $normalize = 'noescape|' . $normalize;
+
+        return $this->get($name, $normalize, $default);
+    }
+
     /**
      * Gets desired Post element by name, normalized or not, if none found return
      * given default value or null.
@@ -86,6 +93,13 @@ class InputData
         return $default;
     }
 
+    public function postForDb($name, $normalize = null, $default = null)
+    {
+        $normalize = 'noescape|' . $normalize;
+
+        return $this->post($name, $normalize, $default);
+    }
+
     /**
      * Gets desired Cookie element by name, normalized or not, if none found return
      * given default value or null.
@@ -104,6 +118,13 @@ class InputData
         }
 
         return $default;
+    }
+
+    public function cookiesForDb($name, $normalize = null, $default = null)
+    {
+        $normalize = 'noescape|' . $normalize;
+
+        return $this->cookies($name, $normalize, $default);
     }
 
     private function hasGet($id)

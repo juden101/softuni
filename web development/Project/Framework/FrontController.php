@@ -2,6 +2,7 @@
 
 namespace Framework;
 
+use Framework\DB\SimpleDB;
 use Framework\Routers\IRouter;
 
 class FrontController
@@ -83,6 +84,10 @@ class FrontController
 
             if (!Token::validates($token)) {
                 throw new \Exception('Invalid token!', 500);
+            }
+
+            if ($this->_router->getPost()['_method']) {
+                $this->_requestMethod = strtolower($this->_router->getPost()['_method']);
             }
         }
 
@@ -250,7 +255,38 @@ class FrontController
 
             if (method_exists($calledController, $this->_method)) {
                 if ($this->isValidRequestMethod($calledController, $this->_method)) {
-                    $calledController->{strtolower($this->_method)}();
+                    // Create binding model
+                    $refMethod = new \ReflectionMethod($calledController, $this->_method);
+                    $doc = $refMethod->getDocComment();
+
+                    $this->ValidateAuthorization($doc);
+
+                    if (preg_match('/@param\s+\\\?([\s\S]+BindingModel)\s+\$/' , $doc, $match)) {
+                        $bindingModelName = $match[1];
+                        $bindingModelsNamespace = App::getInstance()->getConfig()->app['namespaces']['Models'] . 'BindingModels/';
+                        $bindingModelsNamespace = str_replace('../', '', $bindingModelsNamespace);
+                        $bindingModelPath = str_replace('/', '\\', $bindingModelsNamespace . $bindingModelName);
+                        $bindingModelPath = substr($bindingModelPath, 13);
+                        $bindingReflection = new \ReflectionClass($bindingModelPath);
+                        $properties = $bindingReflection->getProperties();
+                        $params = [];
+                        foreach ($properties as $property) {
+                            $name = $property->getName();
+                            $value = $input->postForDb($name);
+                            if ($value === null) {
+                                throw new \Exception("Invalid binding model! Property '$name' not found", 400);
+                            } else {
+                                $params[$name] = $value;
+                            }
+                        }
+
+                        $bindingModel = new $bindingModelPath($params);
+                        $calledController->{strtolower($this->_method)}($bindingModel);
+
+                    } else {
+                        $calledController->{strtolower($this->_method)}();
+                    }
+
                     exit;
                 } else {
                     throw new \Exception("Method does not allow '" . ucfirst($this->_requestMethod) . "' requests!", 500);
@@ -292,7 +328,7 @@ class FrontController
 
             $request = $foundRequestAnnotations[0];
 
-            if (strtolower($request) != $this->_requestMethod) {
+            if (strtolower($request) != strtolower($this->_requestMethod)) {
                 return false;
             }
 
@@ -304,5 +340,55 @@ class FrontController
         }
 
         return true;
+    }
+
+    private function ValidateAuthorization($doc)
+    {
+        $doc = strtolower($doc);
+
+        $notLoggedRegex = '/@NotLogged/';
+        preg_match($notLoggedRegex, $doc, $matches);
+
+        if (isset($matches)) {
+            if (App::getInstance()->getSession()->_login) {
+                throw new \Exception("Already logged in!", 400);
+            }
+        }
+
+        $authorizeRegex = '/@authorize(?:\s+error:\("(.+)"\))?/';
+        preg_match($authorizeRegex, $doc, $matches);
+
+        if ($matches) {
+            $error = 'Unauthorized!';
+
+            if ($matches[1]) {
+                $error = ucfirst($matches[1]);
+            }
+
+            if (!App::getInstance()->getSession()->_login) {
+                throw new \Exception($error, 401);
+            }
+        }
+
+        $adminRegex = '/@admin/';
+        preg_match($adminRegex, $doc, $matches);
+
+        if ($matches) {
+            if (!SimpleDB::isAdmin()) {
+                throw new \Exception("Admin access only!", 401);
+            }
+        }
+
+        $roleRegex = '/@role\s*\("(.+)"\)/';
+        preg_match($roleRegex, $doc, $matches);
+
+        if (isset($matches[1]) && $matches[1] != null) {
+            $role = $matches[1];
+
+            if (!SimpleDB::hasRole($role)) {
+                $role = ucfirst($role);
+                throw new \Exception("$role access only!", 401);
+            }
+        }
     }
 }

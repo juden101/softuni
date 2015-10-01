@@ -2,6 +2,8 @@
 
 namespace Framework;
 
+use Framework\DB\SimpleDB;
+
 class Validator
 {
     private $_rules = [];

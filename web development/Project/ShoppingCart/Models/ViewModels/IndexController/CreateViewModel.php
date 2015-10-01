@@ -1,11 +1,12 @@
 <?php
 
-namespace Models\ViewModels\Admin\IndexController;
+namespace Models\ViewModels\IndexController;
 
-class AdminCreateViewModel {
+class CreateViewModel
+{
     private $data;
 
-    function __construct($data)
+    public function __construct($data)
     {
         $this->data = $data;
     }

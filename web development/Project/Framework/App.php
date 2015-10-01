@@ -78,7 +78,7 @@ class App
             throw new \Exception('No connection string provided', 500);
         }
 
-        if ($this->_dbConnections[$connection]) {
+        if (isset($this->_dbConnections[$connection])) {
             return $this->_dbConnections[$connection];
         }
 

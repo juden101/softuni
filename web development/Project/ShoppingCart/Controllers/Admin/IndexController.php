@@ -3,13 +3,14 @@
 namespace Controllers\Admin;
 
 use Framework\BaseController;
-use Models\ViewModels\Admin\IndexController\AdminCreateViewModel;
-use Models\ViewModels\Admin\IndexController\AdminIndexViewModel;
-use Models\ViewModels\IndexViewModel;
+use Models\ViewModels\Admin\IndexController\CreateViewModel;
+use Models\ViewModels\Admin\IndexController\IndexViewModel;
 
 class IndexController extends BaseController
 {
     /**
+     * @Admin
+     * @Get
      * @Route("custom/{id:int}/index")
      * @throws \Exception
      */
@@ -22,22 +23,21 @@ class IndexController extends BaseController
             $model = $this->validator->getErrors()[0];
         }
 
-        //$this->view->appendToLayout('body', new IndexViewModel('some shit'));
-        $this->view->appendToLayout('body', new AdminIndexViewModel('TestAdmin', $model, 'no'));
+        $this->view->appendToLayout('body', new IndexViewModel('TestAdmin', $model, 'no'));
         $this->view->appendToLayout('header', 'header');
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.Admin.home');
     }
 
     /**
-     * @Post
+     * @Get
      * @Route("Custom/{name:string}/Create")
+     * @Role("Editor")
      * @throws \Exception
      */
     public function create()
     {
-        //$this->view->appendToLayout('body', new AdminIndexViewModel('TestAdmin', '1', 'no'));
-        $this->view->appendToLayout('body', new AdminCreateViewModel('TestAdmin'));
+        $this->view->appendToLayout('body', new CreateViewModel('TestAdmin'));
         $this->view->appendToLayout('header', 'header');
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.Admin.home');
