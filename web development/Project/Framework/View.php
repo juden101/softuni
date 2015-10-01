@@ -7,7 +7,9 @@ class View
     private static $_instance = null;
     private $_viewPath = null;
     private $_viewDir = null;
-    private $_viewBag = array();
+    private $_viewBag = [];
+    private $_layoutParts = [];
+    private $_layoutData = [];
     private $_extension = '.php';
 
     private function __construct()
@@ -56,10 +58,41 @@ class View
         }
     }
 
-    public function display($name, $data = array(), $returnAsString = false)
+    /**
+     * Renders given viewModel with the proper View for it or throws exception when
+     * View model does not belong to the calling controller.
+     * @param $viewModel
+     * @throws \Exception
+     */
+    public function display($viewModel)
     {
-        if (is_array($data)) {
-            $this->_viewBag = array_merge($this->_viewBag, $data);
+        $this->ValidateViewModel($viewModel);
+        $this->_viewBag = $viewModel;
+        $this->includeFile($viewModel);
+        $file = $this->GetViewModelPath($viewModel);
+        $path = str_replace('.', DIRECTORY_SEPARATOR, $file);
+        $fullPath = $this->_viewDir . $path . $this->_extension;
+        $this->includeView($fullPath);
+    }
+
+    /**
+     * Packages must be with starting big letter, views with starting small letters and separated by dot.
+     * @param $name
+     * @param array $data
+     * @param bool $returnAsString
+     * @return string
+     * @throws \Exception
+     */
+    public function displayLayout($name, $returnAsString = false)
+    {
+        if (count($this->_layoutParts) > 0) {
+            foreach ($this->_layoutParts as $key => $template) {
+                $layout = $this->includeFile($template);
+
+                if ($layout) {
+                    $this->_layoutData[$key] = $layout;
+                }
+            }
         }
 
         if ($returnAsString) {
@@ -70,15 +103,39 @@ class View
     }
 
     /**
-     * Packages must be with starting big letter, views with starting small letters and separated by dot.
-     * @param $file string
-     * @return string view
-     * @throws \Exception when file cannot be found
+     * Flexible append method for views. Can be used with ViewModel or string name of the model.
+     * When ViewModel used if the caller is not the Views controller exception is thrown.
+     * @param $key
+     * @param $template string or viewModel
+     * @throws \Exception
      */
-    public function includeFile($file)
+    public function appendToLayout($key, $template)
+    {
+        if ($key && $template) {
+            if (!is_string($template)) {
+                $this->ValidateViewModel($template);
+                $this->_viewBag[$key] = $template;
+            }
+
+            $this->_layoutParts[$key] = $template;
+        } else {
+            throw new \Exception('Layouts require valid key and template!', 500);
+        }
+    }
+
+    public function getLayoutData($name)
+    {
+        return $this->_layoutData[$name];
+    }
+
+    private function includeFile($file)
     {
         if ($this->_viewDir == null) {
             $this->setViewDirectory($this->_viewPath);
+        }
+
+        if (!is_string($file)) {
+            $file = $this->GetViewModelPath($file);
         }
 
         $path = str_replace('.', DIRECTORY_SEPARATOR, $file);
@@ -87,11 +144,59 @@ class View
         if (file_exists($fullPath) && is_readable($fullPath)) {
             // adds to different buffer
             ob_start();
-            require_once $fullPath;
+            $this->includeView($fullPath);
             // returns the buffer as string
+
             return ob_get_clean();
         } else {
             throw new \Exception('View ' . $file . ' cannot be included', 500);
         }
+    }
+
+    private function includeView($path)
+    {
+        include $path;
+    }
+
+    /**
+     * @param $template
+     * @throws \Exception
+     */
+    private function ValidateViewModel($template)
+    {
+        $trace = debug_backtrace();
+        $callerClass = $trace[2]['class'];
+        $callerMethod = $trace[2]['function'];
+        $callerTokens = explode('\\', $callerClass);
+
+        unset($callerTokens[0]);
+        unset($callerTokens[count($callerTokens)]);
+
+        $expected = implode($callerTokens) . ucfirst($callerMethod) . 'ViewModel';
+        $tokens = explode('\\', get_class($template));
+        $given = $tokens[count($tokens) - 1];
+
+        if ($expected != $given) {
+            throw new \Exception("Controller '" . $callerClass . "' with method '" . $callerMethod .
+                "' cannot call ViewModel '" . $given . "' witch is not belonging to him!", 500);
+        }
+    }
+
+    /**
+     * @param $file
+     * @return string
+     */
+    private function GetViewModelPath($file)
+    {
+        $tokens = explode('\\', get_class($file));
+        $viewModel = $tokens[count($tokens) - 1];
+        $viewModel = str_replace('ViewModel', '', $viewModel);
+        // Split at Upper Case
+        $viewPath = preg_split('/(?=[A-Z])/', $viewModel, -1, PREG_SPLIT_NO_EMPTY);
+        // Last is the view
+        $viewPath[count($viewPath) - 1] = strtolower($viewPath[count($viewPath) - 1]);
+        $file = implode('/', $viewPath);
+
+        return $file;
     }
 }

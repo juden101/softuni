@@ -15,4 +15,11 @@ class SimpleRouter implements IRouter
     {
         return 'admin/index/test';
     }
+
+    public function getPost()
+    {
+        return [
+            'simple' => 'routers'
+        ];
+    }
 }

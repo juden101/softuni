@@ -33,9 +33,9 @@ final class Autoloader
                 $realPath = realpath($filePath);
 
                 if ($realPath && is_readable($realPath)) {
-                    include $realPath;
+                    require_once $realPath;
                 } else {
-                    throw new \Exception('File cannot be included: ' . $filePath);
+                    throw new \Exception('File cannot be included: ' . $filePath, 404);
                 }
 
                 break;

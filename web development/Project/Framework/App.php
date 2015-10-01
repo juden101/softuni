@@ -12,14 +12,21 @@ require_once 'Autoloader.php';
 class App
 {
     private static $_instance = null;
+    /**
+     * @var Config
+     */
     private $_config = null;
     private $_frontController = null;
     private $_router = null;
     private $_dbConnections = [];
+    /**
+     * @var ISession
+     */
     private $_session = null;
 
     private function __construct()
     {
+        set_exception_handler(array($this, '_exceptionHandler'));
         Autoloader::registerNamespace('Framework', dirname(__FILE__) . DIRECTORY_SEPARATOR);
         Autoloader::registerAutoLoad();
         $this->_config = Config::getInstance();
@@ -137,5 +144,32 @@ class App
         }
 
         $this->_frontController->dispatch();
+    }
+
+    public function _exceptionHandler(\Exception $ex)
+    {
+        if ($this->_config && $this->_config->app['displayExceptions'] == true) {
+            echo '<pre>' . print_r($ex, true) . '</pre>';
+        } else {
+            $this->displayError($ex->getCode());
+        }
+    }
+
+    public function displayError($error)
+    {
+        try {
+            $view = View::getInstance();
+            $view->display('errors' . $error);
+        } catch (\Exception $ex) {
+            echo '<h1>' . $error . '</h1>';
+            exit;
+        }
+    }
+
+    public function __destruct()
+    {
+        if ($this->_session != null) {
+            $this->_session->saveSession();
+        }
     }
 }

@@ -2,9 +2,12 @@
 
 namespace Controllers;
 
-class IndexController {
+use Framework\BaseController;
+use Models\ViewModels\IndexController\IndexViewModel;
+
+class IndexController extends BaseController {
     public function index() {
-        echo "Index page";
+        $this->view->display(new IndexViewModel('test'));
     }
 
     public function test() {
