@@ -30,6 +30,10 @@ $config['*'][CONTROLLERS]['user'][METHODS]['logout'] = 'logout';
 $config['*'][CONTROLLERS]['categories'][GOES_TO] = 'category';
 $config['*'][CONTROLLERS]['categories'][METHODS]['index'] = 'index';
 
+// Help
+$config['*'][CONTROLLERS]['help'][GOES_TO] = 'help';
+$config['*'][CONTROLLERS]['help'][METHODS]['index'] = 'index';
+
 // Administration panel
 $config['Admin/users'][NS] = 'Controllers\something';
 $config['Admin'][NS] = 'Controllers\Admin';
