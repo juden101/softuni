@@ -2,11 +2,14 @@
 
 namespace Controllers\Admin;
 
-class Index
+use Framework\View;
+
+class IndexController
 {
     public function index()
     {
-        echo 'Admin index file';
+        $view = View::getInstance();
+        $view->display('Admin.index', array(1, 2, 3));
     }
 
     public function create()

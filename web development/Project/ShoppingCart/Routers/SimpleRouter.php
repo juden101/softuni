@@ -4,7 +4,7 @@ namespace Routers;
 
 use Framework\Routers\IRouter;
 
-require_once '../../Framework/Routers/IRouter.php';
+require_once 'Framework/Routers/IRouter.php';
 
 class SimpleRouter implements IRouter
 {

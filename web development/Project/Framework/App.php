@@ -107,38 +107,32 @@ class App
     public function run()
     {
         if ($this->_config->getConfigFolder() == null) {
-            $this->setConfigFolder('../Config');
+            $this->setConfigFolder('ShoppingCart/config');
         }
 
         $this->_frontController = FrontController::getInstance();
 
         if ($this->_router instanceof IRouter) {
             $this->_frontController->setRouter($this->_router);
-        } else {
-            switch ($this->_router) {
-                case 'JsonRPCRouter':
-                    // todo
-                    break;
-                case 'RPCRouter':
-                    // todo
-                    break;
-                default:
-                    $this->_frontController->setRouter(new DefaultRouter());
-                    break;
-            }
         }
 
-        $sessionInfo = $this->_config->app['session'];
+        if ($this->_router == null) {
+            $this->_frontController->setRouter(new DefaultRouter());
+        }
 
-        if ($sessionInfo['auto_start']) {
-            if ($sessionInfo['type'] == 'native') {
-                $this->_session = new NativeSession(
-                    $sessionInfo['name'],
-                    $sessionInfo['lifetime'],
-                    $sessionInfo['path'],
-                    $sessionInfo['domain'],
-                    $sessionInfo['secure']
-                );
+        if ($this->_session == null) {
+            $sessionInfo = $this->_config->app['session'];
+
+            if ($sessionInfo['auto_start']) {
+                if ($sessionInfo['type'] == 'native') {
+                    $this->_session = new NativeSession(
+                        $sessionInfo['name'],
+                        $sessionInfo['lifetime'],
+                        $sessionInfo['path'],
+                        $sessionInfo['domain'],
+                        $sessionInfo['secure']
+                    );
+                }
             }
         }
 

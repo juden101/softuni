@@ -71,6 +71,8 @@ class FrontController
 
         if (is_array($routes) && count($routes) > 0) {
             foreach ($routes as $route => $data) {
+                $route = strtolower($route);
+
                 if (stripos($uri, $route) === 0 &&
                     ($uri == $route || stripos($uri, $route . '/') === 0) &&
                     $data['namespace']
@@ -115,7 +117,8 @@ class FrontController
         }
 
         if (is_array($routeData) && isset($routeData['controllers'])) {
-            if ($routeData['controllers'][$this->_controller]['methods'][$this->_method]) {
+            if (isset($routeData['controllers'][$this->_controller]['methods'][$this->_method]) &&
+                $routeData['controllers'][$this->_controller]['methods'][$this->_method] != null) {
                 $this->_method = strtolower($routeData['controllers'][$this->_controller]['methods'][$this->_method]);
             }
 
@@ -124,7 +127,7 @@ class FrontController
             }
         }
 
-        $file = ucfirst($this->_namespace) . '\\' . ucfirst($this->_controller);
+        $file = ucfirst($this->_namespace) . '\\' . ucfirst($this->_controller) . 'Controller';
         $calledController = new $file();
         $calledController->{strtolower($this->_method)}();
     }

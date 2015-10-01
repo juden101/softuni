@@ -16,8 +16,8 @@ $config['*'][NS] = 'Controllers';
 $config['Admin/users'][NS] = 'Controllers\something';
 
 $config['Admin'][NS] = 'Controllers\Admin';
-$config['Admin'][CONTROLLERS]['index2'][GOES_TO] = 'index';
-$config['Admin'][CONTROLLERS]['index2'][METHODS]['new'] = 'create';
+$config['Admin'][CONTROLLERS]['index'][GOES_TO] = 'index';
+$config['Admin'][CONTROLLERS]['index'][METHODS]['new'] = 'create';
 $config['Admin'][CONTROLLERS]['user'][GOES_TO] = 'some_dude';
 $config['Admin'][CONTROLLERS]['user'][METHODS]['create'] = 'some_create';
 

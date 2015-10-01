@@ -2,8 +2,8 @@
 
 $config['default_controller'] = 'Index';
 $config['default_method'] = 'index';
-$config['namespaces']['Controllers'] = '../Controllers/';
-$config['namespaces']['Routers'] = '../Routers/';
+$config['namespaces']['Controllers'] = 'ShoppingCart/Controllers/';
+$config['namespaces']['Routers'] = 'ShoppingCart/Routers/';
 
 $config['session']['auto_start'] = true;
 $config['session']['type'] = 'native';
