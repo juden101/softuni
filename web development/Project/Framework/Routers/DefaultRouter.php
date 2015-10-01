@@ -11,4 +11,9 @@ class DefaultRouter implements IRouter {
     {
         return $_POST;
     }
+
+    public function getRequestMethod()
+    {
+        return $_SERVER['REQUEST_METHOD'];
+    }
 }

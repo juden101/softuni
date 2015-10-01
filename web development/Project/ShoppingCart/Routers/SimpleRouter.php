@@ -22,4 +22,9 @@ class SimpleRouter implements IRouter
             'simple' => 'routers'
         ];
     }
+
+    public function getRequestMethod()
+    {
+        return 'get';
+    }
 }

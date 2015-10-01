@@ -5,9 +5,10 @@ namespace Framework;
 class FormViewHelper
 {
     private static $_instance = null;
-    private $elements = [];
-    private $assembledElements = [];
-    private $currentElement = null;
+    private $_elements = [];
+    private $_assembledElements = [];
+    private $_currentElementId = 0;
+    private $_isInForm = false;
 
     private function  __construct()
     {
@@ -24,67 +25,176 @@ class FormViewHelper
 
     public function initTextBox()
     {
-        $this->currentElement = 'textBox';
-        $this->elements[$this->currentElement]['opening tag'] = '<input type="text"';
-        $this->elements[$this->currentElement]['closing tag'] = '>';
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="text"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initForm($action, $method = 'post')
+    {
+        if ($this->_currentElementId != 0) {
+            throw new \Exception('Cannot start form as not first element!', 500);
+        }
+
+        $this->_elements['form']['action'] = $action;
+        $this->_elements['form']['method'] = $method;
+        $this->_isInForm = true;
+
+        return $this;
+    }
+
+    public function initPasswordBox()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="password"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initTextArea()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<textarea';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '></textarea>';
+
+        return $this;
+    }
+
+    public function initUploadFile()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="file"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initRadioBox()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="radio"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initSubmit()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="submit"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initLabel()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<label';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '</label>';
+
+        return $this;
+    }
+
+    public function initCheckBox()
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<input type="checkbox"';
+        $this->_elements[$this->_currentElementId]['closing tag'] = '>';
+
+        return $this;
+    }
+
+    public function initBoostrapDropDown($value)
+    {
+        $this->_elements[$this->_currentElementId]['opening tag'] = '<div class="dropdown">
+<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">' . $value .
+            '<span class="caret"></span></button><ul class="dropdown-menu">';
+        $this->_elements[$this->_currentElementId]['closing tag'] = ' </ul></div>';
+
+        return $this;
+    }
+
+    public function setDropDownLi($href, $value)
+    {
+        $this->_elements[$this->_currentElementId]['attributes'][] = '<li><a href="' . $href . '">' . $value . '</a></li>';
 
         return $this;
     }
 
     public function setName($name)
     {
-        $this->elements[$this->currentElement]['name'] = 'name="' . $name . '"';
+        $this->_elements[$this->_currentElementId]['name'] = 'name="' . $name . '"';
 
         return $this;
     }
-
     public function setValue($value)
     {
-        $this->elements[$this->currentElement]['value'] = 'value="' . $value . '"';
+        $this->_elements[$this->_currentElementId]['value'] = '>' . $value;
 
         return $this;
     }
 
     public function setAttribute($attribute, $value)
     {
-        $this->elements[$this->currentElement]['attributes'][] = $attribute . '="' . $value . '"';
+        $this->_elements[$this->_currentElementId]['attributes'][] = $attribute . '="' . $value . '"';
+
+        return $this;
+    }
+
+    public function setChecked()
+    {
+        $this->_elements[$this->_currentElementId]['checked'] = 'checked';
 
         return $this;
     }
 
     public function create()
     {
-        $element = $this->elements[$this->currentElement];
+        $element = $this->_elements[$this->_currentElementId];
         $html = $element['opening tag'];
 
-        if ($element['name']) {
+        if (isset($element['name']) && $element['name'] != null) {
             $html .= ' ' . $element['name'];
         }
 
-        if ($element['value']) {
-            $html .= ' ' . $element['value'];
-        }
-
-        if ($element['attributes']) {
+        if (isset($element['attributes']) && $element['attributes'] != null) {
             foreach ($element['attributes'] as $attribute) {
                 $html .= ' ' . $attribute;
             }
         }
 
+        if (isset($element['checked']) && $element['checked'] != null) {
+            $html .= ' ' . $element['checked'];
+        }
+
+        if (isset($element['value']) && $element['value'] != null) {
+            $html .= ' ' . $element['value'];
+        }
+
         $html .= $element['closing tag'];
-        $this->assembledElements[$this->currentElement] = $html;
-        unset($this->elements[$this->currentElement]);
+        $this->_assembledElements[$this->_currentElementId] = $html;
+        unset($this->_elements[$this->_currentElementId]);
+        $this->_currentElementId++;
 
         return $this;
     }
 
     public function render()
     {
-        foreach ($this->assembledElements as $element) {
+        if ($this->_isInForm) {
+            $action = $this->_elements['form']['action'];
+            $method = $this->_elements['form']['method'];
+            echo '<form action="' . $action . '" method="' . $method . '">';
+        }
+
+        foreach ($this->_assembledElements as $element) {
             echo $element;
         }
 
-        $this->elements = [];
-        $this->currentElement = null;
+        if ($this->_isInForm) {
+            Token::init()->render();
+            echo '</form>';
+        }
+
+        $this->_elements = [];
+        $this->_currentElementId = 0;
+        $this->_isInForm = false;
+        $this->_assembledElements = [];
     }
 }
