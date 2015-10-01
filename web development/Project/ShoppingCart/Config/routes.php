@@ -26,6 +26,10 @@ $config['*'][CONTROLLERS]['user'][REQUEST_METHOD]['register'] = 'post';
 // Logout
 $config['*'][CONTROLLERS]['user'][METHODS]['logout'] = 'logout';
 
+// Categories
+$config['*'][CONTROLLERS]['categories'][GOES_TO] = 'category';
+$config['*'][CONTROLLERS]['categories'][METHODS]['index'] = 'index';
+
 // Administration panel
 $config['Admin/users'][NS] = 'Controllers\something';
 $config['Admin'][NS] = 'Controllers\Admin';

@@ -27,6 +27,12 @@
                                 ->initLink()->setAttribute('href', $this->getPath() . 'home/register')->setValue('Register')->create()
                                 ->render(); ?></li>
                     <?php endif; ?>
+                    <li><?php \Framework\FormViewHelper::init()
+                            ->initLink()->setAttribute('href', $this->getPath() . 'products/0/3')->setValue('All products')->create()
+                            ->render(); ?></li>
+                    <li><?php \Framework\FormViewHelper::init()
+                            ->initLink()->setAttribute('href', $this->getPath() . 'categories')->setValue('All categories')->create()
+                            ->render(); ?></li>
                 </ul>
                 <?php if (\Framework\App::getInstance()->isLogged()) : ?>
                     <ul class="nav navbar-nav navbar-right">

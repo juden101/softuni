@@ -149,8 +149,8 @@ class FrontController
     {
         foreach ($this->_customRoutes as $route => $value) {
             if (preg_match('/[\s\S]*{.+}[\s\S]*/', $route)) {
-                $pattern = preg_replace('/{.+:int}/', '\d+', $route);
-                $pattern = preg_replace('/{.+:string}/', '\w+', $pattern);
+                $pattern = preg_replace('/{.+?:string}/', '\w+', $route);
+                $pattern = preg_replace('/{.+?:int}/', '\d+', $pattern);
                 $pattern = str_replace('/', '\/', $pattern);
                 $pattern = '/' . $pattern . '/';
 
@@ -199,10 +199,10 @@ class FrontController
 
         $params = explode('/', strtolower($uri));
         // No params means no controller and method as well.
-        if ($params[0]) {
+        if (isset($params[0])) {
             $this->_controller = trim($params[0]) . 'Controller';
 
-            if ($params[1]) {
+            if (isset($params[1])) {
                 $this->_method = trim($params[1]);
                 unset($params[0], $params[1]);
                 $this->_params = array_values($params);
@@ -388,7 +388,7 @@ class FrontController
 
         if (isset($matches[1]) && $matches[1] != null) {
             $role = $matches[1];
-            
+
             if (!SimpleDB::hasRole($role)) {
                 $role = ucfirst($role);
                 throw new \Exception("$role access only!", 401);
