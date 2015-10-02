@@ -22,7 +22,7 @@ class CategoryController extends BaseController
         $take = $this->input->get(3);
 
         $this->db->prepare("
-            SELECT p.name, p.description, p.price, p.quantity, c.name as category
+            SELECT p.id, p.name, p.description, p.price, p.quantity, c.name as category
             FROM products p
             JOIN products_categories pc
                 ON p.id = pc.productId
@@ -37,6 +37,7 @@ class CategoryController extends BaseController
 
         foreach ($response as $product) {
             $products[] = new ProductViewModel(
+                Normalizer::normalize($product['id'], 'noescape|int'),
                 $product['name'],
                 $product['description'],
                 Normalizer::normalize($product['price'], 'noescape|double'),

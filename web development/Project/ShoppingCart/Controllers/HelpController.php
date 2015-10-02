@@ -35,7 +35,7 @@ class HelpController extends BaseController
         $this->view->appendToLayout('meta', 'meta');
         $this->view->appendToLayout('body', 'HelpController.ajax');
         $this->view->appendToLayout('footer', 'footer');
-        $this->view->displayLayout('Layouts.Admin.home');
+        $this->view->displayLayout('Layouts.ajax');
     }
 
     private function findBindingModels($doc)

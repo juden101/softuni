@@ -30,6 +30,10 @@ $config['*'][CONTROLLERS]['user'][METHODS]['logout'] = 'logout';
 $config['*'][CONTROLLERS]['categories'][GOES_TO] = 'category';
 $config['*'][CONTROLLERS]['categories'][METHODS]['index'] = 'index';
 
+// Cart
+$config['*'][CONTROLLERS]['cart'][GOES_TO] = 'cart';
+$config['*'][CONTROLLERS]['cart'][METHODS]['index'] = 'index';
+
 // Help
 $config['*'][CONTROLLERS]['help'][GOES_TO] = 'help';
 $config['*'][CONTROLLERS]['help'][METHODS]['index'] = 'index';

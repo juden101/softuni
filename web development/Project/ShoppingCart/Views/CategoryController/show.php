@@ -1,3 +1,5 @@
+<div class="alert alert-success" role="alert" id="#" style="display: none"></div>
+
 <?php
 if (!$this->_viewBag['body']->getProducts()) :?>
     <h1 class="alert alert-danger text-center">No Products</h1>
@@ -12,8 +14,15 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             <div>Price: <?= $product->getPrice() ?> $</div>
             <div>Quantity: <?= $product->getQuantity() ?> remaining</div>
             <div>
-                <a href="/categories/<?= $product->getCategory() ?>/0/3">Category: <?= $product->getCategory() ?></a>
+                <a href="<?= $this->getPath() . 'categories/' . $product->getCategory() ?>/0/3">Category: <?= $product->getCategory() ?></a>
             </div>
+            <?php if (\Framework\App::getInstance()->isLogged()) : ?>
+                <div id="btn" class="panel panel-primary btn btn-default"
+                     onclick="sentAjax(<?= $product->getId() . ', \'' . $product->getName() . '\'' ?>)">Add to cart
+                </div>
+            <?php else: ?>
+                <a href="<?= $this->getPath(); ?>/home/login" class="panel panel-primary btn btn-default">Login to add to cart!</a>
+            <?php endif?>
         </div>
     </div>
 <?php endforeach; ?>
@@ -43,3 +52,18 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             ?>"> Next</a></li>
     <?php endif; ?>
 </ul>
+
+<script>
+    function sentAjax(id, name) {
+        $.ajax({
+            method: "GET",
+            url: "<?= $this->getPath(); ?>cart/add/" + id,
+            data: {}
+        }).done(
+            function (msg) {
+                document.getElementById("#").style.display = 'block';
+                document.getElementById("#").innerHTML = '"' + name + '" added to cart!';
+            }
+        );
+    }
+</script>

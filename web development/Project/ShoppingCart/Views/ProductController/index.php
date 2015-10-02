@@ -5,7 +5,7 @@ if (!$this->_viewBag['body']->getProducts()) :?>
 foreach ($this->_viewBag['body']->getProducts() as $product) :?>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><?= $product->getName() ?></h3>
+            <h3 class="panel-title"><a href="<?= $this->getPath() . 'product/' . $product->getId() ?>/show"><?= $product->getName() ?></a></h3>
         </div>
         <div class="panel-body">
             <div>Description: <?= $product->getDescription() ?></div>
@@ -14,6 +14,14 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             <div>
                 <a href="<?= $this->getPath() . 'categories/' . $product->getCategory() ?>/0/3">Category: <?= $product->getCategory() ?></a>
             </div>
+            <?php if (\Framework\App::getInstance()->isLogged()) : ?>
+                <div id="btn" class="panel panel-primary btn btn-default"
+                     onclick="sentAjax(<?= $product->getId() . ', \'' . $product->getName() . '\'' ?>)"
+                    >Add to cart
+                </div>
+            <?php else: ?>
+                <a href="<?= $this->getPath(); ?>home/login" class="panel panel-primary btn btn-default">Login to add to cart!</a>
+            <?php endif?>
         </div>
     </div>
 <?php endforeach; ?>
@@ -38,3 +46,18 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
         </li>
     <?php endif; ?>
 </ul>
+
+<script>
+    function sentAjax(id, name) {
+        $.ajax({
+            method: "GET",
+            url: "<?= $this->getPath(); ?>cart/add/" + id,
+            data: {}
+        }).done(
+            function (msg) {
+                document.getElementById("#").style.display = 'block';
+                document.getElementById("#").innerHTML = '"' + name + '" added to cart!';
+            }
+        );
+    }
+</script>

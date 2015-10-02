@@ -45,7 +45,7 @@
 <!--</script>-->
 
 <?php
-\Framework\AjaxViewHelper::init()->initForm("api/jsonroutes", "put")->initCallback("function( msg ) {
+\Framework\AjaxViewHelper::init()->initForm($this->getPath() . "help/jsonroutes", "put")->initCallback("function( msg ) {
             console.log( \"Data Saved: \" + msg );
         }")->render(true);
 ?>

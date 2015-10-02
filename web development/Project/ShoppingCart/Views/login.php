@@ -1,6 +1,6 @@
 <?php
 \Framework\FormViewHelper::init()
-    ->initForm('../user/login', ['class' => 'form-group'], 'post')
+    ->initForm($this->getPath() . 'user/login', ['class' => 'form-group'], 'post')
     ->initLabel()->setValue("Username")->setAttribute('for', 'username')->create()
     ->initTextBox()->setName('username')->setAttribute('id', 'username')->setAttribute('class', 'form-control input-md')->create()
     ->initLabel()->setValue("Password")->setAttribute('for', 'password')->create()
@@ -9,7 +9,7 @@
     ->render();
 
 \Framework\FormViewHelper::init()
-    ->initForm('../user/register', ['class' => 'form-group'], 'post')
+    ->initForm($this->getPath() . 'user/register', ['class' => 'form-group'], 'post')
     ->initLabel()->setValue("Username")->setAttribute('for', 'username')->create()
     ->initTextBox()->setName('username')->setAttribute('id', 'username')->setAttribute('class', 'form-control input-md')->create()
     ->initLabel()->setValue("Password")->setAttribute('for', 'password')->create()

@@ -199,7 +199,7 @@ class FrontController
 
         $params = explode('/', strtolower($uri));
         // No params means no controller and method as well.
-        if (isset($params[0])) {
+        if (isset($params[0]) && $params[0] != null) {
             $this->_controller = trim($params[0]) . 'Controller';
 
             if (isset($params[1])) {

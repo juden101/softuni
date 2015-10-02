@@ -59,6 +59,10 @@
                 </ul>
                 <?php if (\Framework\App::getInstance()->isLogged()) : ?>
                     <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="<?= $this->getPath(); ?>cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                <span class="badge"><?= count(\Framework\App::getInstance()->getSession()->cart) ?></span></a>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-haspopup="true"
@@ -72,9 +76,8 @@
                                         ->create()
                                         ->render(); ?></li>
                                 <?php if (\Framework\App::getInstance()->isAdmin()) : ?>
-                                    <li><a href="admin">Admin</a></li>
+                                    <li><a href="<?= $this->getPath(); ?>admin">Admin</a></li>
                                 <?php endif; ?>
-                                <li><a href="#">Something else here</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li>
                                     <?php Framework\FormViewHelper::init()

@@ -1,8 +1,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Home</title>
-        <?= $this->getLayoutData('meta'); ?>
+        <title>Ajax test</title>
+        <?= $this->getLayoutData('meta') ?>
     </head>
     <body>
         <?= $this->getLayoutData('header'); ?>
