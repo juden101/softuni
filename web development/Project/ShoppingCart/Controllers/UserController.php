@@ -55,6 +55,10 @@ class UserController extends BaseController
             throw new \Exception("Password don't match Confirm Password!", 400);
         }
 
+        if (!preg_match('/^[\w]{3,15}$/', $model->getUsername())) {
+            throw new \Exception("Invalid username format!", 400);
+        }
+
         // Check for already registered with the same name
         $this->db->prepare("
             SELECT id
@@ -98,9 +102,9 @@ class UserController extends BaseController
      */
     public function profile()
     {
-        $username = $this->input->get(1);
+        $username = $this->input->getForDb(1);
         $this->db->prepare("
-            SELECT id, isAdmin
+            SELECT id, isAdmin, Cash, isEditor
             FROM users
             WHERE username = ?",
             [ $username ]);
@@ -112,9 +116,12 @@ class UserController extends BaseController
         }
 
         $isAdmin = $response['isAdmin'];
+        $isEditor = $response['isEditor'];
+        $balance = $response['Cash'];
+
         $this->view->appendToLayout('header', 'header');
         $this->view->appendToLayout('meta', 'meta');
-        $this->view->appendToLayout('body', new ProfileViewModel($username, $isAdmin));
+        $this->view->appendToLayout('body', new ProfileViewModel($username, $isAdmin, $balance, $isEditor));
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.userProfile');
     }

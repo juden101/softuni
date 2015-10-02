@@ -63,6 +63,7 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             function (msg) {
                 document.getElementById("#").style.display = 'block';
                 document.getElementById("#").innerHTML = '"' + name + '" added to cart!';
+                document.getElementById("cart-products-count").innerHTML = parseInt(document.getElementById("cart-products-count").innerHTML) + 1
             }
         );
     }

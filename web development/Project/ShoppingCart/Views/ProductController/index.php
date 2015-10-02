@@ -1,3 +1,5 @@
+<div class="alert alert-success" role="alert" id="#" style="display: none"></div>
+
 <?php
 if (!$this->_viewBag['body']->getProducts()) :?>
     <h1 class="alert alert-danger text-center">No Products</h1>
@@ -57,6 +59,7 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             function (msg) {
                 document.getElementById("#").style.display = 'block';
                 document.getElementById("#").innerHTML = '"' + name + '" added to cart!';
+                document.getElementById("cart-products-count").innerHTML = parseInt(document.getElementById("cart-products-count").innerHTML) + 1;
             }
         );
     }

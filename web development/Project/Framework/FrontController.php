@@ -86,7 +86,7 @@ class FrontController
                 throw new \Exception('Invalid token!', 500);
             }
 
-            if ($this->_router->getPost()['_method']) {
+            if (isset($this->_router->getPost()['_method']) && $this->_router->getPost()['_method'] != null) {
                 $this->_requestMethod = strtolower($this->_router->getPost()['_method']);
             }
         }
@@ -389,7 +389,7 @@ class FrontController
         if (isset($matches[1]) && $matches[1] != null) {
             $role = $matches[1];
 
-            if (!SimpleDB::hasRole($role)) {
+            if (!SimpleDB::hasRole($role) && !SimpleDB::isAdmin()) {
                 $role = ucfirst($role);
                 throw new \Exception("$role access only!", 401);
             }

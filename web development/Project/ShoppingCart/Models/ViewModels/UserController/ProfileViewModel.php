@@ -6,11 +6,15 @@ class ProfileViewModel
 {
     private $username;
     private $isAdmin;
+    private $balance;
+    private $isEditor;
 
-    function __construct($username, $isAdmin)
+    function __construct($username, $isAdmin, $balance, $isEditor)
     {
         $this->username = $username;
         $this->isAdmin = $isAdmin;
+        $this->balance = $balance;
+        $this->isEditor = $isEditor;
     }
 
     /**
@@ -27,5 +31,21 @@ class ProfileViewModel
     public function getIsAdmin()
     {
         return $this->isAdmin;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIsEditor()
+    {
+        return $this->isEditor;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBalance()
+    {
+        return $this->balance;
     }
 }

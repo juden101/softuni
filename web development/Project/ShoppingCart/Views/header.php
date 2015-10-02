@@ -48,6 +48,14 @@
                             ->render();
                         ?>
                     </li>
+                    <?php if (\Framework\App::getInstance()->isLogged()) : ?>
+                    <li>
+                        <?php \Framework\FormViewHelper::init()
+                            ->initLink()->setAttribute('href', $this->getPath() . 'products/sell')->setValue('Sell product')->create()
+                            ->render();
+                        ?>
+                    </li>
+                    <?php endif; ?>
                     <li>
                         <?php \Framework\FormViewHelper::init()
                             ->initBoostrapDropDown('Help', 'li')
@@ -61,7 +69,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="<?= $this->getPath(); ?>cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                                <span class="badge"><?= count(\Framework\App::getInstance()->getSession()->cart) ?></span></a>
+                                <span class="badge" id="cart-products-count"><?= count(\Framework\App::getInstance()->getSession()->cart) ?></span></a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"

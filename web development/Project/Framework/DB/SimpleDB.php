@@ -167,22 +167,8 @@ class SimpleDB
         return false;
     }
 
-    private function processData($data, $escape)
+    public function affectedRows()
     {
-        if ($data === false) {
-            return false;
-        }
-
-        if ($escape) {
-            $escaped = [];
-
-            foreach ($data as $key => $value) {
-                $escaped[$key] = htmlentities($value);
-            }
-
-            return $escaped;
-        }
-
-        return $data;
+        return $this->_statement->rowCount();
     }
 }
