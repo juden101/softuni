@@ -7,7 +7,12 @@ if (!$this->_viewBag['body']->getProducts()) :?>
 foreach ($this->_viewBag['body']->getProducts() as $product) :?>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title"><a href="<?= $this->getPath() . 'product/' . $product->getId() ?>/show"><?= $product->getName() ?></a></h3>
+            <h3 class="panel-title">
+                <a href="<?= $this->getPath(); ?>product/<?= $product->getId() ?>/show"><?= $product->getName() ?></a>
+                <?php if (\Framework\App::getInstance()->isAdmin() || \Framework\App::getInstance()->isEditor()) : ?>
+                    <a href="<?= $this->getPath(); ?>product/<?= $product->getId() ?>/edit" class="btn btn-link">Edit</a>
+                <?php endif;?>
+            </h3>
         </div>
         <div class="panel-body">
             <div>Description: <?= $product->getDescription() ?></div>
@@ -46,22 +51,23 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
 <?php endforeach; ?>
 
 <ul class="pager">
-    <?php
-        $start = $this->_viewBag['body']->getStart();
-        $start - 3 >= 0 ? $start -= 3 : $start = 0;
-        $end = $this->_viewBag['body']->getEnd();
-        $end - 3 > 0 ? $end -= 3 : $end = 3;
-    ?>
     <li>
-        <a href="<?= $this->getPath() . 'products/' . $start . '/' . $end; ?>">Previous</a>
+        <?php
+            $start = $this->_viewBag['body']->getStart();
+            $start - 3 >= 0 ? $start -= 3 : 0;
+
+            $end = $this->_viewBag['body']->getEnd();
+            $end = $end - 3 > 0 ? $end -= 3 : 3;
+        ?>
+        <a href="<?= "{$this->getPath()}products/{$start}/{$end}"; ?>">Previous</a>
     </li>
     <?php if ($this->_viewBag['body']->getProducts()) : ?>
         <li>
             <?php
             $start = $this->_viewBag['body']->getStart() + 3;
-            $end = $this->_viewBag['body']->getEnd();
+            $end = $this->_viewBag['body']->getEnd() + 3;
             ?>
-            <a href="<?= $this->getPath() . 'products/' . $start . '/' . $end; ?>">Next</a>
+            <a href="<?= "{$this->getPath()}products/{$start}/{$end}"; ?>">Next</a>
         </li>
     <?php endif; ?>
 </ul>

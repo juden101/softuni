@@ -2,9 +2,13 @@
 
 namespace Controllers;
 
+use Framework\App;
 use Framework\BaseController;
 use Framework\Normalizer;
+use Models\BindingModels\ChangeProductBindingModel;
+use Models\BindingModels\NameBindingModel;
 use Models\BindingModels\SellProductBindingModel;
+use Models\ViewModels\ProductController\EditViewModel;
 use Models\ViewModels\ProductController\IndexViewModel;
 use Models\ViewModels\ProductController\ProductViewModel;
 use Models\ViewModels\ProductController\ProductMessage;
@@ -65,7 +69,7 @@ class ProductController extends BaseController
               ON p.id = pc.productId
             JOIN categories c
               ON pc.categoryId = c.id
-            WHERE quantity > 0 AND p.id = ?",
+            WHERE p.id = ?",
             [ $id ]);
 
         $response = $this->db->execute()->fetchRowAssoc();
@@ -74,8 +78,16 @@ class ProductController extends BaseController
             throw new \Exception("No product with id '$id'!", 404);
         }
 
+        $quantity = Normalizer::normalize($response['quantity'], 'noescape|int');
+
+        if ($quantity <= 0) {
+            if (!App::getInstance()->isAdmin() && !App::getInstance()->isEditor()) {
+                throw new \Exception("No product with id '$id'!", 404);
+            }
+        }
+
         $this->db->prepare("
-            SELECT u.username, u.isAdmin, u.isEditor, r.message
+            SELECT u.username, u.isAdmin, u.isEditor, u.isModerator, r.message
             FROM reviews r
             JOIN products p
                 ON r.productId = p.id
@@ -92,7 +104,8 @@ class ProductController extends BaseController
                 $review['username'],
                 $review['message'],
                 Normalizer::normalize($review['isAdmin'], 'noescape|bool'),
-                Normalizer::normalize($review['isEditor'], 'noescape|bool')
+                Normalizer::normalize($review['isEditor'], 'noescape|bool'),
+                Normalizer::normalize($review['isModerator'], 'noescape|bool')
             );
         }
 
@@ -101,7 +114,7 @@ class ProductController extends BaseController
             $response['name'],
             $response['description'],
             Normalizer::normalize($response['price'], 'noescape|double'),
-            Normalizer::normalize($response['quantity'], 'noescape|int'),
+            $quantity,
             $response['category'],
             $givenReviews
         );
@@ -170,5 +183,137 @@ class ProductController extends BaseController
         $this->db->execute();
 
         $this->redirect("{$this->path}product/$productId/show");
+    }
+
+    /**
+     * @Post
+     * @Route("products/find")
+     * @param NameBindingModel $model
+     */
+    public function find(NameBindingModel $model)
+    {
+        $this->db->prepare("
+            SELECT id
+            FROM products
+            WHERE name LIKE ?",
+            [ $model->getName() ]);
+
+        $response = $this->db->execute()->fetchRowAssoc();
+
+        if ($response) {
+            $productId = Normalizer::normalize($response['id'], 'noescape|int');
+            $this->redirect("{$this->path}product/$productId/show");
+        } else {
+            $this->redirect("{$this->path}editor");
+        }
+    }
+
+    /**
+     * @Get
+     * @Role("Editor")
+     * @Route("product/{id:int}/edit")
+     */
+    public function edit()
+    {
+        $id = $this->input->get(1);
+
+        $this->db->prepare("
+            SELECT p.id, p.name, p.description, p.price, p.quantity, c.name as category
+            FROM products p
+            JOIN products_categories pc
+                ON p.id = pc.productId
+            JOIN categories c
+                ON pc.categoryId = c.id
+            WHERE p.id = ?",
+            [ $id ]);
+
+        $response = $this->db->execute()->fetchRowAssoc();
+
+        if (!$response) {
+            throw new \Exception("No product with id '$id'!", 404);
+        }
+
+        $product = new EditViewModel(
+            Normalizer::normalize($response['id'], 'noescape|int'),
+            $response['name'],
+            $response['description'],
+            Normalizer::normalize($response['price'], 'noescape|double'),
+            $quantity = Normalizer::normalize($response['quantity'], 'noescape|int'),
+            $response['category']);
+
+        $this->view->appendToLayout('meta', 'meta');
+        $this->view->appendToLayout('header', 'header');
+        $this->view->appendToLayout('body', $product);
+        $this->view->appendToLayout('footer', 'footer');
+        $this->view->displayLayout('Layouts.product');
+    }
+
+    /**
+     * @Put
+     * @Role("Editor")
+     * @Route("product/change/{id:int}")
+     * @param ChangeProductBindingModel $model
+     * @throws \Exception
+     */
+    public function change(ChangeProductBindingModel $model)
+    {
+        $this->db->prepare("
+            SELECT id
+            FROM categories
+            WHERE name LIKE ?",
+            [ $model->getCategory() ]);
+
+        $response = $this->db->execute()->fetchRowAssoc();
+        $categoryId = Normalizer::normalize($response['id'], 'noescape|int');
+
+        if (!$response) {
+            $name = $model->getCategory();
+            throw new \Exception("No category '$name'!", 404);
+        }
+
+        $id = $this->input->get(2);
+
+        $this->db->prepare("
+            UPDATE products_categories
+            SET categoryId = ?
+            WHERE productId = ?",
+            [ $categoryId, $id ])->execute();
+
+        $this->db->prepare("
+            UPDATE products
+            SET name = ?, description = ?, price = ?, quantity = ?
+            WHERE id = ?",
+            [
+                $model->getName(),
+                $model->getDescription(),
+                $model->getPrice(),
+                $model->getQuantity(),
+                $id
+            ])->execute();
+
+        $this->redirect("{$this->path}product/$id/show");
+    }
+
+    /**
+     * @Delete
+     * @Role("Editor")
+     * @Route("product/{id:int}/delete")
+     * @throws \Exception
+     */
+    public function delete()
+    {
+        $id = $this->input->get(1);
+
+        $this->db->prepare("
+            DELETE FROM products_categories
+            WHERE productId = ?",
+            [ $id ])->execute();
+
+        $this->db->prepare("
+            DELETE FROM products
+            WHERE id = ?",
+            [ $id ])->execute();
+
+        $this->redirect($this->path);
     }
 }

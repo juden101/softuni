@@ -11,8 +11,8 @@ $config['*'][NS] = 'Controllers';
 
 // Home
 $config['*'][CONTROLLERS]['home'][GOES_TO] = 'index';
-$config['*'][CONTROLLERS]['home'][METHODS]['new'] = 'index';
-$config['*'][CONTROLLERS]['home'][REQUEST_METHOD]['new'] = 'post';
+$config['*'][CONTROLLERS]['home'][METHODS]['index'] = 'index';
+$config['*'][CONTROLLERS]['home'][REQUEST_METHOD]['index'] = 'get';
 
 // Login
 $config['*'][CONTROLLERS]['user'][GOES_TO] = 'user';
@@ -39,7 +39,6 @@ $config['*'][CONTROLLERS]['help'][GOES_TO] = 'help';
 $config['*'][CONTROLLERS]['help'][METHODS]['index'] = 'index';
 
 // Administration panel
-$config['Admin/users'][NS] = 'Controllers\something';
 $config['Admin'][NS] = 'Controllers\Admin';
 $config['Admin'][CONTROLLERS]['index'][GOES_TO] = 'index';
 $config['Admin'][CONTROLLERS]['index'][METHODS]['index'] = 'index';
@@ -50,5 +49,18 @@ $config['Admin'][CONTROLLERS]['index'][METHODS]['add'] = 'add';
 $config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['add'] = 'post';
 $config['Admin'][CONTROLLERS]['index'][METHODS]['remove'] = 'remove';
 $config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['remove'] = 'delete';
+
+// Editor panel
+$config['Editor'][NS] = 'Controllers\Editor';
+$config['Editor'][CONTROLLERS]['index'][GOES_TO] = 'index';
+$config['Editor'][CONTROLLERS]['index'][METHODS]['index'] = 'index';
+$config['Editor'][CONTROLLERS]['index'][REQUEST_METHOD]['index'] = 'get';
+$config['Editor'][CONTROLLERS]['category'][GOES_TO] = 'category';
+$config['Editor'][CONTROLLERS]['category'][METHODS]['add'] = 'add';
+$config['Editor'][CONTROLLERS]['category'][REQUEST_METHOD]['index'] = 'post';
+$config['Editor'][CONTROLLERS]['category'][METHODS]['remove'] = 'remove';
+$config['Editor'][CONTROLLERS]['category'][REQUEST_METHOD]['remove'] = 'delete';
+$config['Editor'][CONTROLLERS]['category'][METHODS]['rename'] = 'rename';
+$config['Editor'][CONTROLLERS]['category'][REQUEST_METHOD]['rename'] = 'put';
 
 return $config;

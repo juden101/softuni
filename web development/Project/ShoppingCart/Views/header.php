@@ -22,20 +22,6 @@
                             ->render();
                         ?>
                     </li>
-                    <?php if (!\Framework\App::getInstance()->isLogged()) : ?>
-                        <li>
-                            <?php \Framework\FormViewHelper::init()
-                                ->initLink()->setAttribute('href', $this->getPath() . 'home/login')->setValue('Login')->create()
-                                ->render();
-                            ?>
-                        </li>
-                        <li>
-                            <?php \Framework\FormViewHelper::init()
-                                ->initLink()->setAttribute('href', $this->getPath() . 'home/register')->setValue('Register')->create()
-                                ->render();
-                            ?>
-                        </li>
-                    <?php endif; ?>
                     <li>
                         <?php \Framework\FormViewHelper::init()
                             ->initLink()->setAttribute('href', $this->getPath() . 'products/0/3')->setValue('All products')->create()
@@ -65,7 +51,22 @@
                         ?>
                     </li>
                 </ul>
-                <?php if (\Framework\App::getInstance()->isLogged()) : ?>
+                <?php if (!\Framework\App::getInstance()->isLogged()) : ?>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <?php \Framework\FormViewHelper::init()
+                                ->initLink()->setAttribute('href', $this->getPath() . 'home/login')->setValue('Login')->create()
+                                ->render();
+                            ?>
+                        </li>
+                        <li>
+                            <?php \Framework\FormViewHelper::init()
+                                ->initLink()->setAttribute('href', $this->getPath() . 'home/login')->setValue('Register')->create()
+                                ->render();
+                            ?>
+                        </li>
+                    </ul>
+                <?php else : ?>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a href="<?= $this->getPath(); ?>cart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
@@ -77,14 +78,29 @@
                                aria-expanded="false"><?= \Framework\App::getInstance()->getUsername() ?><span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><?= \Framework\FormViewHelper::init()
+                                <li>
+                                    <?php \Framework\FormViewHelper::init()
                                         ->initLink()
                                         ->setAttribute('href', $this->getPath() . "user/" . \Framework\App::getInstance()->getUsername() . "/profile")
                                         ->setValue('Profile')
                                         ->create()
-                                        ->render(); ?></li>
+                                        ->render();
+                                    ?>
+                                </li>
+                                <li>
+                                    <?php \Framework\FormViewHelper::init()
+                                        ->initLink()
+                                        ->setAttribute('href', $this->getPath() . "users/all/0/10")
+                                        ->setValue('All users')
+                                        ->create()
+                                        ->render();
+                                    ?>
+                                </li>
                                 <?php if (\Framework\App::getInstance()->isAdmin()) : ?>
                                     <li><a href="<?= $this->getPath(); ?>admin">Admin</a></li>
+                                <?php endif; ?>
+                                <?php if (\Framework\App::getInstance()->isAdmin() || \Framework\App::getInstance()->isEditor()) : ?>
+                                    <li><a href="<?= $this->getPath(); ?>editor">Editor</a></li>
                                 <?php endif; ?>
                                 <li role="separator" class="divider"></li>
                                 <li>

@@ -2,7 +2,7 @@
 
 namespace Models\ViewModels\ProductController;
 
-class ProductViewModel
+class EditViewModel
 {
     private $id;
     private $name;
@@ -10,9 +10,8 @@ class ProductViewModel
     private $price;
     private $quantity;
     private $category;
-    private $givenReviews;
 
-    public function __construct($id, $name, $description, $price, $quantity, $category, $givenReviews = [])
+    public function __construct($id, $name, $description, $price, $quantity, $category)
     {
         $this->id = $id;
         $this->name = $name;
@@ -20,7 +19,6 @@ class ProductViewModel
         $this->price = $price;
         $this->quantity = $quantity;
         $this->category = $category;
-        $this->givenReviews = $givenReviews;
     }
 
     /**
@@ -42,7 +40,7 @@ class ProductViewModel
     /**
      * @return mixed
      */
-    public function getDescription()
+    function getDescription()
     {
         return $this->description;
     }
@@ -69,13 +67,5 @@ class ProductViewModel
     public function getCategory()
     {
         return $this->category;
-    }
-
-    /**
-     * @return array
-     */
-    public function getGivenReviews()
-    {
-        return $this->givenReviews;
     }
 }

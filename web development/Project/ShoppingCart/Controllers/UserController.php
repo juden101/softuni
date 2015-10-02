@@ -3,10 +3,13 @@
 namespace Controllers;
 
 use Framework\BaseController;
+use Framework\Normalizer;
 use Models\BindingModels\ChangePasswordBindingModel;
 use Models\BindingModels\LoginBindingModel;
 use Models\BindingModels\RegisterBindingModel;
 use Models\ViewModels\UserController\ProfileViewModel;
+use Models\ViewModels\UserController\AllUsersViewModel;
+use Models\ViewModels\UserController\User;
 
 class UserController extends BaseController
 {
@@ -110,7 +113,7 @@ class UserController extends BaseController
     {
         $username = $this->input->getForDb(1);
         $this->db->prepare("
-            SELECT id, isAdmin, Cash, isEditor
+            SELECT id, isAdmin, Cash, isEditor, isModerator
             FROM users
             WHERE username = ?",
             [ $username ]);
@@ -123,11 +126,12 @@ class UserController extends BaseController
 
         $isAdmin = $response['isAdmin'];
         $isEditor = $response['isEditor'];
+        $isModerator = $response['isModerator'];
         $balance = $response['Cash'];
 
         $this->view->appendToLayout('header', 'header');
         $this->view->appendToLayout('meta', 'meta');
-        $this->view->appendToLayout('body', new ProfileViewModel($username, $isAdmin, $balance, $isEditor));
+        $this->view->appendToLayout('body', new ProfileViewModel($username, $isAdmin, $balance, $isEditor, $isModerator));
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.userProfile');
     }
@@ -176,4 +180,37 @@ class UserController extends BaseController
         $this->db->execute();
         $this->redirect($this->path);
      }
+
+    /**
+     * @Route("users/all/{start:int}/{end:int}")
+     * @Get
+     */
+    public function allUsers()
+    {
+        $skip = $this->input->get(2);
+        $take = $this->input->get(3) - $skip;
+
+        $this->db->prepare("
+            SELECT username,isAdmin, isEditor, isModerator
+            FROM users
+            ORDER BY username LIMIT {$take} OFFSET {$skip}");
+
+        $response = $this->db->execute()->fetchAllAssoc();
+        $users = [];
+
+        foreach ($response as $user) {
+            $users[] = new User(
+                $user['username'],
+                Normalizer::normalize($user['isAdmin'], 'noescape|bool'),
+                Normalizer::normalize($user['isEditor'], 'noescape|bool'),
+                Normalizer::normalize($user['isModerator'], 'noescape|bool')
+            );
+        }
+
+        $this->view->appendToLayout('meta', 'meta');
+        $this->view->appendToLayout('header', 'header');
+        $this->view->appendToLayout('body', new AllUsersViewModel($users, $skip, $take + $skip));
+        $this->view->appendToLayout('footer', 'footer');
+        $this->view->displayLayout('Layouts.home');
+    }
 }

@@ -1,16 +1,16 @@
 <?php
 
-namespace Models\ViewModels\ProductController;
+namespace Models\ViewModels\UserController;
 
-class IndexViewModel
+class AllUsersViewModel
 {
-    private $products;
+    private $users;
     private $start;
     private $end;
 
-    public function __construct($products, $start, $end)
+    function __construct(array $users, $start, $end)
     {
-        $this->products = $products;
+        $this->users = $users;
         $this->start = $start;
         $this->end = $end;
     }
@@ -18,9 +18,9 @@ class IndexViewModel
     /**
      * @return mixed
      */
-    public function getProducts()
+    public function getUsers()
     {
-        return $this->products;
+        return $this->users;
     }
 
     /**

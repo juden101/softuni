@@ -2,19 +2,17 @@
 
 namespace Models\ViewModels\UserController;
 
-class ProfileViewModel
+class User
 {
     private $username;
     private $isAdmin;
-    private $balance;
     private $isEditor;
     private $isModerator;
 
-    function __construct($username, $isAdmin, $balance, $isEditor, $isModerator)
+    function __construct($username, $isAdmin, $isEditor, $isModerator)
     {
         $this->username = $username;
         $this->isAdmin = $isAdmin;
-        $this->balance = $balance;
         $this->isEditor = $isEditor;
         $this->isModerator = $isModerator;
     }
@@ -41,14 +39,6 @@ class ProfileViewModel
     public function getIsEditor()
     {
         return $this->isEditor;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBalance()
-    {
-        return $this->balance;
     }
 
     /**

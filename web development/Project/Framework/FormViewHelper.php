@@ -9,7 +9,7 @@ class FormViewHelper
     private $_assembledElements = [];
     private $_currentElementId = 0;
     private $_isInForm = false;
-    protected $_additionalTokens = array();
+    protected $_additionalTokens = [];
 
     private function  __construct()
     {
@@ -233,5 +233,6 @@ class FormViewHelper
         $this->_currentElementId = 0;
         $this->_isInForm = false;
         $this->_assembledElements = [];
+        $this->_additionalTokens = [];
     }
 }

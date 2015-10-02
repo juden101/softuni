@@ -5,6 +5,9 @@
     <?php if ($this->_viewBag['body']->getIsEditor()) : ?>
         <span class="label label-info">Editor</span>
     <?php endif; ?>
+    <?php if ($this->_viewBag['body']->getIsModerator()) : ?>
+        <span class="label label-success">Moderator</span>
+    <?php endif; ?>
 </h2>
 
 <?php if (strtolower($this->_viewBag['body']->getUsername()) === strtolower(\Framework\App::getInstance()->getUsername())) { ?>
