@@ -7,7 +7,7 @@
     <?php endif; ?>
 </h2>
 
-<?php if (strtolower($this->_viewBag['body']->getUsername()) === strtolower(\Framework\App::getInstance()->getUsername())) : ?>
+<?php if (strtolower($this->_viewBag['body']->getUsername()) === strtolower(\Framework\App::getInstance()->getUsername())) { ?>
     <div class="panel panel-heading">Your balance: <?= $this->_viewBag['body']->getBalance()?>lv</div>
     <?php \Framework\FormViewHelper::init()
         ->initForm($this->getPath() . 'user/changePass', ['class' => 'form-group'], 'put')
@@ -19,4 +19,4 @@
         ->initPasswordBox()->setAttribute('id', 'conPassword')->setName('confirm')->setAttribute('class', 'form-control input-md')->create()
         ->initSubmit()->setAttribute('value', 'Change password')->setAttribute('class', 'btn btn-default')->create()
         ->render();
-endif ?>
+}

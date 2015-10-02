@@ -18,12 +18,18 @@ class UserController extends BaseController
     public function login(LoginBindingModel $model)
     {
         $this->db->prepare("
-            SELECT id, username
+            SELECT id, username, password
             FROM users
-            WHERE username = ? AND password = ?",
-            array($model->getUsername(), $model->getPassword()));
+            WHERE username = ?",
+            [ $model->getUsername() ]);
 
         $response = $this->db->execute()->fetchRowAssoc();
+
+        if(!password_verify($model->getPassword(), $response['password']))
+        {
+            throw new \Exception("Incorrect password");
+        }
+
         $id = $response['id'];
         $username = $response['username'];
 
@@ -31,7 +37,7 @@ class UserController extends BaseController
         $this->session->_username = $model->getUsername();
         $this->session->escapedUsername = $username;
 
-        $this->redirect('../home/index');
+        $this->redirect($this->path);
     }
 
     /**
@@ -41,7 +47,7 @@ class UserController extends BaseController
     public function logout()
     {
         $this->session->destroySession();
-        $this->redirect('../home/index');
+        $this->redirect($this->path);
     }
 
     /**
@@ -51,12 +57,19 @@ class UserController extends BaseController
      */
     public function register(RegisterBindingModel $model)
     {
-        if ($model->getPassword() !== $model->getConfirm()) {
-            throw new \Exception("Password don't match Confirm Password!", 400);
+        if (!preg_match('/^[\w]{3,15}$/', $model->getUsername()))
+        {
+            throw new \Exception("Invalid username format!", 400);
         }
 
-        if (!preg_match('/^[\w]{3,15}$/', $model->getUsername())) {
-            throw new \Exception("Invalid username format!", 400);
+        if (strlen($model->getPassword()) < 3)
+        {
+            throw new \Exception("Password should be at least 3 characters long!", 400);
+        }
+
+        if($model->getPassword() != $model->getConfirm())
+        {
+            throw new \Exception("Confirm password does not match!", 400);
         }
 
         // Check for already registered with the same name
@@ -64,24 +77,20 @@ class UserController extends BaseController
             SELECT id
             FROM users
             WHERE username = ?",
-            array($model->getUsername()));
+            [ $model->getUsername() ]);
 
         $response = $this->db->execute()->fetchRowAssoc();
-        $id = $response['id'];
 
-        if ($id !== null) {
-            $username = $model->getUsername();
-
-            throw new \Exception("Username '$username' already taken!", 400);
+        if ($response['id'] !== null) {
+            throw new \Exception("Username '{$model->getUsername()}' already taken!", 400);
         }
 
         $this->db->prepare("
-            INSERT
-            INTO users (username, password, cash)
+            INSERT INTO users (username, password, cash)
             VALUES (?, ?, ?)",
             [
                 $model->getUsername(),
-                $model->getPassword(),
+                password_hash($model->getPassword(), PASSWORD_DEFAULT),
                 $this->config->shopping_cart['initialCash']
             ])->execute();
 
@@ -90,9 +99,6 @@ class UserController extends BaseController
                 'username' => $model->getUsername(),
                 'password' => $model->getPassword()
             ]);
-
-        // Work around to avoid double crypting passwords.
-        $loginBindingModel->afterRegisterPasswordPass($model->getPassword());
         $this->login($loginBindingModel);
     }
 
@@ -133,34 +139,41 @@ class UserController extends BaseController
      * @param ChangePasswordBindingModel $model
      * @throws \Exception
      */
-    public function changePass(ChangePasswordBindingModel $model)
+    public function changePassword(ChangePasswordBindingModel $model)
     {
-        if ($model->getNewPassword() !== $model->getConfirm()) {
-            throw new \Exception("Password don't match Confirm Password!", 400);
+        if (strlen($model->getNewPassword()) < 3)
+        {
+            throw new \Exception("Password should be at least 3 characters long!", 400);
+        }
+
+        if($model->getNewPassword() != $model->getConfirm())
+        {
+            throw new \Exception("Confirm password does not match!", 400);
         }
 
         $username = $this->session->_username;
         $id = $this->session->_login;
 
         $this->db->prepare("
-            SELECT id
+            SELECT id, password
             FROM users
-            WHERE id = ? AND username = ? AND password = ?",
-            [ $id, $username, $model->getOldPassword() ]);
+            WHERE id = ? AND username = ?",
+            [ $id, $username ]);
 
         $response = $this->db->execute()->fetchRowAssoc();
 
-        if (isset($response) && $response != null) {
-            $this->db->prepare("
-                UPDATE users
-                SET password = ?
-                WHERE id = ? AND username = ? AND password = ?",
-                [ $model->getNewPassword(), $id, $username, $model->getOldPassword() ]);
-
-            $this->db->execute();
-            $this->redirect($this->path);
-        } else {
-            throw new \Exception("No user found matching those credentials!", 400);
+        if(!password_verify($model->getOldPassword(), $response['password']))
+        {
+            throw new \Exception("Incorrect old password");
         }
+
+        $this->db->prepare("
+            UPDATE users
+            SET password = ?
+            WHERE id = ? AND username = ?",
+            [ password_hash($model->getNewPassword(), PASSWORD_DEFAULT), $id, $username ]);
+
+        $this->db->execute();
+        $this->redirect($this->path);
      }
 }

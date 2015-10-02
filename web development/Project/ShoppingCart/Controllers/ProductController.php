@@ -7,6 +7,7 @@ use Framework\Normalizer;
 use Models\BindingModels\SellProductBindingModel;
 use Models\ViewModels\ProductController\IndexViewModel;
 use Models\ViewModels\ProductController\ProductViewModel;
+use Models\ViewModels\ProductController\ProductMessage;
 
 class ProductController extends BaseController
 {
@@ -73,13 +74,36 @@ class ProductController extends BaseController
             throw new \Exception("No product with id '$id'!", 404);
         }
 
+        $this->db->prepare("
+            SELECT u.username, u.isAdmin, u.isEditor, r.message
+            FROM reviews r
+            JOIN products p
+                ON r.productId = p.id
+            JOIN users u
+                ON r.userId = u.id
+            WHERE p.id = ?",
+            [ $id ]);
+
+        $reviews = $this->db->execute()->fetchAllAssoc();
+        $givenReviews = [];
+
+        foreach ($reviews as $review) {
+            $givenReviews[] = new ProductMessage(
+                $review['username'],
+                $review['message'],
+                Normalizer::normalize($review['isAdmin'], 'noescape|bool'),
+                Normalizer::normalize($review['isEditor'], 'noescape|bool')
+            );
+        }
+
         $product = new ProductViewModel(
             Normalizer::normalize($response['id'], 'noescape|int'),
             $response['name'],
             $response['description'],
             Normalizer::normalize($response['price'], 'noescape|double'),
             Normalizer::normalize($response['quantity'], 'noescape|int'),
-            $response['category']
+            $response['category'],
+            $givenReviews
         );
 
         $this->view->appendToLayout('header', 'header');

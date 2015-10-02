@@ -28,7 +28,7 @@ class ChangePasswordBindingModel
      */
     public function setOldPassword($oldPassword)
     {
-        $this->oldPassword = crypt($oldPassword, PASSWORD_DEFAULT);
+        $this->oldPassword = $oldPassword;
     }
 
     /**
@@ -44,7 +44,7 @@ class ChangePasswordBindingModel
      */
     public function setNewPassword($newPassword)
     {
-        $this->newPassword = crypt($newPassword, PASSWORD_DEFAULT);
+        $this->newPassword = $newPassword;
     }
 
     /**
@@ -60,6 +60,6 @@ class ChangePasswordBindingModel
      */
     public function setConfirm($confirm)
     {
-        $this->confirm = crypt($confirm, PASSWORD_DEFAULT);
+        $this->confirm = $confirm;
     }
 }

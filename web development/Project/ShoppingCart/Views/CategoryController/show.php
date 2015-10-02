@@ -18,10 +18,23 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             </div>
             <?php if (\Framework\App::getInstance()->isLogged()) : ?>
                 <div id="btn" class="panel panel-primary btn btn-default"
-                     onclick="sentAjax(<?= $product->getId() . ', \'' . $product->getName() . '\'' ?>)">Add to cart
+                     onclick="sendAjax('<?= $product->getName(); ?>', '<?= $this->getPath() . 'cart/add/' . $product->getId(); ?>')">Add to cart
                 </div>
-            <?php else: ?>
-                <a href="<?= $this->getPath(); ?>/home/login" class="panel panel-primary btn btn-default">Login to add to cart!</a>
+                <div id="btn" class="panel panel-primary btn btn-default" onclick="enableReviewForm(<?= $product->getId()?>)">
+                    Write review
+                </div>
+                <a href="<?= $this->getPath(); ?>product/<?= $product->getId() ?>/show" id="btn" class="panel panel-primary btn btn-default">
+                    Show reviews</a>
+                <?php \Framework\FormViewHelper::init()->initForm($this->getPath() . 'review/add/' . $product->getId(),
+                    ['class' => 'form-group', 'style' => 'display: none', 'id' => $product->getId()])
+                    ->initLabel()->setAttribute('for', 'message')->setValue('Message')->create()
+                    ->initTextArea()->setAttribute('name', 'message')->setAttribute('class', 'form-control input-md')->setAttribute('id', 'message')->create()
+                    ->initSubmit()->setAttribute('value', 'Send')->setAttribute('class', 'btn btn-primary btn-sm col-sm-1 col-sm-offset-5')->create()
+                    ->render(true);
+            else: ?>
+                <a href="<?= $this->getPath(); ?>home/login" class="panel panel-primary btn btn-default">Login to add to cart!</a>
+                <a href="<?= $this->getPath(); ?>home/login" class="panel panel-primary btn btn-default">Login to write review!</a>
+                <a href="<?= $this->getPath(); ?>product/<?= $product->getId() ?>/show" id="btn" class="panel panel-primary btn btn-default">Show reviews</a>
             <?php endif?>
         </div>
     </div>
@@ -52,19 +65,3 @@ foreach ($this->_viewBag['body']->getProducts() as $product) :?>
             ?>"> Next</a></li>
     <?php endif; ?>
 </ul>
-
-<script>
-    function sentAjax(id, name) {
-        $.ajax({
-            method: "GET",
-            url: "<?= $this->getPath(); ?>cart/add/" + id,
-            data: {}
-        }).done(
-            function (msg) {
-                document.getElementById("#").style.display = 'block';
-                document.getElementById("#").innerHTML = '"' + name + '" added to cart!';
-                document.getElementById("cart-products-count").innerHTML = parseInt(document.getElementById("cart-products-count").innerHTML) + 1
-            }
-        );
-    }
-</script>

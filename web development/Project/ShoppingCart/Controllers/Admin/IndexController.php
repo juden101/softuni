@@ -25,9 +25,9 @@ class IndexController extends BaseController
             $admins[] = $admin['username'];
         }
 
-        $this->view->appendToLayout('body', new IndexViewModel($admins));
-        $this->view->appendToLayout('header', 'header');
         $this->view->appendToLayout('meta', 'meta');
+        $this->view->appendToLayout('header', 'header');
+        $this->view->appendToLayout('body', new IndexViewModel($admins));
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.Admin.home');
     }
@@ -40,8 +40,9 @@ class IndexController extends BaseController
      */
     public function create()
     {
-        $this->view->appendToLayout('body', new CreateViewModel('TestAdmin'));
+        $this->view->appendToLayout('meta', 'meta');
         $this->view->appendToLayout('header', 'header');
+        $this->view->appendToLayout('body', new CreateViewModel('TestAdmin'));
         $this->view->appendToLayout('footer', 'footer');
         $this->view->displayLayout('Layouts.Admin.home');
     }

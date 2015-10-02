@@ -10,8 +10,9 @@ class ProductViewModel
     private $price;
     private $quantity;
     private $category;
+    private $givenReviews;
 
-    public function __construct($id, $name, $description, $price, $quantity, $category)
+    public function __construct($id, $name, $description, $price, $quantity, $category, $givenReviews = [])
     {
         $this->id = $id;
         $this->name = $name;
@@ -19,6 +20,7 @@ class ProductViewModel
         $this->price = $price;
         $this->quantity = $quantity;
         $this->category = $category;
+        $this->givenReviews = $givenReviews;
     }
 
     public function getId()
@@ -49,5 +51,10 @@ class ProductViewModel
     public function getCategory()
     {
         return $this->category;
+    }
+
+    public function getGivenReviews()
+    {
+        return $this->givenReviews;
     }
 }

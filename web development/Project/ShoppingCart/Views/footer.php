@@ -1,3 +1,3 @@
-<footer>
-    <h3 style="color: red">footer</h3>
+<footer class="container-fluid">
+    Footer
 </footer>

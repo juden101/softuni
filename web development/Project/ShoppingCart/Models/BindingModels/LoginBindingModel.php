@@ -42,13 +42,6 @@ class LoginBindingModel
      */
     private  function setPassword($password)
     {
-        $this->password = crypt($password, PASSWORD_DEFAULT);
-    }
-
-    /**
-     * Work around to avoid double crypting passwords when login in after registration.
-     */
-    public function afterRegisterPasswordPass($password){
         $this->password = $password;
     }
 }

@@ -1,7 +1,7 @@
 <div class="panel panel-primary">
     <div class="panel-heading">
-        <h3 class="panel-title"><a
-                href="<?= $this->getPath(); ?>product/<?= $this->_viewBag['body']->getId() ?>/show"><?= $this->_viewBag['body']->getName() ?></a>
+        <h3 class="panel-title">
+            <a href="<?= $this->getPath(); ?>product/<?= $this->_viewBag['body']->getId() ?>/show"><?= $this->_viewBag['body']->getName() ?></a>
         </h3>
     </div>
     <div class="panel-body">
@@ -12,26 +12,54 @@
             <a href="<?= $this->getPath(); ?>categories/<?= $this->_viewBag['body']->getCategory() ?>/0/3">Category: <?= $this->_viewBag['body']->getCategory() ?></a>
         </div>
         <?php if (\Framework\App::getInstance()->isLogged()) : ?>
-            <div id="btn" class="panel panel-primary btn btn-default"
-                 onclick="sentAjax(<?= $this->_viewBag['body']->getId() ?>)"
-                >Add to cart
+            <div id="btn"
+                 class="panel panel-primary btn btn-default"
+                 onclick="sendCart('<?= $this->getPath() . 'cart/add/' . $this->_viewBag['body']->getId(); ?>', '<?= $this->getPath(); ?>')">Add to cart
             </div>
         <?php else: ?>
             <a href="<?= $this->getPath(); ?>home/login" class="panel panel-primary btn btn-default">Login to add to cart!</a>
         <?php endif ?>
+        <?php if (\Framework\App::getInstance()->isLogged()) {
+            if (count($this->_viewBag['body']->getGivenReviews()) === 0) { ?>
+                <div id="btn"
+                     class="panel panel-primary btn btn-default"
+                     onclick="enableReviewForm(<?= $this->_viewBag['body']->getId() ?>)">
+                    There are no reviews! Write the first review
+                </div>
+                <?php \Framework\FormViewHelper::init()->initForm($this->getPath() . 'review/add/' . $this->_viewBag['body']->getId(),
+                    ['class' => 'form-group', 'style' => 'display: none', 'id' => $this->_viewBag['body']->getId()])
+                    ->initLabel()->setAttribute('for', 'message')->setValue('Message')->create()
+                    ->initTextArea()->setAttribute('name', 'message')->setAttribute('class', 'form-control input-md')->setAttribute('id', 'message')->create()
+                    ->initSubmit()->setAttribute('value', 'Send')->setAttribute('class', 'btn btn-primary btn-sm col-sm-1 col-sm-offset-5')->create()
+                    ->render(true);
+            } else { ?>
+                <div id="btn"
+                     class="panel panel-primary btn btn-default"
+                     onclick="enableReviewForm(<?= $this->_viewBag['body']->getId() ?>)">
+                    Write review
+                </div>
+                <?php \Framework\FormViewHelper::init()->initForm($this->getPath() . 'review/add/' . $this->_viewBag['body']->getId(),
+                    ['class' => 'form-group', 'style' => 'display: none', 'id' => $this->_viewBag['body']->getId()])
+                    ->initLabel()->setAttribute('for', 'message')->setValue('Message')->create()
+                    ->initTextArea()->setAttribute('name', 'message')->setAttribute('class', 'form-control input-md')->setAttribute('id', 'message')->create()
+                    ->initSubmit()->setAttribute('value', 'Sent')->setAttribute('class', 'btn btn-primary btn-sm col-sm-1 col-sm-offset-5')->create()
+                    ->render(true);
+            }
+        }
+
+        foreach ($this->_viewBag['body']->getGivenReviews() as $review) : ?>
+            <div class="panel  panel-primary">
+                <div class="panel panel-body"><?= $review->getMessage() ?></div>
+                <div class="panel panel-footer">Written by
+                    <a href="<?= $this->getPath(); ?>user/<?= $review->getUsername() ?>/profile"><?= ucfirst($review->getUsername()) ?></a>
+                    <?php if ($review->getIsAdmin()) : ?>
+                        <span class="label label-danger">Admin</span>
+                    <?php endif; ?>
+                    <?php if ($review->getIsEditor()) : ?>
+                        <span class="label label-info">Editor</span>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
     </div>
 </div>
-
-<script>
-    function sentAjax(id) {
-        $.ajax({
-            method: "GET",
-            url: "<?= $this->getPath(); ?>cart/add/" + id,
-            data: {}
-        }).done(
-            function () {
-                window.location.replace('<?= $this->getPath(); ?>cart')
-            }
-        );
-    }
-</script>
