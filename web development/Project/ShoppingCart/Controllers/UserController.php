@@ -28,6 +28,10 @@ class UserController extends BaseController
 
         $response = $this->db->execute()->fetchRowAssoc();
 
+        if (!$response) {
+            throw new \Exception('User not found!', 400);
+        }
+
         if(!password_verify($model->getPassword(), $response['password']))
         {
             throw new \Exception("Incorrect password");

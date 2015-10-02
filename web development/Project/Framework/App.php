@@ -193,4 +193,9 @@ class App
     {
         return SimpleDB::hasRole('editor');
     }
+
+    public function isModerator()
+    {
+        return SimpleDB::hasRole('moderator');
+    }
 }

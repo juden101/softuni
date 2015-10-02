@@ -13,7 +13,13 @@ foreach ($this->_viewBag['body']->getProducts() as $product) : ?>
         </div>
         <div class="panel-body">
             <div>Description: <?= $product->getDescription(); ?></div>
-            <div>Price: <?= $product->getPrice(); ?> $</div>
+            <?php if ($product->getPromotion() !== 0) : ?>
+                <div>Price: <del><?= $product->getPrice() ?>$</del>: <?= $product->getPrice() * (1 - $product->getPromotion() / 100) ?>$.
+                    <span class="label label-warning">Promotion</span>
+                </div>
+            <?php else: ?>
+                <div>Price: <?= $product->getPrice() ?>$</div>
+            <?php endif; ?>
             <div>Quantity: <?= $product->getQuantity(); ?> remaining</div>
             <div>
                 <a href="<?= $this->getPath() . 'categories/' . $product->getCategory() . '/0/3'; ?>">Category: <?= $product->getCategory() ?></a>

@@ -6,7 +6,13 @@
     </div>
     <div class="panel-body">
         <div>Description: <?= $this->_viewBag['body']->getDescription() ?></div>
-        <div>Price: <?= $this->_viewBag['body']->getPrice() ?> lv.</div>
+        <?php if ($this->_viewBag['body']->getPromotion() !== 0) : ?>
+            <div>Price: <del><?= $this->_viewBag['body']->getPrice() ?>$</del>: <?= $this->_viewBag['body']->getPrice() * (1 - $this->_viewBag['body']->getPromotion() / 100) ?>$
+                <span class="label label-warning">Promotion</span>
+            </div>
+        <?php else: ?>
+            <div>Price: <?= $this->_viewBag['body']->getPrice() ?>$</div>
+        <?php endif; ?>
         <div>Quantity: <?= $this->_viewBag['body']->getQuantity() ?> remaining</div>
         <div>
             <a href="<?= $this->getPath(); ?>categories/<?= $this->_viewBag['body']->getCategory() ?>/0/3">Category: <?= $this->_viewBag['body']->getCategory() ?></a>
@@ -57,17 +63,44 @@
         foreach ($this->_viewBag['body']->getGivenReviews() as $review) : ?>
             <div class="panel  panel-primary">
                 <div class="panel panel-body"><?= $review->getMessage() ?></div>
-                <div class="panel panel-footer">Written by
-                    <a href="<?= $this->getPath(); ?>user/<?= $review->getUsername() ?>/profile"><?= ucfirst($review->getUsername()) ?></a>
-                    <?php if ($review->getIsAdmin()) : ?>
-                        <span class="label label-danger">Admin</span>
-                    <?php endif; ?>
-                    <?php if ($review->getIsEditor()) : ?>
-                        <span class="label label-info">Editor</span>
-                    <?php endif; ?>
-                    <?php if ($review->getIsModerator()) : ?>
-                        <span class="label label-success">Moderator</span>
-                    <?php endif; ?>
+                <div class="panel panel-footer">
+                    <div class="col-sm-10">
+                        Written by <a href="<?= $this->getPath() ?>user/<?= $review->getUsername() ?>/profile"><?= ucfirst($review->getUsername()) ?></a>
+                        <?php if ($review->getIsAdmin()) : ?>
+                            <span class="label label-danger">Admin</span>
+                        <?php endif; ?>
+                        <?php if ($review->getIsEditor()) : ?>
+                            <span class="label label-info">Editor</span>
+                        <?php endif; ?>
+                        <?php if ($review->getIsModerator()) : ?>
+                            <span class="label label-success">Moderator</span>
+                        <?php endif; ?>
+                    </div>
+                    <?php if (\Framework\App::getInstance()->isAdmin() || \Framework\App::getInstance()->isModerator()) : ?>
+                        <div class="col-sm-2 text-right">
+                            <button class="btn btn-sm btn-default" onclick="enableReviewForm('<?= $review->getId() . 'r'?>')">Edit</button>
+                            <?php
+                                \Framework\FormViewHelper::init()
+                                    ->initForm($this->getPath() . 'review/' . $review->getId() . '/delete', ['style' => 'display: inline;'], 'delete')
+                                    ->initSubmit()->setAttribute('value', 'Delete')->setAttribute('class', 'btn btn-sm btn-default')->create()
+                                    ->render(true);
+                            ?>
+                        </div>
+                        <?php
+                            \Framework\FormViewHelper::init()->initForm($this->getPath() . 'review/' . $review->getId() . '/edit',
+                                ['class' => 'form-group', 'style' => 'display: none', 'id' => $review->getId() . 'r'], 'put')
+                                ->initLabel()->setAttribute('for', 'message')->setValue('Edit Message')->create()
+                                ->initTextArea($review->getMessage())->setAttribute('name', 'message')
+                                    ->setAttribute('class', 'form-control input-md')
+                                    ->setAttribute('id', 'message')
+                                    ->create()
+                                ->initSubmit()
+                                    ->setAttribute('value', 'Edit')
+                                    ->setAttribute('class', 'btn btn-primary btn-sm col-sm-1 col-sm-offset-5')
+                                    ->create()
+                                ->render(true);
+                        ?>
+                     <?php endif; ?>
                 </div>
             </div>
         <?php endforeach; ?>

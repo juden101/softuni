@@ -37,15 +37,33 @@ class ProductController extends BaseController
         $products = [];
 
         foreach ($response as $product) {
-            $p_id = isset($product['id']) ? $product['id'] : null;
+            $productId = Normalizer::normalize($product['id'], 'noescape|int');
+
+            $this->db->prepare("
+                SELECT percentage
+                FROM promotions
+                WHERE productId = ? AND NOW() < endDate",
+                [ $productId ]);
+
+            $promos = $this->db->execute()->fetchAllAssoc();
+            $bestPromo = 0;
+
+            foreach ($promos as $promo) {
+                $currentPromo = Normalizer::normalize($promo['percentage'], 'noescape|double');
+
+                if ($currentPromo > $bestPromo) {
+                    $bestPromo = $currentPromo;
+                };
+            }
 
             $products[] = new ProductViewModel(
-                Normalizer::normalize($p_id, 'noescape|int'),
+                $productId,
                 $product['name'],
                 $product['description'],
                 Normalizer::normalize($product['price'], 'noescape|double'),
                 Normalizer::normalize($product['quantity'], 'noescape|int'),
-                $product['category']);
+                $product['category'],
+                $bestPromo);
         }
 
         $this->view->appendToLayout('header', 'header');
@@ -87,7 +105,7 @@ class ProductController extends BaseController
         }
 
         $this->db->prepare("
-            SELECT u.username, u.isAdmin, u.isEditor, u.isModerator, r.message
+            SELECT u.username, u.isAdmin, u.isEditor, u.isModerator, r.message, r.id
             FROM reviews r
             JOIN products p
                 ON r.productId = p.id
@@ -101,12 +119,30 @@ class ProductController extends BaseController
 
         foreach ($reviews as $review) {
             $givenReviews[] = new ProductMessage(
+                Normalizer::normalize($review['id'], 'noescape|int'),
                 $review['username'],
                 $review['message'],
                 Normalizer::normalize($review['isAdmin'], 'noescape|bool'),
                 Normalizer::normalize($review['isEditor'], 'noescape|bool'),
                 Normalizer::normalize($review['isModerator'], 'noescape|bool')
             );
+        }
+
+        $this->db->prepare("
+            SELECT percentage
+            FROM promotions
+            WHERE productId = ? AND NOW() < endDate",
+            [ $id ]);
+
+        $promos = $this->db->execute()->fetchAllAssoc();
+        $bestPromo = 0;
+
+        foreach ($promos as $promo) {
+            $currentPromo = Normalizer::normalize($promo['percentage'], 'noescape|double');
+
+            if ($currentPromo > $bestPromo) {
+                $bestPromo = $currentPromo;
+            };
         }
 
         $product = new ProductViewModel(
@@ -116,6 +152,7 @@ class ProductController extends BaseController
             Normalizer::normalize($response['price'], 'noescape|double'),
             $quantity,
             $response['category'],
+            $bestPromo,
             $givenReviews
         );
 
