@@ -43,7 +43,12 @@ $config['Admin/users'][NS] = 'Controllers\something';
 $config['Admin'][NS] = 'Controllers\Admin';
 $config['Admin'][CONTROLLERS]['index'][GOES_TO] = 'index';
 $config['Admin'][CONTROLLERS]['index'][METHODS]['index'] = 'index';
-$config['Admin'][CONTROLLERS]['index'][METHODS]['new'] = 'create';
-$config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['new'] = 'post';
+$config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['index'] = 'get';
+$config['Admin'][CONTROLLERS]['index'][METHODS]['edit'] = 'edit';
+$config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['edit'] = 'get';
+$config['Admin'][CONTROLLERS]['index'][METHODS]['add'] = 'add';
+$config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['add'] = 'post';
+$config['Admin'][CONTROLLERS]['index'][METHODS]['remove'] = 'remove';
+$config['Admin'][CONTROLLERS]['index'][REQUEST_METHOD]['remove'] = 'delete';
 
 return $config;

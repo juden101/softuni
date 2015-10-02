@@ -16,23 +16,6 @@ class IndexController extends BaseController
     }
 
     /**
-     * @Route("test")
-     */
-    public function create()
-    {
-        $this->view->display(new CreateViewModel('test'));
-    }
-
-    /**
-     * @Route("test/delete")
-     * @Delete
-     */
-    public function delete()
-    {
-        echo "delete";
-    }
-
-    /**
      * @Get
      * @Route("Home/Login")
      * @throws \Exception
