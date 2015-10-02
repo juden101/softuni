@@ -34,7 +34,7 @@ class UserController extends BaseController
 
         if(!password_verify($model->getPassword(), $response['password']))
         {
-            throw new \Exception("Incorrect password");
+            throw new \Exception("Incorrect password", 400);
         }
 
         $id = $response['id'];
@@ -172,7 +172,7 @@ class UserController extends BaseController
 
         if(!password_verify($model->getOldPassword(), $response['password']))
         {
-            throw new \Exception("Incorrect old password");
+            throw new \Exception("Incorrect old password", 400);
         }
 
         $this->db->prepare("

@@ -83,7 +83,7 @@ class FrontController
             $token = $this->_router->getPost()['_token'];
 
             if (!Token::validates($token)) {
-                throw new \Exception('Invalid token!', 500);
+                throw new \Exception('Invalid token!', 400);
             }
 
             if (isset($this->_router->getPost()['_method']) && $this->_router->getPost()['_method'] != null) {

@@ -152,19 +152,32 @@ class App
         if ($this->_config && $this->_config->app['displayExceptions'] == true) {
             echo '<pre>' . print_r($ex, true) . '</pre>';
         } else {
-            $this->displayError($ex->getCode());
+            $this->displayError($ex->getCode(), $ex->getMessage());
         }
     }
 
-    public function displayError($error)
+    public function displayError($error, $message)
     {
-        try {
-            $view = View::getInstance();
-            $view->display('errors' . $error);
-        } catch (\Exception $ex) {
-            echo '<h1>' . $error . '</h1>';
-            exit;
+        echo '<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">';
+        echo '<div class="text-center">';
+
+        $confError = isset($this->_config->errors[$error]) && $this->_config->errors[$error] != null;
+
+        FormViewHelper::init()->initLink()->setValue('Go back')->setAttribute('href', $this->_config->app['default_path'])->create()->render();
+        echo '<h1>Oooops, something went wrong . Error  ' . $error . '</h1>';
+
+        if ($confError) {
+            if ($confError == 'message') {
+                echo '<h1>' . $message . '</h1>';
+            } else {
+                echo "<h1> $confError </h1>";
+            }
         }
+
+        echo '<img class="decoded shrinkToFit" src="http://amorphia-apparel.com/img450/rexnuke.png" />';
+
+        echo '</div>';
+        exit;
     }
 
     public function __destruct()
