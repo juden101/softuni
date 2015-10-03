@@ -4,7 +4,7 @@
 <script>
     function send() {
         <?php
-        \Framework\AjaxViewHelper::init()->initForm($this->getPath() . "help/jsonroutes", "put")->initCallback("function( msg ) {
+        \Framework\AjaxViewHelper::init()->initForm($this->getPath() . "help/jsonroutes", "get")->initCallback("function( msg ) {
            document.getElementById(\"#\").innerHTML = msg;
         }")->render(true);
         ?>
