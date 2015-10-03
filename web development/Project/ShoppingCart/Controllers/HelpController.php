@@ -15,7 +15,7 @@ class HelpController extends BaseController
     }
 
     /**
-     * @Put
+     * @Get
      * @Route("help/jsonRoutes")
      * @return array
      */

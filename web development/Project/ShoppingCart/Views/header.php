@@ -45,7 +45,8 @@
                     <li>
                         <?php \Framework\FormViewHelper::init()
                             ->initBoostrapDropDown('Help', 'li')
-                            ->setDropDownLi($this->getPath() . 'help', 'Help')
+                            ->setDropDownLi($this->getPath() . 'help', 'Routes')
+                            ->setDropDownLi($this->getPath() . 'help/jsonRoutes', 'JSON routes')
                             ->setDropDownLi($this->getPath() . 'help/ajax', 'Ajax test')
                             ->create()->render();
                         ?>

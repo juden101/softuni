@@ -6,7 +6,7 @@ class Config
 {
     private static $_instance = null;
     private $_configFolder = null;
-    private $_configArray = array();
+    private $_configArray = [];
 
     private function __construct()
     {
@@ -21,7 +21,7 @@ class Config
         $realPath = realpath($configFolder);
 
         if ($realPath != false && is_dir($realPath) && is_readable($realPath)) {
-            $this->_configArray = array();
+            $this->_configArray = [];
             $this->_configFolder = $realPath . DIRECTORY_SEPARATOR;
 
             $namespaces = $this->app['namespaces'];
@@ -30,7 +30,7 @@ class Config
                 Autoloader::registerNamespaces($namespaces);
             }
         } else {
-            throw new \Exception('Config directory read error: ' . $configFolder);
+            throw new \Exception('Config directory read error: ' . $configFolder, 500);
         }
     }
 
@@ -51,7 +51,7 @@ class Config
     public function includeConfigFile($path)
     {
         if (!$path) {
-            throw new \Exception('Empty Config path');
+            throw new \Exception('Empty config path');
         }
 
         $file = realpath($path);
@@ -60,7 +60,7 @@ class Config
             $baseName = explode('.php', basename($file))[0];
             $this->_configArray[$baseName] = include $file;
         } else {
-            throw new \Exception('Config file read error: ' . $path);
+            throw new \Exception('Config file read error: ' . $path, 404);
         }
     }
 

@@ -162,7 +162,7 @@ class View
 
     private function includeView($path)
     {
-        include $path;
+        require $path;
     }
 
     /**

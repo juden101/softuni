@@ -19,7 +19,6 @@ class FrontController
     private $_configRequestMethod = 'get';
     private $_scannedControllers = [];
     private $_customRoutes = [];
-
     /**
      * @var IRouter
      */
@@ -174,7 +173,8 @@ class FrontController
             foreach ($routes as $route => $data) {
                 $route = strtolower($route);
 
-                if (stripos($uri, $route) === 0 &&
+                if (
+                    stripos($uri, $route) === 0 &&
                     ($uri == $route || stripos($uri, $route . '/') === 0) &&
                     $data['namespace']
                 ) {
@@ -214,8 +214,10 @@ class FrontController
             $this->_method = $this->getDefaultMethod();
         }
 
-        if (is_array($routeData) &&
-            isset($routeData['controllers']) && $routeData['controllers'] != null
+        if (
+            is_array($routeData) &&
+            isset($routeData['controllers']) &&
+            $routeData['controllers'] != null
         ) {
             $controller = str_replace('Controller', '', $this->_controller);
 
@@ -308,7 +310,7 @@ class FrontController
     private function isValidRequestMethod($controller, $method)
     {
         $reflectionMethod = new \ReflectionMethod($controller, $method);
-        $foundRequestAnnotations = array();
+        $foundRequestAnnotations = [];
         $comment = strtolower($reflectionMethod->getDocComment());
 
         if (preg_match('/@get/', $comment)) {
@@ -347,6 +349,7 @@ class FrontController
 
         return true;
     }
+
     private function ValidateAuthorization($doc)
     {
         $doc = strtolower($doc);

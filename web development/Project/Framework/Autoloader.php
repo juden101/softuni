@@ -8,7 +8,7 @@ namespace Framework;
  */
 final class Autoloader
 {
-    private static $namespaces = array();
+    private static $namespaces = [];
 
     private function __construct()
     {
@@ -16,7 +16,7 @@ final class Autoloader
 
     public static function registerAutoLoad()
     {
-        spl_autoload_register(array("\Framework\Autoloader", 'autoload'));
+        spl_autoload_register([ '\Framework\Autoloader', 'autoload' ]);
     }
 
     public static function autoload($class)
@@ -46,9 +46,10 @@ final class Autoloader
     public static function registerNamespace($namespace, $path)
     {
         $namespace = trim($namespace);
+
         if (strlen($namespace) > 0) {
             if (!$path) {
-                throw new \Exception('Invalid path: ' . $namespace);
+                throw new \Exception('Invalid path: ' . $namespace, 404);
             }
 
             $realPath = realpath($path);
@@ -56,10 +57,10 @@ final class Autoloader
             if ($realPath && is_dir($realPath) && is_readable($realPath)) {
                 self::$namespaces[$namespace . '\\'] = $realPath . DIRECTORY_SEPARATOR;
             } else {
-                throw new \Exception('Namespace directory read error in:' . $path);
+                throw new \Exception('Namespace directory read error in:' . $path, 500);
             }
         } else {
-            throw new \Exception('Invalid namespace: ' . $namespace);
+            throw new \Exception('Invalid namespace: ' . $namespace, 500);
         }
     }
 

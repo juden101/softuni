@@ -13,6 +13,7 @@ require_once 'Autoloader.php';
 class App
 {
     private static $_instance = null;
+
     /**
      * @var Config
      */
@@ -20,6 +21,7 @@ class App
     private $_frontController = null;
     private $_router = null;
     private $_dbConnections = [];
+
     /**
      * @var ISession
      */
@@ -27,20 +29,20 @@ class App
 
     private function __construct()
     {
-        set_exception_handler(array($this, '_exceptionHandler'));
+        set_exception_handler([ $this, '_exceptionHandler' ]);
         Autoloader::registerNamespace('Framework', dirname(__FILE__) . DIRECTORY_SEPARATOR);
         Autoloader::registerAutoLoad();
         $this->_config = Config::getInstance();
     }
 
-    public function setConfigFolder($path)
-    {
-        $this->_config->setConfigFolder($path);
-    }
-
     public function getConfigFolder()
     {
         return $this->_config->getConfigFolder();
+    }
+
+    public function setConfigFolder($path)
+    {
+        $this->_config->setConfigFolder($path);
     }
 
     public function getRouter()

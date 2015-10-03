@@ -145,6 +145,7 @@ class FormViewHelper
 
         return $this;
     }
+
     public function setValue($value)
     {
         $this->_elements[$this->_currentElementId]['value'] = '>' . $value;

@@ -20,7 +20,7 @@ class AjaxViewHelper
         return self::$_instance;
     }
 
-    public function initForm($action, $method = 'post', array $data = array(), $samePageToken = false)
+    public function initForm($action, $method = 'post', array $data = [], $samePageToken = false)
     {
         if (strtolower($method) !== 'post' && strtolower($method) !== 'get') {
             $ajax = "$.ajax({method: \"POST\", url: \"$action\",";
@@ -42,7 +42,6 @@ class AjaxViewHelper
         }
 
         $ajax .= "}})";
-
         $this->_ajax = $ajax;
 
         return $this;
@@ -59,7 +58,6 @@ class AjaxViewHelper
 
     public function render()
     {
-        // $this->_ajax = "<script>" . $this->_ajax . '</script>';
         echo $this->_ajax;
         $this->_ajax = "";
     }
