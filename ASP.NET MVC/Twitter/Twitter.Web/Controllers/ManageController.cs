@@ -7,20 +7,28 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Twitter.Web.Models;
+using Twitter.Data.UnitOfWork;
 
 namespace Twitter.Web.Controllers
 {
     [Authorize]
-    public class ManageController : Controller
+    public class ManageController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        public ManageController(ITwitterSystemData data)
+            : base(data)
+        {
+        }
+
         public ManageController()
+            : base(new TwitterSystemData())
         {
         }
 
         public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
+            : this()
         {
             UserManager = userManager;
             SignInManager = signInManager;

@@ -7,8 +7,6 @@
     {
         IGenericRepository<Tweet> Tweets { get; }
 
-        IGenericRepository<Profile> Profiles { get; }
-
         IGenericRepository<Message> Messages { get; }
 
         IGenericRepository<Notification> Notifications { get; }

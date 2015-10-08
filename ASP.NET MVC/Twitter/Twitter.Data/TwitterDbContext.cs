@@ -19,8 +19,6 @@ namespace Twitter.Data
 
         public IDbSet<Notification> Notifications { get; set; }
 
-        public IDbSet<Profile> Profiles { get; set; }
-
         public IDbSet<Tweet> Tweets { get; set; }
 
         public static TwitterDbContext Create()
@@ -54,16 +52,16 @@ namespace Twitter.Data
                 .HasRequired(m => m.Receiver)
                 .WithOptional();
 
-            modelBuilder.Entity<Profile>()
-                .HasMany(p => p.Followers)
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(au => au.Followers)
                 .WithOptional();
 
-            modelBuilder.Entity<Profile>()
-                .HasMany(p => p.Following)
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(au => au.Following)
                 .WithOptional();
 
-            modelBuilder.Entity<Profile>()
-                .HasMany(p => p.FavouriteTweets)
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(au => au.FavouriteTweets)
                 .WithOptional();
 
             modelBuilder.Entity<Tweet>()

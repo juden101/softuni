@@ -37,11 +37,6 @@
             get { return GetRepository<Notification>(); }
         }
 
-        public IGenericRepository<Profile> Profiles
-        {
-            get { return GetRepository<Profile>(); }
-        }
-
         public IGenericRepository<Tweet> Tweets
         {
             get { return GetRepository<Tweet>(); }

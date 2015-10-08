@@ -13,8 +13,6 @@ namespace Twitter.Data
     {
         IDbSet<Tweet> Tweets { get; set; }
 
-        IDbSet<Profile> Profiles { get; set; }
-
         IDbSet<Message> Messages { get; set; }
 
         IDbSet<Notification> Notifications { get; set; }

@@ -10,20 +10,28 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Twitter.Web.Models;
 using Twitter.Models;
+using Twitter.Data.UnitOfWork;
 
 namespace Twitter.Web.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        public AccountController(ITwitterSystemData data)
+            : base(data)
+        {
+        }
+
         public AccountController()
+            : base(new TwitterSystemData())
         {
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
+            : this()
         {
             UserManager = userManager;
             SignInManager = signInManager;
