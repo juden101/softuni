@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Bunker Buster", "01. Bunker Buster\01. Bunker Buster.csproj", "{C082C337-76FB-4CE4-B37D-1C39B6DC0ED2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Array Slider", "02. Array Slider\02. Array Slider.csproj", "{B03FD809-569D-4A33-8CD2-2F3A3F88E776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Rage Quit", "03. Rage Quit\03. Rage Quit.csproj", "{B69B71F6-0ABE-4EA9-8396-8BF1B98DA2C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Population Counter", "04. Population Counter\04. Population Counter.csproj", "{2F595F23-0535-4346-9B6B-7D47A18D1B71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C082C337-76FB-4CE4-B37D-1C39B6DC0ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C082C337-76FB-4CE4-B37D-1C39B6DC0ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C082C337-76FB-4CE4-B37D-1C39B6DC0ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C082C337-76FB-4CE4-B37D-1C39B6DC0ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B03FD809-569D-4A33-8CD2-2F3A3F88E776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B03FD809-569D-4A33-8CD2-2F3A3F88E776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B03FD809-569D-4A33-8CD2-2F3A3F88E776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B03FD809-569D-4A33-8CD2-2F3A3F88E776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69B71F6-0ABE-4EA9-8396-8BF1B98DA2C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69B71F6-0ABE-4EA9-8396-8BF1B98DA2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69B71F6-0ABE-4EA9-8396-8BF1B98DA2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69B71F6-0ABE-4EA9-8396-8BF1B98DA2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F595F23-0535-4346-9B6B-7D47A18D1B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F595F23-0535-4346-9B6B-7D47A18D1B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F595F23-0535-4346-9B6B-7D47A18D1B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F595F23-0535-4346-9B6B-7D47A18D1B71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
