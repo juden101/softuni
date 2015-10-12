@@ -26,7 +26,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -51,3 +52,17 @@ packages
 #inteli j
 .idea
 .vs
+/c/1. C Programming Intro/homework/03. Hello World/build/
+/c/1. C Programming Intro/homework/03. Hello World/dist/
+/c/1. C Programming Intro/homework/05. Print Numbers/build/
+/c/1. C Programming Intro/homework/05. Print Numbers/dist/
+/c/1. C Programming Intro/homework/06. Print First and Last Name/build/
+/c/1. C Programming Intro/homework/06. Print First and Last Name/dist/
+/c/1. C Programming Intro/homework/07. Square Root/build/
+/c/1. C Programming Intro/homework/07. Square Root/dist/
+/c/1. C Programming Intro/homework/08. Print a Sequence/build/
+/c/1. C Programming Intro/homework/08. Print a Sequence/dist/
+/c/1. C Programming Intro/homework/12. Current Date and Time/build/
+/c/1. C Programming Intro/homework/12. Current Date and Time/dist/
+/c/1. C Programming Intro/homework/13. Age after 10 Years/dist/
+/c/1. C Programming Intro/homework/13. Age after 10 Years/build/
