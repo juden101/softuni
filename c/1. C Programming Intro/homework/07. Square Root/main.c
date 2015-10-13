@@ -2,7 +2,9 @@
 #include <math.h> 
 
 int main() {
-    printf("%f", sqrt(12345));
+    int n;
+    scanf("%d", &n);
+    printf("%f", sqrt(n));
     
     return 0;
 }
