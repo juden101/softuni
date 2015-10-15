@@ -1,0 +1,108 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# visual studio
+*.suo
+bin
+obj
+packages
+
+#inteli j
+.idea
+.vs
+/c/1. C Programming Intro/homework/03. Hello World/build/
+/c/1. C Programming Intro/homework/03. Hello World/dist/
+/c/1. C Programming Intro/homework/05. Print Numbers/build/
+/c/1. C Programming Intro/homework/05. Print Numbers/dist/
+/c/1. C Programming Intro/homework/06. Print First and Last Name/build/
+/c/1. C Programming Intro/homework/06. Print First and Last Name/dist/
+/c/1. C Programming Intro/homework/07. Square Root/build/
+/c/1. C Programming Intro/homework/07. Square Root/dist/
+/c/1. C Programming Intro/homework/08. Print a Sequence/build/
+/c/1. C Programming Intro/homework/08. Print a Sequence/dist/
+/c/1. C Programming Intro/homework/12. Current Date and Time/build/
+/c/1. C Programming Intro/homework/12. Current Date and Time/dist/
+/c/1. C Programming Intro/homework/13. Age after 10 Years/dist/
+/c/1. C Programming Intro/homework/13. Age after 10 Years/build/
+/c/2. Data types/homework/1. Declare Variables/dist/
+/c/2. Data types/homework/1. Declare Variables/build/
+/c/2. Data types/homework/2. Float or Double/build/
+/c/2. Data types/homework/2. Float or Double/dist/
+/c/2. Data types/homework/3. Variable in Hexadecimal Format/dist/
+/c/2. Data types/homework/3. Variable in Hexadecimal Format/build/
+/c/2. Data types/homework/4. Gender/dist/
+/c/2. Data types/homework/4. Gender/build/
+/c/2. Data types/homework/5. Names/dist/
+/c/2. Data types/homework/5. Names/build/
+/c/2. Data types/homework/6. Quotes in Strings/build/
+/c/2. Data types/homework/6. Quotes in Strings/dist/
+/c/2. Data types/homework/7. Exchange Variable Values/build/
+/c/2. Data types/homework/7. Exchange Variable Values/dist/
+/c/2. Data types/homework/8. Employee Data/dist/
+/c/2. Data types/homework/8. Employee Data/build/
+/c/2. Data types/homework/9. Bank Account Data/dist/
+/c/2. Data types/homework/9. Bank Account Data/build/
+/c/2. Data types/homework/10. Comparing Floats/build/
+/c/2. Data types/homework/10. Comparing Floats/dist/
+/c/2. Data types/homework/11. Print the ASCII Table/build/
+/c/2. Data types/homework/11. Print the ASCII Table/dist/
+/c/3. Formatted Input Output/homework/1. Sum of 3 Numbers/build/
+/c/3. Formatted Input Output/homework/1. Sum of 3 Numbers/dist/
+/c/3. Formatted Input Output/homework/2. Print Company Information/build/
+/c/3. Formatted Input Output/homework/2. Print Company Information/dist/
+/c/3. Formatted Input Output/homework/3. Circle Perimeter and Area/dist/
+/c/3. Formatted Input Output/homework/3. Circle Perimeter and Area/build/
+/c/3. Formatted Input Output/homework/4. Formatting Numbers/build/
+/c/3. Formatted Input Output/homework/4. Formatting Numbers/dist/
+/c/3. Formatted Input Output/homework/5. Sum of 5 Numbers/build/
+/c/3. Formatted Input Output/homework/5. Sum of 5 Numbers/dist/
+/c/3. Formatted Input Output/homework/6. Numbers from 1 to n/dist/
+/c/3. Formatted Input Output/homework/6. Numbers from 1 to n/build/
+/c/3. Formatted Input Output/homework/7. Sum of n Numbers/dist/
+/c/3. Formatted Input Output/homework/7. Sum of n Numbers/build/
+/c/3. Formatted Input Output/homework/8. Fibonacci Numbers/build/
+/c/3. Formatted Input Output/homework/8. Fibonacci Numbers/dist/
+/c/3. Formatted Input Output/homework/9. Numbers in Interval Dividable by Given Number/dist/
+/c/3. Formatted Input Output/homework/9. Numbers in Interval Dividable by Given Number/build/
