@@ -5,57 +5,52 @@
 
     using Twitter.Data;
     using Twitter.Data.Repository;
+    using System.Linq.Expressions;
+    using System;
+    using System.Data.Entity.Migrations;
 
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private ITwitterDbContext context;
-        private IDbSet<T> set;
-
-        public GenericRepository()
-            : this(new TwitterDbContext())
+        public GenericRepository(TwitterDbContext context)
         {
+            this.Context = context;
+            this.DbSet = this.Context.Set<T>();
         }
 
-        public GenericRepository(ITwitterDbContext context)
-        {
-            this.context = context;
-            this.set = context.Set<T>();
-        }
+        protected TwitterDbContext Context { get; set; }
+
+        protected IDbSet<T> DbSet { get; set; }
 
         public IQueryable<T> All()
         {
-            return this.set;
+            return this.DbSet.AsQueryable();
         }
 
-        public void Add(T entity)
+        public IQueryable<T> Find(Expression<Func<T, bool>> expression)
         {
-            this.ChangeState(entity, EntityState.Added);
+            return this.DbSet.Where(expression).AsQueryable();
         }
 
-        public void Edit(T entity)
+        public T GetById(object id)
         {
-            this.ChangeState(entity, EntityState.Modified);
+            return this.DbSet.Find(id);
+        }
+
+        public T Add(T entity)
+        {
+            this.DbSet.Add(entity);
+            return entity;
+        }
+
+        public T Update(T entity)
+        {
+            this.DbSet.AddOrUpdate(entity);
+            return entity;
         }
 
         public void Delete(T entity)
         {
-            this.ChangeState(entity, EntityState.Deleted);
-        }
-
-        public void Detach(T entity)
-        {
-            this.ChangeState(entity, EntityState.Detached);
-        }
-
-        public void ChangeState(T entity, EntityState state)
-        {
-            var entry = this.context.Entry(entity);
-            if (EntityState.Detached == state)
-            {
-                this.set.Attach(entity);
-            }
-
-            entry.State = state;
+            this.DbSet.Remove(entity);
         }
     }
 }

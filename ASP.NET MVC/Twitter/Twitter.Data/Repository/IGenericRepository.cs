@@ -1,20 +1,21 @@
 ﻿namespace Twitter.Data.Repository
 {
     using System.Linq;
-    using System.Data.Entity;
+    using System.Linq.Expressions;
+    using System;
 
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T>
     {
         IQueryable<T> All();
 
-        void Add(T entity);
+        IQueryable<T> Find(Expression<Func<T, bool>> expression);
 
-        void Edit(T entity);
+        T GetById(object id);
+
+        T Add(T entity);
+
+        T Update(T entity);
 
         void Delete(T entity);
-
-        void Detach(T entity);
-
-        void ChangeState(T entity, EntityState state);
     }
 }

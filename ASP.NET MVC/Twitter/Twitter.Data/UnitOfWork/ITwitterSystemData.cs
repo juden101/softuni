@@ -7,10 +7,6 @@
     {
         IGenericRepository<Tweet> Tweets { get; }
 
-        IGenericRepository<Message> Messages { get; }
-
-        IGenericRepository<Notification> Notifications { get; }
-
         IGenericRepository<ApplicationUser> ApplicationUsers { get; }
 
         void SaveChanges();

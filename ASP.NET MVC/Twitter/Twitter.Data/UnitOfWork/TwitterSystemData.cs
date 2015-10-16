@@ -8,7 +8,7 @@
 
     public class TwitterSystemData : ITwitterSystemData
     {
-        private ITwitterDbContext context;
+        private TwitterDbContext context;
         private IDictionary<Type, object> repositories;
 
         public TwitterSystemData()
@@ -16,7 +16,7 @@
         {
         }
 
-        public TwitterSystemData(ITwitterDbContext context)
+        public TwitterSystemData(TwitterDbContext context)
         {
             this.context = context;
             this.repositories = new Dictionary<Type, object>();
@@ -25,16 +25,6 @@
         public IGenericRepository<ApplicationUser> ApplicationUsers
         {
             get { return GetRepository<ApplicationUser>(); }
-        }
-
-        public IGenericRepository<Message> Messages
-        {
-            get { return GetRepository<Message>(); }
-        }
-
-        public IGenericRepository<Notification> Notifications
-        {
-            get { return GetRepository<Notification>(); }
         }
 
         public IGenericRepository<Tweet> Tweets

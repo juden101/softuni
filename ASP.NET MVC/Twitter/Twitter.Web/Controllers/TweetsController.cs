@@ -6,11 +6,7 @@ using System.Web.Mvc;
 
 namespace Twitter.Web.Controllers
 {
-    public class PlayController : Controller
+    public class TweetsController : BaseController
     {
-        public ActionResult Index()
-        {
-            return View("index");
-        }
     }
 }

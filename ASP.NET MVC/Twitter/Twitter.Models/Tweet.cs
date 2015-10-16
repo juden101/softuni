@@ -19,28 +19,15 @@
         public int Id { get; set; }
 
         [Required]
-        [MinLength(3)]
+        [MinLength(10)]
+        [MaxLength(200)]
         public string Content { get; set; }
 
         public DateTime CreatedOn { get; set; }
-
-        public bool Reported { get; set; }
 
         [Required]
         public string AuthorId { get; set; }
 
         public ApplicationUser Author { get; set; }
-
-        public virtual ICollection<ApplicationUser> FavouritedBy
-        {
-            get { return this.favouritedBy; }
-            set { this.favouritedBy = value; }
-        }
-
-        public virtual ICollection<ApplicationUser> RetweetedBy
-        {
-            get { return this.retweetedBy; }
-            set { this.retweetedBy = value; }
-        }
     }
 }
