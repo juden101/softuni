@@ -49,10 +49,35 @@ bin
 obj
 packages
 
-#inteli j
+# inteli j
 .idea
 .vs
 
-nbproject
-dist
-build
+# netbeans
+nbproject/*
+dist/*
+build/*
+/c/4. C Operators/homework/1. Exchange If Greater/dist/
+/c/4. C Operators/homework/1. Exchange If Greater/build/
+/c/4. C Operators/homework/2. Bonus Score/dist/
+/c/4. C Operators/homework/2. Bonus Score/build/
+/c/4. C Operators/homework/3. Check for a Play Card/build/
+/c/4. C Operators/homework/3. Check for a Play Card/dist/
+/c/4. C Operators/homework/4. Multiplication Sign/build/
+/c/4. C Operators/homework/4. Multiplication Sign/dist/
+/c/4. C Operators/homework/5. The Biggest of 3 Numbers/dist/
+/c/4. C Operators/homework/5. The Biggest of 3 Numbers/build/
+/c/4. C Operators/homework/6. The Biggest of Five Numbers/build/
+/c/4. C Operators/homework/6. The Biggest of Five Numbers/dist/
+/c/4. C Operators/homework/7. Sort 3 Numbers with Nested Ifs/build/
+/c/4. C Operators/homework/7. Sort 3 Numbers with Nested Ifs/dist/
+/c/4. C Operators/homework/8. Digit as Word/build/
+/c/4. C Operators/homework/8. Digit as Word/dist/
+/c/4. C Operators/homework/9. Play with Int, Double and String/dist/
+/c/4. C Operators/homework/9. Play with Int, Double and String/build/
+/c/4. C Operators/homework/10. Beer Time/build/
+/c/4. C Operators/homework/10. Beer Time/dist/
+/c/4. C Operators/homework/11. Number as Words/build/
+/c/4. C Operators/homework/11. Number as Words/dist/
+/c/4. C Operators/homework/12. Zero Subset/build/
+/c/4. C Operators/homework/12. Zero Subset/dist/

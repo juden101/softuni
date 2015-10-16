@@ -53,32 +53,7 @@ packages
 .idea
 .vs
 
-nbproject
-/c/4. C Operators/homework/1. Odd or Even Integers/dist/
-/c/4. C Operators/homework/1. Odd or Even Integers/build/
-/c/4. C Operators/homework/2. Big and Odd/dist/
-/c/4. C Operators/homework/2. Big and Odd/build/
-/c/4. C Operators/homework/3. Pure Divisor/dist/
-/c/4. C Operators/homework/3. Pure Divisor/build/
-/c/4. C Operators/homework/4. Gravitation on the Moon/build/
-/c/4. C Operators/homework/4. Gravitation on the Moon/dist/
-/c/4. C Operators/homework/5. Divide by 7 and 5/dist/
-/c/4. C Operators/homework/5. Divide by 7 and 5/build/
-/c/4. C Operators/homework/6. Rectangles/build/
-/c/4. C Operators/homework/6. Rectangles/dist/
-/c/4. C Operators/homework/7. Average Sum/dist/
-/c/4. C Operators/homework/7. Average Sum/build/
-/c/4. C Operators/homework/8. Third Digit is 7/dist/
-/c/4. C Operators/homework/8. Third Digit is 7/build/
-/c/4. C Operators/homework/9. Four-Digit Number/build/
-/c/4. C Operators/homework/9. Four-Digit Number/dist/
-/c/4. C Operators/homework/10. N-th Digit/build/
-/c/4. C Operators/homework/10. N-th Digit/dist/
-/c/4. C Operators/homework/11. Point in a Circle/dist/
-/c/4. C Operators/homework/11. Point in a Circle/build/
-/c/4. C Operators/homework/12. Prime Number Check/build/
-/c/4. C Operators/homework/12. Prime Number Check/dist/
-/c/4. C Operators/homework/13. Trapezoids/dist/
-/c/4. C Operators/homework/13. Trapezoids/build/
-/c/4. C Operators/homework/14. Point Inside a Circle & Outside of a Rectangle/dist/
-/c/4. C Operators/homework/14. Point Inside a Circle & Outside of a Rectangle/build/
+#netbeans
+nbproject/*
+dist/*
+build/*
