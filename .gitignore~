@@ -52,57 +52,33 @@ packages
 #inteli j
 .idea
 .vs
-/c/1. C Programming Intro/homework/03. Hello World/build/
-/c/1. C Programming Intro/homework/03. Hello World/dist/
-/c/1. C Programming Intro/homework/05. Print Numbers/build/
-/c/1. C Programming Intro/homework/05. Print Numbers/dist/
-/c/1. C Programming Intro/homework/06. Print First and Last Name/build/
-/c/1. C Programming Intro/homework/06. Print First and Last Name/dist/
-/c/1. C Programming Intro/homework/07. Square Root/build/
-/c/1. C Programming Intro/homework/07. Square Root/dist/
-/c/1. C Programming Intro/homework/08. Print a Sequence/build/
-/c/1. C Programming Intro/homework/08. Print a Sequence/dist/
-/c/1. C Programming Intro/homework/12. Current Date and Time/build/
-/c/1. C Programming Intro/homework/12. Current Date and Time/dist/
-/c/1. C Programming Intro/homework/13. Age after 10 Years/dist/
-/c/1. C Programming Intro/homework/13. Age after 10 Years/build/
-/c/2. Data types/homework/1. Declare Variables/dist/
-/c/2. Data types/homework/1. Declare Variables/build/
-/c/2. Data types/homework/2. Float or Double/build/
-/c/2. Data types/homework/2. Float or Double/dist/
-/c/2. Data types/homework/3. Variable in Hexadecimal Format/dist/
-/c/2. Data types/homework/3. Variable in Hexadecimal Format/build/
-/c/2. Data types/homework/4. Gender/dist/
-/c/2. Data types/homework/4. Gender/build/
-/c/2. Data types/homework/5. Names/dist/
-/c/2. Data types/homework/5. Names/build/
-/c/2. Data types/homework/6. Quotes in Strings/build/
-/c/2. Data types/homework/6. Quotes in Strings/dist/
-/c/2. Data types/homework/7. Exchange Variable Values/build/
-/c/2. Data types/homework/7. Exchange Variable Values/dist/
-/c/2. Data types/homework/8. Employee Data/dist/
-/c/2. Data types/homework/8. Employee Data/build/
-/c/2. Data types/homework/9. Bank Account Data/dist/
-/c/2. Data types/homework/9. Bank Account Data/build/
-/c/2. Data types/homework/10. Comparing Floats/build/
-/c/2. Data types/homework/10. Comparing Floats/dist/
-/c/2. Data types/homework/11. Print the ASCII Table/build/
-/c/2. Data types/homework/11. Print the ASCII Table/dist/
-/c/3. Formatted Input Output/homework/1. Sum of 3 Numbers/build/
-/c/3. Formatted Input Output/homework/1. Sum of 3 Numbers/dist/
-/c/3. Formatted Input Output/homework/2. Print Company Information/build/
-/c/3. Formatted Input Output/homework/2. Print Company Information/dist/
-/c/3. Formatted Input Output/homework/3. Circle Perimeter and Area/dist/
-/c/3. Formatted Input Output/homework/3. Circle Perimeter and Area/build/
-/c/3. Formatted Input Output/homework/4. Formatting Numbers/build/
-/c/3. Formatted Input Output/homework/4. Formatting Numbers/dist/
-/c/3. Formatted Input Output/homework/5. Sum of 5 Numbers/build/
-/c/3. Formatted Input Output/homework/5. Sum of 5 Numbers/dist/
-/c/3. Formatted Input Output/homework/6. Numbers from 1 to n/dist/
-/c/3. Formatted Input Output/homework/6. Numbers from 1 to n/build/
-/c/3. Formatted Input Output/homework/7. Sum of n Numbers/dist/
-/c/3. Formatted Input Output/homework/7. Sum of n Numbers/build/
-/c/3. Formatted Input Output/homework/8. Fibonacci Numbers/build/
-/c/3. Formatted Input Output/homework/8. Fibonacci Numbers/dist/
-/c/3. Formatted Input Output/homework/9. Numbers in Interval Dividable by Given Number/dist/
-/c/3. Formatted Input Output/homework/9. Numbers in Interval Dividable by Given Number/build/
+
+nbproject
+/c/4. C Operators/homework/1. Odd or Even Integers/dist/
+/c/4. C Operators/homework/1. Odd or Even Integers/build/
+/c/4. C Operators/homework/2. Big and Odd/dist/
+/c/4. C Operators/homework/2. Big and Odd/build/
+/c/4. C Operators/homework/3. Pure Divisor/dist/
+/c/4. C Operators/homework/3. Pure Divisor/build/
+/c/4. C Operators/homework/4. Gravitation on the Moon/build/
+/c/4. C Operators/homework/4. Gravitation on the Moon/dist/
+/c/4. C Operators/homework/5. Divide by 7 and 5/dist/
+/c/4. C Operators/homework/5. Divide by 7 and 5/build/
+/c/4. C Operators/homework/6. Rectangles/build/
+/c/4. C Operators/homework/6. Rectangles/dist/
+/c/4. C Operators/homework/7. Average Sum/dist/
+/c/4. C Operators/homework/7. Average Sum/build/
+/c/4. C Operators/homework/8. Third Digit is 7/dist/
+/c/4. C Operators/homework/8. Third Digit is 7/build/
+/c/4. C Operators/homework/9. Four-Digit Number/build/
+/c/4. C Operators/homework/9. Four-Digit Number/dist/
+/c/4. C Operators/homework/10. N-th Digit/build/
+/c/4. C Operators/homework/10. N-th Digit/dist/
+/c/4. C Operators/homework/11. Point in a Circle/dist/
+/c/4. C Operators/homework/11. Point in a Circle/build/
+/c/4. C Operators/homework/12. Prime Number Check/build/
+/c/4. C Operators/homework/12. Prime Number Check/dist/
+/c/4. C Operators/homework/13. Trapezoids/dist/
+/c/4. C Operators/homework/13. Trapezoids/build/
+/c/4. C Operators/homework/14. Point Inside a Circle & Outside of a Rectangle/dist/
+/c/4. C Operators/homework/14. Point Inside a Circle & Outside of a Rectangle/build/

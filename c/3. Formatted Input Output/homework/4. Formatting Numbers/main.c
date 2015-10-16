@@ -1,37 +1,26 @@
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 char *decimal_to_binary(int n)
 {
-   int i, j, count;
-   char *pointer;
+    int i = 0, j = 9;
+    char *binary = (char *)malloc(sizeof(char) * 3);
+    
+    for (j = 0; j < 9; j++)
+    {
+        binary[j] = '0';
+    }
+    
+    while (i < 9)
+    {
+        int bit = (n >> i) & 1;
+        binary[j] = bit == 1 ? '1' : '0';
+        
+        i++;
+        j--;
+    }
  
-   count = 0;
-   pointer = (char*)malloc(10+1);
- 
-   if (pointer == NULL)
-   {
-      exit(EXIT_FAILURE);
-   }
- 
-   for (i = 9; i >= 0; i--)
-   {
-      j = n >> i;
- 
-      if (j & 1) {
-         *(pointer+count) = 1 + '0';
-      } else {
-         *(pointer+count) = 0 + '0';
-      }
-      
-      count++;
-   }
-   
-   *(pointer+count) = '\0';
- 
-   return pointer;
+   return binary;
 }
 
 int main() {
