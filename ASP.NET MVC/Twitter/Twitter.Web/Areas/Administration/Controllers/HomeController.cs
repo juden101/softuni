@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-
-namespace Twitter.Web.Areas.Administration.Controllers
+﻿namespace Twitter.Web.Areas.Administration.Controllers
 {
+    using System.Web.Mvc;
+
     [Authorize(Roles = "Administrator")]
     public class HomeController : Controller
     {

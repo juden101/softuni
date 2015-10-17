@@ -31,7 +31,7 @@
                     }
                     @if (User.IsInRole("Administrator"))
                     {
-                        <li>@Html.ActionLink("Admin", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Admin", "Index", "Home", new { Area = "Administration" }, null)</li>
                     }
                 </ul>
                 @Html.Partial("_LoginPartial")

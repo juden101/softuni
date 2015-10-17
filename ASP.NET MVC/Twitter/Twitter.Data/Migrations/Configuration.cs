@@ -7,6 +7,7 @@ namespace Twitter.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(TwitterDbContext context)
