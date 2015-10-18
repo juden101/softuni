@@ -3,6 +3,7 @@
     using System;
 
     using Sortable_Collection.Sorters;
+    using System.Collections.Generic;
 
     public class SortableCollectionPlayground
     {
@@ -10,8 +11,8 @@
 
         public static void Main(string[] args)
         {
-            const int NumberOfElementsToSort = 22;
-            const int MaxValue = 150;
+            const int NumberOfElementsToSort = 100;
+            const int MaxValue = 999;
 
             var array = new int[NumberOfElementsToSort];
 

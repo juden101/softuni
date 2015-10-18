@@ -33,7 +33,30 @@
 
         public int BinarySearch(T item)
         {
-            // TODO
+            int start = 0;
+            int end = this.Items.Count - 1;
+
+            while (start <= end)
+            {
+                int mid = (end + start) / 2;
+
+                if (this.Items[mid].CompareTo(item) == 0)
+                {
+                    return mid;
+                }
+
+                if (item.CompareTo(this.Items[mid]) > 0)
+                {
+                    start = mid + 1;
+                }
+
+                if (item.CompareTo(this.Items[mid]) < 0)
+                {
+                    end = mid - 1;
+                }
+            }
+
+            return -1;
         }
 
         public int InterpolationSearch(T item)
@@ -54,6 +77,6 @@
         public override string ToString()
         {
             return $"[{string.Join(", ", this.Items)}]";
-        }        
+        }
     }
 }
