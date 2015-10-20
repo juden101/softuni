@@ -1,11 +1,19 @@
-﻿@model ICollection<Twitter.Web.Models.ViewModels.TweetViewModel>
+﻿@using Twitter.Models;
+@model IEnumerable<Tweet>
 
-<br />
-<div>
-    @foreach (var tweet in @Model)
-    {
-        <p>@tweet.Content</p>
-    }
+<div class="home-wrapper">
+    @Html.Partial("_AllTweetsPartial")
+    <nav>
+        <ul class="pagination">
+            @{
+                for (int i = 1; i <= ViewBag.PagesCount; i++)
+                {
+                    int startPage = i - 1;
+                    <li>
+                        <a href="/Home/Index?startPage=@startPage">@i</a>
+                    </li>
+                }
+            }
+        </ul>
+    </nav>
 </div>
-@Html.ActionLink("Previous", "index", "Home", new { page = @ViewBag.Page - 1 }, htmlAttributes: null)
-@Html.ActionLink("Next", "index", "Home", new { page = @ViewBag.Page + 1 }, htmlAttributes: null)
