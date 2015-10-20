@@ -1,4 +1,6 @@
-﻿namespace Twitter.Web.Models.BindingModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Twitter.Web.Models.BindingModels
 {
     public class PaginationBindingModel
     {

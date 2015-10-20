@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Twitter.Web.Models.ViewModels
+﻿namespace Twitter.Web.Models.BindingModels
 {
-    public class EditProfileViewModel
+    using System;
+    using System.ComponentModel.DataAnnotations;
+
+    public class EditProfileBindingModel
     {
+        [Display(Name = "Avatar URL")]
         public string AvatarUrl { get; set; }
 
+        [Display(Name = "Full name")]
         public string FullName { get; set; }
 
         public string Biography { get; set; }
@@ -17,6 +17,7 @@ namespace Twitter.Web.Models.ViewModels
 
         public string Website { get; set; }
 
+        [Display(Name = "Birth date")]
         public DateTime? BirthDay { get; set; }
     }
 }

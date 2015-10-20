@@ -23,11 +23,18 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
-                    <li>@Html.ActionLink("Users", "AllUsers", "User")</li>
-                    <li>@Html.ActionLink("Messages", "Index", "Messages")</li>
-                    <li>@Html.ActionLink("Notifications", "Index", "Notifications")</li>
-                    <li>@Html.ActionLink("New Tweet", "CreateTweet", "Tweets")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Profile", "Index", "Profile")</li>
+                        <li>@Html.ActionLink("Users", "All", "Users")</li>
+                        <li>@Html.ActionLink("Messages", "Index", "Messages")</li>
+                        <li>@Html.ActionLink("Notifications", "Index", "Notifications")</li>
+                        <li>@Html.ActionLink("New Tweet", "CreateTweet", "Tweets")</li>
+                    }
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li>@Html.ActionLink("Admin", "Index", "Home", new { Area = "Administration" }, null)</li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

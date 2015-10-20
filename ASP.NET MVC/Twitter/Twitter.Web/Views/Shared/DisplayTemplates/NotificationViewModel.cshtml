@@ -1,0 +1,30 @@
+﻿@model Twitter.Web.Models.ViewModels.NotificationViewModel
+@{
+    var notification = Model;
+    notification.SenderAvatarUrl = notification.SenderAvatarUrl == null ? "http://www.sourcecoi.com/sites/default/files/team/defaultpic.png" : notification.SenderAvatarUrl;
+}
+
+<div class="tweet-wrapper">
+    <div class="media-left media-top">
+        <a href="#">
+            <img class="media-object" src="@notification.SenderAvatarUrl" style="width: 4rem; height: 4rem; border-radius: 15%" alt="">
+        </a>
+    </div>
+    <div class="media-body">
+        @switch (@notification.Type.ToString())
+        {
+            case "Retweet":
+                <h5 class="media-heading"><b>@notification.SenderFullName</b> has retweeted your tweet</h5>
+                        <p>@notification.CreatedAt</p>
+                break;
+            case "Like":
+                <h5 class="media-heading"><b>@notification.SenderFullName</b> has liked your tweet</h5>
+                        <p>@notification.CreatedAt</p>
+                break;
+            case "Follow":
+                <h5 class="media-heading"><b>@notification.SenderFullName</b> has followed you</h5>
+                        <p>@notification.CreatedAt</p>
+                break;
+        }
+    </div>
+</div>

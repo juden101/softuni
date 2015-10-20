@@ -1,6 +1,8 @@
-﻿@using Microsoft.AspNet.Identity
-@using Twitter.Models;
-@model IQueryable<Twitter.Web.Models.ViewModels.UserTweetViewModel>
+﻿@model IQueryable<Twitter.Web.Models.ViewModels.UserTweetViewModel>
+
+@{
+    ViewBag.Title = "Profile";
+}
 
 <div class="profile-page-wrapper">
     <div class="head-profile">
@@ -38,7 +40,13 @@
     </div>
 </div>
 <div class="home-wrapper">
-    @Html.Partial("_OwnTweetsPartial")
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <br />
+        <p class="alert alert-success">@TempData["SuccessMessage"]</p>
+    }
+    
+    @Html.DisplayForModel()
 </div>
 
 

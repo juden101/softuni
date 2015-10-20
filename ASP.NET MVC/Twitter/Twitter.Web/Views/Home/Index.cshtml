@@ -1,19 +1,25 @@
-﻿@using Twitter.Models;
-@model IEnumerable<Tweet>
+﻿@model IQueryable<Twitter.Web.Models.ViewModels.UserTweetViewModel>
 
 <div class="home-wrapper">
-    @Html.Partial("_AllTweetsPartial")
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <br />
+        <p class="alert alert-success">@TempData["SuccessMessage"]</p>
+    }
+
+    @Html.DisplayForModel()
+
     <nav>
         <ul class="pagination">
-            @{
-                for (int i = 1; i <= ViewBag.PagesCount; i++)
-                {
-                    int startPage = i - 1;
-                    <li>
-                        <a href="/Home/Index?startPage=@startPage">@i</a>
-                    </li>
-                }
+        @{
+            for (int i = 1; i <= ViewBag.PagesCount; i++)
+            {
+                int startPage = i - 1;
+                <li>
+                    <a href="/Home/Index?startPage=@startPage">@i</a>
+                </li>
             }
+        }
         </ul>
     </nav>
 </div>

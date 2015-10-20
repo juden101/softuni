@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Http;
-using System.Web.Mvc;
-using Twitter.Data.UnitOfWork;
-using Twitter.Web.Models.BindingModels;
-using Twitter.Web.Models.ViewModels;
-
-namespace Twitter.Web.Controllers
+﻿namespace Twitter.Web.Controllers
 {
+    using System;
+    using System.Linq;
+    using System.Web.Http;
+    using System.Web.Mvc;
+    using Models.BindingModels;
+    using Models.ViewModels;
+
     public class HomeController : BaseController
     {
         [System.Web.Mvc.Authorize]
@@ -25,7 +22,9 @@ namespace Twitter.Web.Controllers
             var tweets = this.Data.Tweets.All()
                 .OrderByDescending(t => t.CreatedAt)
                 .Skip(model.StartPage * 5)
-                .Take(5);
+                .Take(5)
+                .AsQueryable()
+                .Select(UserTweetViewModel.Create);
 
             return View(tweets);
         }

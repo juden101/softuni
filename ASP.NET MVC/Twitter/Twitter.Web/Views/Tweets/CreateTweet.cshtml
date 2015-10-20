@@ -1,4 +1,4 @@
-﻿@model Twitter.Web.Models.ViewModels.CreateTweetViewModel
+﻿@model Twitter.Web.Models.BindingModels.CreateTweetBindingModel
 
 @{
     ViewBag.Title = "Create tweet";
@@ -9,16 +9,22 @@
 @using (Html.BeginForm("CreateTweet", "Tweets", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    @Html.ValidationSummary("", new { @class = "text-danger" })
     <div class="form-group">
-        @Html.LabelFor(m => m.Content, "", new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.Content, new { @class = "form-control" })
+        <div class="col-md-1">
+            @Html.LabelFor(m => m.Content)
+        </div>
+        <div class="col-md-11">
+            <p class="text-danger">@Html.ValidationMessageFor(m => m.Content)</p>
+            @Html.EditorFor(m => m.Content)
         </div>
     </div>
     <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
+        <div class="col-md-offset-1 col-md-11">
             <input type="submit" class="btn btn-default" value="Tweet" />
         </div>
     </div>
+}
+
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval");
 }

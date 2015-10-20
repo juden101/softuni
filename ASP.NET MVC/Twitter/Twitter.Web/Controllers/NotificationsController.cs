@@ -8,10 +8,10 @@ using Twitter.Web.Models.ViewModels;
 
 namespace Twitter.Web.Controllers
 {
+    [Authorize]
     public class NotificationsController : BaseController
     {
         [HttpGet]
-        [Authorize]
         public ActionResult Index()
         {
             var loggedUserId = User.Identity.GetUserId();

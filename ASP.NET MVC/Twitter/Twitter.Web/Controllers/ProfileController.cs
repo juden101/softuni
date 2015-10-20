@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Web.Mvc;
     using Models.ViewModels;
+    using Models.BindingModels;
 
     [Authorize]
     public class ProfileController : BaseController
@@ -21,6 +22,7 @@
             return View(tweets);
         }
         
+        [OutputCache(Duration = 5 * 60)]
         public ActionResult Edit()
         {
             return View();
@@ -28,7 +30,7 @@
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(EditProfileViewModel model)
+        public ActionResult Edit(EditProfileBindingModel model)
         {
             var loggedUserId = User.Identity.GetUserId();
             var profile = Data.ApplicationUsers.GetById(loggedUserId);
@@ -59,6 +61,7 @@
             }
 
             this.Data.SaveChanges();
+            this.TempData["SuccessMessage"] = "Profile successfully edited!";
 
             return RedirectToAction("Index", "Profile");
         }

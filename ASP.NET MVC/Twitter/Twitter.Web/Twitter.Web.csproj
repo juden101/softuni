@@ -218,20 +218,20 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TweetsController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ViewModels\EditProfileViewModel.cs" />
+    <Compile Include="Models\BindingModels\EditProfileBindingModel.cs" />
     <Compile Include="Models\BindingModels\PaginationBindingModel.cs" />
-    <Compile Include="Models\ViewModels\CreateTweetViewModel.cs" />
+    <Compile Include="Models\BindingModels\CreateTweetBindingModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\TweetModel.cs" />
     <Compile Include="Models\ViewModels\NotificationViewModel.cs" />
     <Compile Include="Models\ViewModels\UserTweetViewModel.cs" />
     <Compile Include="Models\ViewModels\UserViewModel.cs" />
@@ -276,8 +276,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -299,13 +297,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Shared\_AllTweetsPartial.cshtml" />
     <Content Include="Views\Tweets\CreateTweet.cshtml" />
     <Content Include="Views\Notifications\Index.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Shared\_OwnTweetsPartial.cshtml" />
-    <Content Include="Views\User\AllUsers.cshtml" />
+    <Content Include="Views\Users\All.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\UserTweetViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\NotificationViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\UserViewModel.cshtml" />
+    <Content Include="Views\Messages\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
