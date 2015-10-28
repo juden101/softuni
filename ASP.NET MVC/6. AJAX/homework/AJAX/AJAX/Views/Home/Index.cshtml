@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <h1>Hover few times to make sure it works :)</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            <li><a href="#" id="mark" title="saf" onmouseover="loadUser('mark')">Mark</a></li>
+            <li><a href="#" id="pesho" title="saf" onmouseover="loadUser('pesho')">Pesho</a></li>
+            <li><a href="#" id="gosho" title="saf" onmouseover="loadUser('gosho')">Gosho</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6">
+
+        <div class="ui-widget">
+            <p>Type country</p>
+            <label for="automplete-1">Country: </label>
+            <input id="automplete-1">
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="/Scripts/qTip/jquery.qtip.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/Scripts/qTip/jquery.qtip.css" />
+
+    <script>
+        var users = {};
+        var country_list = {};
+
+        function loadUser(user) {
+            if (!users[user])
+            {
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/GetUserData",
+                    data: { user: user }
+                }).done(function (response) {
+                    var link = $("#" + user)[0];
+
+                    var obj = jQuery.parseJSON(response);
+                    users[user] = obj;
+
+                    link.setAttribute("title", "<div class='row'><div class='col-md-4'><img src='" + obj.ProfileImage + "' width='80px' height='80px' />\
+                        </div><div class='col-md-8'><ul>\
+                            <li>Address: " + obj.Address + "</li>\
+                            <li>Contact: " + obj.Contact + "</li>\
+                            <li>Email: " + obj.Email + "</li>\
+                            <li>Status: " + obj.Status + "</li>\
+                            <li>Age: " + obj.Age + "</li>\
+                                \
+                        </ul></div></div>");
+                    $($("#" + user)[0]).qtip();
+                });
+            }
+        }
+
+        $(function () {
+            $.ajax({
+                type: "GET",
+                url: "/Home/GetCountries"
+            }).done(function (response) {
+                var obj = jQuery.parseJSON(response);
+                country_list = obj;
+
+                $("#automplete-1").autocomplete({
+                    source: country_list
+                });
+            });
+        });
+    </script>
+}
