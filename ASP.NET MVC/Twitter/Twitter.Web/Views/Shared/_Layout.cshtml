@@ -49,6 +49,9 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    <script src="/Scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="/signalr/hubs"></script>
+    @Scripts.Render("~/bundles/signalr")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
