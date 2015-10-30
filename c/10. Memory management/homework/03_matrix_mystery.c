@@ -3,49 +3,40 @@
 
 int **matrix_create(int rowsCount, int colsCount)
 {
-    // 4-byte pointers x rowsCount
-    int **rows = malloc(rowsCount * sizeof(int*));
-    if (!rows)
+    int **rows = calloc(rowsCount , sizeof(int)), i = 0;
+
+    while (i < colsCount)
     {
-        return NULL;
+        rows[i] = calloc(colsCount , sizeof(int));
+        i++;
     }
 
-    int i = 0;
-    while (i++ < colsCount)
-    {
-        rows[i] = malloc(colsCount * sizeof(int));
-        if (!rows[i])
-        {
-            return NULL;
-        }
-    }
-    
     return rows;
 }
 
 int main()
 {
-    int a = -1;
-    printf("%d", a);
-    // Declare
-    int size = 3;
-    int **matrix = matrix_create(size, size);
+    long long a = -1;
+    printf("%lld", a);
     
-    // Modify
-    matrix[0][0] = 3;
-    matrix[0][2] = -2;
-    matrix[1][2] = 4;
-    matrix[2][1] = 1;
-    
+    int size = 3, **matrix = matrix_create(size, size);
+
+    *(*(matrix)) = 3;
+    *(*(matrix) + 2) = -2;
+    *(*(matrix + 1) + 2) = 4;
+    *(*(matrix + 2) + 1) = 1;
+
     int row;
+
     for (row = 0; row < size; row++)
     {
         int col;
+
         for (col = 0; col < size; col++)
         {
             printf("%d ", matrix[row][col]);
         }
-        
+
         printf("\n");
     }
 
@@ -53,10 +44,8 @@ int main()
     {
         free(matrix[row]);
     }
-    
-    // Free
-    free(matrix);
-    
-    return (EXIT_SUCCESS);
-}
 
+    free(matrix);
+
+    return 0;
+}
