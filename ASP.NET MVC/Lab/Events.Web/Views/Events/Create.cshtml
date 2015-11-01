@@ -1,0 +1,39 @@
+﻿@model Events.Web.Models.EventBindingModel
+
+@{
+    ViewBag.Title = "Create new event";
+}
+
+@Html.Partial("_EventEditorForm")
+
+@section scripts {
+    @Scripts.Render("~/bundles/bootstrap-datetimepicker")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+@section styles {
+    @Scripts.Render("~/Content/bootstrap-datetimepicker")
+}
+
+<script>
+    $(function () {
+        $("#StartDateTime").datetimepicker({
+            format: 'DD-MMM-YYYY HH:mm',
+            sideBySide: true,
+            showTodayButton: true
+        });
+    });
+</script>
+
+<script>
+    $(function () {
+        var date = new Date();
+        date.setHours(1);
+        date.setMinutes(0);
+        $("#Duration").datetimepicker({
+            format: 'HH:mm',
+            defaultDate: date,
+            showClear: true
+        });
+    });
+</script>
