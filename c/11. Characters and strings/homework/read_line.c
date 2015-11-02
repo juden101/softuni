@@ -1,16 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "read_line.h"
 
 #define INITIAL_SIZE 4
-
-char* read_line();
-
-int main()
-{
-	char *line = read_line();
-	printf("%s\n", line);
-}
 
 char* read_line()
 {

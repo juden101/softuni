@@ -1,0 +1,1 @@
+char* string_reverse(char*, size_t);

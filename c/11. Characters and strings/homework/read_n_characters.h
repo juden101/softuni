@@ -1,0 +1,1 @@
+char* read_n_characters(int);
