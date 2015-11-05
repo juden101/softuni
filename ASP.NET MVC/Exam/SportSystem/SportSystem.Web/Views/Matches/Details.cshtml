@@ -1,0 +1,21 @@
+﻿@using System.Globalization
+@model SportSystem.Web.Models.DetailedMatchViewModel
+
+@{
+    ViewBag.Title = "Match details";
+}
+
+<h2>Team details</h2>
+
+<div class="panel panel-danger">
+    <div class="panel-body">
+        <h3>Home team: @Html.ActionLink(Model.HomeTeam.Name, "Details", "Teams", htmlAttributes: null)</h3>
+        <h3>Away team: @Html.ActionLink(Model.AwayTeam.Name, "Details", "Teams", htmlAttributes: null)</h3>
+        <p>Date and time: <strong>@Model.DateAndTime.ToString("dd-MMM-yyyy hh:mm:ss", CultureInfo.InvariantCulture)</strong></p>
+        @Html.DisplayFor(m => m.Comments)
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}

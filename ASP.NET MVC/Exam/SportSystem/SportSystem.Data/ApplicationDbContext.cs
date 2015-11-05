@@ -43,6 +43,11 @@
                 .WithMany(team => team.AwayMatches)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Player>()
+                .HasOptional(player => player.Team)
+                .WithMany(team => team.Players)
+                .WillCascadeOnDelete(false);
+
             base.OnModelCreating(modelBuilder);
         }
     }

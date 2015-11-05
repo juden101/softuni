@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using SportSystem.Data.Migrations;
+using SportSystem.Web.App_Start;
 
 namespace SportSystem.Web
 {
@@ -17,6 +18,7 @@ namespace SportSystem.Web
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
 
+            MapperConfig.RegisterMappings();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

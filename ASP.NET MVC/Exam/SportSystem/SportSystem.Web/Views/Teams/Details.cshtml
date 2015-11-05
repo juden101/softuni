@@ -1,0 +1,43 @@
+﻿@using System.Globalization
+@model SportSystem.Web.Models.DetailedTeamViewModel
+
+@{
+    ViewBag.Title = "Team details";
+}
+
+<h2>Team details</h2>
+
+<div class="panel panel-danger">
+    <div class="panel-body">
+        <h3>@Model.Name</h3>
+        <p>Nickname: <strong>@Model.NickName</strong></p>
+        <p>Founded: <strong>@Model.DateFounded.ToString("dd-MMM-yyyy hh:mm:ss", CultureInfo.InvariantCulture)</strong></p>
+        @Html.DisplayFor(m => m.Players)
+
+        <div class="col-md-4">
+            <h3>Votes: <span id="team-@Model.Id-votes">@Model.VotesCount</span></h3>
+            @if (!Model.UserHasVoted)
+            {
+                using (Ajax.BeginForm("Vote", "Teams", new { teamId = Model.Id }, new AjaxOptions()
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = string.Format("team-{0}-votes", Model.Id)
+                }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <input type="submit" name="name" value="+" class="btn btn-success" />
+                }
+            }
+            else
+            {
+                <em>You have voted</em>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+}

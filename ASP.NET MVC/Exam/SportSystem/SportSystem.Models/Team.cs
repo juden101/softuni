@@ -24,7 +24,7 @@
 
         public string Website { get; set; }
 
-        public DateTime? DateFounded  { get; set; }
+        public DateTime DateFounded  { get; set; }
 
         public virtual ICollection<Player> Players { get; set; }
 

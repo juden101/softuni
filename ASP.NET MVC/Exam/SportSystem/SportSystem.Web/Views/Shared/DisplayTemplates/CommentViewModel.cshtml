@@ -1,0 +1,8 @@
+﻿@model SportSystem.Web.Models.CommentViewModel
+
+<div class="panel panel-danger">
+    <div class="panel-body">
+        <p><strong>@Model.Author:</strong> @Model.Content</p>
+        <p><i>Created on: @Model.DateAndTime.ToString("dd-MMM-yyyy hh:mm:ss", CultureInfo.InvariantCulture)</i></p>
+    </div>
+</div>
