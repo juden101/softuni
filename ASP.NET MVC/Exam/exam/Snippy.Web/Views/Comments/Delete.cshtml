@@ -1,0 +1,28 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.CommentViewModel
+
+@{
+    ViewBag.Title = "Delete comment";
+}
+
+<h2>Delete comment</h2>
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <p>@Model.Content</p>
+        <p>Author: @Model.Author on @Model.CreatedOn.ToString("dd-MMM-yyyy hh:mm:ss", CultureInfo.InvariantCulture)</p>
+        <p>on snippet <a href="/Snippets/Details/@Model.SnippetId">@Model.SnippetTitle</a></p>
+
+        @using (Html.BeginForm("DeleteComment", "Comments", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.Hidden("id", Model.Id)
+
+            <div class="form-group row">
+                <input type="submit" class="btn btn-danger" value="Delete" />
+            </div>
+        }
+        <a href="/" class="btn btn-default">Cancel</a>
+    </div>
+</div>

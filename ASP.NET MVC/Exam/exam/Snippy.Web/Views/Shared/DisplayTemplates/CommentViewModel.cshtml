@@ -1,0 +1,15 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.CommentViewModel
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <p>@Model.Content</p>
+        <p>Author: @Model.Author on @Model.CreatedOn.ToString("dd-MMM-yyyy hh:mm:ss", CultureInfo.InvariantCulture)</p>
+        <p>on snippet <a href="/Snippets/Details/@Model.SnippetId">@Model.SnippetTitle</a></p>
+        
+        @if (Model.Author == User.Identity.Name)
+        {
+            <a href="/Comments/Delete/@Model.Id" class="btn btn-danger">Delete</a>
+        }
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.LanguagePageViewModel
+
+@{
+    ViewBag.Title = "Language details";
+}
+
+<h2>Language details</h2>
+
+<h3>All snippets with language <span class="label label-info">@Model.Language.Name</span></h3>
+
+@Html.DisplayFor(m => m.Snippets)

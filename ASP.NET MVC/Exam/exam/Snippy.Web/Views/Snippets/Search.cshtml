@@ -1,0 +1,17 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.SearchPageViewModel
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+@if (Model.Snippets.Any())
+{
+    @Html.DisplayFor(m => m.Snippets)
+}
+else
+{
+    <p>Nothing found!</p>
+}

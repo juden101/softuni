@@ -1,0 +1,56 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.SnippetViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h3><span class="label label-info"><a href="/Languages/Details/@Model.Language.Id">@Model.Language.Name</a></span> @Model.Title</h3>
+
+<p>By: <strong>@Model.Author.UserName</strong> on @Model.CreatedOn.ToString("dd, MMM yyyy", CultureInfo.InvariantCulture)</p>
+<p>Labels: @Html.DisplayFor(m => m.Labels)</p>
+<p>@Model.Description</p>
+
+@if (Model.Author.UserName == User.Identity.Name)
+{
+    <a href="/Snippets/Edit/@Model.Id" class="btn btn-info">Edit</a>
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <pre class="brush: js">
+            @Model.Code
+        </pre>
+    </div>
+</div>
+
+<p>
+    <h4>Comments:</h4>
+
+    @if (Request.IsAuthenticated)
+    {
+        using (Html.BeginForm("Add", "Comments", FormMethod.Post))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group row">
+                @Html.TextArea("Comment", new { rows = 10, columns = 40 })
+            </div>
+            @Html.Hidden("snippedId", Model.Id)
+            <div class="form-group row">
+                <input type="submit" class="btn btn-success" value="Create" />
+            </div>
+        }
+    }
+
+    @if (Model.Comments.Any())
+    {
+        @Html.DisplayFor(m => m.Comments)
+    }
+    else
+    {
+        <p>No comments</p>
+    }
+</p>

@@ -1,0 +1,9 @@
+﻿@model Snippy.Web.Models.ShortSnippetViewModel
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+        <a href="/Snippets/Details/@Model.Id"><h3>@Model.Title</h3></a>
+    </div>
+
+    @Html.DisplayFor(m => m.Labels)
+</div>

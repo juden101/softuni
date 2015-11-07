@@ -1,0 +1,17 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.MySnippetsPageViewModel
+
+@{
+    ViewBag.Title = "My snippets";
+}
+
+<h2>MySnippets</h2>
+
+@if(Model.Snippets.Any())
+{
+    @Html.DisplayFor(m => m.Snippets)
+}
+else
+{
+    <p>You have not snippets yet. <a href="/Snippets/Add">Create</a> one nows</p>
+}

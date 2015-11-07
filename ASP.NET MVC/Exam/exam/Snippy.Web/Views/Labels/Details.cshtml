@@ -1,0 +1,12 @@
+﻿@using System.Globalization
+@model Snippy.Web.Models.LabelPageViewModel
+
+@{
+    ViewBag.Title = "Label details";
+}
+
+<h2>Label details</h2>
+
+<h3>All snippets with label <span class="label label-info">@Model.Label.Text</span></h3>
+
+@Html.DisplayFor(m => m.Snippets)
