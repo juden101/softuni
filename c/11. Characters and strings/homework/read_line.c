@@ -13,7 +13,7 @@ char* read_line()
     getline(&line, &size, stdin);
 
     char *token = strtok(line, " ");
-    char *array = malloc(INITIAL_SIZE * sizeof(char));
+    char *array = calloc(INITIAL_SIZE, sizeof(char));
 
     if (!array)
     {
@@ -30,7 +30,8 @@ char* read_line()
         {
             if (i == array_length)
             {
-                char *new_array = realloc(array, array_length * 2);
+                array_length = array_length + (array_length * 2);
+                char *new_array = realloc(array, array_length);
 
                 if (!new_array)
                 {
@@ -38,7 +39,6 @@ char* read_line()
                 }
 
                 array = new_array;
-                array_length *= 2;
             }
 
             array[i] = token[j];
