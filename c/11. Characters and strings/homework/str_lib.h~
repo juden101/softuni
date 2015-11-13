@@ -1,4 +1,4 @@
-char *read_line();
+char *read_line()
 char *str_to_lower(char *);
 char *str_join(char, size_t);
 char *str_replace_all(const char *, const char *, const char *);

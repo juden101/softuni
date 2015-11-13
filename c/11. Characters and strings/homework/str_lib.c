@@ -3,6 +3,39 @@
 #include <string.h>
 #include "str_lib.h"
 
+char *read_line()
+{
+    int initialSize = 4;
+    char *readline = malloc(initialSize);
+    int index = 0;
+    char ch = getchar();
+
+    while (ch != '\n')
+    {
+        if (index == initialSize - 1)
+        {
+            char *newReadLine = realloc(readline, initialSize * 2);
+            
+            if (!newReadLine)
+            {
+                printf("Not enough memory!");
+                exit(1);
+            }
+            
+            readline = newReadLine;
+            initialSize *= 2;
+        }
+        
+        *(readline + index) = ch;
+        index++;
+        ch = getchar();
+    }
+    
+    *(readline + index) = '\0';
+    
+    return readline;
+}
+
 char *str_to_lower(char *input)
 {
     int i;
